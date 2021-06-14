@@ -6,7 +6,21 @@ $exclude: map.get($all-config, exclude);
 $include: map.get($all-config, include);
 $headless: map.get($all-config, headless);
 
-@if ( $headless == false or list.index($include, starter) != null or list.index($exclude, all) != null or list.index($exclude, starter) != null ) {
+$include-condition: true;
+@if ( $headless == false ) {
+  $include-condition: true;
+}
+@if ( list.index($exclude, all) ) {
+  $include-condition: false;
+}
+@if ( list.index($exclude, reset) ) {
+  $include-condition: false;
+}
+@if ( list.index($include, reset) ) {
+  $include-condition: true;
+}
+
+@if ( $include-condition ) {
 
   sub, sup {
     position: relative;

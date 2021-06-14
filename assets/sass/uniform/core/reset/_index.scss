@@ -6,7 +6,22 @@ $exclude: map.get($all-config, exclude);
 $include: map.get($all-config, include);
 $headless: map.get($all-config, headless);
 
-@if ( $headless == false or list.index($include, reset) != null or list.index($exclude, all) != null or list.index($exclude, reset) != null ) {
+
+$include-condition: true;
+@if ( $headless == false ) {
+  $include-condition: true;
+}
+@if ( list.index($exclude, all) ) {
+  $include-condition: false;
+}
+@if ( list.index($exclude, reset) ) {
+  $include-condition: false;
+}
+@if ( list.index($include, reset) ) {
+  $include-condition: true;
+}
+
+@if ( $include-condition ) {
   // inspired from https://piccalil.li/blog/a-modern-css-reset
 
   // reset everything
