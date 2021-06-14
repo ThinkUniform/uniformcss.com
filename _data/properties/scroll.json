@@ -1,0 +1,164 @@
+[
+  {
+    "name": "overflow-x",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overflow-x-auto",
+        "properties": ["overflow-x: auto;"]
+      },
+      {
+        "class": "overflow-x-hidden",
+        "properties": ["overflow-x: hidden;"]
+      },
+      {
+        "class": "overflow-x-visible",
+        "properties": ["overflow-x: visible;"]
+      },
+      {
+        "class": "overflow-x-scroll",
+        "properties": ["overflow-x: auto;"]
+      }
+    ]
+  },
+  {
+    "name": "overflow-y",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overflow-y-auto",
+        "properties": ["overflow-y: auto;"]
+      },
+      {
+        "class": "overflow-y-hidden",
+        "properties": ["overflow-y: hidden;"]
+      },
+      {
+        "class": "overflow-y-visible",
+        "properties": ["overflow-y: visible;"]
+      },
+      {
+        "class": "overflow-y-sroll",
+        "properties": ["overflow-y: sroll;"]
+      }
+    ]
+  },
+  {
+    "name": "overflow",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overflow-auto",
+        "properties": ["overflow: auto;"]
+      },
+      {
+        "class": "overflow-hidden",
+        "properties": ["overflow: hidden;"]
+      },
+      {
+        "class": "overflow-visible",
+        "properties": ["overflow: visible;"]
+      },
+      {
+        "class": "overflow-scroll",
+        "properties": ["overflow: scroll;"]
+      }
+    ]
+  },
+  {
+    "name": "overscroll-x",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overscroll-x-auto",
+        "properties": ["overscroll-behavior-x: auto;"]
+      },
+      {
+        "class": "overscroll-x-contain",
+        "properties": ["overscroll-behavior-x: contain;"]
+      },
+      {
+        "class": "overscroll-x-none",
+        "properties": ["overscroll-behavior-x: none;"]
+      }
+    ]
+  },
+  {
+    "name": "overflow-y",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overscroll-y-auto",
+        "properties": ["overscroll-behavior-y: auto;"]
+      },
+      {
+        "class": "overscroll-y-contain",
+        "properties": ["overscroll-behavior-y: contain;"]
+      },
+      {
+        "class": "overscroll-y-none",
+        "properties": ["overscroll-behavior-y: none;"]
+      }
+    ]
+  },
+  {
+    "name": "overscroll",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overscroll-auto",
+        "properties": ["overscroll-behavior: auto;"]
+      },
+      {
+        "class": "overscroll-contain",
+        "properties": ["overscroll-behavior: contain;"]
+      },
+      {
+        "class": "overscroll-none",
+        "properties": ["overscroll-behavior: none;"]
+      }
+    ]
+  },
+  {
+    "name": "scroll-behavior",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "scroll-auto",
+        "properties": ["scroll-behavior: auto;"]
+      },
+      {
+        "class": "scroll-smooth",
+        "properties": ["scroll-behavior: smooth;"]
+      }
+    ]
+  }
+]

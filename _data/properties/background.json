@@ -1,0 +1,542 @@
+[
+  {
+    "name": "background-attachment",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "bg-scroll",
+        "properties": ["background-attachment: scroll;"]
+      },
+      {
+        "class": "bg-fixed",
+        "properties": ["background-attachment: fixed;"]
+      },
+      {
+        "class": "bg-local",
+        "properties": ["background-attachment: local;"]
+      }
+    ]
+  },
+  {
+    "name": "background-clip",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "bg-bg",
+        "properties": ["background-clip: bg-box;"]
+      },
+      {
+        "class": "bg-padding",
+        "properties": ["background-clip: padding-box;"]
+      },
+      {
+        "class": "bg-content",
+        "properties": ["background-clip: content-box;"]
+      },
+      {
+        "class": "bg-text",
+        "properties": ["background-clip: text;"]
+      }
+    ]
+  },
+  {
+    "name": "background-color",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": ["--bg-ltn: 50%", "--bg-opacity: 1"],
+    "pseudos": ["hover", "group-hover", "focus", "dark"],
+    "utilities": [
+      {
+        "class": "bg-red",
+        "properties": ["background-color: hsla(var(--red-hue), var(--red-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-firebrick",
+        "properties": ["background-color: hsla(var(--firebrick-hue), var(--firebrick-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-orange",
+        "properties": ["background-color: hsla(var(--orange-hue), var(--orange-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-gold",
+        "properties": ["background-color: hsla(var(--gold-hue), var(--gold-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-yellow",
+        "properties": ["background-color: hsla(var(--yellow-hue), var(--yellow-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-lime",
+        "properties": ["background-color: hsla(var(--lime-hue), var(--lime-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-green",
+        "properties": ["background-color: hsla(var(--green-hue), var(--green-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-cyan",
+        "properties": ["background-color: hsla(var(--cyan-hue), var(--cyan-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-blue",
+        "properties": ["background-color: hsla(var(--blue-hue), var(--blue-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-purple",
+        "properties": ["background-color: hsla(var(--purple-hue), var(--purple-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-violet",
+        "properties": ["background-color: hsla(var(--violet-hue), var(--violet-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-pink",
+        "properties": ["background-color: hsla(var(--pink-hue), var(--pink-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-white",
+        "properties": ["background-color: hsla(var(--white-hue), var(--white-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-black",
+        "properties": ["background-color: hsla(var(--black-hue), var(--black-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-cool-gray",
+        "properties": ["background-color: hsla(var(--cool-gray-hue), var(--cool-gray-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-gray",
+        "properties": ["background-color: hsla(var(--gray-hue), var(--gray-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-warm-gray",
+        "properties": ["background-color: hsla(var(--warm-gray-hue), var(--warm-gray-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-primary",
+        "properties": ["background-color: hsla(var(--primary-hue), var(--primary-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-secondary",
+        "properties": ["background-color: hsla(var(--secondary-hue), var(--secondary-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-tertiary",
+        "properties": ["background-color: hsla(var(--tertiary-hue), var(--tertiary-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-success",
+        "properties": ["background-color: hsla(var(--success-hue), var(--success-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-warning",
+        "properties": ["background-color: hsla(var(--warning-hue), var(--warning-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-danger",
+        "properties": ["background-color: hsla(var(--danger-hue), var(--danger-sat), var(--bg-ltn), var(--bg-opacity));"]
+      },
+      {
+        "class": "bg-transparent",
+        "properties": ["background-color: transparent;"]
+      },
+      {
+        "class": "bg-current",
+        "properties": ["background-color: current;"]
+      }
+    ]
+  },
+  {
+    "name": "background-position",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "bg-left-top",
+        "properties": ["background-position: left top;"]
+      },
+      {
+        "class": "bg-left",
+        "properties": ["background-position: left;"]
+      },
+      {
+        "class": "bg-left-bottom",
+        "properties": ["background-position: left bottom;"]
+      },
+      {
+        "class": "bg-right-top",
+        "properties": ["background-position: right top;"]
+      },
+      {
+        "class": "bg-right",
+        "properties": ["background-position: right;"]
+      },
+      {
+        "class": "bg-top",
+        "properties": ["background-position: top;"]
+      },
+      {
+        "class": "bg-bottom",
+        "properties": ["background-position: bottom;"]
+      },
+      {
+        "class": "bg-center",
+        "properties": ["background-position: center;"]
+      }
+    ]
+  },
+  {
+    "name": "background-repeat",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "bg-repeat",
+        "properties": ["background-repeat: repeat;"]
+      },
+      {
+        "class": "bg-repeat-x",
+        "properties": ["background-repeat: repeat-x;"]
+      },
+      {
+        "class": "bg-repeat-y",
+        "properties": ["background-repeat: repeat-y;"]
+      },
+      {
+        "class": "bg-no-repeat",
+        "properties": ["background-repeat: no-repeat;"]
+      },
+      {
+        "class": "bg-space",
+        "properties": ["background-repeat: space;"]
+      },
+      {
+        "class": "bg-round",
+        "properties": ["background-repeat: round;"]
+      }
+    ]
+  },
+  {
+    "name": "background-size",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "bg-auto",
+        "properties": ["background-size: auto;"]
+      },
+      {
+        "class": "bg-cover",
+        "properties": ["background-size: cover;"]
+      },
+      {
+        "class": "bg-contain",
+        "properties": ["background-size: contain;"]
+      }
+    ]
+  },
+  {
+    "name": "background",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": ["--gradient: initial"],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "bg-linear",
+        "properties": [
+          "background: linear-gradient(var(--gradient, to right, #40C6FF 0%, #505BED 100%));"
+        ]
+      },
+      {
+        "class": "bg-radial",
+        "properties": [
+          "background: radial-gradient(var(--gradient, circle at 50% 50%, #40c6ff, #505bed));"
+        ]
+      },
+      {
+        "class": "bg-conic",
+        "properties": [
+          "conic-gradient(var(--gradient, from 90deg at 50% 50%, #40c6ff, #505bed));"
+        ]
+      },
+      {
+        "class": "bg-linear-x-from-white",
+        "properties": [
+          "background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear-x-to-white",
+        "properties": [
+          "background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear-y-from-white",
+        "properties": [
+          "background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear-y-to-white",
+        "properties": [
+          "background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear-x-from-black",
+        "properties": [
+          "background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);"
+        ]
+      },
+      {
+        "class": "bg-radient-x-to-black",
+        "properties": [
+          "background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear-y-from-black",
+        "properties": [
+          "background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear-y-to-black",
+        "properties": [
+          "background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"
+        ]
+      },
+      {
+        "class": "bg-linear",
+        "properties": ["background: linear-gradient(var(--gradient));"]
+      },
+      {
+        "class": "bg-conic",
+        "properties": ["background: conic-gradient(var(--gradient));"]
+      }
+    ]
+  },
+  {
+    "name": "background-opacity",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": ["--bg-opacity"],
+    "pseudos": ["hover", "group-hover", "focus", "dark"],
+    "utilities": [
+      {
+        "class": "bg-opacity-0",
+        "properties": ["--bg-opacity: 0;"]
+      },
+      {
+        "class": "bg-opacity-2",
+        "properties": ["--bg-opacity: 0.02;"]
+      },
+      {
+        "class": "bg-opacity-4",
+        "properties": ["--bg-opacity: 0.04;"]
+      },
+      {
+        "class": "bg-opacity-6",
+        "properties": ["--bg-opacity: 0.06;"]
+      },
+      {
+        "class": "bg-opacity-8",
+        "properties": ["--bg-opacity: 0.08;"]
+      },
+      {
+        "class": "bg-opacity-10",
+        "properties": ["--bg-opacity: 0.1;"]
+      },
+      {
+        "class": "bg-opacity-15",
+        "properties": ["--bg-opacity: 0.15;"]
+      },
+      {
+        "class": "bg-opacity-20",
+        "properties": ["--bg-opacity: 0.2;"]
+      },
+      {
+        "class": "bg-opacity-25",
+        "properties": ["--bg-opacity: 0.25;"]
+      },
+      {
+        "class": "bg-opacity-30",
+        "properties": ["--bg-opacity: 0.3;"]
+      },
+      {
+        "class": "bg-opacity-35",
+        "properties": ["--bg-opacity: 0.35;"]
+      },
+      {
+        "class": "bg-opacity-40",
+        "properties": ["--bg-opacity: 0.4;"]
+      },
+      {
+        "class": "bg-opacity-45",
+        "properties": ["--bg-opacity: 0.45;"]
+      },
+      {
+        "class": "bg-opacity-50",
+        "properties": ["--bg-opacity: 0.5;"]
+      },
+      {
+        "class": "bg-opacity-55",
+        "properties": ["--bg-opacity: 0.55;"]
+      },
+      {
+        "class": "bg-opacity-60",
+        "properties": ["--bg-opacity: 0.6;"]
+      },
+      {
+        "class": "bg-opacity-65",
+        "properties": ["--bg-opacity: 0.65;"]
+      },
+      {
+        "class": "bg-opacity-70",
+        "properties": ["--bg-opacity: 0.7;"]
+      },
+      {
+        "class": "bg-opacity-75",
+        "properties": ["--bg-opacity: 0.75;"]
+      },
+      {
+        "class": "bg-opacity-80",
+        "properties": ["--bg-opacity: 0.8;"]
+      },
+      {
+        "class": "bg-opacity-85",
+        "properties": ["--bg-opacity: 0.85;"]
+      },
+      {
+        "class": "bg-opacity-90",
+        "properties": ["--bg-opacity: 0.9;"]
+      },
+      {
+        "class": "bg-opacity-95",
+        "properties": ["--bg-opacity: 0.95;"]
+      },
+      {
+        "class": "bg-opacity-100",
+        "properties": ["--bg-opacity: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "background-lightness",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover", "focus", "dark"],
+    "utilities": [
+      {
+        "class": "bg-white",
+        "properties": ["--bg-ltn: var(--ltn-white);"]
+      },
+      {
+        "class": "bg-50",
+        "properties": ["--bg-ltn: var(--ltn-50);"]
+      },
+      {
+        "class": "bg-100",
+        "properties": ["--bg-ltn: var(--ltn-100);"]
+      },
+      {
+        "class": "bg-150",
+        "properties": ["--bg-ltn: var(--ltn-150);"]
+      },
+      {
+        "class": "bg-200",
+        "properties": ["--bg-ltn: var(--ltn-200);"]
+      },
+      {
+        "class": "bg-250",
+        "properties": ["--bg-ltn: var(--ltn-250);"]
+      },
+      {
+        "class": "bg-300",
+        "properties": ["--bg-ltn: var(--ltn-300);"]
+      },
+      {
+        "class": "bg-350",
+        "properties": ["--bg-ltn: var(--ltn-350);"]
+      },
+      {
+        "class": "bg-400",
+        "properties": ["--bg-ltn: var(--ltn-400);"]
+      },
+      {
+        "class": "bg-450",
+        "properties": ["--bg-ltn: var(--ltn-450);"]
+      },
+      {
+        "class": "bg-500",
+        "properties": ["--bg-ltn: var(--ltn-500);"]
+      },
+      {
+        "class": "bg-550",
+        "properties": ["--bg-ltn: var(--ltn-550);"]
+      },
+      {
+        "class": "bg-600",
+        "properties": ["--bg-ltn: var(--ltn-600);"]
+      },
+      {
+        "class": "bg-650",
+        "properties": ["--bg-ltn: var(--ltn-650);"]
+      },
+      {
+        "class": "bg-700",
+        "properties": ["--bg-ltn: var(--ltn-700);"]
+      },
+      {
+        "class": "bg-750",
+        "properties": ["--bg-ltn: var(--ltn-750);"]
+      },
+      {
+        "class": "bg-800",
+        "properties": ["--bg-ltn: var(--ltn-800);"]
+      },
+      {
+        "class": "bg-850",
+        "properties": ["--bg-ltn: var(--ltn-850);"]
+      },
+      {
+        "class": "bg-900",
+        "properties": ["--bg-ltn: var(--ltn-900);"]
+      },
+      {
+        "class": "bg-950",
+        "properties": ["--bg-ltn: var(--ltn-950);"]
+      },
+      {
+        "class": "bg-black",
+        "properties": ["--bg-ltn: var(--ltn-black);"]
+      }
+    ]
+  }
+]

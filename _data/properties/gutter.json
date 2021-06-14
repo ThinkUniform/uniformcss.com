@@ -1,0 +1,239 @@
+[
+  {
+    "name": "gutter-reverse",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "> * + *",
+    "customProperties": [
+      "--gutter-top: 0",
+      "--gutter-right: 1",
+      "--gutter-bottom: 1",
+      "--gutter-left: 0"      
+    ],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "gutter-reverse",
+        "properties": []
+      }
+    ]
+  },
+  {
+    "name": "gutter-x",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "> * + *",
+    "customProperties": [
+      "--gutter-right: 0",
+      "--gutter-left: 1"
+    ],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "gutter-x-0",
+        "properties": ["margin: 0 calc(0 * var(--gutter-right)) 0 calc(0 * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-1",
+        "properties": ["margin: 0 calc(0.0625rem * var(--gutter-right)) 0 calc(0.0625rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-2",
+        "properties": ["margin: 0 calc(0.125rem * var(--gutter-right)) 0 calc(0.125rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-4",
+        "properties": ["margin: 0 calc(0.25rem * var(--gutter-right)) 0 calc(0.25rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-6",
+        "properties": ["margin: 0 calc(0.375rem * var(--gutter-right)) 0 calc(0.375rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-8",
+        "properties": ["margin: 0 calc(0.5rem * var(--gutter-right)) 0 calc(0.5rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-10",
+        "properties": ["margin: 0 calc(0.625rem * var(--gutter-right)) 0 calc(0.625rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-12",
+        "properties": ["margin: 0 calc(0.75rem * var(--gutter-right)) 0 calc(0.75rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-14",
+        "properties": ["margin: 0 calc(0.875rem * var(--gutter-right)) 0 calc(0.875rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-16",
+        "properties": ["margin: 0 calc(1rem * var(--gutter-right)) 0 calc(1rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-20",
+        "properties": ["margin: 0 calc(1.25rem * var(--gutter-right)) 0 calc(1.25rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-24",
+        "properties": ["margin: 0 calc(1.5rem * var(--gutter-right)) 0 calc(1.5rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-28",
+        "properties": ["margin: 0 calc(1.75rem * var(--gutter-right)) 0 calc(1.75rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-32",
+        "properties": ["margin: 0 calc(2rem * var(--gutter-right)) 0 calc(2rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-36",
+        "properties": ["margin: 0 calc(2.25rem * var(--gutter-right)) 0 calc(2.25rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-40",
+        "properties": ["margin: 0 calc(2.5rem * var(--gutter-right)) 0 calc(2.5rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-48",
+        "properties": ["margin: 0 calc(3rem * var(--gutter-right)) 0 calc(3rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-56",
+        "properties": ["margin: 0 calc(3.5rem * var(--gutter-right)) 0 calc(3.5rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-64",
+        "properties": ["margin: 0 calc(4rem * var(--gutter-right)) 0 calc(4rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-72",
+        "properties": ["margin: 0 calc(4.5rem * var(--gutter-right)) 0 calc(4.5rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-80",
+        "properties": ["margin: 0 calc(5rem * var(--gutter-right)) 0 calc(5rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-96",
+        "properties": ["margin: 0 calc(6rem * var(--gutter-right)) 0 calc(6rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-112",
+        "properties": ["margin: 0 calc(7rem * var(--gutter-right)) 0 calc(7rem * var(--gutter-left));"]
+      },
+      {
+        "class": "gutter-x-128",
+        "properties": ["margin: 0 calc(8rem * var(--gutter-right)) 0 calc(8rem * var(--gutter-left));"]
+      }
+    ]
+  },
+  {
+    "name": "gutter-y",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "> * + *",
+    "customProperties": [
+      "--gutter-top: 1",
+      "--gutter-bottom: 0"
+    ],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "gutter-y-0",
+        "properties": ["margin: calc(0 * var(--gutter-right)) 0 calc(0 * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-1",
+        "properties": ["margin: calc(0.0625rem * var(--gutter-right)) 0 calc(0.0625rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-2",
+        "properties": ["margin: calc(0.125rem * var(--gutter-right)) 0 calc(0.125rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-4",
+        "properties": ["margin: calc(0.25rem * var(--gutter-right)) 0 calc(0.25rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-6",
+        "properties": ["margin: calc(0.375rem * var(--gutter-right)) 0 calc(0.375rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-8",
+        "properties": ["margin: calc(0.5rem * var(--gutter-right)) 0 calc(0.5rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-10",
+        "properties": ["margin: calc(0.625rem * var(--gutter-right)) 0 calc(0.625rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-12",
+        "properties": ["margin: calc(0.75rem * var(--gutter-right)) 0 calc(0.75rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-14",
+        "properties": ["margin: calc(0.875rem * var(--gutter-right)) 0 calc(0.875rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-16",
+        "properties": ["margin: calc(1rem * var(--gutter-right)) 0 calc(1rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-20",
+        "properties": ["margin: calc(1.25rem * var(--gutter-right)) 0 calc(1.25rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-24",
+        "properties": ["margin: calc(1.5rem * var(--gutter-right)) 0 calc(1.5rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-28",
+        "properties": ["margin: calc(1.75rem * var(--gutter-right)) 0 calc(1.75rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-32",
+        "properties": ["margin: calc(2rem * var(--gutter-right)) 0 calc(2rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-36",
+        "properties": ["margin: calc(2.25rem * var(--gutter-right)) 0 calc(2.25rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-40",
+        "properties": ["margin: calc(2.5rem * var(--gutter-right)) 0 calc(2.5rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-48",
+        "properties": ["margin: calc(3rem * var(--gutter-right)) 0 calc(3rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-56",
+        "properties": ["margin: calc(3.5rem * var(--gutter-right)) 0 calc(3.5rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-64",
+        "properties": ["margin: calc(4rem * var(--gutter-right)) 0 calc(4rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-72",
+        "properties": ["margin: calc(4.5rem * var(--gutter-right)) 0 calc(4.5rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-80",
+        "properties": ["margin: calc(5rem * var(--gutter-right)) 0 calc(5rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-96",
+        "properties": ["margin: calc(6rem * var(--gutter-right)) 0 calc(6rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-112",
+        "properties": ["margin: calc(7rem * var(--gutter-right)) 0 calc(7rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-128",
+        "properties": ["margin: calc(8rem * var(--gutter-right)) 0 calc(8rem * var(--gutter-left)) 0"]
+      }
+    ]
+  }
+]

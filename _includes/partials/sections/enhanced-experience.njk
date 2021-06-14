@@ -1,0 +1,282 @@
+<section class="hidden md.block mb-128 md.mb-192 md.px-32" x-data="tabs()" x-init="init()">
+
+  <div class="max-w-1152 mx-auto">
+    <div class="text-center mb-24 md.mb-128">
+      <div class="mb-16 text-xs md.text-sm tracking-loosest semibold uppercase color-primary color-900">
+        Enhanced Experience
+      </div>
+      <h2 class="font-5xl md.font-6xl md.font-7xl lg.font-8xl leading-110 extrabold tracking-tighter color-primary color-900 mb-32">
+        Tailored to support any design
+      </h2>
+      <div class="flex align-items-center justify-content-center">
+        <div class="p-6 radius-full bg-primary bg-900">
+          <div class="relative flex radius-full overflow-hidden">
+            <div class="inline-block absolute h-100p left-0 top-0 bg-linear radius-full z-1 transition-all duration-200"
+              :style="'left: ' + left + 'px;' + 'width: ' + width + 'px'"></div>
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-20 h-32 md.h-40 z-1 is-active"
+              @click.prevent="switcher($event, 0)">
+              Brand Agnostic
+            </a>
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-20 h-32 md.h-40 z-1" 
+              @click.prevent="switcher($event, 1)">
+              Rich Animations
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white md.shadow-card md.radius-2xl">
+
+      <div class="bg-white bg-opacity-90 radius-2xl">
+        <div class="grid grid-cols-12">
+          <div class="col-12 md.col-5 px-24 md.px-48 md.px-64 py-64">
+            <div 
+              x-show.transition.in.opacity.duration.400="tab === 0">
+
+              <div class="text-center md.text-left">
+                <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24 color-primary color-900"><span class="color-primary color-400">Powerful HSL</span> <br>color manipulations</h3>
+                <p class="max-w-512 mx-auto text-lg color-cool-gray mb-32">No need to spend hours configuring colors, just set hue and saturation for your primary, secondary, and tertiary colors and you're good to go.</p>
+                <a href="/docs/color-system" class="text-lg color-primary semibold">See how colors work →</a>
+              </div>
+
+              <div class="pt-48">
+                <div class="grid grid-cols-1 gap-20 p-16 radius-lg bg-primary bg-900 color-white bold text-xs max-w-512 mx-auto" style="--slider-track-color: #fff; --slider-color: #fff; --slider-hover-color: #fff;">
+                  <div class="flex align-items-center">
+                    <div class="flex flex-none align-items-center semibold w-112">
+                      <div class="w-20 h-20 mr-12 radius-full bg-linear" style="--gradient: to right, #529fff, #aeff7c;">
+                      </div>
+                      Hue
+                    </div>
+                    <input type="range" min="0" max="360" value="220" class="slider" x-model="hue">
+                  </div>
+                  <div class="flex align-items-center">
+                    <div class="flex flex-none align-items-center semibold w-112">
+                      <div class="w-20 h-20 mr-12 radius-full bg-linear" style="--gradient: to right, #555, white;">
+                      </div>
+                      Saturation
+                    </div>
+                    <input type="range" min="0" max="100" value="43" class="slider" x-model="sat">
+                  </div>
+                </div>              
+              </div>
+            </div>
+            
+            <div 
+              x-show.transition.in.opacity.duration.400="tab === 1">
+
+              <div class="text-center md.text-left">
+                <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24 color-primary color-900"><span class="color-primary color-400">Built-in buttery</span> <br>smooth animations</h3>
+                <p class="max-w-512 mx-auto text-lg color-cool-gray mb-32">Animations are great for providing extra context for your users. Apply bounce, ping, pulse, and spin animations to any element or even add your own.</p>
+                <a href="/docs/keyframes" class="text-lg color-primary semibold">Learn about keyframes →</a>
+              </div>
+
+              <div class="flex justify-content-center md.justify-content-start flex-wrap pt-48 max-w-320 mx-auto md.mx-0">
+                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
+                  Pulse
+                </div>
+                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
+                  Spin
+                </div>
+                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
+                  Bounce
+                </div>
+                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
+                  Ping
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-12 md.col-7 relative">
+            <div class="absolute w-100p top-0 bottom-0 md.mt-n40 md.mb-n40 pb-40 md.pb-0 md.pr-32 md.pr-40 lg.pr-56" 
+              x-show="tab === 0"
+              x-transition:enter="transition-800"
+              x-transition:enter-start="opacity-0 transform translate-x-n64 scale-90"
+              x-transition:enter-end="opacity-100 transform scale-100"
+              x-transition:leave="transition-400"
+              x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
+              x-transition:leave-end="opacity-0 transform translate-x-n64 scale-90">  
+
+              <article class="h-512 md.h-100p flex align-items-center justify-content-center md.radius-xl overflow-hidden md.shadow-card bg-linear" style="--gradient: 45deg, #b1b9cc, #b6caef;">
+
+                {% include "partials/ui/issue-tracker.njk" %}
+
+              </article>
+
+            </div>
+
+            <div class="absolute w-100p top-0 bottom-0 md.mt-n40 md.mb-n40 pb-40 md.pb-0 md.pr-32 md.pr-40 lg.pr-56" 
+              x-show="tab === 1"
+              x-transition:enter="transition-800"
+              x-transition:enter-start="opacity-0 transform translate-x-64 scale-90"
+              x-transition:enter-end="opacity-100 transform scale-100"
+              x-transition:leave="transition-400"
+              x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
+              x-transition:leave-end="opacity-0 transform translate-x-64 scale-90">  
+
+              <article class="h-512 md.h-100p md.flex align-items-center justify-content-center md.radius-xl overflow-hidden">
+
+                <div class="w-100p h-100p grid grid-rows-2 grid-cols-2 gap-20">
+                  <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-24 shadow-card bg-primary bg-900">
+                    <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-opacity-20 border-white bg-white bg-opacity-20">
+                      <div class="grid grid-cols-1 gap-10 animate-pulse p-20">
+                        <div class="w-6-12 h-20 radius-sm bg-white bg-opacity-20"></div>
+                        <div class="w-10-12 h-20 radius-sm bg-white bg-opacity-40"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 shadow-card bg-primary bg-900">
+                    <button type="button" class="h-48 px-20 pl-14 radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white flex align-items-center semibold cursor-not-allowed" disabled="">
+                      <svg class="fill-current animate-spin h-20 w-20 mr-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M456.433 371.72l-27.79-16.045c-7.192-4.152-10.052-13.136-6.487-20.636 25.82-54.328 23.566-118.602-6.768-171.03-30.265-52.529-84.802-86.621-144.76-91.424C262.35 71.922 256 64.953 256 56.649V24.56c0-9.31 7.916-16.609 17.204-15.96 81.795 5.717 156.412 51.902 197.611 123.408 41.301 71.385 43.99 159.096 8.042 232.792-4.082 8.369-14.361 11.575-22.424 6.92z"></path></svg>
+                      Loading
+                    </button>
+                  </div>
+          
+                  <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 shadow-card bg-primary bg-900">
+                    <div class="flex align-items-center justify-content-center radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white w-64 h-64 animate-bounce">
+                      <ion-icon name="arrow-down" class="font-2xl"></ion-icon>
+                    </div>
+                  </div>
+
+                  <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-32 shadow-card bg-primary bg-900">
+                    <div class="relative align-left p-20 w-100p max-w-320 mx-auto radius-md bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 bold">
+                      <span class="absolute top-0 right-0 mt-n8 mr-n8 flex h-12 w-12">
+                        <span class="animate-ping absolute inline-flex h-12 w-12 radius-full bg-green opacity-70"></span>
+                        <span class="relative inline-flex radius-full h-12 w-12 bg-green"></span>
+                      </span>
+                      <div class="text-md leading-none mb-10 color-white">2 New messages</div>
+                      <div class="text-sm leading-none semibold color-white color-opacity-60">Received 2 minutes ago</div>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+                
+
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="block md.hidden mb-96 last.mb-0" x-data="tabs()">
+  <div class="px-32 sm.text-center mb-64">
+    <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24 color-primary color-900">
+      <span class="color-primary color-400">Powerful HSL</span> <br>color control
+    </h3>
+    <p class="sm.max-w-512 mx-auto text-xl color-cool-gray mb-32">No need to spend hours configuring colors, just set hue and saturation for your primary, secondary, and tertiary colors and you're good to go.</p>
+    <a href="/docs/color-system" class="text-xl color-primary semibold">See how colors work →</a>
+
+    <div class="pt-48">
+      <div class="grid grid-cols-1 gap-20 p-16 radius-lg bg-primary bg-900 color-white bold text-xs max-w-512 sm.mx-auto" style="--slider-track-color: #fff; --slider-color: #fff; --slider-hover-color: #fff;">
+        <div class="flex align-items-center">
+          <div class="flex flex-none align-items-center semibold w-112">
+            <div class="w-20 h-20 mr-12 radius-full bg-linear" style="--gradient: to right, #529fff, #aeff7c;">
+            </div>
+            Hue
+          </div>
+          <input type="range" min="0" max="360" value="220" class="slider" x-model="hue">
+        </div>
+        <div class="flex align-items-center">
+          <div class="flex flex-none align-items-center semibold w-112">
+            <div class="w-20 h-20 mr-12 radius-full bg-linear" style="--gradient: to right, #555, white;">
+            </div>
+            Saturation
+          </div>
+          <input type="range" min="0" max="100" value="43" class="slider" x-model="sat">
+        </div>
+      </div>              
+    </div>
+  </div>
+
+  <article class="h-512 flex align-items-center justify-content-center overflow-hidden md.shadow-card bg-linear" style="--gradient: 45deg, #b1b9cc, #b6caef;">
+    {% include "partials/ui/issue-tracker.njk" %}
+  </article>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="block md.hidden mb-96 last.mb-0" x-data="tabs()">
+  <div class="px-32 sm.text-center mb-64">
+    <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24 color-primary color-900">
+      <span class="color-primary color-400">Built-in buttery</span> <br>smooth animations
+    </h3>
+    <p class="sm.max-w-512 mx-auto text-xl color-cool-gray mb-32">Animations are great for providing extra context for your users. Apply bounce, ping, pulse, and spin animations to any element or even add your own.</p>
+    <a href="/docs/keyframes" class="text-xl color-primary semibold">Learn about keyframes →</a>
+
+  </div>
+
+  <article class="h-512 overflow-hidden">
+
+    <div class="w-100p h-100p grid grid-rows-2 grid-cols-2 gap-20">
+      <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-24 shadow-card bg-primary bg-900">
+        <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-opacity-20 border-white bg-white bg-opacity-20">
+          <div class="grid grid-cols-1 gap-10 animate-pulse p-20">
+            <div class="w-6-12 h-20 radius-sm bg-white bg-opacity-20"></div>
+            <div class="w-10-12 h-20 radius-sm bg-white bg-opacity-40"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 shadow-card bg-primary bg-900">
+        <button type="button" class="h-48 px-20 pl-14 radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white flex align-items-center semibold cursor-not-allowed" disabled="">
+          <svg class="fill-current animate-spin h-20 w-20 mr-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M456.433 371.72l-27.79-16.045c-7.192-4.152-10.052-13.136-6.487-20.636 25.82-54.328 23.566-118.602-6.768-171.03-30.265-52.529-84.802-86.621-144.76-91.424C262.35 71.922 256 64.953 256 56.649V24.56c0-9.31 7.916-16.609 17.204-15.96 81.795 5.717 156.412 51.902 197.611 123.408 41.301 71.385 43.99 159.096 8.042 232.792-4.082 8.369-14.361 11.575-22.424 6.92z"></path></svg>
+          Loading
+        </button>
+      </div>
+
+      <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 shadow-card bg-primary bg-900">
+        <div class="flex align-items-center justify-content-center radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white w-64 h-64 animate-bounce">
+          <ion-icon name="arrow-down" class="font-2xl"></ion-icon>
+        </div>
+      </div>
+
+      <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-32 shadow-card bg-primary bg-900">
+        <div class="relative align-left p-20 w-100p max-w-320 mx-auto radius-md bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 bold">
+          <span class="absolute top-0 right-0 mt-n8 mr-n8 flex h-12 w-12">
+            <span class="animate-ping absolute inline-flex h-12 w-12 radius-full bg-green opacity-70"></span>
+            <span class="relative inline-flex radius-full h-12 w-12 bg-green"></span>
+          </span>
+          <div class="text-md leading-none mb-10 color-white">2 New messages</div>
+          <div class="text-sm leading-none semibold color-white color-opacity-60">Received 2 minutes ago</div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+
+  </article>
+
+</section>

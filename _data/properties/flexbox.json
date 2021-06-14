@@ -1,0 +1,178 @@
+[
+  {
+    "name": "flex-direction",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "flex-row",
+        "properties": ["flex-direction: row;"]
+      },
+      {
+        "class": "flex-row-reverse",
+        "properties": ["flex-direction: row-reverse;"]
+      },
+      {
+        "class": "flex-col",
+        "properties": ["flex-direction: column;"]
+      },
+      {
+        "class": "flex-col-reverse",
+        "properties": ["flex-direction: col-reverse;"]
+      }
+    ]
+  },
+  {
+    "name": "flex-grow",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "flex-grow-1",
+        "properties": ["flex-grow: 1"]
+      },
+      {
+        "class": "flex-grow-0",
+        "properties": ["flex-grow: 0"]
+      }
+    ]
+  },
+  {
+    "name": "flex-shrink",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "flex-shrink-1",
+        "properties": ["flex-shrink: 1;"]
+      },
+      {
+        "class": "flex-shrink-0",
+        "properties": ["flex-shrink: 0;"]
+      }
+    ]
+  },
+  {
+    "name": "flex-wrap",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "flex-no-wrap",
+        "properties": ["flex-wrap: nowrap;"]
+      },
+      {
+        "class": "flex-wrap",
+        "properties": ["flex-wrap: wrap;"]
+      },
+      {
+        "class": "flex-wrap-reverse",
+        "properties": ["flex-wrap: wrap-reverse;"]
+      }
+    ]
+  },
+  {
+    "name": "flex",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "flex-initial",
+        "properties": ["flex: 0 1 auto;"]
+      },
+      {
+        "class": "flex-1",
+        "properties": ["flex: 1 1 0%;"]
+      },
+      {
+        "class": "flex-auto",
+        "properties": ["flex: 1 1 auto;"]
+      },
+      {
+        "class": "flex-none",
+        "properties": ["flex: none;"]
+      }
+    ]
+  },
+  {
+    "name": "order",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "order-first",
+        "properties": ["order: -9999;"]
+      },
+      {
+        "class": "order-last",
+        "properties": ["order: 9999;"]
+      },
+      {
+        "class": "order-1",
+        "properties": ["order: 1;"]
+      },
+      {
+        "class": "order-2",
+        "properties": ["order: 2;"]
+      },
+      {
+        "class": "order-3",
+        "properties": ["order: 3;"]
+      },
+      {
+        "class": "order-4",
+        "properties": ["order: 4;"]
+      },
+      {
+        "class": "order-5",
+        "properties": ["order: 5;"]
+      },
+      {
+        "class": "order-6",
+        "properties": ["order: 6;"]
+      },
+      {
+        "class": "order-7",
+        "properties": ["order: 7;"]
+      },
+      {
+        "class": "order-8",
+        "properties": ["order: 8;"]
+      },
+      {
+        "class": "order-9",
+        "properties": ["order: 9;"]
+      },
+      {
+        "class": "order-10",
+        "properties": ["order: 10;"]
+      },
+      {
+        "class": "order-11",
+        "properties": ["order: 11;"]
+      },
+      {
+        "class": "order-12",
+        "properties": ["order: 12;"]
+      }
+    ]
+  }
+]

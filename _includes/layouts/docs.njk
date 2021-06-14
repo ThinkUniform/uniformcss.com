@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/notice.njk" %}
+
+{% include "partials/nav.njk" %}
+
+<div class="md.hidden" x-data="{open: false}">
+  <nav class="mt-10 sm.mt-20 px-20 sm.px-32">
+    <div class="max-w-1280 mx-auto">
+      <div class="flex align-items-center justify-content-between h-72 mx-auto">
+        <div class="w-256 flex align-items-center">
+          <a href="/" class="inline-flex align-items-center text-xl sm.text-2xl semibold tracking-tight">
+            <img src="/assets/img/uniform-brandmark.svg" class="w-24 h-24 sm.w-28 sm.h-28 mr-12">
+            Uniform <span class="hidden sm.inline-flex align-items-center ml-12 px-6 py-2 bg-primary bg-opacity-15 color-primary color-900 uppercase font-2xs bold tracking-loose radius-sm">0.9.0</span>
+          </a>
+        </div>
+
+
+        <button @click.prevent="open = !open" class="relative inline-flex align-items-center h-36 px-14 bg-primary bg-opacity-10 bg-800 hover.bg-opacity-15 transition-100 radius-md semibold text-sm color-primary color-900">
+          Menu
+        </button>
+        
+      </div>
+    </div>
+  </nav>
+  <div class="fixed top-0 right-0 w-100p h-100vh bg-black bg-opacity-20 z-1"
+    x-cloak
+    @click.prevent="open = !open"
+    x-show.transition.opacity.duration.300="open === true">
+  </div>
+
+  <div class="fixed top-0 right-0 w-288 h-100vh p-24 overflow-auto bg-white z-1"
+    x-cloak
+    x-show="open === true"
+    x-transition:enter="transition-300"
+    x-transition:enter-start="transform translate-x-288"
+    x-transition:enter-end="transform"
+    x-transition:leave="transition-300"
+    x-transition:leave-start="transform translate-x-0"
+    x-transition:leave-end="transform translate-x-288">
+    {% include "partials/sidebar-docs.njk" %}
+  </div>
+  
+</div>
+
+<main class="px-10 sm.px-32">
+  <div class="max-w-1280 mx-auto">
+  
+    <div class="flex">
+      <aside class="hidden md.block w-256 flex-none">
+        <div class="top-72 sticky h-100vh overflow-auto pl-20 pr-40 pt-48 pb-192 ml-n20">
+          {% include "partials/sidebar-docs.njk" %}
+        </div>
+      </aside>
+
+      
+
+      <section class="docsearch-content overflow-auto flex-1 mt-10 sm.mt-20 md.mt-48 mb-112 bg-white shadow-card radius-2xl px-20 sm.px-72 py-64">
+        <h1 class="text-5xl lg.text-6xl extrabold color-primary color-900 tracking-tight mb-10">
+          <span class="color-primary color-400">{{ title | safe }}</span>
+        </h1>
+        <p class="text-xl tracking-tight mb-56">
+          {{ description | safe }}
+        </p>
+        <hr class="border-t-4 border-dotted border-cool-gray border-100 mb-56">
+        <article class="markdown color-black">
+          {{ content | safe }}
+        </article>
+      </section>
+
+
+
+      <div class="relative hidden lg.block w-256 pl-48 flex-none">
+        <div class="sticky flex justify-content-end top-72 h-100vh py-48 overflow-auto">
+          <div class="w-100p">
+            
+            <div class="pb-64">
+              <h6 class="text-sm semibold color-primary color-900 mb-16">
+                On this page
+              </h6>
+              {{ content | toc | safe }}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

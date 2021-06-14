@@ -1,0 +1,90 @@
+@use "uniform" as *;
+@use "sass:math";
+
+:root {
+  --crest-color: white;
+  --trough-color: #D0D9E7;
+  --ripple-duration: 2s;
+  --ripple-delay: .2s;
+  --ripple-blur: 60px;
+  --ripple-size: 512px;
+  
+  --animation-delay: 1s;
+}
+
+.ripple {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ripple-size);
+  height: var(--ripple-size);
+  z-index: -1;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &__one,
+  &__two,
+  &__three {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+  }
+  &__one {
+    animation: trough-ripple var(--ripple-duration) forwards ease-out;
+    animation-delay: calc( var(--animation-delay) + ( var(--ripple-delay) * 1 ) );
+  }
+  &__two {
+    animation: crest-ripple var(--ripple-duration) forwards ease-out;
+    animation-delay: calc( var(--animation-delay) + ( var(--ripple-delay) * 2 ) );
+  }
+  &__three {
+    animation: trough-ripple var(--ripple-duration) forwards ease-out;
+    animation-delay: calc( var(--animation-delay) + ( var(--ripple-delay) * 3 ) );
+  }
+
+  // &__node {
+  //   position: relative;
+  //   padding: size(14, 16);
+  //   background: white;
+  //   z-index: 1;
+  // }
+}
+
+
+
+@keyframes trough-ripple 
+{
+  0%  {
+    box-shadow: 0 0 var(--ripple-blur) 0px var(--trough-color);
+    opacity: 1;
+  }
+  100%  {
+    box-shadow: 0 0 var(--ripple-blur) var(--ripple-size) var(--trough-color);
+    opacity: 0;
+  }
+}
+
+@keyframes crest-ripple 
+{
+  0%  {
+    box-shadow: 0 0 var(--ripple-blur) 0px var(--crest-color);
+    opacity: 1;
+  }
+  100%  {
+    box-shadow: 0 0 var(--ripple-blur) var(--ripple-size) var(--crest-color);
+    opacity: 0;
+  }
+}
+
+/*! purgecss end ignore */

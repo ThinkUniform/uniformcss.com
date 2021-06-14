@@ -1,0 +1,202 @@
+[
+  {
+    "name": "box-sizing",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "border-box",
+        "properties": ["box-sizing: border-box;"]
+      },
+      {
+        "class": "content-box",
+        "properties": ["box-sizing: content-box;"]
+      }
+    ]
+  },
+  {
+    "name": "clear",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "clear-left",
+        "properties": ["clear: left"]
+      },
+      {
+        "class": "clear-right",
+        "properties": ["clear: right"]
+      },
+      {
+        "class": "clear-both",
+        "properties": ["clear: both"]
+      }
+    ]
+  },
+  {
+    "name": "float",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "float-left",
+        "properties": ["float: left;"]
+      },
+      {
+        "class": "float-right",
+        "properties": ["float: right;"]
+      },
+      {
+        "class": "float-none",
+        "properties": ["float: none;"]
+      }
+    ]
+  },
+  {
+    "name": "object-fit",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "object-contain",
+        "properties": ["object-fit: contain;"]
+      },
+      {
+        "class": "object-cover",
+        "properties": ["object-fit: cover;"]
+      },
+      {
+        "class": "object-fill",
+        "properties": ["object-fit: fill;"]
+      },
+      {
+        "class": "object-none",
+        "properties": ["object-fit: none;"]
+      },
+      {
+        "class": "object-size-down",
+        "properties": ["object-fit: size-down;"]
+      }
+    ]
+  },
+  {
+    "name": "object-position",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "object-bottom",
+        "properties": ["object-position: bottom;"]
+      },
+      {
+        "class": "object-center",
+        "properties": ["object-position: center;"]
+      },
+      {
+        "class": "object-left",
+        "properties": ["object-position: left;"]
+      },
+      {
+        "class": "object-left-bottom",
+        "properties": ["object-position: left-bottom;"]
+      },
+      {
+        "class": "object-left-top",
+        "properties": ["object-position: left-top;"]
+      },
+      {
+        "class": "object-right",
+        "properties": ["object-position: right;"]
+      },
+      {
+        "class": "object-right-bottom",
+        "properties": ["object-position: right-bottom;"]
+      },
+      {
+        "class": "object-right-top",
+        "properties": ["object-position: right-top;"]
+      },
+      {
+        "class": "object-top",
+        "properties": ["object-position: top;"]
+      }
+    ]
+  },
+  {
+    "name": "position",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "static",
+        "properties": ["position: static;"]
+      },
+      {
+        "class": "fixed",
+        "properties": ["position: fixed;"]
+      },
+      {
+        "class": "absolute",
+        "properties": ["position: absolute;"]
+      },
+      {
+        "class": "relative",
+        "properties": ["position: relative;"]
+      },
+      {
+        "class": "sticky",
+        "properties": ["position: sticky;"]
+      }
+    ]
+  },
+  {
+    "name": "table-layout",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "table-auto",
+        "properties": ["table-layout: auto;"]
+      },
+      {
+        "class": "table-fixed",
+        "properties": ["table-layout: fixed;"]
+      }
+    ]
+  },
+  {
+    "name": "ratio",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "ratio-square",
+        "properties": ["display"]
+      }
+    ]
+  }
+]

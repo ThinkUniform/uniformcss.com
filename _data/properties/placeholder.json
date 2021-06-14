@@ -1,0 +1,315 @@
+[
+  {
+    "name": "placeholder-color",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "::placeholder",
+    "customProperties": [
+    "--placeholder-ltn: 50%",
+    "--placeholder-opacity: 1"
+    ],
+    "pseudos": ["hover", "group-hover", "focus", "dark"],
+    "utilities": [
+      {
+        "class": "placeholder-red",
+        "properties": ["color: hsla(var(--red-hue), var(--red-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-firebrick",
+        "properties": ["color: hsla(var(--firebrick-hue), var(--firebrick-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-orange",
+        "properties": ["color: hsla(var(--orange-hue), var(--orange-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-gold",
+        "properties": ["color: hsla(var(--gold-hue), var(--gold-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-yellow",
+        "properties": ["color: hsla(var(--yellow-hue), var(--yellow-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-lime",
+        "properties": ["color: hsla(var(--lime-hue), var(--lime-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-green",
+        "properties": ["color: hsla(var(--green-hue), var(--green-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-cyan",
+        "properties": ["color: hsla(var(--cyan-hue), var(--cyan-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-blue",
+        "properties": ["color: hsla(var(--blue-hue), var(--blue-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-purple",
+        "properties": ["color: hsla(var(--purple-hue), var(--purple-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-violet",
+        "properties": ["color: hsla(var(--violet-hue), var(--violet-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-pink",
+        "properties": ["color: hsla(var(--pink-hue), var(--pink-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-white",
+        "properties": ["color: hsla(var(--white-hue), var(--white-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-black",
+        "properties": ["color: hsla(var(--black-hue), var(--black-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-cool-gray",
+        "properties": ["color: hsla(var(--cool-gray-hue), var(--cool-gray-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-gray",
+        "properties": ["color: hsla(var(--gray-hue), var(--gray-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-warm-gray",
+        "properties": ["color: hsla(var(--warm-gray-hue), var(--warm-gray-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-primary",
+        "properties": ["color: hsla(var(--primary-hue), var(--primary-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-secondary",
+        "properties": ["color: hsla(var(--secondary-hue), var(--secondary-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-tertiary",
+        "properties": ["color: hsla(var(--tertiary-hue), var(--tertiary-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-success",
+        "properties": ["color: hsla(var(--success-hue), var(--success-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-warning",
+        "properties": ["color: hsla(var(--warning-hue), var(--warning-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-danger",
+        "properties": ["color: hsla(var(--danger-hue), var(--danger-sat), var(--placeholder-ltn), var(--placeholder-opacity));"]
+      },
+      {
+        "class": "placeholder-transparent",
+        "properties": ["color: transparent;"]
+      },
+      {
+        "class": "placeholder-current",
+        "properties": ["color: current;"]
+      }
+    ]
+  },
+  {
+    "name": "placeholder-opacity",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "::placeholder",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover", "focus", "dark"],
+    "utilities": [
+      {
+        "class": "placeholder-opacity-0",
+        "properties": ["--placeholder-opacity: 0;"]
+      },
+      {
+        "class": "placeholder-opacity-2",
+        "properties": ["--placeholder-opacity: 0.02;"]
+      },
+      {
+        "class": "placeholder-opacity-4",
+        "properties": ["--placeholder-opacity: 0.04;"]
+      },
+      {
+        "class": "placeholder-opacity-6",
+        "properties": ["--placeholder-opacity: 0.06;"]
+      },
+      {
+        "class": "placeholder-opacity-8",
+        "properties": ["--placeholder-opacity: 0.08;"]
+      },
+      {
+        "class": "placeholder-opacity-10",
+        "properties": ["--placeholder-opacity: 0.1;"]
+      },
+      {
+        "class": "placeholder-opacity-15",
+        "properties": ["--placeholder-opacity: 0.15;"]
+      },
+      {
+        "class": "placeholder-opacity-20",
+        "properties": ["--placeholder-opacity: 0.2;"]
+      },
+      {
+        "class": "placeholder-opacity-25",
+        "properties": ["--placeholder-opacity: 0.25;"]
+      },
+      {
+        "class": "placeholder-opacity-30",
+        "properties": ["--placeholder-opacity: 0.3;"]
+      },
+      {
+        "class": "placeholder-opacity-35",
+        "properties": ["--placeholder-opacity: 0.35;"]
+      },
+      {
+        "class": "placeholder-opacity-40",
+        "properties": ["--placeholder-opacity: 0.4;"]
+      },
+      {
+        "class": "placeholder-opacity-45",
+        "properties": ["--placeholder-opacity: 0.45;"]
+      },
+      {
+        "class": "placeholder-opacity-50",
+        "properties": ["--placeholder-opacity: 0.5;"]
+      },
+      {
+        "class": "placeholder-opacity-55",
+        "properties": ["--placeholder-opacity: 0.55;"]
+      },
+      {
+        "class": "placeholder-opacity-60",
+        "properties": ["--placeholder-opacity: 0.6;"]
+      },
+      {
+        "class": "placeholder-opacity-65",
+        "properties": ["--placeholder-opacity: 0.65;"]
+      },
+      {
+        "class": "placeholder-opacity-70",
+        "properties": ["--placeholder-opacity: 0.7;"]
+      },
+      {
+        "class": "placeholder-opacity-75",
+        "properties": ["--placeholder-opacity: 0.75;"]
+      },
+      {
+        "class": "placeholder-opacity-80",
+        "properties": ["--placeholder-opacity: 0.8;"]
+      },
+      {
+        "class": "placeholder-opacity-85",
+        "properties": ["--placeholder-opacity: 0.85;"]
+      },
+      {
+        "class": "placeholder-opacity-90",
+        "properties": ["--placeholder-opacity: 0.9;"]
+      },
+      {
+        "class": "placeholder-opacity-95",
+        "properties": ["--placeholder-opacity: 0.95;"]
+      },
+      {
+        "class": "placeholder-opacity-100",
+        "properties": ["--placeholder-opacity: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "placeholder-lightness",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "::placeholder",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover", "focus", "dark"],
+    "utilities": [
+      {
+        "class": "placeholder-white",
+        "properties": ["--placeholder-ltn: var(--ltn-white);"]
+      },
+      {
+        "class": "placeholder-50",
+        "properties": ["--placeholder-ltn: var(--ltn-50);"]
+      },
+      {
+        "class": "placeholder-100",
+        "properties": ["--placeholder-ltn: var(--ltn-100);"]
+      },
+      {
+        "class": "placeholder-150",
+        "properties": ["--placeholder-ltn: var(--ltn-150);"]
+      },
+      {
+        "class": "placeholder-200",
+        "properties": ["--placeholder-ltn: var(--ltn-200);"]
+      },
+      {
+        "class": "placeholder-250",
+        "properties": ["--placeholder-ltn: var(--ltn-250);"]
+      },
+      {
+        "class": "placeholder-300",
+        "properties": ["--placeholder-ltn: var(--ltn-300);"]
+      },
+      {
+        "class": "placeholder-350",
+        "properties": ["--placeholder-ltn: var(--ltn-350);"]
+      },
+      {
+        "class": "placeholder-400",
+        "properties": ["--placeholder-ltn: var(--ltn-400);"]
+      },
+      {
+        "class": "placeholder-450",
+        "properties": ["--placeholder-ltn: var(--ltn-450);"]
+      },
+      {
+        "class": "placeholder-500",
+        "properties": ["--placeholder-ltn: var(--ltn-500);"]
+      },
+      {
+        "class": "placeholder-550",
+        "properties": ["--placeholder-ltn: var(--ltn-550);"]
+      },
+      {
+        "class": "placeholder-600",
+        "properties": ["--placeholder-ltn: var(--ltn-600);"]
+      },
+      {
+        "class": "placeholder-650",
+        "properties": ["--placeholder-ltn: var(--ltn-650);"]
+      },
+      {
+        "class": "placeholder-700",
+        "properties": ["--placeholder-ltn: var(--ltn-700);"]
+      },
+      {
+        "class": "placeholder-750",
+        "properties": ["--placeholder-ltn: var(--ltn-750);"]
+      },
+      {
+        "class": "placeholder-800",
+        "properties": ["--placeholder-ltn: var(--ltn-800);"]
+      },
+      {
+        "class": "placeholder-850",
+        "properties": ["--placeholder-ltn: var(--ltn-850);"]
+      },
+      {
+        "class": "placeholder-900",
+        "properties": ["--placeholder-ltn: var(--ltn-900);"]
+      },
+      {
+        "class": "placeholder-950",
+        "properties": ["--placeholder-ltn: var(--ltn-950);"]
+      },
+      {
+        "class": "placeholder-black",
+        "properties": ["--placeholder-ltn: var(--ltn-black);"]
+      }
+    ]
+  }
+]

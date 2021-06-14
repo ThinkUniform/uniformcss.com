@@ -1,0 +1,28 @@
+{
+  "name": "uniformcss",
+  "version": "0.9.0",
+  "description": "Fully customizable utility-first CSS framework built in Sass. Say good-bye to CSS bloat and start building future-proof sites today.",
+  "main": "styles.sass",
+  "scripts": {
+    "uniform:compile": "sass --load-path=./ --no-source-map styles.scss ../assets/css/styles.css",
+    "uniform:watch": "sass --load-path=./ --no-source-map --watch styles.scss ../assets/css/styles.css",
+    "uniform": "sass --load-path=./ --no-source-map styles.scss ../assets/css/styles.css --style compressed"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "flexbox",
+    "framework",
+    "responsive",
+    "utility first"
+  ],
+  "author": {
+    "name": "Jin Su Park",
+    "email": "jinsupark@icloud.com",
+    "url": "https://jinsupark.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

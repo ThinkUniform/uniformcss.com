@@ -1,0 +1,428 @@
+[
+  {
+    "name": "backdrop-filter",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [
+      "--backdrop-blur: 0", 
+      "--backdrop-grayscale: 0", 
+      "--backdrop-saturate: 1",
+      "--backdrop-invert: 0"
+    ],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "backdrop",
+        "properties": ["blur(var(--backdrop-blur)) grayscale(var(--backdrop-grayscale)) saturate(var(--backdrop-saturate)) invert(var(--backdrop-invert));"]
+      }
+    ]
+  },
+  {
+    "name": "box-shadow",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "focus"],
+    "utilities": [
+      {
+        "class": "shadow-none",
+        "properties": ["box-shadow: 0;"]
+      },
+      {
+        "class": "shadow-2xs",
+        "properties": ["box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);"]
+      },
+      {
+        "class": "shadow-xs",
+        "properties": ["box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.2);"]
+      },
+      {
+        "class": "shadow-sm",
+        "properties": ["box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);"]
+      },
+      {
+        "class": "shadow-md",
+        "properties": ["box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);"]
+      },
+      {
+        "class": "shadow-lg",
+        "properties": ["box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2);"]
+      },
+      {
+        "class": "shadow-xl",
+        "properties": ["box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 15px 10px rgba(0, 0, 0, 0.2);"]
+      },
+      {
+        "class": "shadow-2xl",
+        "properties": ["box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.3);"]
+      },
+      {
+        "class": "shadow-focus",
+        "properties": ["box-shadow: 0 0 0 4px hsla(220, 75%, 50%, 20%);"]
+      },
+      {
+        "class": "shadow-success",
+        "properties": ["box-shadow: 0 0 0 4px hsla(80, 75%, 50%, 20%);"]
+      },
+      {
+        "class": "shadow-warning",
+        "properties": ["box-shadow: 0 0 0 4px hsla(40, 75%, 50%, 20%);"]
+      },
+      {
+        "class": "shadow-danger",
+        "properties": ["box-shadow: 0 0 0 4px hsla(0, 75%, 50%, 20%);"]
+      }
+    ]
+  },
+  {
+    "name": "filter",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [
+      "--filter-blur: 0",
+      "--filter-grayscale: 0",
+      "--filter-saturate: 1",
+      "--filter-invert: 0,"
+    ],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "filter",
+        "properties": ["filter: blur(var(--filter-blur)) grayscale(var(--filter-grayscale)) saturate(var(--filter-saturate)) invert(var(--filter-invert));"]
+      }
+    ]
+  },
+  {
+    "name": "mix-blend-mode",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "blend-normal",
+        "properties": ["mix-blend-mode: normal;"]
+      },
+      {
+        "class": "blend-multiply;",
+        "properties": ["mix-blend-mode: multiply;"]
+      },
+      {
+        "class": "blend-screen;",
+        "properties": ["mix-blend-mode: screen;"]
+      },
+      {
+        "class": "blend-overlay;",
+        "properties": ["mix-blend-mode: overlay;"]
+      },
+      {
+        "class": "blend-darken;",
+        "properties": ["mix-blend-mode: darken;"]
+      },
+      {
+        "class": "blend-lighten;",
+        "properties": ["mix-blend-mode: lighten;"]
+      },
+      {
+        "class": "blend-color-dodge;",
+        "properties": ["mix-blend-mode: color-dodge;"]
+      },
+      {
+        "class": "blend-color-burn;",
+        "properties": ["mix-blend-mode: color-burn;"]
+      },
+      {
+        "class": "blend-hard-light;",
+        "properties": ["mix-blend-mode: hard-light;"]
+      },
+      {
+        "class": "blend-soft-light;",
+        "properties": ["mix-blend-mode: soft-light;"]
+      },
+      {
+        "class": "blend-difference;",
+        "properties": ["mix-blend-mode: difference;"]
+      },
+      {
+        "class": "blend-exclusion;",
+        "properties": ["mix-blend-mode: exclusion;"]
+      },
+      {
+        "class": "blend-hue;",
+        "properties": ["mix-blend-mode: hue;"]
+      },
+      {
+        "class": "blend-saturation;",
+        "properties": ["mix-blend-mode: saturation;"]
+      },
+      {
+        "class": "blend-color;",
+        "properties": ["mix-blend-mode: color;"]
+      },
+      {
+        "class": "blend-luminosity;",
+        "properties": ["mix-blend-mode: luminosity;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-blur",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "backdrop-blur-2xs",
+        "properties": ["--backdrop-blur: 4px;"]
+      },
+      {
+        "class": "backdrop-blur-xs",
+        "properties": ["--backdrop-blur: 8px;"]
+      },
+      {
+        "class": "backdrop-blur-sm",
+        "properties": ["--backdrop-blur: 12px;"]
+      },
+      {
+        "class": "backdrop-blur-md",
+        "properties": ["--backdrop-blur: 16px;"]
+      },
+      {
+        "class": "backdrop-blur-lg",
+        "properties": ["--backdrop-blur: 24px;"]
+      },
+      {
+        "class": "backdrop-blur-xl",
+        "properties": ["--backdrop-blur: 32px;"]
+      },
+      {
+        "class": "backdrop-blur-2xl",
+        "properties": ["--backdrop-blur: 48px;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-grayscale",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "backdrop-grayscale-0",
+        "properties": ["--backdrop-grayscale: 0;"]
+      },
+      {
+        "class": "backdrop-grayscale",
+        "properties": ["backdrop-grayscale: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-invert",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "backdrop-invert-0",
+        "properties": ["--backdrop-invert: 0;"]
+      },
+      {
+        "class": "backdrop-invert",
+        "properties": ["--backdrop-invert: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-saturate",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "backdrop-saturate-100",
+        "properties": ["--backdrop-saturate: 1;"]
+      },
+      {
+        "class": "backdrop-saturate-110",
+        "properties": ["--backdrop-saturate: 1.1;"]
+      },
+      {
+        "class": "backdrop-saturate-120",
+        "properties": ["--backdrop-saturate: 1.2;"]
+      },
+      {
+        "class": "backdrop-saturate-130",
+        "properties": ["--backdrop-saturate: 1.3;"]
+      },
+      {
+        "class": "backdrop-saturate-140",
+        "properties": ["--backdrop-saturate: 1.4;"]
+      },
+      {
+        "class": "backdrop-saturate-150",
+        "properties": ["--backdrop-saturate: 1.5;"]
+      },
+      {
+        "class": "backdrop-saturate-160",
+        "properties": ["--backdrop-saturate: 1.6;"]
+      },
+      {
+        "class": "backdrop-saturate-170",
+        "properties": ["--backdrop-saturate: 1.7;"]
+      },
+      {
+        "class": "backdrop-saturate-180",
+        "properties": ["--backdrop-saturate: 1.8;"]
+      },
+      {
+        "class": "backdrop-saturate-190",
+        "properties": ["--backdrop-saturate: 1.9;"]
+      },
+      {
+        "class": "backdrop-saturate-200",
+        "properties": ["--backdrop-saturate: 2;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-blur",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "filter-blur-2xs",
+        "properties": ["--filter-blur: 4px;"]
+      },
+      {
+        "class": "filter-blur-xs",
+        "properties": ["--filter-blur: 8px;"]
+      },
+      {
+        "class": "filter-blur-sm",
+        "properties": ["--filter-blur: 12px;"]
+      },
+      {
+        "class": "filter-blur-md",
+        "properties": ["--filter-blur: 16px;"]
+      },
+      {
+        "class": "filter-blur-lg",
+        "properties": ["--filter-blur: 24px;"]
+      },
+      {
+        "class": "filter-blur-xl",
+        "properties": ["--filter-blur: 32px;"]
+      },
+      {
+        "class": "filter-blur-2xl",
+        "properties": ["--filter-blur: 48px;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-grayscale",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "filter-grayscale-0",
+        "properties": ["--filter-grayscale: 0;"]
+      },
+      {
+        "class": "filter-grayscale",
+        "properties": ["--filter-grayscale: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-invert",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "filter-invert-0",
+        "properties": ["--filter-invert: 0;"]
+      },
+      {
+        "class": "filter-invert",
+        "properties": ["--filter-invert: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-saturate",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "group-hover"],
+    "utilities": [
+      {
+        "class": "filter-saturate-100",
+        "properties": ["--filter-saturate: 1;"]
+      },
+      {
+        "class": "filter-saturate-110",
+        "properties": ["--filter-saturate: 1.1;"]
+      },
+      {
+        "class": "filter-saturate-120",
+        "properties": ["--filter-saturate: 1.2;"]
+      },
+      {
+        "class": "filter-saturate-130",
+        "properties": ["--filter-saturate: 1.3;"]
+      },
+      {
+        "class": "filter-saturate-140",
+        "properties": ["--filter-saturate: 1.4;"]
+      },
+      {
+        "class": "filter-saturate-150",
+        "properties": ["--filter-saturate: 1.5;"]
+      },
+      {
+        "class": "filter-saturate-160",
+        "properties": ["--filter-saturate: 1.6;"]
+      },
+      {
+        "class": "filter-saturate-170",
+        "properties": ["--filter-saturate: 1.7;"]
+      },
+      {
+        "class": "filter-saturate-180",
+        "properties": ["--filter-saturate: 1.8;"]
+      },
+      {
+        "class": "filter-saturate-190",
+        "properties": ["--filter-saturate: 1.9;"]
+      },
+      {
+        "class": "filter-saturate-200",
+        "properties": ["--filter-saturate: 2;"]
+      }
+    ]
+  }
+]

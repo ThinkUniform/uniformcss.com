@@ -1,0 +1,60 @@
+<div class="mb-48 last.mb-0">
+  {% include "partials/links.njk" %}
+</div>
+
+<hr class="border-t-4 border-dotted border-cool-gray border-100 mb-48">
+
+<div class="mb-48 last.mb-0">
+  <h6 class="text-sm semibold color-primary color-900 mb-16">
+    Introduction
+  </h6>
+  <nav class="flex flex-col align-items-start">
+    {%- for post in collections.introduction -%}
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-primary bg-100 bg-opacity-30 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-700 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+    {%- endfor -%}
+  </nav>
+</div>
+
+<div class="mb-48 last.mb-0">
+  <h6 class="text-sm semibold color-primary color-900 mb-16">
+    Fundamentals
+  </h6>
+  <nav class="flex flex-col align-items-start">
+    {%- for post in collections.fundamentals -%}
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-primary bg-100 bg-opacity-30 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-700 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+    {%- endfor -%}
+  </nav>
+</div>
+
+<div class="mb-48 last.mb-0">
+  <h6 class="text-sm semibold color-primary color-900 mb-16">
+    Customization
+  </h6>
+  <nav class="flex flex-col align-items-start">
+    {%- for post in collections.customization -%}
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-primary bg-100 bg-opacity-30 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-700 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+    {%- endfor -%}
+  </nav>
+</div>
+
+<div class="mb-48 last.mb-0">
+  <h6 class="text-sm semibold color-primary color-900 mb-16">
+    Theming
+  </h6>
+  <nav class="flex flex-col align-items-start">
+    {%- for post in collections.theming -%}
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-primary bg-100 bg-opacity-30 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-700 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+    {%- endfor -%}
+  </nav>
+</div>
+
+<div class="mb-48 last.mb-0">
+  <h6 class="text-sm semibold color-primary color-900 mb-16">
+    Special Utilities
+  </h6>
+  <nav class="flex flex-col align-items-start">
+    {%- for post in collections.specialUtilities -%}
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-primary bg-100 bg-opacity-30 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-700 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+    {%- endfor -%}
+  </nav>
+</div>

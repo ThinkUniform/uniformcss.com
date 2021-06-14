@@ -1,0 +1,32 @@
+[
+  {
+    "name": "animation",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "animate-none",
+        "properties": ["animation: none;"]
+      },
+      {
+        "class": "animate-spin",
+        "properties": ["animation: spin 1s linear infinite;"]
+      },
+      {
+        "class": "animate-pulse",
+        "properties": ["animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;"]
+      },
+      {
+        "class": "animate-ping",
+        "properties": ["animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;"]
+      },
+      {
+        "class": "animate-bounce",
+        "properties": ["animation: bounce 1s infinite;"]
+      }
+    ]
+  }
+]

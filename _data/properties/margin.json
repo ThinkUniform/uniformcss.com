@@ -1,0 +1,1518 @@
+[
+  {
+    "name": "margin-left",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "ml-0",
+        "properties": ["margin-left: 0;"]
+      },
+      {
+        "class": "ml-1",
+        "properties": ["margin-left: 0.0625rem;"]
+      },
+      {
+        "class": "ml-2",
+        "properties": ["margin-left: 0.125rem;"]
+      },
+      {
+        "class": "ml-4",
+        "properties": ["margin-left: 0.25rem;"]
+      },
+      {
+        "class": "ml-6",
+        "properties": ["margin-left: 0.375rem;"]
+      },
+      {
+        "class": "ml-8",
+        "properties": ["margin-left: 0.5rem;"]
+      },
+      {
+        "class": "ml-10",
+        "properties": ["margin-left: 0.625rem;"]
+      },
+      {
+        "class": "ml-12",
+        "properties": ["margin-left: 0.75rem;"]
+      },
+      {
+        "class": "ml-14",
+        "properties": ["margin-left: 0.875rem;"]
+      },
+      {
+        "class": "ml-16",
+        "properties": ["margin-left: 1rem;"]
+      },
+      {
+        "class": "ml-20",
+        "properties": ["margin-left: 1.25rem;"]
+      },
+      {
+        "class": "ml-24",
+        "properties": ["margin-left: 1.5rem;"]
+      },
+      {
+        "class": "ml-28",
+        "properties": ["margin-left: 1.75rem;"]
+      },
+      {
+        "class": "ml-32",
+        "properties": ["margin-left: 2rem;"]
+      },
+      {
+        "class": "ml-36",
+        "properties": ["margin-left: 2.25rem;"]
+      },
+      {
+        "class": "ml-40",
+        "properties": ["margin-left: 2.5rem;"]
+      },
+      {
+        "class": "ml-48",
+        "properties": ["margin-left: 3rem;"]
+      },
+      {
+        "class": "ml-56",
+        "properties": ["margin-left: 3.5rem;"]
+      },
+      {
+        "class": "ml-64",
+        "properties": ["margin-left: 4rem;"]
+      },
+      {
+        "class": "ml-72",
+        "properties": ["margin-left: 4.5rem;"]
+      },
+      {
+        "class": "ml-80",
+        "properties": ["margin-left: 5rem;"]
+      },
+      {
+        "class": "ml-96",
+        "properties": ["margin-left: 6rem;"]
+      },
+      {
+        "class": "ml-112",
+        "properties": ["margin-left: 7rem;"]
+      },
+      {
+        "class": "ml-128",
+        "properties": ["margin-left: 8rem;"]
+      },
+      {
+        "class": "ml-144",
+        "properties": ["margin-left: 9rem;"]
+      },
+      {
+        "class": "ml-160",
+        "properties": ["margin-left: 10rem;"]
+      },
+      {
+        "class": "ml-192",
+        "properties": ["margin-left: 12rem;"]
+      },
+      {
+        "class": "ml-224",
+        "properties": ["margin-left: 14rem;"]
+      },
+      {
+        "class": "ml-256",
+        "properties": ["margin-left: 16rem;"]
+      },
+      {
+        "class": "ml-288",
+        "properties": ["margin-left: 18rem;"]
+      },
+      {
+        "class": "ml-320",
+        "properties": ["margin-left: 20rem;"]
+      },
+      {
+        "class": "ml-384",
+        "properties": ["margin-left: 24rem;"]
+      },
+      {
+        "class": "ml-n1",
+        "properties": ["margin-left: -0.0625rem;"]
+      },
+      {
+        "class": "ml-n2",
+        "properties": ["margin-left: -0.125rem;"]
+      },
+      {
+        "class": "ml-n4",
+        "properties": ["margin-left: -0.25rem;"]
+      },
+      {
+        "class": "ml-n6",
+        "properties": ["margin-left: -0.375rem;"]
+      },
+      {
+        "class": "ml-n8",
+        "properties": ["margin-left: -0.5rem;"]
+      },
+      {
+        "class": "ml-n10",
+        "properties": ["margin-left: -0.625rem;"]
+      },
+      {
+        "class": "ml-n12",
+        "properties": ["margin-left: -0.75rem;"]
+      },
+      {
+        "class": "ml-n14",
+        "properties": ["margin-left: -0.875rem;"]
+      },
+      {
+        "class": "ml-n16",
+        "properties": ["margin-left: -1rem;"]
+      },
+      {
+        "class": "ml-n20",
+        "properties": ["margin-left: -1.25rem;"]
+      },
+      {
+        "class": "ml-n24",
+        "properties": ["margin-left: -1.5rem;"]
+      },
+      {
+        "class": "ml-n28",
+        "properties": ["margin-left: -1.75rem;"]
+      },
+      {
+        "class": "ml-n32",
+        "properties": ["margin-left: -2rem;"]
+      },
+      {
+        "class": "ml-n36",
+        "properties": ["margin-left: -2.25rem;"]
+      },
+      {
+        "class": "ml-n40",
+        "properties": ["margin-left: -2.5rem;"]
+      },
+      {
+        "class": "ml-n48",
+        "properties": ["margin-left: -3rem;"]
+      },
+      {
+        "class": "ml-n56",
+        "properties": ["margin-left: -3.5rem;"]
+      },
+      {
+        "class": "ml-n64",
+        "properties": ["margin-left: -4rem;"]
+      },
+      {
+        "class": "ml-n72",
+        "properties": ["margin-left: -4.5rem;"]
+      },
+      {
+        "class": "ml-n80",
+        "properties": ["margin-left: -5rem;"]
+      },
+      {
+        "class": "ml-n96",
+        "properties": ["margin-left: -6rem;"]
+      },
+      {
+        "class": "ml-n112",
+        "properties": ["margin-left: -7rem;"]
+      },
+      {
+        "class": "ml-n128",
+        "properties": ["margin-left: -8rem;"]
+      },
+      {
+        "class": "ml-n144",
+        "properties": ["margin-left: -9rem;"]
+      },
+      {
+        "class": "ml-n160",
+        "properties": ["margin-left: -10rem;"]
+      },
+      {
+        "class": "ml-n192",
+        "properties": ["margin-left: -12rem;"]
+      },
+      {
+        "class": "ml-n224",
+        "properties": ["margin-left: -14rem;"]
+      },
+      {
+        "class": "ml-n256",
+        "properties": ["margin-left: -16rem;"]
+      },
+      {
+        "class": "ml-n288",
+        "properties": ["margin-left: -18rem;"]
+      },
+      {
+        "class": "ml-n320",
+        "properties": ["margin-left: -20rem;"]
+      },
+      {
+        "class": "ml-n384",
+        "properties": ["margin-left: -24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "margin-right",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "mr-0",
+        "properties": ["margin-right: 0;"]
+      },
+      {
+        "class": "mr-1",
+        "properties": ["margin-right: 0.0625rem;"]
+      },
+      {
+        "class": "mr-2",
+        "properties": ["margin-right: 0.125rem;"]
+      },
+      {
+        "class": "mr-4",
+        "properties": ["margin-right: 0.25rem;"]
+      },
+      {
+        "class": "mr-6",
+        "properties": ["margin-right: 0.375rem;"]
+      },
+      {
+        "class": "mr-8",
+        "properties": ["margin-right: 0.5rem;"]
+      },
+      {
+        "class": "mr-10",
+        "properties": ["margin-right: 0.625rem;"]
+      },
+      {
+        "class": "mr-12",
+        "properties": ["margin-right: 0.75rem;"]
+      },
+      {
+        "class": "mr-14",
+        "properties": ["margin-right: 0.875rem;"]
+      },
+      {
+        "class": "mr-16",
+        "properties": ["margin-right: 1rem;"]
+      },
+      {
+        "class": "mr-20",
+        "properties": ["margin-right: 1.25rem;"]
+      },
+      {
+        "class": "mr-24",
+        "properties": ["margin-right: 1.5rem;"]
+      },
+      {
+        "class": "mr-28",
+        "properties": ["margin-right: 1.75rem;"]
+      },
+      {
+        "class": "mr-32",
+        "properties": ["margin-right: 2rem;"]
+      },
+      {
+        "class": "mr-36",
+        "properties": ["margin-right: 2.25rem;"]
+      },
+      {
+        "class": "mr-40",
+        "properties": ["margin-right: 2.5rem;"]
+      },
+      {
+        "class": "mr-48",
+        "properties": ["margin-right: 3rem;"]
+      },
+      {
+        "class": "mr-56",
+        "properties": ["margin-right: 3.5rem;"]
+      },
+      {
+        "class": "mr-64",
+        "properties": ["margin-right: 4rem;"]
+      },
+      {
+        "class": "mr-72",
+        "properties": ["margin-right: 4.5rem;"]
+      },
+      {
+        "class": "mr-80",
+        "properties": ["margin-right: 5rem;"]
+      },
+      {
+        "class": "mr-96",
+        "properties": ["margin-right: 6rem;"]
+      },
+      {
+        "class": "mr-112",
+        "properties": ["margin-right: 7rem;"]
+      },
+      {
+        "class": "mr-128",
+        "properties": ["margin-right: 8rem;"]
+      },
+      {
+        "class": "mr-144",
+        "properties": ["margin-right: 9rem;"]
+      },
+      {
+        "class": "mr-160",
+        "properties": ["margin-right: 10rem;"]
+      },
+      {
+        "class": "mr-192",
+        "properties": ["margin-right: 12rem;"]
+      },
+      {
+        "class": "mr-224",
+        "properties": ["margin-right: 14rem;"]
+      },
+      {
+        "class": "mr-256",
+        "properties": ["margin-right: 16rem;"]
+      },
+      {
+        "class": "mr-288",
+        "properties": ["margin-right: 18rem;"]
+      },
+      {
+        "class": "mr-320",
+        "properties": ["margin-right: 20rem;"]
+      },
+      {
+        "class": "mr-384",
+        "properties": ["margin-right: 24rem;"]
+      },
+      {
+        "class": "mr-n1",
+        "properties": ["margin-right: -0.0625rem;"]
+      },
+      {
+        "class": "mr-n2",
+        "properties": ["margin-right: -0.125rem;"]
+      },
+      {
+        "class": "mr-n4",
+        "properties": ["margin-right: -0.25rem;"]
+      },
+      {
+        "class": "mr-n6",
+        "properties": ["margin-right: -0.5rem;"]
+      },
+      {
+        "class": "mr-n8",
+        "properties": ["margin-right: -0.5rem;"]
+      },
+      {
+        "class": "mr-n10",
+        "properties": ["margin-right: -0.625rem;"]
+      },
+      {
+        "class": "mr-n12",
+        "properties": ["margin-right: -0.75rem;"]
+      },
+      {
+        "class": "mr-n14",
+        "properties": ["margin-right: -0.875rem;"]
+      },
+      {
+        "class": "mr-n16",
+        "properties": ["margin-right: -1rem;"]
+      },
+      {
+        "class": "mr-n20",
+        "properties": ["margin-right: -1.25rem;"]
+      },
+      {
+        "class": "mr-n24",
+        "properties": ["margin-right: -1.5rem;"]
+      },
+      {
+        "class": "mr-n28",
+        "properties": ["margin-right: -1.75rem;"]
+      },
+      {
+        "class": "mr-n32",
+        "properties": ["margin-right: -2rem;"]
+      },
+      {
+        "class": "mr-n36",
+        "properties": ["margin-right: -2.25rem;"]
+      },
+      {
+        "class": "mr-n40",
+        "properties": ["margin-right: -2.5rem;"]
+      },
+      {
+        "class": "mr-n48",
+        "properties": ["margin-right: -3rem;"]
+      },
+      {
+        "class": "mr-n56",
+        "properties": ["margin-right: -3.5rem;"]
+      },
+      {
+        "class": "mr-n64",
+        "properties": ["margin-right: -4rem;"]
+      },
+      {
+        "class": "mr-n72",
+        "properties": ["margin-right: -4.5rem;"]
+      },
+      {
+        "class": "mr-n80",
+        "properties": ["margin-right: -5rem;"]
+      },
+      {
+        "class": "mr-n96",
+        "properties": ["margin-right: -6rem;"]
+      },
+      {
+        "class": "mr-n112",
+        "properties": ["margin-right: -7rem;"]
+      },
+      {
+        "class": "mr-n128",
+        "properties": ["margin-right: -8rem;"]
+      },
+      {
+        "class": "mr-n144",
+        "properties": ["margin-right: -9rem;"]
+      },
+      {
+        "class": "mr-n160",
+        "properties": ["margin-right: -10rem;"]
+      },
+      {
+        "class": "mr-n192",
+        "properties": ["margin-right: -12rem;"]
+      },
+      {
+        "class": "mr-n224",
+        "properties": ["margin-right: -14rem;"]
+      },
+      {
+        "class": "mr-n256",
+        "properties": ["margin-right: -16rem;"]
+      },
+      {
+        "class": "mr-n288",
+        "properties": ["margin-right: -18rem;"]
+      },
+      {
+        "class": "mr-n320",
+        "properties": ["margin-right: -20rem;"]
+      },
+      {
+        "class": "mr-n384",
+        "properties": ["margin-right: -24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "margin-top",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "mt-0",
+        "properties": ["margin-top: 0;"]
+      },
+      {
+        "class": "mt-1",
+        "properties": ["margin-top: 0.0625rem;"]
+      },
+      {
+        "class": "mt-2",
+        "properties": ["margin-top: 0.125rem;"]
+      },
+      {
+        "class": "mt-4",
+        "properties": ["margin-top: 0.25rem;"]
+      },
+      {
+        "class": "mt-6",
+        "properties": ["margin-top: 0.375rem;"]
+      },
+      {
+        "class": "mt-8",
+        "properties": ["margin-top: 0.5rem;"]
+      },
+      {
+        "class": "mt-10",
+        "properties": ["margin-top: 0.625rem;"]
+      },
+      {
+        "class": "mt-12",
+        "properties": ["margin-top: 0.75rem;"]
+      },
+      {
+        "class": "mt-14",
+        "properties": ["margin-top: 0.875rem;"]
+      },
+      {
+        "class": "mt-16",
+        "properties": ["margin-top: 1rem;"]
+      },
+      {
+        "class": "mt-20",
+        "properties": ["margin-top: 1.25rem;"]
+      },
+      {
+        "class": "mt-24",
+        "properties": ["margin-top: 1.5rem;"]
+      },
+      {
+        "class": "mt-28",
+        "properties": ["margin-top: 1.75rem;"]
+      },
+      {
+        "class": "mt-32",
+        "properties": ["margin-top: 2rem;"]
+      },
+      {
+        "class": "mt-36",
+        "properties": ["margin-top: 2.25rem;"]
+      },
+      {
+        "class": "mt-40",
+        "properties": ["margin-top: 2.5rem;"]
+      },
+      {
+        "class": "mt-48",
+        "properties": ["margin-top: 3rem;"]
+      },
+      {
+        "class": "mt-56",
+        "properties": ["margin-top: 3.5rem;"]
+      },
+      {
+        "class": "mt-64",
+        "properties": ["margin-top: 4rem;"]
+      },
+      {
+        "class": "mt-72",
+        "properties": ["margin-top: 4.5rem;"]
+      },
+      {
+        "class": "mt-80",
+        "properties": ["margin-top: 5rem;"]
+      },
+      {
+        "class": "mt-96",
+        "properties": ["margin-top: 6rem;"]
+      },
+      {
+        "class": "mt-112",
+        "properties": ["margin-top: 7rem;"]
+      },
+      {
+        "class": "mt-128",
+        "properties": ["margin-top: 8rem;"]
+      },
+      {
+        "class": "mt-144",
+        "properties": ["margin-top: 9rem;"]
+      },
+      {
+        "class": "mt-160",
+        "properties": ["margin-top: 10rem;"]
+      },
+      {
+        "class": "mt-192",
+        "properties": ["margin-top: 12rem;"]
+      },
+      {
+        "class": "mt-224",
+        "properties": ["margin-top: 14rem;"]
+      },
+      {
+        "class": "mt-256",
+        "properties": ["margin-top: 16rem;"]
+      },
+      {
+        "class": "mt-288",
+        "properties": ["margin-top: 18rem;"]
+      },
+      {
+        "class": "mt-320",
+        "properties": ["margin-top: 20rem;"]
+      },
+      {
+        "class": "mt-384",
+        "properties": ["margin-top: 24rem;"]
+      },
+      {
+        "class": "mt-n1",
+        "properties": ["margin-top: -0.0625rem;"]
+      },
+      {
+        "class": "mt-n2",
+        "properties": ["margin-top: -0.125rem;"]
+      },
+      {
+        "class": "mt-n4",
+        "properties": ["margin-top: -0.25rem;"]
+      },
+      {
+        "class": "mt-n6",
+        "properties": ["margin-top: -0.5rem;"]
+      },
+      {
+        "class": "mt-n8",
+        "properties": ["margin-top: -0.5rem;"]
+      },
+      {
+        "class": "mt-n10",
+        "properties": ["margin-top: -0.625rem;"]
+      },
+      {
+        "class": "mt-n12",
+        "properties": ["margin-top: -0.75rem;"]
+      },
+      {
+        "class": "mt-n14",
+        "properties": ["margin-top: -0.875rem;"]
+      },
+      {
+        "class": "mt-n16",
+        "properties": ["margin-top: -1rem;"]
+      },
+      {
+        "class": "mt-n20",
+        "properties": ["margin-top: -1.25rem;"]
+      },
+      {
+        "class": "mt-n24",
+        "properties": ["margin-top: -1.5rem;"]
+      },
+      {
+        "class": "mt-n28",
+        "properties": ["margin-top: -1.75rem;"]
+      },
+      {
+        "class": "mt-n32",
+        "properties": ["margin-top: -2rem;"]
+      },
+      {
+        "class": "mt-n36",
+        "properties": ["margin-top: -2.25rem;"]
+      },
+      {
+        "class": "mt-n40",
+        "properties": ["margin-top: -2.5rem;"]
+      },
+      {
+        "class": "mt-n48",
+        "properties": ["margin-top: -3rem;"]
+      },
+      {
+        "class": "mt-n56",
+        "properties": ["margin-top: -3.5rem;"]
+      },
+      {
+        "class": "mt-n64",
+        "properties": ["margin-top: -4rem;"]
+      },
+      {
+        "class": "mt-n72",
+        "properties": ["margin-top: -4.5rem;"]
+      },
+      {
+        "class": "mt-n80",
+        "properties": ["margin-top: -5rem;"]
+      },
+      {
+        "class": "mt-n96",
+        "properties": ["margin-top: -6rem;"]
+      },
+      {
+        "class": "mt-n112",
+        "properties": ["margin-top: -7rem;"]
+      },
+      {
+        "class": "mt-n128",
+        "properties": ["margin-top: -8rem;"]
+      },
+      {
+        "class": "mt-n144",
+        "properties": ["margin-top: -9rem;"]
+      },
+      {
+        "class": "mt-n160",
+        "properties": ["margin-top: -10rem;"]
+      },
+      {
+        "class": "mt-n192",
+        "properties": ["margin-top: -12rem;"]
+      },
+      {
+        "class": "mt-n224",
+        "properties": ["margin-top: -14rem;"]
+      },
+      {
+        "class": "mt-n256",
+        "properties": ["margin-top: -16rem;"]
+      },
+      {
+        "class": "mt-n288",
+        "properties": ["margin-top: -18rem;"]
+      },
+      {
+        "class": "mt-n320",
+        "properties": ["margin-top: -20rem;"]
+      },
+      {
+        "class": "mt-n384",
+        "properties": ["margin-top: -24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "margin-bottom",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "mb-0",
+        "properties": ["margin-bottom: 0;"]
+      },
+      {
+        "class": "mb-1",
+        "properties": ["margin-bottom: 0.0625rem;"]
+      },
+      {
+        "class": "mb-2",
+        "properties": ["margin-bottom: 0.125rem;"]
+      },
+      {
+        "class": "mb-4",
+        "properties": ["margin-bottom: 0.25rem;"]
+      },
+      {
+        "class": "mb-6",
+        "properties": ["margin-bottom: 0.375rem;"]
+      },
+      {
+        "class": "mb-8",
+        "properties": ["margin-bottom: 0.5rem;"]
+      },
+      {
+        "class": "mb-10",
+        "properties": ["margin-bottom: 0.625rem;"]
+      },
+      {
+        "class": "mb-12",
+        "properties": ["margin-bottom: 0.75rem;"]
+      },
+      {
+        "class": "mb-14",
+        "properties": ["margin-bottom: 0.875rem;"]
+      },
+      {
+        "class": "mb-16",
+        "properties": ["margin-bottom: 1rem;"]
+      },
+      {
+        "class": "mb-20",
+        "properties": ["margin-bottom: 1.25rem;"]
+      },
+      {
+        "class": "mb-24",
+        "properties": ["margin-bottom: 1.5rem;"]
+      },
+      {
+        "class": "mb-28",
+        "properties": ["margin-bottom: 1.75rem;"]
+      },
+      {
+        "class": "mb-32",
+        "properties": ["margin-bottom: 2rem;"]
+      },
+      {
+        "class": "mb-36",
+        "properties": ["margin-bottom: 2.25rem;"]
+      },
+      {
+        "class": "mb-40",
+        "properties": ["margin-bottom: 2.5rem;"]
+      },
+      {
+        "class": "mb-48",
+        "properties": ["margin-bottom: 3rem;"]
+      },
+      {
+        "class": "mb-56",
+        "properties": ["margin-bottom: 3.5rem;"]
+      },
+      {
+        "class": "mb-64",
+        "properties": ["margin-bottom: 4rem;"]
+      },
+      {
+        "class": "mb-72",
+        "properties": ["margin-bottom: 4.5rem;"]
+      },
+      {
+        "class": "mb-80",
+        "properties": ["margin-bottom: 5rem;"]
+      },
+      {
+        "class": "mb-96",
+        "properties": ["margin-bottom: 6rem;"]
+      },
+      {
+        "class": "mb-112",
+        "properties": ["margin-bottom: 7rem;"]
+      },
+      {
+        "class": "mb-128",
+        "properties": ["margin-bottom: 8rem;"]
+      },
+      {
+        "class": "mb-144",
+        "properties": ["margin-bottom: 9rem;"]
+      },
+      {
+        "class": "mb-160",
+        "properties": ["margin-bottom: 10rem;"]
+      },
+      {
+        "class": "mb-192",
+        "properties": ["margin-bottom: 12rem;"]
+      },
+      {
+        "class": "mb-224",
+        "properties": ["margin-bottom: 14rem;"]
+      },
+      {
+        "class": "mb-256",
+        "properties": ["margin-bottom: 16rem;"]
+      },
+      {
+        "class": "mb-288",
+        "properties": ["margin-bottom: 18rem;"]
+      },
+      {
+        "class": "mb-320",
+        "properties": ["margin-bottom: 20rem;"]
+      },
+      {
+        "class": "mb-384",
+        "properties": ["margin-bottom: 24rem;"]
+      },
+      {
+        "class": "mb-n1",
+        "properties": ["margin-bottom: -0.0625rem;"]
+      },
+      {
+        "class": "mb-n2",
+        "properties": ["margin-bottom: -0.125rem;"]
+      },
+      {
+        "class": "mb-n4",
+        "properties": ["margin-bottom: -0.25rem;"]
+      },
+      {
+        "class": "mb-n6",
+        "properties": ["margin-bottom: -0.5rem;"]
+      },
+      {
+        "class": "mb-n8",
+        "properties": ["margin-bottom: -0.5rem;"]
+      },
+      {
+        "class": "mb-n10",
+        "properties": ["margin-bottom: -0.625rem;"]
+      },
+      {
+        "class": "mb-n12",
+        "properties": ["margin-bottom: -0.75rem;"]
+      },
+      {
+        "class": "mb-n14",
+        "properties": ["margin-bottom: -0.875rem;"]
+      },
+      {
+        "class": "mb-n16",
+        "properties": ["margin-bottom: -1rem;"]
+      },
+      {
+        "class": "mb-n20",
+        "properties": ["margin-bottom: -1.25rem;"]
+      },
+      {
+        "class": "mb-n24",
+        "properties": ["margin-bottom: -1.5rem;"]
+      },
+      {
+        "class": "mb-n28",
+        "properties": ["margin-bottom: -1.75rem;"]
+      },
+      {
+        "class": "mb-n32",
+        "properties": ["margin-bottom: -2rem;"]
+      },
+      {
+        "class": "mb-n36",
+        "properties": ["margin-bottom: -2.25rem;"]
+      },
+      {
+        "class": "mb-n40",
+        "properties": ["margin-bottom: -2.5rem;"]
+      },
+      {
+        "class": "mb-n48",
+        "properties": ["margin-bottom: -3rem;"]
+      },
+      {
+        "class": "mb-n56",
+        "properties": ["margin-bottom: -3.5rem;"]
+      },
+      {
+        "class": "mb-n64",
+        "properties": ["margin-bottom: -4rem;"]
+      },
+      {
+        "class": "mb-n72",
+        "properties": ["margin-bottom: -4.5rem;"]
+      },
+      {
+        "class": "mb-n80",
+        "properties": ["margin-bottom: -5rem;"]
+      },
+      {
+        "class": "mb-n96",
+        "properties": ["margin-bottom: -6rem;"]
+      },
+      {
+        "class": "mb-n112",
+        "properties": ["margin-bottom: -7rem;"]
+      },
+      {
+        "class": "mb-n128",
+        "properties": ["margin-bottom: -8rem;"]
+      },
+      {
+        "class": "mb-n144",
+        "properties": ["margin-bottom: -9rem;"]
+      },
+      {
+        "class": "mb-n160",
+        "properties": ["margin-bottom: -10rem;"]
+      },
+      {
+        "class": "mb-n192",
+        "properties": ["margin-bottom: -12rem;"]
+      },
+      {
+        "class": "mb-n224",
+        "properties": ["margin-bottom: -14rem;"]
+      },
+      {
+        "class": "mb-n256",
+        "properties": ["margin-bottom: -16rem;"]
+      },
+      {
+        "class": "mb-n288",
+        "properties": ["margin-bottom: -18rem;"]
+      },
+      {
+        "class": "mb-n320",
+        "properties": ["margin-bottom: -20rem;"]
+      },
+      {
+        "class": "mb-n384",
+        "properties": ["margin-bottom: -24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "margin-x",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "mx-0",
+        "properties": [
+          "margin-left: 0;",
+          "margin-right: 0;"
+        ]
+      },
+      {
+        "class": "mx-1",
+        "properties": [
+          "margin-left: 0.0625rem;",
+          "margin-right: 0.0625rem;"
+        ]
+      },
+      {
+        "class": "mx-2",
+        "properties": [
+          "margin-left: 0.125rem;",
+          "margin-right: 0.125rem;"
+        ]
+      },
+      {
+        "class": "mx-4",
+        "properties": [
+          "margin-left: 0.25rem;",
+          "margin-right: 0.25rem;"
+        ]
+      },
+      {
+        "class": "mx-6",
+        "properties": [
+          "margin-left: 0.375rem;",
+          "margin-right: 0.375rem;"
+        ]
+      },
+      {
+        "class": "mx-8",
+        "properties": [
+          "margin-left: 0.5rem;",
+          "margin-right: 0.5rem;"
+        ]
+      },
+      {
+        "class": "mx-10",
+        "properties": [
+          "margin-left: 0.625rem;",
+          "margin-right: 0.625rem;"
+        ]
+      },
+      {
+        "class": "mx-12",
+        "properties": [
+          "margin-left: 0.75rem;",
+          "margin-right: 0.75rem;"
+        ]
+      },
+      {
+        "class": "mx-14",
+        "properties": [
+          "margin-left: 0.875rem;",
+          "margin-right: 0.875rem;"
+        ]
+      },
+      {
+        "class": "mx-16",
+        "properties": [
+          "margin-left: 1rem;",
+          "margin-right: 1rem;"
+        ]
+      },
+      {
+        "class": "mx-20",
+        "properties": [
+          "margin-left: 1.25rem;",
+          "margin-right: 1.25rem;"
+        ]
+      },
+      {
+        "class": "mx-24",
+        "properties": [
+          "margin-left: 1.5rem;",
+          "margin-right: 1.5rem;"
+        ]
+      },
+      {
+        "class": "mx-28",
+        "properties": [
+          "margin-left: 1.75rem;",
+          "margin-right: 1.75rem;"
+        ]
+      },
+      {
+        "class": "mx-32",
+        "properties": [
+          "margin-left: 2rem;",
+          "margin-right: 2rem;"
+        ]
+      },
+      {
+        "class": "mx-36",
+        "properties": [
+          "margin-left: 2.25rem;",
+          "margin-right: 2.25rem;"
+        ]
+      },
+      {
+        "class": "mx-40",
+        "properties": [
+          "margin-left: 2.5rem;",
+          "margin-right: 2.5rem;"
+        ]
+      },
+      {
+        "class": "mx-48",
+        "properties": [
+          "margin-left: 3rem;",
+          "margin-right: 3rem;"
+        ]
+      },
+      {
+        "class": "mx-56",
+        "properties": [
+          "margin-left: 3.5rem;",
+          "margin-right: 3.5rem;"
+        ]
+      },
+      {
+        "class": "mx-64",
+        "properties": [
+          "margin-left: 4rem;",
+          "margin-right: 4rem;"
+        ]
+      },
+      {
+        "class": "mx-72",
+        "properties": [
+          "margin-left: 4.5rem;",
+          "margin-right: 4.5rem;"
+        ]
+      },
+      {
+        "class": "mx-80",
+        "properties": [
+          "margin-left: 5rem;",
+          "margin-right: 5rem;"
+        ]
+      },
+      {
+        "class": "mx-96",
+        "properties": [
+          "margin-left: 6rem;",
+          "margin-right: 6rem;"
+        ]
+      },
+      {
+        "class": "mx-112",
+        "properties": [
+          "margin-left: 7rem;",
+          "margin-right: 7rem;"
+        ]
+      },
+      {
+        "class": "mx-128",
+        "properties": [
+          "margin-left: 8rem;",
+          "margin-right: 8rem;"
+        ]
+      },
+      {
+        "class": "mx-144",
+        "properties": [
+          "margin-left: 9rem;",
+          "margin-right: 9rem;"
+        ]
+      },
+      {
+        "class": "mx-160",
+        "properties": [
+          "margin-left: 10rem;",
+          "margin-right: 10rem;"
+        ]
+      },
+      {
+        "class": "mx-192",
+        "properties": [
+          "margin-left: 12rem;",
+          "margin-right: 12rem;"
+        ]
+      },
+      {
+        "class": "mx-224",
+        "properties": [
+          "margin-left: 14rem;",
+          "margin-right: 14rem;"
+        ]
+      },
+      {
+        "class": "mx-256",
+        "properties": [
+          "margin-left: 16rem;",
+          "margin-right: 16rem;"
+        ]
+      },
+      {
+        "class": "mx-288",
+        "properties": [
+          "margin-left: 18rem;",
+          "margin-right: 18rem;"
+        ]
+      },
+      {
+        "class": "mx-320",
+        "properties": [
+          "margin-left: 20rem;",
+          "margin-right: 20rem;"
+        ]
+      },
+      {
+        "class": "mx-384",
+        "properties": [
+          "margin-left: 24rem;",
+          "margin-right: 24rem;"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "margin-y",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "my-0",
+        "properties": [
+          "margin-top: 0;",
+          "margin-bottom: 0;"
+        ]
+      },
+      {
+        "class": "my-1",
+        "properties": [
+          "margin-top: 0.0625rem;",
+          "margin-bottom: 0.0625rem;"
+        ]
+      },
+      {
+        "class": "my-2",
+        "properties": [
+          "margin-top: 0.125rem;",
+          "margin-bottom: 0.125rem;"
+        ]
+      },
+      {
+        "class": "my-4",
+        "properties": [
+          "margin-top: 0.25rem;",
+          "margin-bottom: 0.25rem;"
+        ]
+      },
+      {
+        "class": "my-6",
+        "properties": [
+          "margin-top: 0.375rem;",
+          "margin-bottom: 0.375rem;"
+        ]
+      },
+      {
+        "class": "my-8",
+        "properties": [
+          "margin-top: 0.5rem;",
+          "margin-bottom: 0.5rem;"
+        ]
+      },
+      {
+        "class": "my-10",
+        "properties": [
+          "margin-top: 0.625rem;",
+          "margin-bottom: 0.625rem;"
+        ]
+      },
+      {
+        "class": "my-12",
+        "properties": [
+          "margin-top: 0.75rem;",
+          "margin-bottom: 0.75rem;"
+        ]
+      },
+      {
+        "class": "my-14",
+        "properties": [
+          "margin-top: 0.875rem;",
+          "margin-bottom: 0.875rem;"
+        ]
+      },
+      {
+        "class": "my-16",
+        "properties": [
+          "margin-top: 1rem;",
+          "margin-bottom: 1rem;"
+        ]
+      },
+      {
+        "class": "my-20",
+        "properties": [
+          "margin-top: 1.25rem;",
+          "margin-bottom: 1.25rem;"
+        ]
+      },
+      {
+        "class": "my-24",
+        "properties": [
+          "margin-top: 1.5rem;",
+          "margin-bottom: 1.5rem;"
+        ]
+      },
+      {
+        "class": "my-28",
+        "properties": [
+          "margin-top: 1.75rem;",
+          "margin-bottom: 1.75rem;"
+        ]
+      },
+      {
+        "class": "my-32",
+        "properties": [
+          "margin-top: 2rem;",
+          "margin-bottom: 2rem;"
+        ]
+      },
+      {
+        "class": "my-36",
+        "properties": [
+          "margin-top: 2.25rem;",
+          "margin-bottom: 2.25rem;"
+        ]
+      },
+      {
+        "class": "my-40",
+        "properties": [
+          "margin-top: 2.5rem;",
+          "margin-bottom: 2.5rem;"
+        ]
+      },
+      {
+        "class": "my-48",
+        "properties": [
+          "margin-top: 3rem;",
+          "margin-bottom: 3rem;"
+        ]
+      },
+      {
+        "class": "my-56",
+        "properties": [
+          "margin-top: 3.5rem;",
+          "margin-bottom: 3.5rem;"
+        ]
+      },
+      {
+        "class": "my-64",
+        "properties": [
+          "margin-top: 4rem;",
+          "margin-bottom: 4rem;"
+        ]
+      },
+      {
+        "class": "my-72",
+        "properties": [
+          "margin-top: 4.5rem;",
+          "margin-bottom: 4.5rem;"
+        ]
+      },
+      {
+        "class": "my-80",
+        "properties": [
+          "margin-top: 5rem;",
+          "margin-bottom: 5rem;"
+        ]
+      },
+      {
+        "class": "my-96",
+        "properties": [
+          "margin-top: 6rem;",
+          "margin-bottom: 6rem;"
+        ]
+      },
+      {
+        "class": "my-112",
+        "properties": [
+          "margin-top: 7rem;",
+          "margin-bottom: 7rem;"
+        ]
+      },
+      {
+        "class": "my-128",
+        "properties": [
+          "margin-top: 8rem;",
+          "margin-bottom: 8rem;"
+        ]
+      },
+      {
+        "class": "my-144",
+        "properties": [
+          "margin-top: 9rem;",
+          "margin-bottom: 9rem;"
+        ]
+      },
+      {
+        "class": "my-160",
+        "properties": [
+          "margin-top: 10rem;",
+          "margin-bottom: 10rem;"
+        ]
+      },
+      {
+        "class": "my-192",
+        "properties": [
+          "margin-top: 12rem;",
+          "margin-bottom: 12rem;"
+        ]
+      },
+      {
+        "class": "my-224",
+        "properties": [
+          "margin-top: 14rem;",
+          "margin-bottom: 14rem;"
+        ]
+      },
+      {
+        "class": "my-256",
+        "properties": [
+          "margin-top: 16rem;",
+          "margin-bottom: 16rem;"
+        ]
+      },
+      {
+        "class": "my-288",
+        "properties": [
+          "margin-top: 18rem;",
+          "margin-bottom: 18rem;"
+        ]
+      },
+      {
+        "class": "my-320",
+        "properties": [
+          "margin-top: 20rem;",
+          "margin-bottom: 20rem;"
+        ]
+      },
+      {
+        "class": "my-384",
+        "properties": [
+          "margin-top: 24rem;",
+          "margin-bottom: 24rem;"
+        ]
+      }
+    ]
+  }
+]

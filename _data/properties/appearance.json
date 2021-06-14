@@ -1,0 +1,268 @@
+[ 
+  {
+    "name": "appearance",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "appearance-none",
+        "properties": [
+          "appearance: none;", 
+          "-moz-appearance: none;",
+          "-webkit-appearance: none;"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "display",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "inline",
+        "properties": ["display: inline;"]
+      },
+      {
+        "class": "block",
+        "properties": ["display: block;"]
+      },
+      {
+        "class": "flex",
+        "properties": ["display: flex;"]
+      },
+      {
+        "class": "grid",
+        "properties": ["display: grid;"]
+      },
+      {
+        "class": "inline-block",
+        "properties": ["display: inline-block;"]
+      },
+      {
+        "class": "inline-flex",
+        "properties": ["display: inline-flex;"]
+      },
+      {
+        "class": "inline-grid",
+        "properties": ["display: inline-grid;"]
+      },
+      {
+        "class": "inline-table",
+        "properties": ["display: inline-table;"]
+      },
+      {
+        "class": "table",
+        "properties": ["display: table;"]
+      },
+      {
+        "class": "table-row-group",
+        "properties": ["display: table-caption;"]
+      },
+      {
+        "class": "table-column-group",
+        "properties": ["display: table-column-group;"]
+      },
+      {
+        "class": "table-header-group",
+        "properties": ["display: table-header-group;"]
+      },
+      {
+        "class": "table-footer-group",
+        "properties": ["display: table-footer-group;"]
+      },
+      {
+        "class": "table-row-group",
+        "properties": ["display: table-row-group;"]
+      },
+      {
+        "class": "table-cell",
+        "properties": ["display: table-cell;"]
+      },
+      {
+        "class": "table-column",
+        "properties": ["display: table-column;"]
+      },
+      {
+        "class": "table-row",
+        "properties": ["display: table-row;"]
+      },
+      {
+        "class": "hidden",
+        "properties": ["display: hidden;"]
+      },
+      {
+        "class": "flow-root",
+        "properties": ["display: flow-root;"]
+      }
+    ]
+  },
+  {
+    "name": "font-smooth",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "antialiased",
+        "properties": [
+          "-webkit-font-smoothing: antialiased",
+          "-moz-osx-font-smoothing: grayscale"
+        ]
+      },
+      {
+        "class": "subpixel-antialiased",
+        "properties": [
+          "-webkit-font-smoothing: auto",
+          "-moz-osx-font-smoothing: auto"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "opacity",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "dark"],
+    "utilities": [
+      {
+        "class": "opacity-0",
+        "properties": ["opacity: 0;"]
+      },
+      {
+        "class": "opacity-2",
+        "properties": ["opacity: 0.02;"]
+      },
+      {
+        "class": "opacity-4",
+        "properties": ["opacity: 0.04;"]
+      },
+      {
+        "class": "opacity-6",
+        "properties": ["opacity: 0.06;"]
+      },
+      {
+        "class": "opacity-8",
+        "properties": ["opacity: 0.08;"]
+      },
+      {
+        "class": "opacity-10",
+        "properties": ["opacity: 0.1;"]
+      },
+      {
+        "class": "opacity-15",
+        "properties": ["opacity: 0.15;"]
+      },
+      {
+        "class": "opacity-20",
+        "properties": ["opacity: 0.2;"]
+      },
+      {
+        "class": "opacity-25",
+        "properties": ["opacity: 0.25;"]
+      },
+      {
+        "class": "opacity-30",
+        "properties": ["opacity: 0.3;"]
+      },
+      {
+        "class": "opacity-35",
+        "properties": ["opacity: 0.35;"]
+      },
+      {
+        "class": "opacity-40",
+        "properties": ["opacity: 0.4;"]
+      },
+      {
+        "class": "opacity-45",
+        "properties": ["opacity: 0.45;"]
+      },
+      {
+        "class": "opacity-50",
+        "properties": ["opacity: 0.5;"]
+      },
+      {
+        "class": "opacity-55",
+        "properties": ["opacity: 0.55;"]
+      },
+      {
+        "class": "opacity-60",
+        "properties": ["opacity: 0.6;"]
+      },
+      {
+        "class": "opacity-65",
+        "properties": ["opacity: 0.65;"]
+      },
+      {
+        "class": "opacity-70",
+        "properties": ["opacity: 0.7;"]
+      },
+      {
+        "class": "opacity-75",
+        "properties": ["opacity: 0.75;"]
+      },
+      {
+        "class": "opacity-80",
+        "properties": ["opacity: 0.8;"]
+      },
+      {
+        "class": "opacity-85",
+        "properties": ["opacity: 0.85;"]
+      },
+      {
+        "class": "opacity-90",
+        "properties": ["opacity: 0.9;"]
+      },
+      {
+        "class": "opacity-95",
+        "properties": ["opacity: 0.95;"]
+      },
+      {
+        "class": "opacity-100",
+        "properties": ["opacity: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "outline",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["focus"],
+    "utilities": [
+      {
+        "class": "outline-none",
+        "properties": ["outline: none;"]
+      }
+    ]
+  },
+  {
+    "name": "visibility",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "visible",
+        "properties": ["visibility: visible;"]
+      },
+      {
+        "class": "invisible",
+        "properties": ["visibility: hidden;"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,203 @@
+<div class="flex flex-none w-640 transform translate-x-128 sm.translate-x-0 md.translate-x-128 translate-y-96 radius-lg bg-primary bg-700 color-white overflow-hidden shadow-xl" style="--checkbox-bg: transparent; --checkbox-border: 1px solid rgba(255,255,255,.2); --checkbox-hover-border: 1px solid rgba(255,255,255,.4);"
+  :style="'--primary-hue: ' + hue + ';' + '--primary-sat: ' + sat + '%;'">
+  <div class="w-224 flex-none">
+    <div class="flex p-14">
+      <div class="radius-full w-10 h-10 mr-6 bg-firebrick"></div>
+      <div class="radius-full w-10 h-10 mr-6 bg-gold"></div>
+      <div class="radius-full w-10 h-10 mr-6 bg-green"></div>
+    </div>
+    <div class="flex align-items-center justify-content-between border-b-1 border-white border-opacity-20">
+      <div class="flex align-items-center p-14 text-xs semibold">
+        <div class="flex align-items-center justify-content-center w-20 h-20 radius-sm bg-lime bold text-xs mr-10">P</div>
+        Pigi Money
+      </div>
+
+      <a class="flex align-items-center p-14 text-xs semibold">
+        <div class="relative mr-10">
+          <img src="/assets/img/jin-profile.jpg" class="flex align-items-center justify-content-center w-24 h-24 radius-full">
+          <div class="absolute bottom-0 right-0 h-8 w-8">
+            <div class="animate-ping absolute h-8 w-8 radius-full bg-green opacity-70"></div>
+            <div class="relative radius-full h-8 w-8 bg-green"></div>
+          </div>
+        </div>
+        <svg class="fill-current w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"></path></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 p-10 mb-12">
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <svg class="fill-current w-12 mr-12 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>
+        Search
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <svg class="fill-current w-12 mr-12 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M567.403 235.642L462.323 84.589A48 48 0 0 0 422.919 64H153.081a48 48 0 0 0-39.404 20.589L8.597 235.642A48.001 48.001 0 0 0 0 263.054V400c0 26.51 21.49 48 48 48h480c26.51 0 48-21.49 48-48V263.054c0-9.801-3-19.366-8.597-27.412zM153.081 112h269.838l77.913 112H378.334l-32 64H229.666l-32-64H75.168l77.913-112zM528 400H48V272h120l32 64h176l32-64h120v160z"></path></svg>
+        Inbox
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold bg-white bg-opacity-10 transition-200">
+        <svg class="fill-current w-12 mr-12 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a47.998 47.998 0 0 0 14.059 33.941l211.882 211.882c18.745 18.745 49.137 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM259.886 463.996L48 252.118V48h204.118L464 259.882 259.886 463.996zM192 144c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48z"></path></svg>
+        My issues
+      </a>
+    </div>
+    
+    <div class="px-20 text-xs bold color-opacity-50">
+      Favourites
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 p-10 mb-12">
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 h-10 bg-firebrick radius-full mr-12"></div>
+        Bug
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 h-10 bg-yellow radius-full mr-12"></div>
+        Improvement
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 h-10 bg-cyan radius-full mr-12"></div>
+        Backlog
+      </a>
+    </div>
+
+    <div class="px-20 text-xs bold color-opacity-50">
+      Your teams
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 p-10 mb-12">
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 mr-12">
+          #
+        </div>
+        Engineering
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 mr-12">
+          #
+        </div>
+        Product
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 mr-12">
+          #
+        </div>
+        Design
+      </a>
+    </div>
+  </div>
+  <div class="w-100p bg-primary bg-900 bg-opacity-40">
+    <div class="px-20 py-14 text-xs semibold border-b-1 border-white border-opacity-20">
+      Active issues <span class="ml-6 opacity-40">12</span>
+      <a class="inline-flex ml-12 px-8 radius-sm text-xs bg-white bg-opacity-10 hover.bg-opacity-20 color-white transition-200">+ Filter</a>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-12
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Welcome to Pigi Money
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-13
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Fix header menu bar alignment
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-14
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Bring policies forward
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-15
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Update front-end dependencies
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-16
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Support latest dart sass module system
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-17
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Configure UniformCSS variables
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-18
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Delete old cached users
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 color-primary border-gray transition-100 mr-12" checked="">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-19
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Fix dropdown bug
+      </div>
+    </div>
+
+  </div>
+</div>

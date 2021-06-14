@@ -1,0 +1,240 @@
+---
+title: Atomic workflow built in Sass
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+scssExample: |
+  @use "uniform" as * with (
+    $config: (
+      important: true,
+      colors: (...)
+    )
+  );
+cssExample: |
+  .text-left { 
+    text-align: left !important; 
+  }
+  .text-center { 
+    text-align: center !important; 
+  }
+  .text-right { 
+    text-align: right !important; 
+  }
+  .block {
+    display: block !important;
+  }
+  ...
+cloneUniform: |
+  npm install uniformcss
+compileUniform: |
+  @use "uniform" as *;
+loadUniform: |
+  <head>
+    <!-- Load your compiled stylesheet here -->
+    <link rel="stylesheet" href="/uniform.min.css">
+  </head>
+
+  <body>
+    <!-- Style components using composable utilities -->
+    <h1 class="text-4xl text-center extrabold color-pink mb-24">
+      Hello World!
+    </h1>
+  </body>
+loadPlugins: |
+  @use "uniform" as *;
+  @use "uniform/plugins/wrapper";
+  @use "uniform/plugins/markdown";
+  @use "uniform/plugins/ratio";
+  @use "uniform/plugins/animate";
+animatePlugin: |
+  <main class="wrapper markdown">
+
+    <h1 class="fade-in-from-top" style="--animate-delay: 0s;">
+      Typewriter delectus cred
+    </h1>
+
+    <p class="fade-in-from-top" style="--animate-delay: 0.2s;">
+      Cosby sweater plaid shabby chic kitsch pour-over ex. 
+      Meggings kogi vinyl meh, food truck banh mi Etsy.
+    </p>
+
+  </main>
+apiFunctionInput: |
+  @use "uniform" as * with (
+    $config: (    
+      colors: ( navbar: #3a37d3 ),
+      shadows: ( card: 0 4px 60px 0 rgba(90, 134, 234, 0.2) )
+    )
+  );
+
+  .navbar {
+    display: flex;
+    background: fill(navbar);
+    box-shadow: shadow(card);
+    padding: size(20, 24);
+  }
+apiFunctionOutput: |
+  .navbar {
+    display: flex;
+    background: #3a37d3;
+    box-shadow: 0 4px 60px 0 rgba(90, 134, 234, 0.2);
+    padding: 1.25rem 1.5rem;
+  }
+configureSass: |
+  @use "uniform" as * with (
+    $config: (    
+      colors: ( 
+        navbar: #3a37d3,
+        footer: #5a6072,
+        seagreen: #188657,
+      ),
+      shadows: (
+        card: 0 4px 60px 0 rgba(90, 134, 234, 0.2)
+      )
+    )
+  );
+configureCSS: |
+  :root {
+    --font-sans: sans-serif;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+  }
+---
+
+
+
+<div class="hidden md.block h-20 bg-white bg-opacity-90 backdrop backdrop-blur-md">
+  <!-- spacer -->
+</div>
+<nav class="fade-in-from-top opacity-0 hidden md.block sticky top-n1 px-32 bg-white bg-opacity-85 backdrop backdrop-blur-md relative z-3"
+  style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: -24px;">
+  <div class="max-w-1152 mx-auto">
+    <div class="flex align-items-center justify-content-between h-72 mx-auto">
+      <div class="w-256 flex align-items-center">
+        <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+          <img src="/assets/img/uniform-brandmark.svg" class="w-24 h-24 mr-12">
+          Uniform CSS<span class="hidden sm.inline-flex align-items-center ml-12 px-6 py-2 bg-primary bg-opacity-15 color-primary color-900 uppercase font-2xs bold tracking-loose radius-sm">0.9.0</span>
+        </a>
+      </div>
+
+      <div class="w-100p max-w-320 md.max-w-448 group">
+        <div class="relative color-white text-sm leading-none">
+          <div class="font-lg absolute z-2 top-0 w-48 h-48 flex align-items-center justify-content-center color-primary color-900 color-opacity-50 group-hover.color-opacity-100 transition-300">
+            <ion-icon name="search"></ion-icon>
+          </div>
+
+          <input type="text" placeholder="Stay hydrated" class="w-100p h-48 pr-32 text-sm text-center radius-full shadow-card placeholder-cool-gray focus.placeholder-800 color-cool-gray color-800 js-docsearch">
+        </div>
+      </div>
+
+      <div class="w-256 text-right">
+        
+        <a href="https://github.com/UniformCSS/UniformCSS" class="ml-10 first.ml-0 text-2xl color-tertiary color-200 hover.color-300 transition-100">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://twitter.com/uniformcss" class="ml-10 first.ml-0 text-2xl color-tertiary color-200 hover.color-300 transition-100">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://github.com/UniformCSS/UniformCSS" class="ml-10 first.ml-0 text-2xl color-tertiary color-200 hover.color-300 transition-100">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="overflow-hidden">
+  <header>
+    <div class="relative px-32 sm.text-center">
+      <div class="max-w-900px pt-56 sm.pt-128 pb-128">
+        <div class="inline-flex md.hidden align-items-center mb-36 text-xl semibold tracking-tight">
+          <img src="/assets/img/uniform-brandmark.svg" class="w-28 h-28 mr-12">
+          Uniform CSS <span class="inline-flex align-items-center ml-12 px-6 py-2 bg-primary bg-opacity-15 uppercase font-2xs bold tracking-loose radius-sm">0.9.0</span>
+        </div>
+        <h1 class="fade-in opacity-0 font-8xl sm.font-11xl md.font-11xl lg.font-11xl leading-110 extrabold m-auto mb-32 tracking-tighter color-primary color-900"
+          style="--animate-delay: .8s;">
+          <span class="color-primary color-400">Atomic workflow&nbsp;</span><br>built in Sass
+        </h1>
+        
+        <p class="fade-in opacity-0 text-xl md.text-xl tracking-tight sm.max-w-640 md.max-w-screen-sm sm.mx-auto mb-48 color-cool-gray"
+          style="--animate-delay: .9s;">
+          An easy to use utility-first CSS framework designed to help you gain the <br class="hidden md.inline">full power of functional CSS without compromising on Sass.
+        </p>
+        <a href="/docs/overview" class="fade-in inline-flex align-items-center h-48 mb-64 px-20 pr-16 border-2 border-primary border-900 bg-transparent hover.bg-primary hover.bg-900 color-primary color-900 hover.color-white transition-100 focus.shadow-focus opacity-0 radius-lg semibold text-md"
+          style="--animate-delay: 1s;">
+          Read the docs <span class="ml-12">→</span>
+        </a>
+        <div class="fade-in opacity-0"
+          style="--animate-delay: 1.1s;">
+          <a href="#" class="inline-flex align-items-center color-black font-sm leading-140">
+            <div class="relative flex align-items-center justify-content-center w-24 h-24 pl-2 mr-10 radius-full border-1 border-black color-black font-xs" style="--shadow-card: 0 4px 20px 0 rgba(90, 134, 234, 0.3)">
+              <div class="animate-spin absolute top-0 left-0 w-100p h-100p radius-full" style="animation-duration: 3s;">
+                <div class="absolute top-0 left-50p transform translate-x-n50p w-4 h-4 mt-n2 bg-black radius-full"></div>
+              </div>
+              <ion-icon name="play-sharp"></ion-icon>
+            </div>
+            <div class="text-left">
+              Why in under 2 minutes
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="ripple">
+        <div class="ripple__content">
+          <div class="ripple__one"></div>
+          <div class="ripple__two"></div>
+          <div class="ripple__three"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="block sm.hidden mb-96 sm.mb-160 px-96">
+    <div class="border-t-4 border-dotted border-cool-gray border-100"></div>
+  </div>
+
+
+  <section class="mb-96 sm.mb-160 fade-in-from-bottom opacity-0 px-32"
+    style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: 24px;">
+    <div class="flex align-items-center justify-content-center">
+
+      <div class="sm.flex align-items-center sm.p-40 sm.shadow-card radius-lg sm.radius-2xl">
+
+        <div class="flex-none w-96 h-96 sm.w-128 sm.h-128 mx-auto mb-36 sm.mb-0 p-4 radius-xl sm.mr-48 shadow-card bg-primary bg-900 transform rotate-n12">
+          <div class="bg-linear radius-xl overflow-hidden transform rotate-12">
+            <img src="/assets/img/jin.svg" class="w-100p">
+          </div>
+        </div>
+
+        <div class="text-md text-center sm.text-left max-w-448">
+          <p class="text-lg mb-20 color-cool-gray">"Sass already provides great functionality out of the box. Uniform CSS builds on this strength to help web developers be more productive with the power of immensely flexible utility-first classes."</p>
+          <div class="text-xs uppercase bold tracking-looser">
+            — Jin Su Park, Product Designer<a href="https://castle.io" class="color-primary ml-6">@Castle</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="block sm.hidden mb-96 sm.mb-160 px-96">
+    <div class="border-t-4 border-dotted border-cool-gray border-100"></div>
+  </div>
+
+</div>
+
+
+{% include "partials/sections/get-started.njk" %}
+{% include "partials/sections/start-building.njk" %}
+{% include "partials/sections/enhanced-experience.njk" %}
+{% include "partials/sections/power-features.njk" %}
+{% include "partials/sections/easy-setup.njk" %}
+
+{% include "partials/footer.njk" %}

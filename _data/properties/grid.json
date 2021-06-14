@@ -1,0 +1,428 @@
+[
+  {
+    "name": "grid-auto-flow",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "grid-flow-row",
+        "properties": ["grid-auto-flow: row;"]
+      },
+      {
+        "class": "grid-flow-col",
+        "properties": ["grid-auto-flow: column;"]
+      },
+      {
+        "class": "grid-flow-row-dense",
+        "properties": ["grid-auto-flow: row dense;"]
+      },
+      {
+        "class": "grid-flow-ol-dense",
+        "properties": ["grid-auto-flow: column dense;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-column-end",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "col-end-auto",
+        "properties": ["grid-column-end: auto;"]
+      },
+      {
+        "class": "col-end-1",
+        "properties": ["grid-column-end: 1;"]
+      },
+      {
+        "class": "col-end-2",
+        "properties": ["grid-column-end: 2;"]
+      },
+      {
+        "class": "col-end-3",
+        "properties": ["grid-column-end: 3;"]
+      },
+      {
+        "class": "col-end-4",
+        "properties": ["grid-column-end: 4;"]
+      },
+      {
+        "class": "col-end-5",
+        "properties": ["grid-column-end: 5;"]
+      },
+      {
+        "class": "col-end-6",
+        "properties": ["grid-column-end: 6;"]
+      },
+      {
+        "class": "col-end-7",
+        "properties": ["grid-column-end: 7;"]
+      },
+      {
+        "class": "col-end-8",
+        "properties": ["grid-column-end: 8;"]
+      },
+      {
+        "class": "col-end-9",
+        "properties": ["grid-column-end: 9;"]
+      },
+      {
+        "class": "col-end-10",
+        "properties": ["grid-column-end: 10;"]
+      },
+      {
+        "class": "col-end-11",
+        "properties": ["grid-column-end: 11;"]
+      },
+      {
+        "class": "col-end-12",
+        "properties": ["grid-column-end: 12;"]
+      },
+      {
+        "class": "col-end-13",
+        "properties": ["grid-column-end: 13;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-column-start",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "col-start-auto",
+        "properties": ["grid-column-start: auto;"]
+      },
+      {
+        "class": "col-start-1",
+        "properties": ["grid-column-start: 1;"]
+      },
+      {
+        "class": "col-start-2",
+        "properties": ["grid-column-start: 2;"]
+      },
+      {
+        "class": "col-start-3",
+        "properties": ["grid-column-start: 3;"]
+      },
+      {
+        "class": "col-start-4",
+        "properties": ["grid-column-start: 4;"]
+      },
+      {
+        "class": "col-start-5",
+        "properties": ["grid-column-start: 5;"]
+      },
+      {
+        "class": "col-start-6",
+        "properties": ["grid-column-start: 6;"]
+      },
+      {
+        "class": "col-start-7",
+        "properties": ["grid-column-start: 7;"]
+      },
+      {
+        "class": "col-start-8",
+        "properties": ["grid-column-start: 8;"]
+      },
+      {
+        "class": "col-start-9",
+        "properties": ["grid-column-start: 9;"]
+      },
+      {
+        "class": "col-start-10",
+        "properties": ["grid-column-start: 10;"]
+      },
+      {
+        "class": "col-start-11",
+        "properties": ["grid-column-start: 11;"]
+      },
+      {
+        "class": "col-start-12",
+        "properties": ["grid-column-start: 12;"]
+      },
+      {
+        "class": "col-start-13",
+        "properties": ["grid-column-start: 13;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-column",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "col-auto",
+        "properties": ["grid-column: auto;"]
+      },
+      {
+        "class": "col-1",
+        "properties": ["grid-column: span 1 / span 1;"]
+      },
+      {
+        "class": "col-2",
+        "properties": ["grid-column: span 2 / span 2;"]
+      },
+      {
+        "class": "col-3",
+        "properties": ["grid-column: span 3 / span 3;"]
+      },
+      {
+        "class": "col-4",
+        "properties": ["grid-column: span 4 / span 4;"]
+      },
+      {
+        "class": "col-5",
+        "properties": ["grid-column: span 5 / span 5;"]
+      },
+      {
+        "class": "col-6",
+        "properties": ["grid-column: span 6 / span 6;"]
+      },
+      {
+        "class": "col-7",
+        "properties": ["grid-column: span 7 / span 7;"]
+      },
+      {
+        "class": "col-8",
+        "properties": ["grid-column: span 8 / span 8;"]
+      },
+      {
+        "class": "col-9",
+        "properties": ["grid-column: span 9 / span 9;"]
+      },
+      {
+        "class": "col-10",
+        "properties": ["grid-column: span 10 / span 10;"]
+      },
+      {
+        "class": "col-11",
+        "properties": ["grid-column: span 11 / span 11;"]
+      },
+      {
+        "class": "col-12",
+        "properties": ["grid-column: span 12 / span 12;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-row-end",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "row-end-auto",
+        "properties": ["grid-row-end: auto;"]
+      },
+      {
+        "class": "row-end-1",
+        "properties": ["grid-row-end: 1;"]
+      },
+      {
+        "class": "row-end-2",
+        "properties": ["grid-row-end: 2;"]
+      },
+      {
+        "class": "row-end-3",
+        "properties": ["grid-row-end: 3;"]
+      },
+      {
+        "class": "row-end-4",
+        "properties": ["grid-row-end: 4;"]
+      },
+      {
+        "class": "row-end-5",
+        "properties": ["grid-row-end: 5;"]
+      },
+      {
+        "class": "row-end-6",
+        "properties": ["grid-row-end: 6;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-row-start",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "row-start-auto",
+        "properties": ["grid-row-start: auto;"]
+      },
+      {
+        "class": "row-start-1",
+        "properties": ["grid-row-start: 1;"]
+      },
+      {
+        "class": "row-start-2",
+        "properties": ["grid-row-start: 2;"]
+      },
+      {
+        "class": "row-start-3",
+        "properties": ["grid-row-start: 3;"]
+      },
+      {
+        "class": "row-start-4",
+        "properties": ["grid-row-start: 4;"]
+      },
+      {
+        "class": "row-start-5",
+        "properties": ["grid-row-start: 5;"]
+      },
+      {
+        "class": "row-start-6",
+        "properties": ["grid-row-start: 6;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-row",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "row-auto",
+        "properties": ["grid-row: auto;"]
+      },
+      {
+        "class": "row-1",
+        "properties": ["grid-row: 1;"]
+      },
+      {
+        "class": "row-2",
+        "properties": ["grid-row: 2;"]
+      },
+      {
+        "class": "row-3",
+        "properties": ["grid-row: 3;"]
+      },
+      {
+        "class": "row-4",
+        "properties": ["grid-row: 4;"]
+      },
+      {
+        "class": "row-5",
+        "properties": ["grid-row: 5;"]
+      }
+    ]
+  },
+  {
+    "name": "grid-template-columns",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "grid-col-none",
+        "properties": ["grid-template-columns: none;"]
+      },
+      {
+        "class": "grid-col-1",
+        "properties": ["grid-template-columns: repeat(1, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-2",
+        "properties": ["grid-template-columns: repeat(2, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-3",
+        "properties": ["grid-template-columns: repeat(3, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-4",
+        "properties": ["grid-template-columns: repeat(4, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-5",
+        "properties": ["grid-template-columns: repeat(5, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-6",
+        "properties": ["grid-template-columns: repeat(6, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-7",
+        "properties": ["grid-template-columns: repeat(7, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-8",
+        "properties": ["grid-template-columns: repeat(8, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-9",
+        "properties": ["grid-template-columns: repeat(9, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-10",
+        "properties": ["grid-template-columns: repeat(10, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-11",
+        "properties": ["grid-template-columns: repeat(11, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-col-12",
+        "properties": ["grid-template-columns: repeat(12, minmax(0, 1fr));"]
+      }
+    ]
+  },
+  {
+    "name": "grid-template-rows",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "grid-rows-none",
+        "properties": ["grid-template-rows: none;"]
+      },
+      {
+        "class": "grid-rows-1",
+        "properties": ["grid-template-rows: repeat(1, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-rows-2",
+        "properties": ["grid-template-rows: repeat(2, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-rows-3",
+        "properties": ["grid-template-rows: repeat(3, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-rows-4",
+        "properties": ["grid-template-rows: repeat(4, minmax(0, 1fr));"]
+      },
+      {
+        "class": "grid-rows-5",
+        "properties": ["grid-template-rows: repeat(5, minmax(0, 1fr));"]
+      }
+    ]
+  }
+]

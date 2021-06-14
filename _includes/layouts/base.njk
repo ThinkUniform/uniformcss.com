@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="antialiased font-sans">
+<head>
+  <title>{{ metadata.sitename }}{{ title or metadata.title }}</title>
+
+  <!-- Page Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="{{ description or metadata.description }}">
+
+  <!-- Social Media Open Graph -->
+  <meta property="og:title" content="{{ metadata.sitename }}{{ title or metadata.title }}" />
+  <meta property="og:url" content="{{ permalink | url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ description or metadata.description }}" />
+  <meta property="og:image" content="/screenshot.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@UniformCSS" />
+  <meta name="twitter:creator" content="@UniformCSS" />
+  <meta property="twitter:url" content="{{ permalink | url }}" />
+  <meta property="twitter:title" content="{{ metadata.sitename }}{{ title or metadata.title }}" />
+  <meta property="twitter:description" content="{{ description or metadata.description }}" />
+  <meta property="twitter:image" content="/screenshot.png" />
+
+  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/uniform.min.css' | url }}">
+
+  <!-- SplitBee Analytics -->
+  <script async src="https://cdn.splitbee.io/sb.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+
+{{ content | safe }}
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+function tabs() {                  
+  return {
+    width: 0,
+    left: 0,
+    tab: 0,
+
+    activeUI: 0, 
+    activeAPI: 0,
+
+    hue: 220,
+    sat: 40,
+
+    dark: 0,
+    init: function() {
+      active = this.$el.querySelector('.is-active');
+      this.width =  active.offsetWidth;
+      this.left =  active.offsetLeft;
+    },
+    switcher(e, targetTab) {
+      this.tab = targetTab,
+      this.width = e.currentTarget.offsetWidth;
+      this.left =  e.currentTarget.offsetLeft;
+    }
+  }
+}
+
+docsearch({
+  apiKey: '041931dc20e82036bcc5ef4b413bbfdb',
+  indexName: 'uniformcss',
+  inputSelector: '.js-docsearch',
+  debug: false
+});
+</script>
+</body>
+</html>

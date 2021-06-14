@@ -1,0 +1,11 @@
+{
+  "sitename": "Uniform CSS - ",
+  "title": "Uniform CSS",
+  "url": "https://uniformcss.com/",
+  "description": "An easy to use utility-first CSS framework designed to help you gain the full power of functional CSS without compromising on Sass.",
+  "author": {
+    "name": "Jin Su Park",
+    "email": "jinsupark@icloud.com",
+    "url": "https://jinsupark.com/"
+  }
+}

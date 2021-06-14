@@ -1,0 +1,39 @@
+{
+  "name": "uniformcss-docs",
+  "version": "0.1.0",
+  "description": "Documentation site for Uniform CSS, a utility-first CSS framework built in Sass.",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ThinkUniform/uniformcss.com.git"
+  },
+  "author": {
+    "name": "Jin Su Park",
+    "email": "jinsupark@icloud.com",
+    "url": "https://jinsupark.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThinkUniform/uniformcss.com/issues"
+  },
+  "homepage": "https://github.com/ThinkUniform/uniformcss.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.2.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "eleventy-plugin-toc": "^1.1.0",
+    "luxon": "^1.25.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.0.1",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-container": "^3.0.0",
+    "purgecss": "^4.0.0"
+  }
+}

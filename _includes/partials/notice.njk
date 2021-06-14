@@ -1,0 +1,9 @@
+<div class="relative flex align-items-center sm.justify-content-center px-20 py-10 bg-linear" x-data="{ open: true }" x-show.transition.out.duration.300.opacity="open === true">
+  <div class="flex align-items-center color-white font-sm leading-loose">
+    <span class="inline-flex align-items-center h-20 mr-12 px-6 bg-white color-black uppercase font-2xs bold tracking-loose radius-sm">New</span> <p>Uniform CSS has now been officially released! <br class="sm.hidden"><a class="sm.ml-10 bold">Read more</a></p>
+  </div>
+  <button class="absolute top-0 right-0 w-40 h-100p font-xl color-white"
+    @click.prevent="open = false">
+    <ion-icon name="close"></ion-icon>
+  </button>
+</div> 

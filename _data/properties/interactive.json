@@ -1,0 +1,116 @@
+[
+  {
+    "name": "cursor",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["hover", "active"],
+    "utilities": [
+      {
+        "class": "cursor-auto",
+        "properties": ["cursor: auto;"]
+      },
+      {
+        "class": "cursor-default",
+        "properties": ["cursor: default;"]
+      },
+      {
+        "class": "cursor-pointer",
+        "properties": ["cursor: pointer;"]
+      },
+      {
+        "class": "cursor-wait",
+        "properties": ["cursor: wait;"]
+      },
+      {
+        "class": "cursor-text",
+        "properties": ["cursor: text;"]
+      },
+      {
+        "class": "cursor-move",
+        "properties": ["cursor: move;"]
+      },
+      {
+        "class": "cursor-not-allowed",
+        "properties": ["cursor: not-allowed;"]
+      }
+    ]
+  },
+  {
+    "name": "pointer-events",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "pointer-events-none",
+        "properties": ["pointer-events: none;"]
+      },
+      {
+        "class": "pointer-events-auto",
+        "properties": ["pointer-events: auto;"]
+      }
+    ]
+  },
+  {
+    "name": "resize",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "resize-none",
+        "properties": ["resize: none;"]
+      },
+      {
+        "class": "resize-both",
+        "properties": ["resize: both;"]
+      },
+      {
+        "class": "resize-horizontal",
+        "properties": ["resize: horizontal;"]
+      },
+      {
+        "class": "resize-vertical",
+        "properties": ["resize: vertical;"]
+      }
+    ]
+  },
+  {
+    "name": "scrolling",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "scrolling-auto",
+        "properties": ["-webkit-overflow-scrolling: auto;"]
+      },
+      {
+        "class": "scrolling-touch",
+        "properties": ["-webkit-overflow-scrolling: touch;"]
+      }
+    ]
+  },
+  {
+    "name": "user-select",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "select-none",
+        "properties": ["display"]
+      }
+    ]
+  }
+]
