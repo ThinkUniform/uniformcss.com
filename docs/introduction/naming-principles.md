@@ -35,17 +35,7 @@ If the property name include words that can be shortened without confusion, shor
 ...
 ```
 
-### 3. Remove hyphenation
-
-If the word is hyphenated but can be elegantly combined, remove hyphenation e.g. `wordbreak` and `whitespace` instead of `word-break` and `white-space`.
-
-```scss
-.wordbreak-normal: { word-break: normal; }
-.whitespace-normal: { white-space: normal; }
-...
-```
-
-### 4. Single-letter shorthands
+### 3. Single-letter shorthands
 
 Single-characters are only reserved for directions and `width`, `height`, `margin`, and `padding` properties e.g. `w`, `h`, `m`, `p`. For single letter properties, don't separate direction using a delimiter. For example, use `mr` for margin right instead of `m-r`.
 
@@ -58,7 +48,7 @@ Single-characters are only reserved for directions and `width`, `height`, `margi
 ...
 ```
 
-### 5. Single characters for directions
+### 4. Single characters for directions
 
 Common directional properties such as `top`, `right`, `bottom`, and `left` are represented with the first letter of the direction e.g. `border-t` for `border-top` etc. For multiple direction, combine the direction letters e.g. `tr` for `top-right`.
 
@@ -68,19 +58,20 @@ Common directional properties such as `top`, `right`, `bottom`, and `left` are r
 ...
 ```
 
-### 6. Simplify properties names
+### 5. Simplify properties names
 
 Simplify the property name to its most essential and ideal denominator, provided it does not cause confusion or conflict with others properties in the same family.
 
 ```scss
-.text-left { text-alignt: left; }
+.text-left { text-align: left; }
+.align-middle { vertical-align: middle; }
 .font-xl { font-size: 1.25rem; }
 ...
 ```
 
 When dealing with multi-word properties such as `line-height`, simplifying it to just `height` or `line` would misrepresent the meaning and cause confusion. In this case, use a different industry term such as `leading` instead.
 
-### 7. Append unit as characters
+### 6. Append unit as characters
 
 Whenever conflicting situations arise, over-qualify the unit by appending an abbreviated characters that represent the unit. All negative values are suffixed with `n`, (short for negative).
 

@@ -3,7 +3,7 @@
 
 $name: text-overflow;
 $shorthand: null;
-$responsive: false;
+$responsive: true;
 $responsive-pseudos: false;
 $extra-selector: null;
 
@@ -11,6 +11,7 @@ $properties: (text-overflow);
 $custom-properties: ();
 
 $variants: (
+  clip: clip,
   ellipsis: ellipsis
 );
 

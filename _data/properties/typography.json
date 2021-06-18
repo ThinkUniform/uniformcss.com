@@ -570,6 +570,28 @@
     ]
   },
   {
+    "name": "overflow-wrap",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "customProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "overflow-wrap-normal",
+        "properties": ["overflow-wrap: normal;"]
+      },
+      {
+        "class": "overflow-wrap-any",
+        "properties": ["overflow-wrap: anywhere;"]
+      },
+      {
+        "class": "overflow-wrap-word",
+        "properties": ["overflow-wrap: breakword;"]
+      }
+    ]
+  },
+  {
     "name": "text-align",
     "responsive": true,
     "responsive-pseudos": false,
@@ -619,12 +641,16 @@
   },
   {
     "name": "text-overflow",
-    "responsive": false,
+    "responsive": true,
     "responsive-pseudos": false,
     "extraSelector": "",
     "customProperties": [],
     "pseudos": ["none"],
     "utilities": [
+      {
+        "class": "clip",
+        "properties": ["text-overflow: clip;"]
+      },
       {
         "class": "ellipsis",
         "properties": ["text-overflow: ellipsis;"]
@@ -662,39 +688,55 @@
     "pseudos": ["none"],
     "utilities": [
       {
-        "class": "whitespace-nowrap",
+        "class": "space-normal",
+        "properties": ["white-space: normal;"]
+      },
+      {
+        "class": "space-nowrap",
         "properties": ["white-space: nowrap;"]
       },
       {
-        "class": "whitespace-pre",
+        "class": "space-pre",
         "properties": ["white-space: pre;"]
       },
       {
-        "class": "whitespace-pre-line",
+        "class": "space-pre-wrap",
+        "properties": ["white-space: pre-wrap;"]
+      },
+      {
+        "class": "space-pre-line",
         "properties": ["white-space: pre-line;"]
       },
       {
-        "class": "whitespace-pre-wrap",
-        "properties": ["white-space: pre-wrap;"]
+        "class": "space-break",
+        "properties": ["white-space: break-spaces;"]
       }
     ]
   },
   {
     "name": "word-break",
-    "responsive": false,
+    "responsive": true,
     "responsive-pseudos": false,
     "extraSelector": "",
     "customProperties": [],
     "pseudos": ["none"],
     "utilities": [
       {
-        "class": "wordbreak-word",
-        "properties": ["word-break: break-word;"]
+        "class": "break-normal",
+        "properties": ["word-break: normal;"]
       },
       {
-        "class": "wordbreak-all",
-        "properties": ["word-break: all;"]
-      }
+        "class": "break-all",
+        "properties": ["word-break: break-all;"]
+      },
+      {
+        "class": "break-keep",
+        "properties": ["word-break: keep-all;"]
+      },
+      {
+        "class": "break-word",
+        "properties": ["word-break: break-word;"]
+      }      
     ]
   },
   {
