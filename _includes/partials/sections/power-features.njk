@@ -233,17 +233,12 @@
     </div>
   </div>
 
-  <article class="overflow-hidden bg-primary bg-900 shadow-card">
+  <article class="overflow-hidden bg-tertiary bg-50">
     <header class="flex align-items-center h-64 px-20 border-b-1 border-cool-gray border-opacity-20">
-      <ion-icon name="logo-sass" class="text-4xl color-pink color-300 mr-20"></ion-icon>
-      <div class="flex flex-col sm.flex-row justify-content-between w-100p font-sm leading-140">
-        <div class="color-white">
-          Configure Uniform directly in Sass
-        </div>
-        <div class="color-white semibold color-opacity-50">
-          styles.scss
-        </div>
-      </div>
+      <ion-icon name="logo-sass" class="text-4xl color-pink color-500 mr-20"></ion-icon>
+      <p class="text-sm color-primary color-900">
+        Configure and access any theme variables
+      </p>
     </header>
     <div>
       {% highlight "scss" %}
@@ -263,17 +258,12 @@
     </div>
   </div>
 
-  <article class="overflow-hidden bg-primary bg-900 shadow-card mb-20">
+  <article class="overflow-hidden bg-tertiary bg-50 mb-20">
     <header class="flex align-items-center h-64 px-20 border-b-1 border-cool-gray border-opacity-20">
-      <span class="inline-flex align-items-center mr-16 px-6 bg-white  uppercase text-2xs extrabold radius-sm">css</span>
-      <div class="flex flex-col sm.flex-row justify-content-between w-100p font-sm leading-140">
-        <div class="color-white">
-          Generate<span class="hidden sm.inline"> suite of</span> utilities properties
-        </div>
-        <div class="color-white semibold color-opacity-50">
-          styles.css
-        </div>
-      </div>
+      <span class="inline-flex align-items-center h-20 mr-16 px-6 bg-primary bg-900 color-white uppercase text-2xs extrabold radius-sm">css</span>
+      <p class="text-sm color-primary color-900">
+        API functions will apply theme values
+      </p>
     </header>
     {% highlight "css" %}
     {{ apiFunctionOutput | safe }}
