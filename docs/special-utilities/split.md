@@ -16,7 +16,7 @@ The `split` utility applies horizontal or vertical dividing borders to child ele
 
 To apply `split`, assign the class `split-x-<size>` or `split-y-<size>` to any parent element.
 
-<div class="radius-md bg-cool-gray bg-50 split-y-2 px-20 split-cool-gray mb-20">
+<div class="radius-md bg-tertiary bg-50 split-y-2 px-20 split-cool-gray mb-20">
   <div class="py-10">A</div>
   <div class="py-10">B</div>
   <div class="py-10">C</div>

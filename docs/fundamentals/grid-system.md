@@ -16,7 +16,7 @@ Grids are a useful tool to help containerize page content in columns.
 
 You can build traditional grid systems using the `grid` display type with support up to `12` columns. You can combine the `grid` display property with the `grid-cols-<1-12>` property to set the column count.
 
-<section class="bg-cool-gray bg-50 p-20 radius-md mb-24">
+<section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-2 mb-20">
     <div class="h-40 bg-cool-gray bg-200">
     </div>
@@ -71,7 +71,7 @@ You can build traditional grid systems using the `grid` display type with suppor
 
 You can create gutters by applying the `gap-<size>` property. The `gap` property supports up to **29** sizes. To see a visual reference of each size please refer to the [cheatsheet](/cheatsheet/sizing-scales).
 
-<section class="bg-cool-gray bg-50 p-20 radius-md mb-24">
+<section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-2 mb-20 gap-36">
     <div class="h-40 bg-cool-gray bg-200">
     </div>
@@ -114,7 +114,7 @@ You can create gutters by applying the `gap-<size>` property. The `gap` property
 
 Gutters can be responsive by prefixing the `gap-<size>` property with the breakpoint variant. For more information on media queries, please refer to [media queries](/docs/media-queries/).
 
-<section class="bg-cool-gray bg-50 p-20 radius-md mb-24">
+<section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-3 gap-12 sm.gap-24 md.gap-28 lg.gap-36">
     <div class="h-40 bg-cool-gray bg-200">
     </div>
@@ -135,7 +135,7 @@ Gutters can be responsive by prefixing the `gap-<size>` property with the breakp
 
 You can specify the column count by applying the `col-<count>` property, if undefined, the column count will be 1.
 
-<section class="bg-cool-gray bg-50 p-20 radius-md mb-24">
+<section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-5 gap-14">
     <div class="h-40 bg-cool-gray bg-400 col-1">
     </div>
@@ -160,7 +160,7 @@ You can specify the column count by applying the `col-<count>` property, if unde
 
 Both the grid column count and column span count can be responsive by prefixing the breakpoint variant. Adjust your browser width to see this in action.
 
-<section class="bg-cool-gray bg-50 p-20 radius-md mb-24">
+<section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-1 md.grid-cols-5 gap-14">
     <div class="h-40 bg-cool-gray bg-400 col-1 md.col-1">
     </div>
