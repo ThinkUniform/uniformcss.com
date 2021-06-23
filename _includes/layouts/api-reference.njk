@@ -84,18 +84,18 @@ layout: layouts/base.njk
 
               
               
-              <div class="radius-md max-h-320 overflow-auto bg-cool-gray bg-50 bg-opacity-60">
+              <div class="radius-md max-h-320 overflow-auto border-1 border-cool-gray border-100">
                 <table class="w-100p">
                   <tbody>
                     {%- for utility in key.utilities -%}
                       <tr class="border-b-1 border-cool-gray border-100 last.border-b-0">
-                        <td class="w-3-12 text-xs color-primary color-600 select-all align-top bg-cool-gray bg-100 bg-opacity-30 pr-40 px-20 py-8">
-                          <code class="whitespace-nowrap">{{utility.class}} <span class="opacity-30">{{ key.extraSelector }}</span></code>
+                        <td class="w-4-12 text-sm color-primary color-700 select-all border-r-1 border-cool-gray border-100 align-top pr-40 px-20 py-8">
+                          <code class="space-nowrap">{{utility.class}} <span class="opacity-30">{{ key.extraSelector }}</span></code>
                         </td>
-                        <td class="text-xs color-cool-gray align-top px-20 py-8">
+                        <td class="text-sm color-tertiary color-800 align-top px-20 py-8">
                           <pre class="overflow-auto">
                           {%- for item in key.customProperties -%}
-                            <code class="opacity-70">{{ item }}</code><br>
+                            <code class="opacity-50">{{ item }}</code><br>
                           {%- endfor -%}
                           {%- for item in utility.properties -%}
                             <code>{{ item }}</code><br>
