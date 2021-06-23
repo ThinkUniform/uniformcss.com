@@ -13,16 +13,19 @@ $custom-properties: ();
 $range-limit: map.get(core.$all-config, range-limits, height);
 
 $variants: (
-	core.merge(
-		core.positive-sizes($range-limit),
-		(
-			auto: auto,
-			100p: 100%,
-			100vh: 100vh,
-			50p: 50%,
-			50vh: 50vh,
-		)
-	)
+  core.merge(
+    core.positive-sizes($range-limit),
+    (
+      auto: auto,
+      0: 0,
+      
+      50p: 50%,
+      100p: 100%,
+      
+      50vh: 50vh,
+      100vh: 100vh,      
+    )
+  )
 );
 
 $pseudos: ();

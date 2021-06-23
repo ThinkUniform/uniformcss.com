@@ -464,6 +464,10 @@
         "properties": ["--translate-x: 1rem;"]
       },
       {
+        "class": "translate-x-18",
+        "properties": ["--translate-x: 1.125rem;"]
+      },
+      {
         "class": "translate-x-20",
         "properties": ["--translate-x: 1.25rem;"]
       },
@@ -724,6 +728,10 @@
       {
         "class": "translate-y-16",
         "properties": ["--translate-y: 1rem;"]
+      },
+      {
+        "class": "translate-y-18",
+        "properties": ["--translate-y: 1.125rem;"]
       },
       {
         "class": "translate-y-20",

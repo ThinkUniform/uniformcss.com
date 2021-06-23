@@ -70,6 +70,10 @@
         "properties": ["margin: 0 calc(1rem * var(--gutter-right)) 0 calc(1rem * var(--gutter-left));"]
       },
       {
+        "class": "gutter-x-18",
+        "properties": ["margin: 0 calc(1.125rem * var(--gutter-right)) 0 calc(1.125rem * var(--gutter-left));"]
+      },
+      {
         "class": "gutter-x-20",
         "properties": ["margin: 0 calc(1.25rem * var(--gutter-right)) 0 calc(1.25rem * var(--gutter-left));"]
       },
@@ -177,6 +181,10 @@
       {
         "class": "gutter-y-16",
         "properties": ["margin: calc(1rem * var(--gutter-right)) 0 calc(1rem * var(--gutter-left)) 0"]
+      },
+      {
+        "class": "gutter-y-18",
+        "properties": ["margin: calc(1.125rem * var(--gutter-right)) 0 calc(1.125rem * var(--gutter-left)) 0"]
       },
       {
         "class": "gutter-y-20",

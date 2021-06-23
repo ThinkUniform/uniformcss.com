@@ -48,6 +48,10 @@
         "properties": ["margin-left: 1rem;"]
       },
       {
+        "class": "ml-18",
+        "properties": ["margin-left: 1.125rem;"]
+      },
+      {
         "class": "ml-20",
         "properties": ["margin-left: 1.25rem;"]
       },
@@ -308,6 +312,10 @@
       {
         "class": "mr-16",
         "properties": ["margin-right: 1rem;"]
+      },
+      {
+        "class": "mr-18",
+        "properties": ["margin-right: 1.125rem;"]
       },
       {
         "class": "mr-20",
@@ -572,6 +580,10 @@
         "properties": ["margin-top: 1rem;"]
       },
       {
+        "class": "mt-18",
+        "properties": ["margin-top: 1.125rem;"]
+      },
+      {
         "class": "mt-20",
         "properties": ["margin-top: 1.25rem;"]
       },
@@ -832,6 +844,10 @@
       {
         "class": "mb-16",
         "properties": ["margin-bottom: 1rem;"]
+      },
+      {
+        "class": "mb-18",
+        "properties": ["margin-bottom: 1.125rem;"]
       },
       {
         "class": "mb-20",
@@ -1126,6 +1142,13 @@
         ]
       },
       {
+        "class": "mx-18",
+        "properties": [
+          "margin-left: 1.125rem;",
+          "margin-right: 1.125rem;"
+        ]
+      },
+      {
         "class": "mx-20",
         "properties": [
           "margin-left: 1.25rem;",
@@ -1357,6 +1380,13 @@
         "properties": [
           "margin-top: 1rem;",
           "margin-bottom: 1rem;"
+        ]
+      },
+      {
+        "class": "my-18",
+        "properties": [
+          "margin-top: 1.125rem;",
+          "margin-bottom: 1.125rem"
         ]
       },
       {

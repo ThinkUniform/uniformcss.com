@@ -18,16 +18,16 @@ Uniform supports the following sizes out of the box. These sizes are applied in 
 
 | Level | Size | Pixel | Rem |
 | - | - | - | - |
-| 1 | `size-0` | 0px | 0rem |
-| 2 | `size-1` | 1px | 0.0625rem |
-| 3 | `size-2` | 2px | 0.125rem |
-| 4 | `size-4` | 4px | 0.25rem |
-| 5 | `size-6` | 6px | 0.375rem |
-| 6 | `size-8` | 8px | 0.5rem |
-| 7 | `size-10` | 10px | 0.625rem |
-| 8 | `size-12` | 12px | 0.75rem |
-| 9 | `size-14` | 14px | 0.875rem |
-| 10 | `size-16` | **16px** | **1rem (base)** |
+| 1 | `size-1` | 1px | 0.0625rem |
+| 2 | `size-2` | 2px | 0.125rem |
+| 3 | `size-4` | 4px | 0.25rem |
+| 4 | `size-6` | 6px | 0.375rem |
+| 5 | `size-8` | 8px | 0.5rem |
+| 6 | `size-10` | 10px | 0.625rem |
+| 7 | `size-12` | 12px | 0.75rem |
+| 8 | `size-14` | 14px | 0.875rem |
+| 9 | `size-16` | **16px** | **1rem (base)** |
+| 10 | `size-18` | 18px | 1.125rem |
 | 11 | `size-20` | 20px | 1.25rem |
 | 12 | `size-24` | 24px | 1.5rem |
 | 13 | `size-28` | 28px | 1.75rem |

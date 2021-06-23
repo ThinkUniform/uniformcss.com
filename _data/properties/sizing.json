@@ -8,6 +8,26 @@
     "pseudos": ["none"],
     "utilities": [
       {
+        "class": "h-auto",
+        "properties": ["height: auto;"]
+      },
+      {
+        "class": "h-50",
+        "properties": ["height: auto;"]
+      },
+      {
+        "class": "h-100p",
+        "properties": ["height: 100%;"]
+      },
+      {
+        "class": "h-50vh",
+        "properties": ["height: 50vh;"]
+      },
+      {
+        "class": "h-100vh",
+        "properties": ["height: 100vh;"]
+      },
+      {
         "class": "h-0",
         "properties": ["height: 0;"]
       },
@@ -46,6 +66,10 @@
       {
         "class": "h-16",
         "properties": ["height: 1rem;"]
+      },
+      {
+        "class": "h-18",
+        "properties": ["height: 1.125rem;"]
       },
       {
         "class": "h-20",
@@ -162,98 +186,6 @@
     "pseudos": ["none"],
     "utilities": [
       {
-        "class": "max-h-0",
-        "properties": ["max-height: 0;"]
-      },
-      {
-        "class": "max-h-1",
-        "properties": ["max-height: 0.0625rem;"]
-      },
-      {
-        "class": "max-h-2",
-        "properties": ["max-height: 0.125rem;"]
-      },
-      {
-        "class": "max-h-4",
-        "properties": ["max-height: 0.25rem;"]
-      },
-      {
-        "class": "max-h-6",
-        "properties": ["max-height: 0.375rem;"]
-      },
-      {
-        "class": "max-h-8",
-        "properties": ["max-height: 0.5rem;"]
-      },
-      {
-        "class": "max-h-10",
-        "properties": ["max-height: 0.625rem;"]
-      },
-      {
-        "class": "max-h-12",
-        "properties": ["max-height: 0.75rem;"]
-      },
-      {
-        "class": "max-h-14",
-        "properties": ["max-height: 0.875rem;"]
-      },
-      {
-        "class": "max-h-16",
-        "properties": ["max-height: 1rem;"]
-      },
-      {
-        "class": "max-h-20",
-        "properties": ["max-height: 1.25rem;"]
-      },
-      {
-        "class": "max-h-24",
-        "properties": ["max-height: 1.5rem;"]
-      },
-      {
-        "class": "max-h-28",
-        "properties": ["max-height: 1.75rem;"]
-      },
-      {
-        "class": "max-h-32",
-        "properties": ["max-height: 2rem;"]
-      },
-      {
-        "class": "max-h-36",
-        "properties": ["max-height: 2.25rem;"]
-      },
-      {
-        "class": "max-h-40",
-        "properties": ["max-height: 2.5rem;"]
-      },
-      {
-        "class": "max-h-48",
-        "properties": ["max-height: 3rem;"]
-      },
-      {
-        "class": "max-h-56",
-        "properties": ["max-height: 3.5rem;"]
-      },
-      {
-        "class": "max-h-64",
-        "properties": ["max-height: 4rem;"]
-      },
-      {
-        "class": "max-h-72",
-        "properties": ["max-height: 4.5rem;"]
-      },
-      {
-        "class": "max-h-80",
-        "properties": ["max-height: 5rem;"]
-      },
-      {
-        "class": "max-h-96",
-        "properties": ["max-height: 6rem;"]
-      },
-      {
-        "class": "max-h-112",
-        "properties": ["max-height: 7rem;"]
-      },
-      {
         "class": "max-h-128",
         "properties": ["max-height: 8rem;"]
       },
@@ -348,6 +280,34 @@
         "properties": ["max-width: 64ch;"]
       },
       {
+        "class": "max-w-128",
+        "properties": ["max-width: 8rem;"]
+      },
+      {
+        "class": "max-w-144",
+        "properties": ["max-width: 9rem;"]
+      },
+      {
+        "class": "max-w-160",
+        "properties": ["max-width: 10rem;"]
+      },
+      {
+        "class": "max-w-192",
+        "properties": ["max-width: 12rem;"]
+      },
+      {
+        "class": "max-w-224",
+        "properties": ["max-width: 14rem;"]
+      },
+      {
+        "class": "max-w-256",
+        "properties": ["max-width: 16rem;"]
+      },
+      {
+        "class": "max-w-288",
+        "properties": ["max-width: 18rem;"]
+      },
+      {
         "class": "max-w-320",
         "properties": ["max-width: 20rem;"]
       },
@@ -406,24 +366,72 @@
     "pseudos": ["none"],
     "utilities": [
       {
-        "class": "max-w-0",
-        "properties": ["max-width: 0;"]
+        "class": "min-h-50p",
+        "properties": ["min-height: 50%;"]
       },
       {
-        "class": "max-w-50p",
-        "properties": ["max-width: 50%;"]
+        "class": "min-h-100p",
+        "properties": ["min-height: 100%;"]
       },
       {
-        "class": "max-w-100p",
-        "properties": ["max-width: 100%;"]
+        "class": "min-h-50vh",
+        "properties": ["min-height: 50vh;"]
       },
       {
-        "class": "max-w-50vh",
-        "properties": ["max-width: 50vh;"]
+        "class": "min-h-100vh",
+        "properties": ["min-height: 100vh;"]
       },
       {
-        "class": "max-w-100vh",
-        "properties": ["max-width: 100vh;"]
+        "class": "min-h-128",
+        "properties": ["min-height: 8rem;"]
+      },
+      {
+        "class": "min-h-144",
+        "properties": ["min-height: 9rem;"]
+      },
+      {
+        "class": "min-h-160",
+        "properties": ["min-height: 10rem;"]
+      },
+      {
+        "class": "min-h-192",
+        "properties": ["min-height: 12rem;"]
+      },
+      {
+        "class": "min-h-224",
+        "properties": ["min-height: 14rem;"]
+      },
+      {
+        "class": "min-h-256",
+        "properties": ["min-height: 16rem;"]
+      },
+      {
+        "class": "min-h-288",
+        "properties": ["min-height: 18rem;"]
+      },
+      {
+        "class": "min-h-320",
+        "properties": ["min-height: 20rem;"]
+      },
+      {
+        "class": "min-h-384",
+        "properties": ["min-height: 24rem;"]
+      },
+      {
+        "class": "min-h-448",
+        "properties": ["min-height: 28rem;"]
+      },
+      {
+        "class": "min-h-512",
+        "properties": ["min-height: 32rem;"]
+      },
+      {
+        "class": "min-h-576",
+        "properties": ["min-height: 36rem;"]
+      },
+      {
+        "class": "min-h-640",
+        "properties": ["min-height: 40rem;"]
       }
     ]
   },
@@ -435,10 +443,6 @@
     "customProperties": [],
     "pseudos": ["none"],
     "utilities": [
-      {
-        "class": "min-w-0",
-        "properties": ["min-width: 0;"]
-      },
       {
         "class": "min-w-50p",
         "properties": ["min-width: 50%;"]
@@ -454,6 +458,58 @@
       {
         "class": "min-w-100vw",
         "properties": ["min-width: 100vw;"]
+      },
+      {
+        "class": "min-w-128",
+        "properties": ["min-width: 8rem;"]
+      },
+      {
+        "class": "min-w-144",
+        "properties": ["min-width: 9rem;"]
+      },
+      {
+        "class": "min-w-160",
+        "properties": ["min-width: 10rem;"]
+      },
+      {
+        "class": "min-w-192",
+        "properties": ["min-width: 12rem;"]
+      },
+      {
+        "class": "min-w-224",
+        "properties": ["min-width: 14rem;"]
+      },
+      {
+        "class": "min-w-256",
+        "properties": ["min-width: 16rem;"]
+      },
+      {
+        "class": "min-w-288",
+        "properties": ["min-width: 18rem;"]
+      },
+      {
+        "class": "min-w-320",
+        "properties": ["min-width: 20rem;"]
+      },
+      {
+        "class": "min-w-384",
+        "properties": ["min-width: 24rem;"]
+      },
+      {
+        "class": "min-w-448",
+        "properties": ["min-width: 28rem;"]
+      },
+      {
+        "class": "min-w-512",
+        "properties": ["min-width: 32rem;"]
+      },
+      {
+        "class": "min-w-576",
+        "properties": ["min-width: 36rem;"]
+      },
+      {
+        "class": "min-w-640",
+        "properties": ["min-width: 40rem;"]
       }
     ]
   },
@@ -485,7 +541,6 @@
         "class": "w-100vw",
         "properties": ["width: 100vw;"]
       },
-
       {
         "class": "w-1-12",
         "properties": ["width: 8.333333%;"]
@@ -585,6 +640,10 @@
       {
         "class": "w-16",
         "properties": ["width: 1rem;"]
+      },
+      {
+        "class": "w-18",
+        "properties": ["width: 1.125rem;"]
       },
       {
         "class": "w-20",

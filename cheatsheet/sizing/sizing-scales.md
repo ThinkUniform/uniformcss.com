@@ -22,6 +22,7 @@ The following table visually represents all the radiuses that are available.
 | <div class="w-100p h-12 bg-cool-gray"></div> | `size-12` | 12px | 0.75rem |
 | <div class="w-100p h-14 bg-cool-gray"></div> | `size-14` | 14px | 0.875rem |
 | <div class="w-100p h-16 bg-cool-gray"></div> | `size-16` | 16px | 1rem |
+| <div class="w-100p h-18 bg-cool-gray"></div> | `size-18` | 18px | 1.125rem |
 | <div class="w-100p h-20 bg-cool-gray"></div> | `size-20` | 20px | 1.25rem |
 | <div class="w-100p h-24 bg-cool-gray"></div> | `size-24` | 24px | 1.5rem |
 | <div class="w-100p h-28 bg-cool-gray"></div> | `size-28` | 28px | 1.75rem |

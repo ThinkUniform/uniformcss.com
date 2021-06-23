@@ -48,6 +48,10 @@
         "properties": ["padding-left: 1rem;"]
       },
       {
+        "class": "pl-18",
+        "properties": ["padding-left: 1.125rem;"]
+      },
+      {
         "class": "pl-20",
         "properties": ["padding-left: 1.25rem;"]
       },
@@ -184,6 +188,10 @@
       {
         "class": "pr-16",
         "properties": ["padding-right: 1rem;"]
+      },
+      {
+        "class": "pr-18",
+        "properties": ["padding-right: 1.125rem;"]
       },
       {
         "class": "pr-20",
@@ -324,6 +332,10 @@
         "properties": ["padding-top: 1rem;"]
       },
       {
+        "class": "pt-18",
+        "properties": ["padding-top: 1.125rem;"]
+      },
+      {
         "class": "pt-20",
         "properties": ["padding-top: 1.25rem;"]
       },
@@ -460,6 +472,10 @@
       {
         "class": "pb-16",
         "properties": ["padding-bottom: 1rem;"]
+      },
+      {
+        "class": "pb-18",
+        "properties": ["padding-bottom: 1.125rem;"]
       },
       {
         "class": "pb-20",
@@ -627,6 +643,13 @@
         "properties": [
           "padding-left: 1rem;",
           "padding-right: 1rem;"
+        ]
+      },
+      {
+        "class": "px-18",
+        "properties": [
+          "padding-left: 1.125rem;",
+          "padding-right: 1.125rem;"
         ]
       },
       {
@@ -861,6 +884,13 @@
         "properties": [
           "padding-top: 1rem;",
           "padding-bottom: 1rem;"
+        ]
+      },
+      {
+        "class": "py-18",
+        "properties": [
+          "padding-top: 1.125rem;",
+          "padding-bottom: 1.125rem;"
         ]
       },
       {

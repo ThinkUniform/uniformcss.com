@@ -3,7 +3,7 @@
 @use "sass:string";
 @use "sass:meta";
 @use "sass:math";
-/*! UniformCSS v0.9.0 | MIT License | github.com/UniformCSS/UniformCSS */
+/*! Uniform CSS v0.9.0 | MIT License | github.com/ThinkUniform/uniformcss */
 
 // ==================================================
 // USER CONFIG
@@ -239,15 +239,15 @@ $default-config: (
     margin: (1, 32),
     padding: (1, 32),
     width: (1, 36),
-    min-width: (1, 1),
-    max-width: (31, 42),
+    min-width: (24, 36),
+    max-width: (24, 42),
     height: (1, 36),
-    min-height: (1, 1),
-    max-height: (1, 36),
+    min-height: (24, 36),
+    max-height: (24, 36),
     gap: (1, 24),
     gutter: (1, 24),
-    border-width: (1, 6),
-    split-width: (1, 6),
+    border-width: (1, 4),
+    split-width: (1, 4),
     top: (1, 32),
     right: (1, 32),
     bottom: (1, 32),
@@ -256,7 +256,6 @@ $default-config: (
   ),
 
   positive-sizes: (
-    0: 0,
     1: rem(1),
     2: rem(2),
     4: rem(4),
@@ -266,6 +265,7 @@ $default-config: (
     12: rem(12),
     14: rem(14),
     16: rem(16),
+    18: rem(18),
     20: rem(20),
     24: rem(24),
     28: rem(28),
@@ -301,7 +301,6 @@ $default-config: (
   ),
 
   negative-sizes: (
-    0: 0,
     n1: rem(-1),
     n2: rem(-2),
     n4: rem(-4),
@@ -311,6 +310,7 @@ $default-config: (
     n12: rem(-12),
     n14: rem(-14),
     n16: rem(-16),
+    n18: rem(-18),
     n20: rem(-20),
     n24: rem(-24),
     n28: rem(-28),
@@ -1240,82 +1240,5 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
   @each $utility in $utilities {
     $escaped-utility: escape($utility);
     @extend %#{$escaped-utility};
-  }
-}
-
-// ==================================================
-// ROOT VARIABLES
-// ==================================================
-
-@if ($headless == false) {
-  :root {
-    --FONT-FAMILIES-----------------:#01;
-    @each $key, $value in $merged-font-families {
-      --font-#{'' + $key}: #{$value};
-    }
-    --FONT-SIZES--------------------:#02;
-    @each $key, $value in $merged-font-sizes {
-      @if (meta.type-of($value) == map) {
-        --font-#{'' + $key}: #{map.get($value, font-size)};
-      } @else {
-        --font-#{'' + $key}: #{$value};
-      }
-    }
-    --FONT-WEIGHTS------------------:#03;
-    @each $key, $value in $merged-font-weights {
-      --#{'' + $key}: #{$value};
-    }
-    --LEADING-----------------------:#04;
-    @each $key, $value in $merged-leadings {
-      --leading-#{'' + $key}: #{$value};
-    }
-    --TRACKING----------------------:#05;
-    @each $key, $value in $merged-trackings {
-      --tracking-#{'' + $key}: #{$value};
-    }
-    --TEXT-LEADING------------------:#06;
-    @each $key, $value in $merged-font-sizes {
-      @if (meta.type-of($value) == map) {
-        --font-#{'' + $key}-leading: #{map.get($value, line-height)};
-      } @else {
-        --font-#{'' + $key}-leading: 1;
-      }
-    }
-    --RADIUS------------------------:#07;
-    @each $key, $value in $merged-radiuses {
-      --radius-#{'' + $key}: #{$value};
-    }
-    --BLUR--------------------------:#08;
-    @each $key, $value in $merged-blurs {
-      --blur-#{'' + $key}: #{$value};
-    }
-    --SHADOWS-----------------------:#09;
-    @each $key, $value in $merged-shadows {
-      --shadow-#{'' + $key}: #{$value};
-    }
-    --LIGHTNESS---------------------:#10;
-    @each $key, $value in $merged-lightness {
-      --ltn-#{'' + $key}: #{$value};
-    }
-    --GRADIENTS---------------------:#11;
-    @each $gradient, $gradient-value in $merged-gradients {
-      @if (meta.type-of($gradient-value) == map) {
-        @each $key, $value in $gradient-value {
-          --#{'' + $gradient}-#{'' + $key}: #{$value};
-        }
-      } @else {
-        --#{'' + $gradient}: #{$gradient-value};
-      }
-    }
-    --COLORS------------------------:#12;
-    @each $color, $color-value in $merged-colors {
-      @if (meta.type-of($color-value) == map) {
-        @each $key, $value in $color-value {
-          --#{'' + $color}-#{'' + $key}: #{$value};
-        }
-      } @else {
-        --#{'' + $color}: #{$color-value};
-      }
-    }
   }
 }

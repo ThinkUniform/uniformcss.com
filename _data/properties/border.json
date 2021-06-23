@@ -118,10 +118,6 @@
       {
         "class": "border-b-6",
         "properties": ["border-bottom-width: 0.375rem;"]
-      },
-      {
-        "class": "border-b-8",
-        "properties": ["border-bottom-width: 0.5rem;"]
       }
     ]
   },
@@ -283,10 +279,6 @@
       {
         "class": "border-l-6",
         "properties": ["border-left-width: 0.375rem;"]
-      },
-      {
-        "class": "border-l-8",
-        "properties": ["border-left-width: 0.5rem;"]
       }
     ]
   },
@@ -363,14 +355,6 @@
       {
         "class": "border-r-6",
         "properties": ["border-right-width: 0.375rem;"]
-      },
-      {
-        "class": "border-r-8",
-        "properties": ["border-right-width: 0.5rem;"]
-      },
-      {
-        "class": "border-r-full",
-        "properties": ["border-right-width: 9999px;"]
       }
     ]
   },
@@ -523,10 +507,6 @@
       {
         "class": "border-t-6",
         "properties": ["border-top-width: 0.375rem;"]
-      },
-      {
-        "class": "border-t-8",
-        "properties": ["border-top-width: 0.5rem;"]
       }
     ]
   },
@@ -540,27 +520,23 @@
     "utilities": [
       {
         "class": "border-0",
-        "properties": ["border-bottom-width: 0;"]
+        "properties": ["border-width: 0;"]
       },
       {
         "class": "border-1",
-        "properties": ["border-bottom-width: 0.0625rem;"]
+        "properties": ["border-width: 0.0625rem;"]
       },
       {
         "class": "border-2",
-        "properties": ["border-bottom-width: 0.125rem;"]
+        "properties": ["border-width: 0.125rem;"]
       },
       {
         "class": "border-4",
-        "properties": ["border-bottom-width: 0.25rem;"]
+        "properties": ["border-width: 0.25rem;"]
       },
       {
         "class": "border-6",
-        "properties": ["border-bottom-width: 0.375rem;"]
-      },
-      {
-        "class": "border-8",
-        "properties": ["border-bottom-width: 0.5rem;"]
+        "properties": ["border-width: 0.375rem;"]
       }
     ]
   },
@@ -1098,13 +1074,6 @@
           "border-left-width: 0.375rem;",
           "border-right-width: 0.375rem;"
         ]
-      },
-      {
-        "class": "border-x-8",
-        "properties": [
-          "border-left-width: 0.5rem;",
-          "border-right-width: 0.5rem;"
-        ]
       }
     ]
   },
@@ -1149,13 +1118,6 @@
         "properties": [
           "border-top-width: 0.375rem;",
           "border-bottom-width: 0.375rem;"
-        ]
-      },
-      {
-        "class": "border-y-8",
-        "properties": [
-          "border-top-width: 0.5rem;",
-          "border-bottom-width: 0.5rem;"
         ]
       }
     ]

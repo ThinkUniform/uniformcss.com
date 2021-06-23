@@ -4,7 +4,9 @@
 @use "sass:list";
 @use "sass:meta";
 
-// DEFAULTS (2)
+// DEFAULTS (3)
+@use "core/root";
+@use "core/keyframes";
 @use "core/reset";
 @use "core/starter";
 
@@ -46,8 +48,8 @@
 @use "utilities/split/extension-split-color";
 @use "utilities/split/extension-split-reverse";
 @use "utilities/split/extension-split-style";
-@use "utilities/split/extension-split-x";
-@use "utilities/split/extension-split-y";
+@use "utilities/split/extension-split-x-width";
+@use "utilities/split/extension-split-y-width";
 
 // UTILITIES - GRID (9)
 @use "utilities/grid/core-grid-auto-flow";
@@ -227,7 +229,7 @@
 @use "utilities/typography/core-color";
 
 // CONSTRUCTOR
-$config: map.deep-merge(core.$config, core.$all-config);
+$config: map.deep-merge(core.$all-config, core.$config);
 
 @mixin constructor($config) {
 	$important: map.get($config, important);
@@ -277,6 +279,9 @@ $config: map.deep-merge(core.$config, core.$all-config);
 			@if (list.index($pseudos, null) == null) {
 				$merged-pseudos: list.join($merged-pseudos, $pseudos);
 			}
+			// @if ($utility == background-color) {
+			// 	@debug $utility-value;
+			// }
 			@if (list.index($pseudo-extends, null) == null) {
 				$merged-pseudos: list.join($merged-pseudos, $pseudo-extends, $separator: comma);
 			}
@@ -1255,19 +1260,6 @@ $config: map.deep-merge(core.$config, core.$all-config);
 									}
 								}
 							}
-						}
-					}
-				}
-			}
-		}
-
-		// GENERATE KEYFRAMES
-		@each $keyframe-key, $keyframe-value in $keyframes {
-			@keyframes #{$keyframe-key} {
-				@each $keyframe-timestamp, $keyframe-property in $keyframe-value {
-					#{$keyframe-timestamp} {
-						@each $keyframe-transform-property, $keyframe-property-value in $keyframe-property {
-							#{$keyframe-transform-property}: #{$keyframe-property-value};
 						}
 					}
 				}

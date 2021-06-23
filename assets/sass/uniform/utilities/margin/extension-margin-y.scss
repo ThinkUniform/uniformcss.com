@@ -17,6 +17,7 @@ $variants: (
 		core.positive-sizes($range-limit),
 		(
       auto: auto,
+      0: 0,
     )
 	)
 );

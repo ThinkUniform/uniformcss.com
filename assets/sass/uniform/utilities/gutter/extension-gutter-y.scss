@@ -24,7 +24,12 @@ $gutter-map: ();
 }
 
 $variants: (
-  $gutter-map
+  core.merge(
+    $gutter-map,
+    (
+      0: 0,
+    )
+  )
 );
 
 $pseudos: ();

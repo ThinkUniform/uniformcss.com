@@ -1,7 +1,7 @@
 @use "uniform/core";
 @use "sass:map";
 
-$name: split-x;
+$name: split-x-width;
 $shorthand: split-x;
 $responsive: true;
 $responsive-pseudos: false;
@@ -24,7 +24,12 @@ $split-map: ();
 }
 
 $variants: (
-  $split-map
+  core.merge(
+    $split-map,
+    (
+      0: 0,
+    )
+  )
 );
 
 $pseudos: ();

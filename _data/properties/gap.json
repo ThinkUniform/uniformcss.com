@@ -48,6 +48,10 @@
         "properties": ["column-gap: 1rem;"]
       },
       {
+        "class": "col-gap-18",
+        "properties": ["column-gap: 1.125rem;"]
+      },
+      {
         "class": "col-gap-20",
         "properties": ["column-gap: 1.25rem;"]
       },
@@ -154,6 +158,10 @@
         "properties": ["gap: 1rem;"]
       },
       {
+        "class": "gap-18",
+        "properties": ["gap: 1.125rem;"]
+      },
+      {
         "class": "gap-20",
         "properties": ["gap: 1.25rem;"]
       },
@@ -258,6 +266,10 @@
       {
         "class": "row-gap-16",
         "properties": ["row-gap: 1rem;"]
+      },
+      {
+        "class": "row-gap-18",
+        "properties": ["row-gap: 1.125rem;"]
       },
       {
         "class": "row-gap-20",

@@ -329,7 +329,7 @@
     ]
   },
   {
-    "name": "split-x",
+    "name": "split-x-width",
     "responsive": true,
     "responsive-pseudos": false,
     "extraSelector": "> * + *",
@@ -355,15 +355,11 @@
       {
         "class": "split-x-6",
         "properties": ["border-width: 0 calc(0.375rem * var(--split-right)) 0 calc(0.375rem * var(--split-left));"]
-      },
-      {
-        "class": "split-x-8",
-        "properties": ["border-width: 0 calc(0.5rem * var(--split-right)) 0 calc(0.5rem * var(--split-left));"]
       }
     ]
   },
   {
-    "name": "split-y",
+    "name": "split-y-width",
     "responsive": true,
     "responsive-pseudos": false,
     "extraSelector": "> * + *",
@@ -389,10 +385,6 @@
       {
         "class": "split-y-6",
         "properties": ["border-width: calc(0.375rem * var(--split-right)) 0 calc(0.375rem * var(--split-left)) 0;"]
-      },
-      {
-        "class": "split-y-8",
-        "properties": ["border-width: calc(0.5rem * var(--split-right)) 0 calc(0.5rem * var(--split-left)) 0;"]
       }
     ]
   }
