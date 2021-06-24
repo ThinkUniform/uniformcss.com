@@ -141,7 +141,9 @@ The source code is licensed under the [MIT agreement](https://github.com/ThinkUn
 
 ## Contact
 
-Jin Su Park • Creator and Author [@jinsu](https://twitter.com/jinsu) • [jinsupark@icloud.com](mailto:jinsupark@icloud.com) • [jinsupark.com](https://jinsupark.com)
+Jin Su Park<br>
+Creator and Author<br>
+[@jinsu](https://twitter.com/jinsu) • [jinsupark@icloud.com](mailto:jinsupark@icloud.com) • [jinsupark.com](https://jinsupark.com)
 
 
 ## Acknowledgements
