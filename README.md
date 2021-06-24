@@ -148,7 +148,7 @@ Creator and Author<br>
 
 ## Acknowledgements
 
-This project would not have been possible without the genius minds behind the following tools, products and languages.
+This project would not have been possible without the genius minds behind the following tools, products and languages. Thank you for your contribution.
 
 * [Sass](https://sass-lang.com/)
 * [Eleventy](https://www.11ty.dev/)
