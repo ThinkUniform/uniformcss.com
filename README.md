@@ -94,7 +94,7 @@ To install and run this project locally follow these simple example steps.
    ```
 4. Run Eleventy from your terminal
    ```JS
-   const API_KEY = 'ENTER YOUR API';
+   npx eleventy --serve
    ```
 
 
@@ -109,7 +109,7 @@ If you're ever stuck, need help, or wish to have a general discussion about this
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Thanks to all the people that have contributed in making this project great!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -120,7 +120,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-The source code is licensed under the MIT agreement. You are more than welcome to clone and customize this repo to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+The source code is licensed under the [MIT agreement](https://github.com/ThinkUniform/uniformcss.com/blob/main/LICENSE). You are more than welcome to clone and customize this repo to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 #### You are free to
 
@@ -136,10 +136,6 @@ The source code is licensed under the MIT agreement. You are more than welcome t
 3. **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
 4. **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-
-
-Thanks to all the people that have contributed in making this project great! See `LICENSE` for more information.
 
 
 ## Contact
