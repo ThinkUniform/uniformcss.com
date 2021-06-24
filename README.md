@@ -50,13 +50,12 @@
 <!-- Introduction -->
 ## Introduction
 
-This respository houses the official documentation site for [Uniform CSS](https://uniformcss.com), a fully configurable utility-first CSS framework built for Sass projects. For see documentation, visit [uniformcss.com](https://uniformcss.com/)
+This respository houses the official documentation site for [Uniform CSS](https://github.com/ThinkUniform/uniformcss), a fully configurable utility-first CSS framework built for Sass projects. To see documentation, visit [uniformcss.com](https://uniformcss.com/)
 
 * :rocket: Learn everything you need to know to install, customize, and get started with Uniform CSS
 * :clipboard: Quickly find any utility you're looking for with an alphabetically ordered API reference
 * :art: Get a visual reference of every color, size, font-size, and effects
 
-This project is licensed under the MIT agreement. You are more than welcome to clone and customize this project to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people that have contributed in making this project great!
 
 ### Built With
 
@@ -121,7 +120,26 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+The source code is licensed under the MIT agreement. You are more than welcome to clone and customize this repo to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+#### You are free to
+
+1. **Share** — copy and redistribute the material in any medium or format
+2. **Adapt** — remix, transform, and build upon the material
+
+#### Under the following terms
+
+1. **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+2. **NonCommercial** — You may not use the material for commercial purposes.
+
+3. **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+4. **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+
+
+Thanks to all the people that have contributed in making this project great! See `LICENSE` for more information.
 
 
 ## Contact
