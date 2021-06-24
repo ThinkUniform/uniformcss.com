@@ -50,15 +50,11 @@
 <!-- Introduction -->
 ## Introduction
 
-```scss
-@use "uniform" as *;
-```
-
 This respository houses the official documentation site for [Uniform CSS](https://uniformcss.com), a fully configurable utility-first CSS framework built for Sass projects. For see documentation, visit [uniformcss.com](https://uniformcss.com/)
 
-* Learn everything you need to know to install, customize, and get started with Uniform CSS
-* :smile: Quickly find any utility you're looking for with an alphabetically ordered API reference
-* Get a visual reference of every color, size, font-size, and effects
+* :rocket: Learn everything you need to know to install, customize, and get started with Uniform CSS
+* :clipboard: Quickly find any utility you're looking for with an alphabetically ordered API reference
+* :art: Get a visual reference of every color, size, font-size, and effects
 
 This project is licensed under the MIT agreement. You are more than welcome to clone and customize this project to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people that have contributed in making this project great!
 
