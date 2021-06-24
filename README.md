@@ -147,14 +147,14 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [Sass](https://choosealicense.com)
-* [Eleventy](https://choosealicense.com)
-* [Netlify](https://pages.github.com)
-* [Inter Font](http://leafo.net/sticky-kit)
-* [AlpineJS](http://jvectormap.com)
-* [Ionicons](https://fontawesome.com)
+
+Thank you for building amazing tools, products, and languages. This project could not happen with you!
+
+* [Sass](https://sass-lang.com/)
+* [Eleventy](https://www.11ty.dev/)
+* [Netlify](https://www.netlify.com/)
+* [Inter Font](https://rsms.me/inter/)
+* [AlpineJS](https://alpinejs.dev/)
+* [Ionicons](https://ionic.io/ionicons)
 
 
