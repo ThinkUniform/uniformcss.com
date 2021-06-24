@@ -24,7 +24,7 @@ The following table visually represents all the colors that are available.
 | { .bg-pink } | `pink` | h310 s60 l50 |
 | { .bg-white } | `white` | h0 s0 l100 |
 | { .bg-black } | `black` | h0 s0 l0 |
-| { .bg-cool-gray } | `cool-gray` | h220 s10 l50 |
+| { .bg-tertiary } | `cool-gray` | h220 s10 l50 |
 | { .bg-gray } | `gray` | h0 s0 l50 |
 | { .bg-warm-gray } | `warm-gray` | h24 s10 l50 |
 | { .bg-primary } | `primary` | h220 s80 l50 |

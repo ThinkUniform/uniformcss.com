@@ -10,13 +10,13 @@ The following table visually represents all the blurs that are available.
 
 | Reference | Class | Blur |
 | - | - | - |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-2xs"></div> | `blur-2xs` | 4px |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-xs"></div> | `blur-xs` | 8px |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-sm"></div> | `blur-sm` | 12px |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-md"></div> | `blur-md` | 16px |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-lg"></div> | `blur-lg` | 24px |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-xl"></div> | `blur-xl` | 32px |
-| <div class="w-32 h-32 m-10 bg-cool-gray filter filter-blur-2xl"></div> | `blur-2xl` | 48px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-2xs"></div> | `blur-2xs` | 4px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-xs"></div> | `blur-xs` | 8px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-sm"></div> | `blur-sm` | 12px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-md"></div> | `blur-md` | 16px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-lg"></div> | `blur-lg` | 24px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-xl"></div> | `blur-xl` | 32px |
+| <div class="w-32 h-32 m-10 bg-tertiary filter filter-blur-2xl"></div> | `blur-2xl` | 48px |
 
 { .text-left }
 

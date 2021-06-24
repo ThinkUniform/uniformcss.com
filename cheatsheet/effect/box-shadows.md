@@ -8,7 +8,7 @@ date: 2021-01-03
 
 The following table visually represents all drop shadow effects that are available.
 
-<section class="bg-cool-gray bg-100 p-20 radius-md">
+<section class="bg-tertiary bg-100 p-20 radius-md">
   <div class="grid grid-cols-1 gap-20">
     <div class="h-40 shadow-2xs bg-white radius-sm"></div>
     <div class="h-40 shadow-xs bg-white radius-sm"></div>
@@ -26,7 +26,7 @@ The following table visually represents all drop shadow effects that are availab
 
 The following table visually represents all input states and other semantic effects that are available.
 
-<section class="bg-cool-gray bg-100 p-20 radius-md">
+<section class="bg-tertiary bg-100 p-20 radius-md">
   <div class="grid grid-cols-1 gap-20">
     <div class="h-40 shadow-card bg-white radius-sm"></div>
     <input type="text" class="h-40 shadow-focus bg-white radius-sm" placeholder="Focus">

@@ -18,29 +18,29 @@ You can build traditional grid systems using the `grid` display type with suppor
 
 <section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-2 mb-20">
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
   </div>
 
   <div class="grid grid-cols-3 mb-20">
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
   </div>
 
   <div class="grid grid-cols-4">
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
   </div>
 </section>
@@ -73,29 +73,29 @@ You can create gutters by applying the `gap-<size>` property. The `gap` property
 
 <section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-2 mb-20 gap-36">
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
   </div>
 
   <div class="grid grid-cols-3 mb-20 gap-48">
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
   </div>
 
   <div class="grid grid-cols-4 gap-18">
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
   </div>
 </section>
@@ -116,11 +116,11 @@ Gutters can be responsive by prefixing the `gap-<size>` property with the breakp
 
 <section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-3 gap-12 sm.gap-24 md.gap-28 lg.gap-36">
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
-    <div class="h-40 bg-cool-gray bg-400">
+    <div class="h-40 bg-tertiary bg-400">
     </div>
-    <div class="h-40 bg-cool-gray bg-200">
+    <div class="h-40 bg-tertiary bg-200">
     </div>
   </div>
 </section>
@@ -137,11 +137,11 @@ You can specify the column count by applying the `col-<count>` property, if unde
 
 <section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-5 gap-14">
-    <div class="h-40 bg-cool-gray bg-400 col-1">
+    <div class="h-40 bg-tertiary bg-400 col-1">
     </div>
-    <div class="h-40 bg-cool-gray bg-200 col-3">
+    <div class="h-40 bg-tertiary bg-200 col-3">
     </div>
-    <div class="h-40 bg-cool-gray bg-400 col-1">
+    <div class="h-40 bg-tertiary bg-400 col-1">
     </div>
   </div>
 </section>
@@ -162,11 +162,11 @@ Both the grid column count and column span count can be responsive by prefixing 
 
 <section class="bg-tertiary bg-50 p-20 radius-md mb-24">
   <div class="grid grid-cols-1 md.grid-cols-5 gap-14">
-    <div class="h-40 bg-cool-gray bg-400 col-1 md.col-1">
+    <div class="h-40 bg-tertiary bg-400 col-1 md.col-1">
     </div>
-    <div class="h-40 bg-cool-gray bg-200 col-1 md.col-3">
+    <div class="h-40 bg-tertiary bg-200 col-1 md.col-3">
     </div>
-    <div class="h-40 bg-cool-gray bg-400 col-1 md.col-1">
+    <div class="h-40 bg-tertiary bg-400 col-1 md.col-1">
     </div>
   </div>
 </section>

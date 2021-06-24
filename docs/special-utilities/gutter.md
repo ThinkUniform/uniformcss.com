@@ -19,10 +19,10 @@ The `gutter` utility applies margin-based horizontal or vertical spacing of chil
 To apply `gutter`, assign the class `gutter-x-<size>` or `gutter-y-<size>` to any parent element.
 
 <div class="flex radius-md bg-tertiary bg-50 p-20 gutter-x-20 mb-20">
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">1</div>
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">2</div>
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">3</div>
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">4</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">1</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">2</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">3</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">4</div>
 </div>
 
 ```html
@@ -49,10 +49,10 @@ To apply `gutter`, assign the class `gutter-x-<size>` or `gutter-y-<size>` to an
 You can reverse direction of the `margin` that is applied by assigning the `gutter-reverse` utility, this can be useful in situations where `flex-row-reverse` or `flex-col-reverse` is applied.
 
 <div class="flex flex-row-reverse radius-md bg-tertiary bg-50 p-20 gutter-x-20 gutter-reverse mb-20">
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">1</div>
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">2</div>
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">3</div>
-  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-cool-gray color-white">4</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">1</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">2</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">3</div>
+  <div class="flex align-items-center justify-content-center w-40 h-40 radius-sm bg-tertiary color-white">4</div>
 </div>
 
 ```html
