@@ -1,4 +1,3 @@
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/ThinkUniform/uniformcss">
@@ -22,7 +21,6 @@
 </p>
 
 
-<!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -47,7 +45,7 @@
   </ol>
 </details>
 
-<!-- Introduction -->
+
 ## Introduction
 
 This respository houses the official documentation site for [Uniform CSS](https://github.com/ThinkUniform/uniformcss), a fully configurable utility-first CSS framework built for Sass projects. To see documentation, visit [uniformcss.com](https://uniformcss.com/)
@@ -79,6 +77,7 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+
 
 ### Installation
 
@@ -122,10 +121,12 @@ Contributions are what make the open source community such an amazing place to b
 
 The source code is licensed under the [MIT agreement](https://github.com/ThinkUniform/uniformcss.com/blob/main/LICENSE). You are more than welcome to clone and customize this repo to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+
 #### You are free to
 
 1. **Share** — copy and redistribute the material in any medium or format
 2. **Adapt** — remix, transform, and build upon the material
+
 
 #### Under the following terms
 
@@ -140,12 +141,9 @@ The source code is licensed under the [MIT agreement](https://github.com/ThinkUn
 
 ## Contact
 
-Jin Su Park - [@jinsu](https://twitter.com/jinsu) - jinsupark@icloud.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Jin Su Park • Creator and Author [@jinsu](https://twitter.com/jinsu) • [jinsupark@icloud.com](mailto:jinsupark@icloud.com) • [jinsupark.com](https://jinsupark.com)
 
 
-<!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 This project would not have been possible without the genius minds behind the following tools, products and languages.
