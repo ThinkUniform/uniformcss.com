@@ -148,7 +148,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-Thank you for building amazing tools, products, and languages. This project could not happen with you!
+This project would not have been possible without the genius minds behind the following tools, products and languages.
 
 * [Sass](https://sass-lang.com/)
 * [Eleventy](https://www.11ty.dev/)
