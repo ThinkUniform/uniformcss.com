@@ -71,13 +71,10 @@ Here are the instructions on setting up this project locally. To get a local cop
 
 ### Prerequisites
 
-All you need installed to get started is Eleventy and Sass.
+Before you get started, ensure you have the following installed.
 
-1. Install development dependencies
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- [Node & NPM](https://nodejs.org/en/download/)
+- [Sass](https://sass-lang.com/install)
 
 
 ### Installation
