@@ -230,9 +230,9 @@ $default-config: (
   ),
 
   gradients: (
-    linear: linear-gradient(var(--gradient, to right, #40C6FF 0%, #505BED 100%)),
-    radial: radial-gradient(var(--gradient, circle at 50% 50%, #40c6ff, #505bed)),
-    conic: conic-gradient(var(--gradient, from 90deg at 50% 50%, #40c6ff, #505bed)),
+    linear: linear-gradient(var(--linear-gradient, to right, #40C6FF 0%, #505BED 100%)),
+    radial: radial-gradient(var(--radial-gradient, circle at 50% 50%, #40c6ff, #505bed)),
+    conic: conic-gradient(var(--conic-gradient, from 90deg at 50% 50%, #40c6ff, #505bed)),
   ),
 
   range-limits: (
@@ -1062,18 +1062,24 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 @function size($size, $sizes...) {
   $result: ();
-  @if (map.has-key($merged-sizes, $size)) {
+  @if ($size == 0) {
+    $result: 0;
+  } @else if (map.has-key($merged-sizes, $size)) {
     $result: map.get($merged-sizes, $size);
   } @else {
     @error "[#{$size}] does not exist";
   }
   @each $size in $sizes {
     $value: '';
-    @if (map.has-key($merged-sizes, $size)) {
+
+    @if ($size == 0) {
+      $value: 0;
+      $result: list.append($result, $value);
+    } @else if (map.has-key($merged-sizes, $size)) {
       $value: map.get($merged-sizes, $size);
       $result: list.append($result, $value);
     } @else {
-      $result: list.append($result, $size);
+      @error "[#{$size}] does not exist";
     }
   }
   @return $result;

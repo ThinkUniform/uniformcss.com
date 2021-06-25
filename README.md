@@ -71,7 +71,7 @@ Here are the instructions on setting up this project locally. To get a local cop
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+All you need installed to get started is Eleventy and Sass.
 
 * npm
   ```sh
@@ -101,9 +101,9 @@ To install and run this project locally follow these simple example steps.
 
 If you're ever stuck, need help, or wish to have a general discussion about this project, please get involved with the following community channels.
 
-* [Twitter](http://leafo.net/sticky-kit)
-* [Discord](http://jvectormap.com)
-* [Github Discussions](https://fontawesome.com)
+* [Twitter](http://twitter.com/UniformCSS)
+* [Discord](https://discord.gg/GGZuRVua)
+* [Github Discussions](https://github.com/ThinkUniform/uniformcss/discussions)
 
 
 ## Contributing
