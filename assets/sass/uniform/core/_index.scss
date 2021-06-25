@@ -72,7 +72,8 @@ $config: (
   // empty array/list
   $split-array: ();
   // first index of separator in string
-  $index : string.index($string, $separator);
+  $index: string.index($string, $separator);
+ 
   // loop through string
   @while $index != null {
     // get the substring from the first character to the separator
@@ -86,7 +87,6 @@ $config: (
   }
   // add the remaining string to list (the last item)
   $split-array: append($split-array, $string);
-
   @return $split-array;
 }
 
@@ -1242,8 +1242,16 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
   }
 }
 
-@mixin apply($utilities...) {
-  @each $utility in $utilities {
+// @mixin apply($utilities...) {
+//   @each $utility in $utilities {
+//     $escaped-utility: escape($utility);
+//     @extend %#{$escaped-utility};
+//   }
+// }
+
+@mixin apply ($utilities) {
+  $utility-array: string-split($utilities, ' ');
+  @each $utility in $utility-array {
     $escaped-utility: escape($utility);
     @extend %#{$escaped-utility};
   }

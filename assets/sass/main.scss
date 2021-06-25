@@ -1,5 +1,6 @@
 @use "uniform" as * with (
-  $config: (    
+  $config: (
+		placeholders: true,
 		dark-mode-support: true,
     utility: (
       background-color: (
@@ -53,6 +54,10 @@
 
 [x-cloak] {
 	display: none !important;
+}
+
+.element {
+	@include apply('font-3xl bg-red sm.pb-48 h-64')
 }
 
 .falling-ball {
