@@ -137,12 +137,10 @@ The source code is licensed under the [MIT agreement](https://github.com/ThinkUn
 
 Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-
 #### You are free to
 
 1. **Share** — copy and redistribute the material in any medium or format
 2. **Adapt** — remix, transform, and build upon the material
-
 
 #### Under the following terms
 
@@ -171,5 +169,3 @@ This project would not have been possible without the genius minds behind the fo
 * [Inter Font](https://rsms.me/inter/)
 * [AlpineJS](https://alpinejs.dev/)
 * [Ionicons](https://ionic.io/ionicons)
-
-
