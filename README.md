@@ -102,8 +102,7 @@ This project uses a pre-configured version of Uniform CSS. Making changes and co
    ```sh
    cd assets/sass
    ```
-2. Make changes to `main.scss`
-3. Compile and watch for changes
+2. Run script to compile and watch for changes
    ```sh
    npm run uniform:watch-compressed
    ```
