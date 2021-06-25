@@ -7,7 +7,7 @@
   <h3 align="center">Uniform CSS</h3>
 
   <p align="center">
-    A fully configurable utility class generator and CSS framework built for Sass projects.
+    A fully configurable utility class generator and <br>CSS framework built for Sass projects.
     <br />
     <a href="https://uniformcss.com"><strong>Explore the docs »</strong></a>
     <br />
@@ -48,7 +48,7 @@
 
 ## Introduction
 
-This respository houses the official documentation site for [Uniform CSS](https://github.com/ThinkUniform/uniformcss), a fully configurable utility-first CSS framework built for Sass projects. To see documentation, visit [uniformcss.com](https://uniformcss.com/)
+This respository houses the official documentation site for [Uniform CSS](https://github.com/ThinkUniform/uniformcss), a fully configurable utility class generator and CSS framework built for Sass projects. To see documentation, visit [uniformcss.com](https://uniformcss.com/)
 
 * :rocket: Learn everything you need to know to install, customize, and get started with Uniform CSS
 * :clipboard: Quickly find any utility you're looking for with an alphabetically ordered API reference
