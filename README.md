@@ -59,9 +59,9 @@ This respository houses the official documentation site for [Uniform CSS](https:
 
 This project was built with the following tools and technologies.
 
-* [Sass](https://getbootstrap.com)
-* [Eleventy](https://laravel.com)
-* [AlpineJS](https://jquery.com)
+* [Sass](https://sass-lang.com/)
+* [Eleventy](https://www.11ty.dev/)
+* [AlpineJS](https://alpinejs.dev/)
 
 
 ## Getting Started
@@ -73,6 +73,7 @@ Here are the instructions on setting up this project locally. To get a local cop
 
 All you need installed to get started is Eleventy and Sass.
 
+1. Install development dependencies
 * npm
   ```sh
   npm install npm@latest -g
