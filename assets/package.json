@@ -1,7 +1,7 @@
 {
   "name": "uniformcss",
-  "version": "1.0.0",
-  "description": "An easy to use utility-first CSS framework designed to help you gain the full power of functional CSS without compromising on Sass.",
+  "version": "0.9.0",
+  "description": "A fully configurable utility class generator and CSS framework built for Sass projects.",
   "main": "sass/uniform.sass",
   "scripts": {
     "uniform:compile": "sass --load-path=./sass --no-source-map sass/main.scss css/uniform.css",
@@ -14,11 +14,11 @@
   "keywords": [
     "css",
     "sass",
-    "flexbox",
-    "framework",
-    "responsive",
+    "functional css",
     "atomic css",
-    "utility first"
+    "responsive css",
+    "utility first",
+    "uniformcss"
   ],
   "author": {
     "name": "Jin Su Park",
