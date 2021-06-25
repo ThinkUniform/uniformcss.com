@@ -74,7 +74,7 @@ Here are the instructions on setting up this project locally. To get a local cop
 Before you get started, ensure you have the following installed.
 
 - [Node & NPM](https://nodejs.org/en/download/)
-- [Sass](https://sass-lang.com/install)
+- [Sass v1.33.0+](https://sass-lang.com/install)
 
 
 ### Installation
