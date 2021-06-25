@@ -41,7 +41,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#special-thanks">Special Thanks</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -151,7 +151,7 @@ Jin Su Park – Creator and Author<br>
 [@jinsu](https://twitter.com/jinsu) • [jinsupark@icloud.com](mailto:jinsupark@icloud.com) • [jinsupark.com](https://jinsupark.com)
 
 
-## Special Thanks
+## Acknowledgements
 
 This project would not have been possible without the genius minds behind the following tools, products and languages. Thank you for your contribution.
 
