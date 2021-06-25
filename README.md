@@ -7,7 +7,7 @@
   <h3 align="center">Uniform CSS</h3>
 
   <p align="center">
-    A fully configurable utility-first CSS framework built for Sass projects.
+    A fully configurable utility class generator and CSS framework built for Sass projects.
     <br />
     <a href="https://uniformcss.com"><strong>Explore the docs »</strong></a>
     <br />
