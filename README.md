@@ -12,7 +12,7 @@
     <a href="https://uniformcss.com"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://codepen">View Demo</a>
+    <a href="https://uniformcss.com">View Site</a>
     ·
     <a href="https://github.com/ThinkUniform/uniformcss/issues">Report Bug</a>
     ·
