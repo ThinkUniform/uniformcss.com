@@ -119,7 +119,13 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-The source code is licensed under the [MIT agreement](https://github.com/ThinkUniform/uniformcss.com/blob/main/LICENSE). You are more than welcome to clone and customize this repo to suit your needs. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+### Source Code
+
+The source code is licensed under the [MIT agreement](https://github.com/ThinkUniform/uniformcss.com/blob/main/LICENSE). You are more than welcome to clone and customize this repo to suit your needs.
+
+### Web Content
+
+Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 
 #### You are free to
