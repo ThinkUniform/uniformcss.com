@@ -147,8 +147,7 @@ Website content is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/
 
 ## Contact
 
-Jin Su Park<br>
-Creator and Author<br>
+Jin Su Park – Creator and Author<br>
 [@jinsu](https://twitter.com/jinsu) • [jinsupark@icloud.com](mailto:jinsupark@icloud.com) • [jinsupark.com](https://jinsupark.com)
 
 
