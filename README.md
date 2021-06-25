@@ -35,11 +35,18 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#compiling-sass">Compiling Sass</a></li>
       </ul>
     </li>
     <li><a href="#community">Community</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li>
+      <a href="#license">License</a>
+      <ul>
+        <li><a href="#source-code">Source Code</a></li>
+        <li><a href="#web-content">Web Content</a></li>
+      </ul>
+    </li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
