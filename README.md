@@ -79,7 +79,7 @@ Before you get started, ensure you have the following installed.
 
 ### Installation
 
-To install and run this project locally follow these simple example steps.
+To install and run this project locally, follow these simple example steps.
 
 1. Clone this repo
    ```sh
@@ -94,6 +94,19 @@ To install and run this project locally follow these simple example steps.
    npx eleventy --serve
    ```
 
+### Compiling Sass
+
+This project uses a pre-configured version of Uniform CSS. Making changes and compiling is the same as any other Uniform CSS setup. Follow these steps to compile and watch for changes.
+
+1. Go to the styles directory
+   ```sh
+   cd assets/sass
+   ```
+2. Make changes to `main.scss`
+3. Compile and watch for changes
+   ```sh
+   npm run uniform:watch-compressed
+   ```
 
 ## Community
 
