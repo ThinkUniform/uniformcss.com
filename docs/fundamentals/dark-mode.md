@@ -14,13 +14,13 @@ All color and opacity related properties such as `background-color`, `border-col
 
 ## Enabling Dark Mode Support
 
-Dark mode is disabled by default, to enable, pass `true` to the `dark-mode-support` setting in your configuration.
+Dark mode is disabled by default, to enable, pass `true` to the `dark-support` setting in your configuration.
 
 ```scss
 // main.scss
 @use "uniform" as * with (
   $config: (
-    dark-mode-support: true
+    dark-support: true
   )
 );
 ```

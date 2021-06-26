@@ -59,7 +59,7 @@ The following advanced build setting definitions apply.
 | - | - | - |
 | `headless` | `false` | Loads Uniform CSS in Headless Mode. |
 | `placeholders` | `false` | Builds with placeholder selectors enabled. |
-| `dark-mode-support` | `false` | Enable dark pseudo across all properties. |
+| `dark-support` | `false` | Enable dark pseudo across all properties. |
 
 {.text-left style=""}
 
@@ -89,12 +89,12 @@ When `placeholders` is enabled, every property will also generate Sass placehold
 
 ### Dark Mode Support
 
-When `dark-mode-support` is enabled, color or opacity related properties will also generate a dark pseudo variant.
+When `dark-support` is enabled, color or opacity related properties will also generate a dark pseudo variant.
 
 ```scss
 @use "uniform" as * with (
   $config: (
-    dark-mode-support: true, // false by default
+    dark-support: true, // false by default
   )
 );
 ```

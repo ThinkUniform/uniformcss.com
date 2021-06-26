@@ -99,7 +99,7 @@ $default-config: (
 
   headless: false,
   placeholders: false,
-  dark-mode-support: false,
+  dark-support: false,
 
   exclude: (),
   include: (),
@@ -143,9 +143,7 @@ $default-config: (
     checked: ':checked',
     disabled: ':disabled',
     empty: ':empty',
-    focus-within: ':focus-within',
-    group-hover: ':group-hover',
-    group-focus: ':group-focus',
+    focus-within: ':focus-within'
   ),
 
   lightness: (
@@ -590,7 +588,7 @@ $screen-delimiter: escape(map.get($all-config, screen-delimiter));
 $headless: map.get($all-config, headless);
 $root: map.get($all-config, root);
 $debugger: map.get($all-config, debugger);
-$dark-mode-support: map.get($all-config, dark-mode-support);
+$dark-support: map.get($all-config, dark-support);
 
 $screens: map.get($all-config, screens);
 
@@ -641,9 +639,17 @@ $extend-gradients: map.get($all-config, extend, gradients);
 
 // MULTIPLE MAP MERGE FUNCTION
 @function merge($maps...) {
-  $collection: () !default;
+  $collection: ();
   @each $map in $maps {
     $collection: map.merge($collection, $map);
+  }
+  @return $collection;
+}
+
+@function deep-merge($maps...) {
+  $collection: ();
+  @each $map in $maps {
+    $collection: map.deep-merge($collection, $map);
   }
   @return $collection;
 }
@@ -659,6 +665,9 @@ $extend-gradients: map.get($all-config, extend, gradients);
   }
   @return $named-screens;
 }
+
+// TREE MAP MERGER
+
 
 // ==================================================
 // MERGED VARIABLES
