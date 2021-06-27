@@ -654,6 +654,14 @@ $extend-gradients: map.get($all-config, extend, gradients);
   @return $collection;
 }
 
+@function join($maps...) {
+  $collection: ();
+  @each $map in $maps {
+    $collection: list.join($collection, $map);
+  }
+  @return $collection;
+}
+
 // GENERATE SCREENS MAP
 @function name-screens() {
   $named-screens: ();
