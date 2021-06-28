@@ -468,7 +468,6 @@ $responsive-class-set: ();
 				);
 			}
 			$standard-class-set: map.merge($standard-class-set, $variant-set) !global;
-			// @debug $standard-class-set;
 		}
 	}
 
