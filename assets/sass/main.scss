@@ -10,5 +10,5 @@
 );
 
 .box {
-	@include apply('block bg-red bg-50 md.py-40 hover.bg-blue')
+	@include apply('flex align-items-center justify-content-center md.h-192 block bg-red bg-50 md.py-40 hover.bg-blue')
 }

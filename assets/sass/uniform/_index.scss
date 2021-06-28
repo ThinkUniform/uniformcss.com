@@ -234,7 +234,7 @@ $config: map.deep-merge(core.$all-config, core.$config);
 $standard-class-set: ();
 $responsive-class-set: ();
 
-@function map-reverse ($map) {
+@function map-reverse($map) {
 	$result: null;
 
 	@if type-of($map) == "map" {
@@ -261,14 +261,12 @@ $responsive-class-set: ();
 }
 
 @mixin tree-constructor($config) {
-	$important: map.get($config, important);
+	$headless: map.get($config, headless);
 	$prefix: map.get($config, prefix);
+	$important: map.get($config, important);
 	$delimiter: map.get($config, delimiter);
 	$pseudo-delimiter: core.escape(map.get($config, pseudo-delimiter));
 	$screen-delimiter: core.escape(map.get($config, screen-delimiter));
-
-	$headless: map.get($config, headless);
-	$dark-support: map.get($config, dark-support);
 
 	$utilities: map.get($config, utility);
 	$exclude: map.get($config, exclude);
@@ -342,7 +340,6 @@ $responsive-class-set: ();
 						$merged-properties: map.merge($merged-properties, $map);
 					}
 				}
-				
 
 				$compiled-properties: map.merge($custom-properties, $merged-properties);
 				
@@ -360,10 +357,6 @@ $responsive-class-set: ();
 				$group-hover-set: ();
 				$group-focus-set: ();
 				$pseudo-set: ();
-				$dark-group-hover-set: ();
-				$dark-group-focus-set: ();
-				$dark-set: ();
-				$dark-pseudo-set: ();
 
 				// for EACH PSEUDO do the following
 				@each $pseudo in $merged-pseudos {
@@ -389,58 +382,7 @@ $responsive-class-set: ();
 								)
 							)
 						);
-					} @else if $pseudo == dark and $dark-support == true {
-						@each $pseudo in $merged-pseudos {
-
-							@if $pseudo == group-hover {
-								$dark-group-hover-set: (
-									'dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-										selector: '.dark .group:hover .dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
-										parent: '.#{$compiled-class-name}',
-										category: dark,
-										properties: (
-											$compiled-properties
-										)
-									)
-								);
-							} @else if $pseudo == group-focus {
-								$dark-group-focus-set: (
-									'dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-										selector: '.dark .group:focus .dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
-										parent: '.#{$compiled-class-name}',
-										category: dark,
-										properties: (
-											$compiled-properties
-										)
-									)
-								);
-							} @else if $pseudo == dark {
-								$dark-set: (
-									'dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-										selector: '.dark .#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
-										parent: '.#{$compiled-class-name}',
-										category: dark,
-										properties: (
-											$compiled-properties
-										)
-									)
-								);
-							} @else if $pseudo != dark {
-								$map: (
-									'dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-										selector: '.dark .dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
-										parent: '.#{$compiled-class-name}',
-										category: dark,
-										properties: (
-											$compiled-properties
-										)
-									)
-								);
-								$dark-pseudo-set: map.merge($dark-pseudo-set, $map);
-							}
-							
-						}
-					} @else if $pseudo != dark {
+					} @else {
 						$map: (
 							'#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
 								selector: '.#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
@@ -460,11 +402,7 @@ $responsive-class-set: ();
 					$class-set, 
 					$group-hover-set, 
 					$group-focus-set, 
-					$pseudo-set,
-					$dark-group-hover-set,
-					$dark-group-focus-set,
-					$dark-set,
-					$dark-pseudo-set,
+					$pseudo-set
 				);
 			}
 			$standard-class-set: map.merge($standard-class-set, $variant-set) !global;
@@ -559,10 +497,6 @@ $responsive-class-set: ();
 							$group-hover-set: ();
 							$group-focus-set: ();
 							$pseudo-set: ();
-							$dark-group-hover-set: ();
-							$dark-group-focus-set: ();
-							$dark-set: ();
-							$dark-pseudo-set: ();
 			
 							// for EACH PSEUDO do the following
 							@each $pseudo in $merged-pseudos {
@@ -590,61 +524,6 @@ $responsive-class-set: ();
 											)
 										)
 									);
-								} @else if $pseudo == dark and $dark-support == true {
-									@each $pseudo in $merged-pseudos {
-			
-										@if $pseudo == group-hover {
-											$dark-group-hover-set: (
-												'#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-													selector: '.dark .group:hover .#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
-													parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
-													category: dark,
-													screen: $screen,
-													properties: (
-														$compiled-properties
-													)
-												)
-											);
-										} @else if $pseudo == group-focus {
-											$dark-group-focus-set: (
-												'#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-													selector: '.dark .group:focus .#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
-													parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
-													category: dark,
-													screen: $screen,
-													properties: (
-														$compiled-properties
-													)
-												)
-											);
-										} @else if $pseudos == dark {
-											$dark-set: (
-												'#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-													selector: '.dark .#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
-													parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
-													category: dark,
-													screen: $screen,
-													properties: (
-														$compiled-properties
-													)
-												)
-											);
-										} @else if $pseudo != dark {
-											$map: (
-												'#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-													selector: '.dark .#{$screen}#{$screen-delimiter}dark#{$pseudo-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
-													parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
-													category: dark,
-													screen: $screen,
-													properties: (
-														$compiled-properties
-													)
-												)
-											);
-											$dark-pseudo-set: map.merge($dark-pseudo-set, $map);
-										}
-										
-									}
 								} @else {
 									$map: (
 										'#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
@@ -666,11 +545,7 @@ $responsive-class-set: ();
 								$class-set, 
 								$group-hover-set, 
 								$group-focus-set, 
-								$pseudo-set,
-								$dark-group-hover-set,
-								$dark-group-focus-set,
-								$dark-set,
-								$dark-pseudo-set,
+								$pseudo-set
 							);
 						} @else {
 							$variant-set: map.merge($variant-set, $class-set);
@@ -697,10 +572,6 @@ $responsive-class-set: ();
 						#{$key}: #{$value};
 					}
 				}
-			} @else if $category == dark {
-				#{$selector} {
-					@extend #{$parent};
-				}
 			} @else {
 				#{$selector} {
 					@extend #{$parent};
@@ -723,10 +594,6 @@ $responsive-class-set: ();
 									#{$key}: #{$value};
 								}
 							}
-						} @else if $category == dark {
-							#{$selector} {
-								@extend #{$parent};
-							}
 						} @else {
 							#{$selector} {
 								@extend #{$parent};
@@ -744,7 +611,7 @@ $responsive-class-set: ();
 
 $merged-class-set: map.merge($standard-class-set, $responsive-class-set);
 
-@mixin apply ($utilities) {
+@mixin apply($utilities) {
   $utility-array: core.string-split($utilities, ' ');
   @each $utility in $utility-array {
     $escaped-utility: core.escape($utility);

@@ -27,8 +27,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.33.0",
     "postcss-cli": "^7.1.0",
-    "purgecss": "^3.0.0"
+    "purgecss": "^3.0.0",
+    "sass": "^1.33.0"
   }
 }
