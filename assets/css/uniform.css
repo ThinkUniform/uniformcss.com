@@ -38140,9 +38140,6 @@ select {
   --bg-opacity: 1;
   background-color: hsla(var(--red-hue), var(--red-sat), var(--bg-ltn), var(--bg-opacity));
   --bg-ltn: var(--ltn-50);
-  --bg-ltn: 50%;
-  --bg-opacity: 1;
-  background-color: hsla(var(--blue-hue), var(--blue-sat), var(--bg-ltn), var(--bg-opacity));
 }
 .box:hover {
   background: blue;
