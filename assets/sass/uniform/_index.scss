@@ -293,10 +293,10 @@ $responsive-class-set: ();
 			$variant-extends: map.get($utility-value, extend, variants);
 			$merged-variants: ();
 			@if ($variants != null) {
-				$merged-variants: map.deep-merge($merged-variants, $variants);
+				$merged-variants: map.merge($merged-variants, $variants);
 			}
 			@if ($variant-extends != null) {
-				$merged-variants: map.deep-merge($merged-variants, $variant-extends);
+				$merged-variants: map.merge($merged-variants, $variant-extends);
 			}
 
 			// MERGE EXTENDED PSEUDOS
@@ -316,7 +316,7 @@ $responsive-class-set: ();
 				$map: (
 					#{$custom-property}: $custom-property-value
 				);
-				$merged-custom-properties: map.deep-merge($merged-custom-properties, $map);
+				$merged-custom-properties: map.merge($merged-custom-properties, $map);
 			}
 			
 			$variant-set: ();
@@ -332,19 +332,19 @@ $responsive-class-set: ();
 						$map: (
 							#{$key}: $value #{if($important == true, !important, null)}
 						);
-						$merged-properties: map.deep-merge($merged-properties, $map);
+						$merged-properties: map.merge($merged-properties, $map);
 					}
 				} @else {
 					@each $property in $properties {
 						$map: (
 							#{$property}: $merged-variant-value #{if($important == true, !important, null)}
 						);
-						$merged-properties: map.deep-merge($merged-properties, $map);
+						$merged-properties: map.merge($merged-properties, $map);
 					}
 				}
 				
 
-				$compiled-properties: map.deep-merge($custom-properties, $merged-properties);
+				$compiled-properties: map.merge($custom-properties, $merged-properties);
 				
 				$class-set: (
 					'#{$compiled-class-name}': (
@@ -436,7 +436,7 @@ $responsive-class-set: ();
 										)
 									)
 								);
-								$dark-pseudo-set: map.deep-merge($dark-pseudo-set, $map);
+								$dark-pseudo-set: map.merge($dark-pseudo-set, $map);
 							}
 							
 						}
@@ -451,7 +451,7 @@ $responsive-class-set: ();
 								)
 							)
 						);
-						$pseudo-set: map.deep-merge($pseudo-set, $map);
+						$pseudo-set: map.merge($pseudo-set, $map);
 					}
 				}
 
@@ -467,7 +467,7 @@ $responsive-class-set: ();
 					$dark-pseudo-set,
 				);
 			}
-			$standard-class-set: map.deep-merge($standard-class-set, $variant-set) !global;
+			$standard-class-set: map.merge($standard-class-set, $variant-set) !global;
 			// @debug $standard-class-set;
 		}
 	}
@@ -491,10 +491,10 @@ $responsive-class-set: ();
 					$variant-extends: map.get($utility-value, extend, variants);
 					$merged-variants: ();
 					@if ($variants != null) {
-						$merged-variants: map.deep-merge($merged-variants, $variants);
+						$merged-variants: map.merge($merged-variants, $variants);
 					}
 					@if ($variant-extends != null) {
-						$merged-variants: map.deep-merge($merged-variants, $variant-extends);
+						$merged-variants: map.merge($merged-variants, $variant-extends);
 					}
 
 					// MERGE EXTENDED PSEUDOS
@@ -514,7 +514,7 @@ $responsive-class-set: ();
 						$map: (
 							#{$custom-property}: $custom-property-value
 						);
-						$merged-custom-properties: map.deep-merge($merged-custom-properties, $map);
+						$merged-custom-properties: map.merge($merged-custom-properties, $map);
 					}
 
 					$variant-set: ();
@@ -530,18 +530,18 @@ $responsive-class-set: ();
 								$map: (
 									#{$key}: $value #{if($important == true, !important, null)}
 								);
-								$merged-properties: map.deep-merge($merged-properties, $map);
+								$merged-properties: map.merge($merged-properties, $map);
 							}
 						} @else {
 							@each $property in $properties {
 								$map: (
 									#{$property}: $merged-variant-value #{if($important == true, !important, null)}
 								);
-								$merged-properties: map.deep-merge($merged-properties, $map);
+								$merged-properties: map.merge($merged-properties, $map);
 							}
 						}
 			
-						$compiled-properties: map.deep-merge($custom-properties, $merged-properties);
+						$compiled-properties: map.merge($custom-properties, $merged-properties);
 			
 						$class-set: (
 							'#{$screen}#{$screen-delimiter}#{$compiled-class-name}': (
@@ -642,7 +642,7 @@ $responsive-class-set: ();
 													)
 												)
 											);
-											$dark-pseudo-set: map.deep-merge($dark-pseudo-set, $map);
+											$dark-pseudo-set: map.merge($dark-pseudo-set, $map);
 										}
 										
 									}
@@ -658,7 +658,7 @@ $responsive-class-set: ();
 											)
 										)
 									);
-									$pseudo-set: map.deep-merge($pseudo-set, $map);
+									$pseudo-set: map.merge($pseudo-set, $map);
 								}
 							}
 							
@@ -674,10 +674,10 @@ $responsive-class-set: ();
 								$dark-pseudo-set,
 							);
 						} @else {
-							$variant-set: map.deep-merge($variant-set, $class-set);
+							$variant-set: map.merge($variant-set, $class-set);
 						}
 					}
-					$responsive-class-set: map.deep-merge($responsive-class-set, $variant-set) !global;
+					$responsive-class-set: map.merge($responsive-class-set, $variant-set) !global;
 				}
 			}
 		}
@@ -698,11 +698,11 @@ $responsive-class-set: ();
 						#{$key}: #{$value};
 					}
 				}
-			} @else if $category == pseudo {
+			} @else if $category == dark {
 				#{$selector} {
 					@extend #{$parent};
 				}
-			} @else if $category == dark {
+			} @else {
 				#{$selector} {
 					@extend #{$parent};
 				}
@@ -724,11 +724,11 @@ $responsive-class-set: ();
 									#{$key}: #{$value};
 								}
 							}
-						} @else if $category == pseudo {
+						} @else if $category == dark {
 							#{$selector} {
 								@extend #{$parent};
 							}
-						} @else if $category == dark {
+						} @else {
 							#{$selector} {
 								@extend #{$parent};
 							}
@@ -743,7 +743,7 @@ $responsive-class-set: ();
 
 @include tree-constructor($config);
 
-$merged-class-set: map.deep-merge($standard-class-set, $responsive-class-set);
+$merged-class-set: map.merge($standard-class-set, $responsive-class-set);
 
 @mixin apply ($utilities) {
   $utility-array: core.string-split($utilities, ' ');
@@ -758,10 +758,16 @@ $merged-class-set: map.deep-merge($standard-class-set, $responsive-class-set);
 			@each $property, $value in $properties {
 				#{$property}: #{$value};
 			}
+			&:hover {
+				background: blue;
+			}
 		} @else {
 			@media (min-width: map.get($config, screens, $screen)) {
 				@each $property, $value in $properties {
 					#{$property}: #{$value};
+				}
+				&:hover {
+					background: blue;
 				}
 			}
 		}
