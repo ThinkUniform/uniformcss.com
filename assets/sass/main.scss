@@ -1,14 +1,9 @@
 @use "uniform" as * with (
 	$config: (
-		// headless: true,
-		utility: (
-			color: (
-
-			)
-		)
+		// headless: true
 	)
 );
-
-.box {
-	@include apply('flex align-items-center justify-content-center md.h-192 block bg-red bg-50 md.py-40 hover.bg-blue')
+ 
+.element {
+	@include apply('text-left bg-red bg-50 group-hover.bg-100')
 }

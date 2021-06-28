@@ -320,7 +320,7 @@ $responsive-class-set: ();
 			$variant-set: ();
 			@each $merged-variant, $merged-variant-value in $merged-variants {
 				
-				// compile and define the final class name
+				// COMPILE CLASS NAME
 				$compiled-class-name: #{$prefix}#{if($shorthand == null, if($merged-variant == null, null, $merged-variant), if($merged-variant == null,$shorthand, $shorthand + $delimiter + '' + $merged-variant))};
 
 				// MERGE PROPERTIES
@@ -360,10 +360,11 @@ $responsive-class-set: ();
 
 				// for EACH PSEUDO do the following
 				@each $pseudo in $merged-pseudos {
+					$compiled-pseudo-name: #{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name};
 					@if $pseudo == group-hover {
 						$group-hover-set: (
-							'#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-								selector: '.group:hover .#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
+							'#{$compiled-pseudo-name}': (
+								selector: '.group:hover .#{$compiled-pseudo-name}#{$extra-selector}',
 								parent: '.#{$compiled-class-name}',
 								category: pseudo,
 								properties: (
@@ -373,8 +374,8 @@ $responsive-class-set: ();
 						);
 					} @else if $pseudo == group-focus {
 						$group-focus-set: (
-							'#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-								selector: '.group:focus .#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
+							'#{$compiled-pseudo-name}': (
+								selector: '.group:focus .#{$compiled-pseudo-name}#{$extra-selector}',
 								parent: '.#{$compiled-class-name}',
 								category: pseudo,
 								properties: (
@@ -384,8 +385,8 @@ $responsive-class-set: ();
 						);
 					} @else {
 						$map: (
-							'#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-								selector: '.#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
+							'#{$compiled-pseudo-name}': (
+								selector: '.#{$compiled-pseudo-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
 								parent: '.#{$compiled-class-name}',
 								category: pseudo,
 								properties: (
@@ -457,7 +458,7 @@ $responsive-class-set: ();
 					$variant-set: ();
 					@each $merged-variant, $merged-variant-value in $merged-variants {
 
-						// compile and define the final class name
+						// COMPILE CLASS NAME
 						$compiled-class-name: #{$prefix}#{if($shorthand == null, if($merged-variant == null, null, $merged-variant), if($merged-variant == null,$shorthand, $shorthand + $delimiter + '' + $merged-variant))};
 			
 						// MERGE PROPERTIES
@@ -497,13 +498,15 @@ $responsive-class-set: ();
 							$group-hover-set: ();
 							$group-focus-set: ();
 							$pseudo-set: ();
-			
+
 							// for EACH PSEUDO do the following
 							@each $pseudo in $merged-pseudos {
+								$compiled-responsive-pseudo-name: #{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter};
+
 								@if $pseudo == group-hover {
 									$group-hover-set: (
-										'#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-											selector: '.group:hover .#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
+										'#{$compiled-responsive-pseudo-name}#{$compiled-class-name}': (
+											selector: '.group:hover .#{$compiled-responsive-pseudo-name}#{$compiled-class-name}#{$extra-selector}',
 											parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
 											category: pseudo,
 											screen: $screen,
@@ -514,8 +517,8 @@ $responsive-class-set: ();
 									);
 								} @else if $pseudo == group-focus {
 									$group-focus-set: (
-										'#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-											selector: '.group:focus .#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}',
+										'#{$compiled-responsive-pseudo-name}#{$compiled-class-name}': (
+											selector: '.group:focus .#{$compiled-responsive-pseudo-name}#{$compiled-class-name}#{$extra-selector}',
 											parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
 											category: pseudo,
 											screen: $screen,
@@ -526,8 +529,8 @@ $responsive-class-set: ();
 									);
 								} @else {
 									$map: (
-										'#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}': (
-											selector: '.#{$screen}#{$screen-delimiter}#{$pseudo}#{$pseudo-delimiter}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
+										'#{$compiled-responsive-pseudo-name}#{$compiled-class-name}': (
+											selector: '.#{$compiled-responsive-pseudo-name}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
 											parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
 											category: pseudo,
 											screen: $screen,
@@ -615,27 +618,43 @@ $merged-class-set: map.merge($standard-class-set, $responsive-class-set);
   $utility-array: core.string-split($utilities, ' ');
   @each $utility in $utility-array {
     $escaped-utility: core.escape($utility);
-		$select-utility: map.get($merged-class-set, $escaped-utility);
-
-		$properties: map.get($select-utility, properties);
-		$screen: map.get($select-utility, screen);
-		
-		@if $screen == null {
-			@each $property, $value in $properties {
-				#{$property}: #{$value};
-			}
-			&:hover {
-				background: blue;
-			}
+		@if map.get($merged-class-set, $escaped-utility) == null {
+			@error '[#{$utility}] does not exist, please check spelling and make sure it does not exist in your exclude setting.'
 		} @else {
-			@media (min-width: map.get($config, screens, $screen)) {
-				@each $property, $value in $properties {
-					#{$property}: #{$value};
+			$target-utility: map.get($merged-class-set, $escaped-utility);
+			$properties: map.get($target-utility, properties);
+			$selector: map.get($target-utility, selector);
+			$category: map.get($target-utility, category);
+			$screen: map.get($target-utility, screen);
+			
+			@if $screen == null {
+				@if $category == pseudo {
+					@at-root #{$selector} {
+						@each $property, $value in $properties {
+							#{$property}: #{$value};
+						}
+					}
+				} @else {
+					@each $property, $value in $properties {
+						#{$property}: #{$value};
+					}
 				}
-				&:hover {
-					background: blue;
+			} @else {
+				@media (min-width: map.get($config, screens, $screen)) {
+					@if $category == pseudo {
+						@at-root #{$selector} {
+							@each $property, $value in $properties {
+								#{$property}: #{$value};
+							}
+						}
+					} @else {
+						@each $property, $value in $properties {
+							#{$property}: #{$value};
+						}
+					}
 				}
 			}
 		}
+		
   }
 }

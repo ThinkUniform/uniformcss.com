@@ -161,9 +161,9 @@
   --primary-hue: 220;
   --primary-sat: 80%;
   --secondary-hue: 220;
-  --secondary-sat: 60%;
+  --secondary-sat: 40%;
   --tertiary-hue: 220;
-  --tertiary-sat: 40%;
+  --tertiary-sat: 20%;
   --success-hue: 80;
   --success-sat: 60%;
   --warning-hue: 40;
@@ -38134,54 +38134,13 @@ select {
     resize: vertical;
   }
 }
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: block;
+.element {
+  text-align: left;
   --bg-ltn: 50%;
   --bg-opacity: 1;
   background-color: hsla(var(--red-hue), var(--red-sat), var(--bg-ltn), var(--bg-opacity));
   --bg-ltn: var(--ltn-50);
-  --bg-ltn: 50%;
-  --bg-opacity: 1;
-  background-color: hsla(var(--blue-hue), var(--blue-sat), var(--bg-ltn), var(--bg-opacity));
 }
-.box:hover {
-  background: blue;
-}
-.box:hover {
-  background: blue;
-}
-.box:hover {
-  background: blue;
-}
-@media (min-width: 1024px) {
-  .box {
-    height: 12rem;
-  }
-  .box:hover {
-    background: blue;
-  }
-}
-.box:hover {
-  background: blue;
-}
-.box:hover {
-  background: blue;
-}
-.box:hover {
-  background: blue;
-}
-@media (min-width: 1024px) {
-  .box {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-  .box:hover {
-    background: blue;
-  }
-}
-.box:hover {
-  background: blue;
+.group:hover .group-hover\.bg-100 {
+  --bg-ltn: var(--ltn-100);
 }

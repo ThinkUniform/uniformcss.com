@@ -8,8 +8,8 @@ $include: map.get($all-config, include);
 $headless: map.get($all-config, headless);
 
 $include-condition: true;
-@if ( $headless == false ) {
-  $include-condition: true;
+@if ( $headless == true ) {
+  $include-condition: false;
 }
 @if ( list.index($exclude, all) ) {
   $include-condition: false;
