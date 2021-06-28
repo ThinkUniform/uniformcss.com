@@ -208,6 +208,8 @@
 @use "utilities/transition/core-transition";
 
 // UTILITIES - TYPOGRAPHY (19)
+@use "utilities/typography/extension-color-lightness";
+@use "utilities/typography/extension-color-opacity";
 @use "utilities/typography/core-letter-spacing";
 @use "utilities/typography/core-line-height";
 @use "utilities/typography/core-list-style-position";
@@ -225,8 +227,6 @@
 @use "utilities/typography/core-font-size";
 @use "utilities/typography/extension-text-size";
 @use "utilities/typography/core-color";
-@use "utilities/typography/extension-color-lightness";
-@use "utilities/typography/extension-color-opacity";
 
 // CONSTRUCTOR
 $config: map.deep-merge(core.$all-config, core.$config);

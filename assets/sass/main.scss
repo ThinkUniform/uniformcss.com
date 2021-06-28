@@ -1,6 +1,11 @@
 @use "uniform" as * with (
 	$config: (
 		// headless: true,
+		utility: (
+			color: (
+
+			)
+		)
 	)
 );
 
