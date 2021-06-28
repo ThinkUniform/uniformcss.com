@@ -208,8 +208,6 @@
 @use "utilities/transition/core-transition";
 
 // UTILITIES - TYPOGRAPHY (19)
-@use "utilities/typography/extension-color-lightness";
-@use "utilities/typography/extension-color-opacity";
 @use "utilities/typography/core-letter-spacing";
 @use "utilities/typography/core-line-height";
 @use "utilities/typography/core-list-style-position";
@@ -227,6 +225,8 @@
 @use "utilities/typography/core-font-size";
 @use "utilities/typography/extension-text-size";
 @use "utilities/typography/core-color";
+@use "utilities/typography/extension-color-lightness";
+@use "utilities/typography/extension-color-opacity";
 
 // CONSTRUCTOR
 $config: map.deep-merge(core.$all-config, core.$config);
@@ -330,21 +330,21 @@ $responsive-class-set: ();
 				@if meta.type-of($merged-variant-value) == map {
 					@each $key, $value in $merged-variant-value {
 						$map: (
-							#{$key}: $value if($important == true, !important, null)
+							#{$key}: $value #{if($important == true, !important, null)}
 						);
 						$merged-properties: map.deep-merge($merged-properties, $map);
 					}
 				} @else {
 					@each $property in $properties {
 						$map: (
-							#{$property}: $merged-variant-value if($important == true, !important, null)
+							#{$property}: $merged-variant-value #{if($important == true, !important, null)}
 						);
 						$merged-properties: map.deep-merge($merged-properties, $map);
 					}
 				}
 				
 
-				$compiled-properties: list.join($custom-properties, $merged-properties);
+				$compiled-properties: map.deep-merge($custom-properties, $merged-properties);
 				
 				$class-set: (
 					'#{$compiled-class-name}': (
@@ -455,7 +455,7 @@ $responsive-class-set: ();
 					}
 				}
 
-				$variant-set: core.join(
+				$variant-set: core.deep-merge(
 					$variant-set, 
 					$class-set, 
 					$group-hover-set, 
@@ -467,7 +467,8 @@ $responsive-class-set: ();
 					$dark-pseudo-set,
 				);
 			}
-			$standard-class-set: list.join($standard-class-set, $variant-set) !global;
+			$standard-class-set: map.deep-merge($standard-class-set, $variant-set) !global;
+			// @debug $standard-class-set;
 		}
 	}
 
@@ -527,20 +528,20 @@ $responsive-class-set: ();
 						@if meta.type-of($merged-variant-value) == map {
 							@each $key, $value in $merged-variant-value {
 								$map: (
-									#{$key}: $value if($important == true, !important, null)
+									#{$key}: $value #{if($important == true, !important, null)}
 								);
 								$merged-properties: map.deep-merge($merged-properties, $map);
 							}
 						} @else {
 							@each $property in $properties {
 								$map: (
-									#{$property}: $merged-variant-value if($important == true, !important, null)
+									#{$property}: $merged-variant-value #{if($important == true, !important, null)}
 								);
 								$merged-properties: map.deep-merge($merged-properties, $map);
 							}
 						}
 			
-						$compiled-properties: list.join($custom-properties, $merged-properties);
+						$compiled-properties: map.deep-merge($custom-properties, $merged-properties);
 			
 						$class-set: (
 							'#{$screen}#{$screen-delimiter}#{$compiled-class-name}': (
@@ -661,7 +662,7 @@ $responsive-class-set: ();
 								}
 							}
 							
-							$variant-set: core.join(
+							$variant-set: core.deep-merge(
 								$variant-set, 
 								$class-set, 
 								$group-hover-set, 
@@ -673,10 +674,10 @@ $responsive-class-set: ();
 								$dark-pseudo-set,
 							);
 						} @else {
-							$variant-set: list.join($variant-set, $class-set);
+							$variant-set: map.deep-merge($variant-set, $class-set);
 						}
 					}
-					$responsive-class-set: list.join($responsive-class-set, $variant-set) !global;
+					$responsive-class-set: map.deep-merge($responsive-class-set, $variant-set) !global;
 				}
 			}
 		}
@@ -742,13 +743,27 @@ $responsive-class-set: ();
 
 @include tree-constructor($config);
 
-$merged-class-set: list.join($standard-class-set, $responsive-class-set);
+$merged-class-set: map.deep-merge($standard-class-set, $responsive-class-set);
 
 @mixin apply ($utilities) {
   $utility-array: core.string-split($utilities, ' ');
   @each $utility in $utility-array {
     $escaped-utility: core.escape($utility);
-		$select-utility: list.index($merged-class-set, 7);
-		@debug $select-utility;
+		$select-utility: map.get($merged-class-set, $escaped-utility);
+
+		$properties: map.get($select-utility, properties);
+		$screen: map.get($select-utility, screen);
+		
+		@if $screen == null {
+			@each $property, $value in $properties {
+				#{$property}: #{$value};
+			}
+		} @else {
+			@media (min-width: map.get($config, screens, $screen)) {
+				@each $property, $value in $properties {
+					#{$property}: #{$value};
+				}
+			}
+		}
   }
 }
