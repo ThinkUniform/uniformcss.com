@@ -1,1 +1,6 @@
 @use "uniform" as *;
+
+.box {
+	background: pink;
+	@include apply('text-left md.text-center')
+}

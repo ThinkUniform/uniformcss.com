@@ -147,27 +147,27 @@ $default-config: (
   ),
 
   lightness: (
-    white: 100%,
-    50: 95%,
-    100: 90%,
-    150: 85%,
-    200: 80%,
-    250: 75%,
-    300: 70%,
-    350: 65%,
-    400: 60%,
-    450: 55%,
-    500: 50%,
-    550: 45%,
-    600: 40%,
-    650: 35%,
-    700: 30%,
-    750: 25%,
-    800: 20%,
-    850: 15%,
-    900: 10%,
-    950: 5%,
-    black: 0%,
+    100: 100%,
+    95: 95%,
+    90: 90%,
+    85: 85%,
+    80: 80%,
+    75: 75%,
+    70: 70%,
+    65: 65%,
+    60: 60%,
+    55: 55%,
+    50: 50%,
+    45: 45%,
+    40: 40%,
+    35: 35%,
+    30: 30%,
+    25: 25%,
+    20: 20%,
+    15: 15%,
+    10: 10%,
+    5: 5%,
+    0: 0%,
   ),
 
   opacities: (
@@ -1256,20 +1256,5 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @mixin screen($screen) {
   @media (min-width: screen($screen)) {
     @content; 
-  }
-}
-
-// @mixin apply($utilities...) {
-//   @each $utility in $utilities {
-//     $escaped-utility: escape($utility);
-//     @extend %#{$escaped-utility};
-//   }
-// }
-
-@mixin apply ($utilities) {
-  $utility-array: string-split($utilities, ' ');
-  @each $utility in $utility-array {
-    $escaped-utility: escape($utility);
-    @extend %#{$escaped-utility};
   }
 }
