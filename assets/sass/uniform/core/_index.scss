@@ -588,7 +588,6 @@ $screen-delimiter: escape(map.get($all-config, screen-delimiter));
 $headless: map.get($all-config, headless);
 $root: map.get($all-config, root);
 $debugger: map.get($all-config, debugger);
-$dark-support: map.get($all-config, dark-support);
 
 $screens: map.get($all-config, screens);
 

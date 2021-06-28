@@ -3,7 +3,5 @@
 		// headless: true
 	)
 );
- 
-.element {
-	@include apply('text-left bg-red bg-50 group-hover.bg-100')
-}
+
+
