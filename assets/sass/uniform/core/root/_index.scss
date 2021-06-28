@@ -67,11 +67,7 @@ $include-condition: true;
     @each $key, $value in $merged-shadows {
       --shadow-#{'' + $key}: #{$value};
     }
-    --LIGHTNESS---------------------:#10;
-    @each $key, $value in $merged-lightness {
-      --ltn-#{'' + $key}: #{$value};
-    }
-    --GRADIENTS---------------------:#11;
+    --GRADIENTS---------------------:#10;
     @each $gradient, $gradient-value in $merged-gradients {
       @if (meta.type-of($gradient-value) == map) {
         @each $key, $value in $gradient-value {
@@ -81,7 +77,7 @@ $include-condition: true;
         --#{'' + $gradient}: #{$gradient-value};
       }
     }
-    --COLORS------------------------:#12;
+    --COLORS------------------------:#11;
     @each $color, $color-value in $merged-colors {
       @if (meta.type-of($color-value) == map) {
         @each $key, $value in $color-value {

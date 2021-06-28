@@ -1,12 +1,5 @@
 @use "uniform" as * with (
   $config: (
-		colors: (
-			tama: (
-				hue: 110,
-				sat: 40%,
-				ltn: 10%
-			)
-		),
     utility: (
       background-color: (
       	extend: (
@@ -89,7 +82,7 @@
 		padding: size(6, 0);
 		color: fill(cool-gray);
 		&:hover {
-			color: fill(cool-gray, shade-400);
+			color: fill(cool-gray, 400);
 		}
 	}
 	& > ol {

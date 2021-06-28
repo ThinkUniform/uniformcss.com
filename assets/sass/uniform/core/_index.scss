@@ -836,7 +836,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
   $result: ();
   @each $key, $value in $merged-lightness {
     $map: (
-      $key: var(--ltn-#{$key})
+      $key: $value
     );
     $result: map.merge($result, $map);
   }
@@ -868,7 +868,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
         $ltn: map.get($value, ltn);
       }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--bg-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--bg-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -894,7 +894,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
         $ltn: map.get($value, ltn);
       }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--color-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--color-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -920,7 +920,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
         $ltn: map.get($value, ltn);
       }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--ph-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--ph-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -946,7 +946,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
         $ltn: map.get($value, ltn);
       }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--border-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--border-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -972,7 +972,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
         $ltn: map.get($value, ltn);
       }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--split-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--split-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -985,19 +985,25 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
   @return $result;
 }
 
-@function fill($key, $lightness: 500, $opacity: 1) {
+@function fill($key, $ltn: 500, $opacity: 1) {
   $result: ();
 
-  @if $key == white {
-    $lightness: 100%;
-  } @else if $key == black {
-    $lightness: 0%;
-  }
-
   @if map.has-key($merged-colors, $key) {
+
     $value: map.get($merged-colors, $key);
+
+    @if $key == white {
+      $ltn: 100%;
+    } @else if $key == black {
+      $ltn: 0%;
+    } @else if map.get($merged-lightness, $ltn) {
+      $ltn: map.get($merged-lightness, $ltn);
+    } @else {
+      @error "[#{$ltn}] does not exist.";
+    }
+
     @if meta.type-of($value) == map {
-      $result: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--ltn-#{$lightness}), #{$opacity} );
+      $result: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, $opacity );
     } @else {
       $result: map.get($merged-colors, $key);
     }    
