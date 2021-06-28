@@ -98,8 +98,8 @@ $default-config: (
   screen-delimiter: '.',
 
   headless: false,
-  placeholders: false,
-  dark-support: false,
+  placeholder-support: false,
+  apply-support: false,
 
   exclude: (),
   include: (),
@@ -147,27 +147,25 @@ $default-config: (
   ),
 
   lightness: (
-    100: 100%,
-    95: 95%,
-    90: 90%,
-    85: 85%,
-    80: 80%,
-    75: 75%,
-    70: 70%,
-    65: 65%,
-    60: 60%,
-    55: 55%,
-    50: 50%,
-    45: 45%,
-    40: 40%,
-    35: 35%,
-    30: 30%,
-    25: 25%,
-    20: 20%,
-    15: 15%,
-    10: 10%,
-    5: 5%,
-    0: 0%,
+    50: 95%,
+    100: 90%,
+    150: 85%,
+    200: 80%,
+    250: 75%,
+    300: 70%,
+    350: 65%,
+    400: 60%,
+    450: 55%,
+    500: 50%,
+    550: 45%,
+    600: 40%,
+    650: 35%,
+    700: 30%,
+    750: 25%,
+    800: 20%,
+    850: 15%,
+    900: 10%,
+    950: 5%
   ),
 
   opacities: (
@@ -198,33 +196,33 @@ $default-config: (
   ),
 
   colors: (
-    red: ( hue: 0, sat: 50% ),
-    firebrick: ( hue: 10, sat: 60% ),
-    orange: ( hue: 20, sat: 70% ),
-    gold: ( hue: 40, sat: 90% ),
-    yellow: ( hue: 50, sat: 100% ),
-    lime: ( hue: 80, sat: 70% ),
-    green: ( hue: 110, sat: 60% ),
-    cyan: ( hue: 190, sat: 60% ),
-    blue: ( hue: 220, sat: 70% ),
-    purple: ( hue: 260, sat: 90% ),
-    violet: ( hue: 280, sat: 70% ),
-    pink: ( hue: 310, sat: 60% ),
+    red: ( hue: 0, sat: 50%, ltn: 50% ),
+    firebrick: ( hue: 10, sat: 60%, ltn: 50% ),
+    orange: ( hue: 20, sat: 70%, ltn: 50% ),
+    gold: ( hue: 40, sat: 90%, ltn: 50% ),
+    yellow: ( hue: 50, sat: 100%, ltn: 50% ),
+    lime: ( hue: 80, sat: 70%, ltn: 50% ),
+    green: ( hue: 110, sat: 60%, ltn: 50% ),
+    cyan: ( hue: 190, sat: 60%, ltn: 50% ),
+    blue: ( hue: 220, sat: 70%, ltn: 50% ),
+    purple: ( hue: 260, sat: 90%, ltn: 50% ),
+    violet: ( hue: 280, sat: 70%, ltn: 50% ),
+    pink: ( hue: 310, sat: 60%, ltn: 50% ),
     
-    white: ( hue: 0, sat: 0% ),
-    black: ( hue: 0, sat: 0% ),
+    white: ( hue: 0, sat: 0%, ltn: 100% ),
+    black: ( hue: 0, sat: 0%, ltn: 100% ),
 
-    cool-gray: ( hue: 220, sat: 10% ),
-    gray: ( hue: 0, sat: 0% ),
-    warm-gray: ( hue: 24, sat: 10% ),
+    cool-gray: ( hue: 220, sat: 10%, ltn: 50% ),
+    gray: ( hue: 0, sat: 0%, ltn: 50% ),
+    warm-gray: ( hue: 24, sat: 10%, ltn: 50% ),
 
-    primary: ( hue: 220, sat: 80% ),
-    secondary: ( hue: 220, sat: 40% ),
-    tertiary: ( hue: 220, sat: 20% ),
+    primary: ( hue: 220, sat: 80%, ltn: 50% ),
+    secondary: ( hue: 220, sat: 40%, ltn: 50% ),
+    tertiary: ( hue: 220, sat: 20%, ltn: 50% ),
 
-    success: ( hue: 80, sat: 60% ),
-    warning: ( hue: 40, sat: 60% ),
-    danger: ( hue: 0, sat: 60% )
+    success: ( hue: 80, sat: 60%, ltn: 50% ),
+    warning: ( hue: 40, sat: 60%, ltn: 50% ),
+    danger: ( hue: 0, sat: 60%, ltn: 50% )
   ),
 
   gradients: (
@@ -682,29 +680,29 @@ $extend-gradients: map.get($all-config, extend, gradients);
 
 // MERGED SCREENS
 $merged-screens: ();
-@if ($screens != null) {
+@if $screens != null {
   $merged-screens: map.deep-merge($merged-screens, $screens);
 }
 $merged-screens: map.deep-merge($merged-screens, $extend-screens);
 
 // MERGED SIZES
 $merged-positive-sizes: ();
-@if ($positive-sizes != null) {
+@if $positive-sizes != null {
   $merged-positive-sizes: map.deep-merge($merged-positive-sizes, $positive-sizes);
 }
 $merged-positive-sizes: map.deep-merge($merged-positive-sizes, $extend-positive-sizes);
 
 $merged-negative-sizes: ();
-@if ($negative-sizes != null) {
+@if $negative-sizes != null {
   $merged-negative-sizes: map.deep-merge($merged-negative-sizes, $negative-sizes);
 }
 $merged-negative-sizes: map.deep-merge($merged-negative-sizes, $extend-negative-sizes);
 
 $merged-sizes: ();
-@if ($positive-sizes != null) {
+@if $positive-sizes != null {
   $merged-sizes: map.deep-merge($merged-sizes, $positive-sizes);
 }
-@if ($negative-sizes != null) {
+@if $negative-sizes != null {
   $merged-sizes: map.deep-merge($merged-sizes, $negative-sizes);
 }
 $merged-sizes: map.deep-merge($merged-sizes, $extend-positive-sizes);
@@ -712,84 +710,84 @@ $merged-sizes: map.deep-merge($merged-sizes, $extend-negative-sizes);
 
 // MERGED SHADOWS
 $merged-shadows: ();
-@if ($shadows != null) {
+@if $shadows != null {
   $merged-shadows: map.deep-merge($merged-shadows, $shadows);
 }
 $merged-shadows: map.deep-merge($merged-shadows, $extend-shadows);
 
 // MERGED FONT FAMILIES
 $merged-font-families: ();
-@if ($font-families != null) {
+@if $font-families != null {
   $merged-font-families: map.deep-merge($merged-font-families, $font-families);
 }
 $merged-font-families: map.deep-merge($merged-font-families, $extend-font-families);
 
 // MERGED FONT SIZES
 $merged-font-sizes: ();
-@if ($font-sizes != null) {
+@if $font-sizes != null {
   $merged-font-sizes: map.deep-merge($merged-font-sizes, $font-sizes);
 }
 $merged-font-sizes: map.deep-merge($merged-font-sizes, $extend-font-sizes);
 
 // MERGED WEIGHTS
 $merged-font-weights: ();
-@if ($font-weights != null) {
+@if $font-weights != null {
   $merged-font-weights: map.deep-merge($merged-font-weights, $font-weights);
 }
 $merged-font-weights: map.deep-merge($merged-font-weights, $extend-font-weights);
 
 // MERGED LEADINGS
 $merged-leadings: ();
-@if ($leadings != null) {
+@if $leadings != null {
   $merged-leadings: map.deep-merge($merged-leadings, $leadings);
 }
 $merged-leadings: map.deep-merge($merged-leadings, $extend-leadings);
 
 // MERGED TRACKINGS
 $merged-trackings: ();
-@if ($trackings != null) {
+@if $trackings != null {
   $merged-trackings: map.deep-merge($merged-trackings, $trackings);
 }
 $merged-trackings: map.deep-merge($merged-trackings, $extend-trackings);
 
 // MERGED RADIUSES
 $merged-radiuses: ();
-@if ($radiuses != null) {
+@if $radiuses != null {
   $merged-radiuses: map.deep-merge($merged-radiuses, $radiuses);
 }
 $merged-radiuses: map.deep-merge($merged-radiuses, $extend-radiuses);
 
 // MERGED BLURS
 $merged-blurs: ();
-@if ($blurs != null) {
+@if $blurs != null {
   $merged-blurs: map.deep-merge($merged-blurs, $blurs);
 }
 $merged-blurs: map.deep-merge($merged-blurs, $extend-blurs);
 
 // MERGED LIGHTNESS LEVELS
 $merged-lightness: ();
-@if ($lightness != null) {
+@if $lightness != null {
   $merged-lightness: map.deep-merge($merged-lightness, $lightness);
 }
 $merged-lightness: map.deep-merge($merged-lightness, $extend-lightness);
 
 // MERGED OPACITY LEVELS
 $merged-opacities: ();
-@if ($opacities != null) {
+@if $opacities != null {
   $merged-opacities: map.deep-merge($merged-opacities, $opacities);
 }
 $merged-opacities: map.deep-merge($merged-opacities, $extend-opacities);
 
 // MERGED COLORS
 $merged-colors: ();
-@if ($colors != null) {
+@if $colors != null {
   $merged-colors: map.deep-merge($merged-colors, $colors);
 }
 $merged-colors: map.deep-merge($merged-colors, $extend-colors);
 
 // MERGED GRADIENTS
 $merged-gradients: ();
-@if ($gradients != null) {
+@if $gradients != null {
   $merged-gradients: map.deep-merge($merged-gradients, $gradients);
 }
 $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
@@ -802,7 +800,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 // GET SCREEN FUNCTIONS
 @function screen($screen) {
   $result: ();
-  @if (map.get($all-config, screens, $screen)) {
+  @if map.get($all-config, screens, $screen) {
     $result: map.get($all-config, screens, $screen);
   }
   @return $result;
@@ -815,7 +813,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 // GET COLOR FUNCTIONS
 @function gradient($gradient) {
-  @if (map.get($merged-gradients, $gradient)) {
+  @if map.get($merged-gradients, $gradient) {
     $result: map.get($merged-gradients, $gradient);
     @return $result;
   } @else {
@@ -860,9 +858,17 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function bg-colors() {
   $result: ();
   @each $key, $value in $merged-colors {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
+      $ltn: var(--bg-ltn);
+      @if $key == white {
+        $ltn: 100%;
+      } @else if $key == black {
+        $ltn: 0%;
+      } @else if map.get($value, ltn) != 50% {
+        $ltn: map.get($value, ltn);
+      }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--bg-ltn), var(--bg-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--bg-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -878,9 +884,17 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function text-colors() {
   $result: ();
   @each $key, $value in $merged-colors {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
+      $ltn: var(--color-ltn);
+      @if $key == white {
+        $ltn: 100%;
+      } @else if $key == black {
+        $ltn: 0%;
+      } @else if map.get($value, ltn) != 50% {
+        $ltn: map.get($value, ltn);
+      }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--color-ltn), var(--color-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--color-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -896,9 +910,17 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function placeholder-colors() {
   $result: ();
   @each $key, $value in $merged-colors {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
+      $ltn: var(--ph-ltn);
+      @if $key == white {
+        $ltn: 100%;
+      } @else if $key == black {
+        $ltn: 0%;
+      } @else if map.get($value, ltn) != 50% {
+        $ltn: map.get($value, ltn);
+      }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--placeholder-ltn), var(--placeholder-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--ph-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -914,9 +936,17 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function border-colors() {
   $result: ();
   @each $key, $value in $merged-colors {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
+      $ltn: var(--border-ltn);
+      @if $key == white {
+        $ltn: 100%;
+      } @else if $key == black {
+        $ltn: 0%;
+      } @else if map.get($value, ltn) != 50% {
+        $ltn: map.get($value, ltn);
+      }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--border-ltn), var(--border-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--border-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -932,9 +962,17 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function split-colors() {
   $result: ();
   @each $key, $value in $merged-colors {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
+      $ltn: var(--split-ltn);
+      @if $key == white {
+        $ltn: 100%;
+      } @else if $key == black {
+        $ltn: 0%;
+      } @else if map.get($value, ltn) != 50% {
+        $ltn: map.get($value, ltn);
+      }
       $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--split-ltn), var(--split-opacity) )
+        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), #{$ltn}, var(--split-opacity) )
       );
       $result: map.deep-merge($result, $map);
     } @else {
@@ -950,15 +988,15 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function fill($key, $lightness: 500, $opacity: 1) {
   $result: ();
 
-  @if ($key == white) {
-    $lightness: white;
-  } @else if ($key == black) {
-    $lightness: black;
+  @if $key == white {
+    $lightness: 100%;
+  } @else if $key == black {
+    $lightness: 0%;
   }
 
-  @if (map.has-key($merged-colors, $key)) {
+  @if map.has-key($merged-colors, $key) {
     $value: map.get($merged-colors, $key);
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
       $result: hsla( var(--#{$key}-hue), var(--#{$key}-sat), var(--ltn-#{$lightness}), #{$opacity} );
     } @else {
       $result: map.get($merged-colors, $key);
@@ -972,7 +1010,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 // GET RADIUS FUNCTION
 @function radius($radius) {
-  @if (map.get($merged-radiuses, $radius)) {
+  @if map.get($merged-radiuses, $radius) {
     $result: var(--radius-#{$radius});
     @return $result;
   } @else {
@@ -993,7 +1031,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 // GET BLUR FUNCTION
 @function blur($blur) {
-  @if (map.get($merged-blurs, $blur)) {
+  @if map.get($merged-blurs, $blur) {
     $result: var(--blur-#{$blur});
     @return $result;
   } @else {
@@ -1014,7 +1052,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 // GET SHADOW FUNCTIONS
 @function shadow($shadow) {
-  @if (map.get($merged-shadows, $shadow)) {
+  @if map.get($merged-shadows, $shadow) {
     $result: var(--shadow-#{$shadow});
     @return $result;
   } @else {
@@ -1035,7 +1073,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 // GET SIZE FUNCTIONS
 @function positive-sizes($limit: null) {
-  @if ($limit != null) {
+  @if $limit != null {
     $size-map: ();
     $min: list.nth($limit, 1);
     $max: list.nth($limit, 2);
@@ -1056,7 +1094,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 @function negative-sizes($limit: null) {
-  @if ($limit != null) {
+  @if $limit != null {
     $size-map: ();
     $min: list.nth($limit, 1);
     $max: list.nth($limit, 2);
@@ -1078,9 +1116,9 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 @function size($size, $sizes...) {
   $result: ();
-  @if ($size == 0) {
+  @if $size == 0 {
     $result: 0;
-  } @else if (map.has-key($merged-sizes, $size)) {
+  } @else if map.has-key($merged-sizes, $size) {
     $result: map.get($merged-sizes, $size);
   } @else {
     @error "[#{$size}] does not exist";
@@ -1088,10 +1126,10 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
   @each $size in $sizes {
     $value: '';
 
-    @if ($size == 0) {
+    @if $size == 0 {
       $value: 0;
       $result: list.append($result, $value);
-    } @else if (map.has-key($merged-sizes, $size)) {
+    } @else if map.has-key($merged-sizes, $size) {
       $value: map.get($merged-sizes, $size);
       $result: list.append($result, $value);
     } @else {
@@ -1102,7 +1140,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 @function sizes($limit: null) {
-  @if ($limit != null) {
+  @if $limit != null {
     $positive-sizes: positive-sizes($limit);
     $negative-sizes: negative-sizes($limit);
     $size-map: map.merge($positive-sizes, $negative-sizes);
@@ -1114,7 +1152,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 
 // GET TYPOGRAPHY FUNCTIONS
 @function font-family($font-family) {
-  @if (map.get($merged-font-families, $font-family)) {
+  @if map.get($merged-font-families, $font-family) {
     $result: var(--font-#{$font-family});
     @return $result;
   } @else {
@@ -1134,7 +1172,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 @function font-size($font-size) {
-  @if (map.get($merged-font-sizes, $font-size)) {
+  @if map.get($merged-font-sizes, $font-size) {
     $result: var(--font-#{$font-size});
     @return $result;
   } @else {
@@ -1145,7 +1183,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function font-sizes() {
   $result: ();
   @each $key, $value in $merged-font-sizes {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
       $map: (
         $key: (
           font-size: var(--font-#{$key})
@@ -1167,7 +1205,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function text-sizes() {
   $result: ();
   @each $key, $value in $merged-font-sizes {
-    @if (meta.type-of($value) == map) {
+    @if meta.type-of($value) == map {
       $map: (
         $key: (
           font-size: var(--font-#{$key}),
@@ -1189,7 +1227,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 @function font-weight($font-weight) {
-  @if (map.get($merged-font-weights, $font-weight)) {
+  @if map.get($merged-font-weights, $font-weight) {
     $result: var(--#{$font-weight});
     @return $result;
   } @else {
@@ -1209,7 +1247,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 @function leading($leading) {
-  @if (map.get($merged-leadings, $leading)) {
+  @if map.get($merged-leadings, $leading) {
     $result: var(--leading-#{$leading});
     @return $result;
   } @else {
@@ -1229,7 +1267,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 @function tracking($tracking) {
-  @if (map.get($merged-trackings, $tracking)) {
+  @if map.get($merged-trackings, $tracking) {
     $result: var(--tracking-#{$tracking});
     @return $result;
   } @else {
