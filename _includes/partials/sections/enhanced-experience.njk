@@ -9,15 +9,15 @@
         Tailored to support any design
       </h2>
       <div class="flex align-items-center justify-content-center">
-        <div class="p-6 radius-full bg-black">
-          <div class="relative flex radius-full overflow-hidden">
-            <div class="inline-block absolute h-100p left-0 top-0 bg-linear radius-full z-1 transition-all duration-200"
+        <div class="p-6 radius-lg bg-black">
+          <div class="relative flex radius-sm overflow-hidden">
+            <div class="absolute h-100p left-0 top-0 bg-primary-500 radius-sm z-1 transition-all duration-200"
               :style="'left: ' + left + 'px;' + 'width: ' + width + 'px'"></div>
-            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-20 h-32 md.h-40 z-1 is-active"
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1 is-active"
               @click.prevent="switcher($event, 0)">
               Brand Agnostic
             </a>
-            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-20 h-32 md.h-40 z-1" 
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1" 
               @click.prevent="switcher($event, 1)">
               Rich Animations
             </a>

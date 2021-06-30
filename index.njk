@@ -24,7 +24,9 @@ cssExample: |
   .block {
     display: block !important;
   }
-  ...
+  .flex {
+    display: flex !important;
+  }
 cloneUniform: |
   npm install uniformcss
 compileUniform: |
@@ -37,9 +39,11 @@ loadUniform: |
 
   <body>
     <!-- Style components using composable utilities -->
-    <h1 class="text-4xl text-center extrabold color-pink mb-24">
-      Hello World!
-    </h1>
+    <div class="max-w-1025 mx-auto py-48">
+      <h1 class="text-4xl text-center extrabold color-pink-500 mb-24">
+        Hello World!
+      </h1>
+    </div>
   </body>
 loadPlugins: |
   @use "uniform" as *;
@@ -195,7 +199,7 @@ configureCSS: |
 
 
   <div class="block sm.hidden mb-96 sm.mb-160 px-96">
-    <div class="border-t-4 border-dotted border-cool-gray-600 border-100"></div>
+    <div class="border-t-4 border-dotted border-cool-gray-100"></div>
   </div>
 
 
@@ -225,7 +229,7 @@ configureCSS: |
 
 
   <div class="block sm.hidden mb-96 sm.mb-160 px-96">
-    <div class="border-t-4 border-dotted border-cool-gray-600 border-100"></div>
+    <div class="border-t-4 border-dotted border-cool-gray-100"></div>
   </div>
 
 </div>

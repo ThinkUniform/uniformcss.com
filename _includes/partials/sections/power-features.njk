@@ -10,15 +10,15 @@
         Push your website further
       </h2>
       <div class="flex align-items-center justify-content-center">
-        <div class="p-6 radius-full bg-black">
-          <div class="relative flex radius-full overflow-hidden">
-            <div class="inline-block absolute h-100p left-0 top-0 bg-linear radius-full z-1 transition-all duration-200"
+        <div class="p-6 radius-lg bg-black">
+          <div class="relative flex radius-sm overflow-hidden">
+            <div class="absolute h-100p left-0 top-0 bg-primary-500 radius-sm z-1 transition-all duration-200"
               :style="'left: ' + left + 'px;' + 'width: ' + width + 'px'"></div>
-            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-20 h-32 md.h-40 z-1 is-active"
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1 is-active"
               @click.prevent="switcher($event, 0)">
               Dark mode
             </a>
-            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-20 h-32 md.h-40 z-1" 
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1" 
               @click.prevent="switcher($event, 1)">
               API functions
             </a>
@@ -115,8 +115,8 @@
             x-transition:leave-end="opacity-0 transform translate-x-64 scale-90">  
 
             <article class="md.radius-xl overflow-hidden bg-white">
-              <header class="flex align-items-center h-64 px-20 bg-cool-gray-900 color-white">
-                <ion-icon name="logo-sass" class="text-4xl color-pink-500 mr-20"></ion-icon>
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+                <ion-icon name="logo-sass" class="text-4xl color-pink-400 mr-20"></ion-icon>
                 <p class="text-sm">
                   Configure and access any theme variables
                 </p>
@@ -140,7 +140,7 @@
             </div>
 
             <article class="md.radius-xl overflow-hidden bg-white mb-20">
-              <header class="flex align-items-center h-64 px-20 bg-cool-gray-900 color-white">
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
                 <span class="inline-flex align-items-center h-20 mr-16 px-6 bg-black color-white uppercase text-2xs extrabold radius-sm">css</span>
                 <p class="text-sm">
                   API functions will apply theme values
@@ -234,8 +234,8 @@
   </div>
 
   <article class="overflow-hidden bg-white">
-    <header class="flex align-items-center h-64 px-20 bg-cool-gray-900 color-white">
-      <ion-icon name="logo-sass" class="text-4xl color-pink-500 mr-20"></ion-icon>
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+      <ion-icon name="logo-sass" class="text-4xl color-pink-400 mr-20"></ion-icon>
       <p class="text-sm">
         Configure and access any theme variables
       </p>
@@ -259,7 +259,7 @@
   </div>
 
   <article class="overflow-hidden bg-white mb-20">
-    <header class="flex align-items-center h-64 px-20 bg-cool-gray-900 color-white">
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
       <span class="inline-flex align-items-center h-20 mr-16 px-6 bg-black color-white uppercase text-2xs extrabold radius-sm">css</span>
       <p class="text-sm">
         API functions will apply theme values
