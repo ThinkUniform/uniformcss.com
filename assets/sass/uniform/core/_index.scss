@@ -662,21 +662,20 @@ $default-config: (
       0 24px 48px rgba(0, 0, 0, 0.4)
     ),
 
-    card: (
-      0 4px 60px 0 rgba(94, 142, 237, 0.2)
-    ),
-
     focus: (
-      0 0 0 4px rgba(25, 94, 230, 0.2)
+      0 0 0 4px rgba(var(--primary-500), 0.2)
     ),
     success: (
-      0 0 0 4px rgba(162, 230, 25, 0.2)
+      0 0 0 4px rgba(var(--success-500), 0.2)
     ),
     warning: (
-      0 0 0 4px rgba(230, 162, 25, 0.2)
+      0 0 0 4px rgba(var(--warning-500), 0.2)
     ),
     danger: (
-      0 0 0 4px rgba(230, 25, 25, 0.2)
+      0 0 0 4px rgba(var(--danger-500), 0.2)
+    ),
+    info: (
+      0 0 0 4px rgba(var(--info-500), 0.2)
     )
   ),
 
