@@ -8,7 +8,7 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (--backdrop-saturate);
-$custom-properties: ();
+$static-properties: ();
 
 $variants: (
   100: 1,
@@ -27,14 +27,14 @@ $variants: (
 $pseudos: (hover, group-hover);
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

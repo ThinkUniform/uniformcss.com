@@ -8,7 +8,7 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (left);
-$custom-properties: ();
+$static-properties: ();
 
 $range-limit: map.get(core.$all-config, range-limits, left);
 
@@ -29,14 +29,14 @@ $variants: (
 $pseudos: ();
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

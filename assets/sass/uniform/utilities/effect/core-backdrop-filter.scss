@@ -9,7 +9,7 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (backdrop-filter, -webkit-backdrop-filter);
-$custom-properties: (
+$static-properties: (
   --backdrop-blur: 0,
   --backdrop-grayscale: 0,
   --backdrop-saturate: 1,
@@ -23,14 +23,14 @@ $variants: (
 $pseudos: (hover, group-hover);
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

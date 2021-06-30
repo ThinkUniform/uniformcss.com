@@ -8,7 +8,7 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (transition-duration);
-$custom-properties: ();
+$static-properties: ();
 
 $variants: (
 	100: 100ms,
@@ -25,14 +25,14 @@ $variants: (
 $pseudos: ();
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

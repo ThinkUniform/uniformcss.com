@@ -13,12 +13,12 @@ layout: layouts/base.njk
         <div class="w-256 flex align-items-center">
           <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
             <img src="/assets/img/uniform-brandmark.svg" class="w-24 h-24 sm.w-28 sm.h-28 mr-12">
-            Uniform CSS<span class="hidden sm.inline-flex align-items-center ml-12 px-6 py-2 bg-primary bg-opacity-15 color-primary color-900 uppercase font-2xs bold tracking-loose radius-sm">0.9.0</span>
+            Uniform CSS<span class="hidden sm.inline-flex align-items-center ml-12 px-6 py-2 bg-primary bg-opacity-15 uppercase font-2xs bold tracking-loose radius-sm">0.9.0</span>
           </a>
         </div>
 
 
-        <button @click.prevent="open = !open" class="relative inline-flex align-items-center h-36 px-14 bg-primary bg-opacity-10 bg-800 hover.bg-opacity-15 transition-100 radius-md semibold text-sm color-primary color-900">
+        <button @click.prevent="open = !open" class="relative inline-flex align-items-center h-36 px-14 bg-primary bg-opacity-10 bg-800 hover.bg-opacity-15 transition-100 radius-md semibold text-sm">
           Menu
         </button>
         
@@ -58,13 +58,13 @@ layout: layouts/base.njk
       
 
       <section class="docsearch-content overflow-auto flex-1 mt-10 sm.mt-20 md.mt-48 mb-112 bg-white shadow-card radius-2xl px-20 sm.px-72 py-64">
-        <h1 class="text-5xl lg.text-6xl extrabold color-primary color-900 tracking-tight mb-10">
-          <span class="color-primary color-400">{{ title | safe }}</span>
+        <h1 class="text-5xl lg.text-6xl extrabold tracking-tight mb-10">
+          <span class="color-primary-500">{{ title | safe }}</span>
         </h1>
         <p class="text-xl tracking-tight mb-56">
           {{ description | safe }}
         </p>
-        <hr class="border-t-4 border-dotted border-cool-gray border-100 mb-56">
+        <hr class="border-t-4 border-dotted border-cool-gray-600 border-100 mb-56">
         <article class="markdown color-black">
           {{ content | safe }}
         </article>
@@ -77,7 +77,7 @@ layout: layouts/base.njk
           <div class="w-100p">
             
             <div class="pb-64">
-              <h6 class="text-sm semibold color-primary color-900 mb-16">
+              <h6 class="text-sm semibold mb-16">
                 On this page
               </h6>
               {{ content | toc | safe }}

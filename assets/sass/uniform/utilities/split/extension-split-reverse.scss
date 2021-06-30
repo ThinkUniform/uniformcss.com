@@ -8,7 +8,7 @@ $responsive-pseudos: false;
 $extra-selector: '> * + *';
 
 $properties: (margin);
-$custom-properties: (
+$static-properties: (
   --split-right: 1,
   --split-left: 0,
   --split-top: 0,
@@ -22,14 +22,14 @@ $variants: (
 $pseudos: ();
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

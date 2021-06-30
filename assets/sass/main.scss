@@ -1,16 +1,17 @@
 @use "uniform" as * with (
   $config: (
-    utility: (
+		dark-support: true,
+    utilities: (
       background-color: (
       	extend: (
 					pseudos: (
-						active, empty
+						active, hover, focus, group-hover, empty
 					)
 				)
       ),
       opacity: (
         extend: (
-					pseudos: (focus, checked, disabled)
+					pseudos: (focus, checked, disabled, group-hover)
 				)
       ),
       border-color: (
@@ -22,12 +23,37 @@
       ),
       color: (
         extend: (
-					pseudos: (group-focus)
+					pseudos: (hover, group-hover, group-focus)
 				)
-      )
+      ),
+			background-shade: (
+				extend: (
+					pseudos: (
+						active
+					)
+				)
+			)
     ),
     exclude: (
-			
+			background-lightness,
+			// background-opacity
+			split-lightness,
+			// split-opacity,
+			color-lightness,
+			// color-opacity,
+			border-lightness,
+			// border-opacity,
+			placeholder-color,
+			placeholder-lightness,
+			// placeholder-opacity,
+			gutter-x,
+			gutter-y,
+			split-color,
+			gutter-reverse,
+			split-x-width,
+			split-y-width,
+			split-lightness,
+			split-opacity
     ),
     include: (
 
@@ -49,10 +75,6 @@
 
 // .element {
 // 	@include apply('font-3xl bg-red sm.pb-48 h-64')
-// }
-
-// .box {
-// 	@include apply('flex align-items-center justify-content-center md.h-192 block bg-red bg-50 md.py-40 hover.bg-blue')
 // }
 
 .falling-ball {
@@ -80,9 +102,9 @@
 		font-weight: font-weight(medium);
 		line-height: leading(looser);
 		padding: size(6, 0);
-		color: fill(cool-gray);
+		color: fill(cool-gray-500);
 		&:hover {
-			color: fill(cool-gray, 400);
+			color: fill(cool-gray-600);
 		}
 	}
 	& > ol {

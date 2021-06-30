@@ -8,7 +8,7 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (border-top-right-radius, border-bottom-right-radius);
-$custom-properties: ();
+$static-properties: ();
 
 $variants: (
 	core.merge(
@@ -23,14 +23,14 @@ $variants: (
 $pseudos: (last);
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

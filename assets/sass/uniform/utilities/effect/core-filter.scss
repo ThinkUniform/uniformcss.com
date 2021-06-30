@@ -9,7 +9,7 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (filter);
-$custom-properties: (
+$static-properties: (
   --filter-blur: 0,
   --filter-grayscale: 0,
   --filter-saturate: 1,
@@ -24,14 +24,14 @@ $variants: (
 $pseudos: (hover, group-hover);
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

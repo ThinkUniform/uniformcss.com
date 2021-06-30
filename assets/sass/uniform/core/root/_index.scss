@@ -79,13 +79,7 @@ $include-condition: true;
     }
     --COLORS------------------------:#11;
     @each $color, $color-value in $merged-colors {
-      @if (meta.type-of($color-value) == map) {
-        @each $key, $value in $color-value {
-          --#{'' + $color}-#{'' + $key}: #{$value};
-        }
-      } @else {
-        --#{'' + $color}: #{$color-value};
-      }
+      --#{'' + $color}: #{$color-value};
     }
   }
 }

@@ -8,14 +8,13 @@ $responsive-pseudos: false;
 $extra-selector: null;
 
 $properties: (color);
-$custom-properties: (
-  --color-ltn: 50%,
+$static-properties: (
   --color-opacity: 1,
 );
 
 $variants: (
   core.merge(
-    core.text-colors(),
+    core.fills(color),
     (
       transparent: transparent,
       current: currentColor
@@ -26,14 +25,14 @@ $variants: (
 $pseudos: (hover, group-hover, focus);
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
       responsive-pseudos: $responsive-pseudos,
       extra-selector: $extra-selector,
       properties: $properties,
-      custom-properties: $custom-properties,
+      static-properties: $static-properties,
       variants: (
         $variants
       ),

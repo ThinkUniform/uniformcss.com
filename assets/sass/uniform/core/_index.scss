@@ -101,8 +101,8 @@ $default-config: (
   placeholder-support: false,
   apply-support: false,
 
-  exclude: (),
-  include: (),
+  excludes: (),
+  includes: (),
 
   extend: (
     shadows: (),
@@ -147,25 +147,25 @@ $default-config: (
   ),
 
   lightness: (
-    50: 95%,
-    100: 90%,
-    150: 85%,
-    200: 80%,
-    250: 75%,
-    300: 70%,
-    350: 65%,
-    400: 60%,
-    450: 55%,
-    500: 50%,
-    550: 45%,
-    600: 40%,
-    650: 35%,
-    700: 30%,
-    750: 25%,
-    800: 20%,
-    850: 15%,
-    900: 10%,
-    950: 5%
+    // 50: 95%,
+    // 100: 90%,
+    // 150: 85%,
+    // 200: 80%,
+    // 250: 75%,
+    // 300: 70%,
+    // 350: 65%,
+    // 400: 60%,
+    // 450: 55%,
+    // 500: 50%,
+    // 550: 45%,
+    // 600: 40%,
+    // 650: 35%,
+    // 700: 30%,
+    // 750: 25%,
+    // 800: 20%,
+    // 850: 15%,
+    // 900: 10%,
+    // 950: 5%
   ),
 
   opacities: (
@@ -196,33 +196,198 @@ $default-config: (
   ),
 
   colors: (
-    red: ( hue: 0, sat: 50%, ltn: 50% ),
-    firebrick: ( hue: 10, sat: 60%, ltn: 50% ),
-    orange: ( hue: 20, sat: 70%, ltn: 50% ),
-    gold: ( hue: 40, sat: 90%, ltn: 50% ),
-    yellow: ( hue: 50, sat: 100%, ltn: 50% ),
-    lime: ( hue: 80, sat: 70%, ltn: 50% ),
-    green: ( hue: 110, sat: 60%, ltn: 50% ),
-    cyan: ( hue: 190, sat: 60%, ltn: 50% ),
-    blue: ( hue: 220, sat: 70%, ltn: 50% ),
-    purple: ( hue: 260, sat: 90%, ltn: 50% ),
-    violet: ( hue: 280, sat: 70%, ltn: 50% ),
-    pink: ( hue: 310, sat: 60%, ltn: 50% ),
-    
-    white: ( hue: 0, sat: 0%, ltn: 100% ),
-    black: ( hue: 0, sat: 0%, ltn: 100% ),
-
-    cool-gray: ( hue: 220, sat: 10%, ltn: 50% ),
-    gray: ( hue: 0, sat: 0%, ltn: 50% ),
-    warm-gray: ( hue: 24, sat: 10%, ltn: 50% ),
-
-    primary: ( hue: 220, sat: 80%, ltn: 50% ),
-    secondary: ( hue: 220, sat: 40%, ltn: 50% ),
-    tertiary: ( hue: 220, sat: 20%, ltn: 50% ),
-
-    success: ( hue: 80, sat: 60%, ltn: 50% ),
-    warning: ( hue: 40, sat: 60%, ltn: 50% ),
-    danger: ( hue: 0, sat: 60%, ltn: 50% )
+    primary-50: (246, 251, 253),
+    primary-100: (231, 248, 253),
+    primary-200: (194, 232, 251),
+    primary-300: (152, 210, 251),
+    primary-400: (95, 167, 250),
+    primary-500: (47, 122, 249),
+    primary-600: (9, 99, 239),
+    primary-700: (27, 67, 221),
+    primary-800: (23, 51, 170),
+    primary-900: (19, 42, 130),
+    accent-50: (250, 247, 237),
+    accent-100: (250, 243, 208),
+    accent-200: (246, 232, 149),
+    accent-300: (241, 213, 79),
+    accent-400: (231, 181, 27),
+    accent-500: (223, 147, 10),
+    accent-600: (201, 110, 6),
+    accent-700: (162, 82, 10),
+    accent-800: (127, 64, 16),
+    accent-900: (100, 51, 17),
+    white: (255, 255, 255),
+    black: (0, 0, 0),
+    success-50: (249, 251, 246),
+    success-100: (247, 249, 228),
+    success-200: (236, 242, 180),
+    success-300: (218, 229, 117),
+    success-400: (174, 203, 49),
+    success-500: (121, 174, 18),
+    success-600: (85, 140, 11),
+    success-700: (68, 108, 14),
+    success-800: (53, 81, 18),
+    success-900: (42, 63, 18),
+    warning-50: (250, 249, 240),
+    warning-100: (250, 246, 213),
+    warning-200: (245, 237, 153),
+    warning-300: (238, 219, 82),
+    warning-400: (223, 189, 28),
+    warning-500: (206, 156, 9),
+    warning-600: (175, 120, 6),
+    warning-700: (136, 90, 9),
+    warning-800: (103, 69, 14),
+    warning-900: (80, 54, 15),
+    danger-50: (251, 246, 241),
+    danger-100: (252, 237, 225),
+    danger-200: (249, 216, 193),
+    danger-300: (248, 185, 141),
+    danger-400: (247, 140, 78),
+    danger-500: (248, 98, 41),
+    danger-600: (255, 50, 0),
+    danger-700: (211, 48, 30),
+    danger-800: (172, 39, 33),
+    danger-900: (140, 33, 30),
+    info-50: (240, 249, 249),
+    info-100: (220, 247, 244),
+    info-200: (180, 240, 229),
+    info-300: (124, 228, 213),
+    info-400: (50, 208, 186),
+    info-500: (18, 180, 153),
+    info-600: (15, 150, 122),
+    info-700: (20, 121, 99),
+    info-800: (22, 93, 79),
+    info-900: (20, 75, 64),
+    cool-gray-50: (243, 244, 245),
+    cool-gray-100: (231, 233, 236),
+    cool-gray-200: (201, 204, 211),
+    cool-gray-300: (167, 173, 184),
+    cool-gray-400: (134, 142, 158),
+    cool-gray-500: (104, 113, 130),
+    cool-gray-600: (84, 91, 105),
+    cool-gray-700: (65, 71, 82),
+    cool-gray-800: (48, 52, 60),
+    cool-gray-900: (31, 34, 39),
+    gray-50: (244, 244, 244),
+    gray-100: (234, 234, 234),
+    gray-200: (207, 207, 207),
+    gray-300: (177, 177, 177),
+    gray-400: (148, 148, 148),
+    gray-500: (119, 119, 119),
+    gray-600: (96, 96, 96),
+    gray-700: (75, 75, 75),
+    gray-800: (55, 55, 55),
+    gray-900: (36, 36, 36),
+    warm-gray-50: (246, 245, 244),
+    warm-gray-100: (237, 236, 234),
+    warm-gray-200: (214, 211, 208),
+    warm-gray-300: (189, 183, 178),
+    warm-gray-400: (164, 157, 149),
+    warm-gray-500: (137, 129, 120),
+    warm-gray-600: (111, 104, 97),
+    warm-gray-700: (86, 81, 76),
+    warm-gray-800: (63, 60, 56),
+    warm-gray-900: (41, 39, 36),
+    orange-50: (250, 246, 238),
+    orange-100: (251, 238, 215),
+    orange-200: (248, 222, 171),
+    orange-300: (246, 197, 108),
+    orange-400: (243, 158, 48),
+    orange-500: (242, 118, 21),
+    orange-600: (230, 82, 14),
+    orange-700: (197, 61, 18),
+    orange-800: (159, 49, 24),
+    orange-900: (129, 40, 24),
+    yellow-50: (250, 247, 237),
+    yellow-100: (250, 243, 208),
+    yellow-200: (246, 232, 149),
+    yellow-300: (241, 213, 79),
+    yellow-400: (231, 181, 27),
+    yellow-500: (223, 147, 10),
+    yellow-600: (201, 110, 6),
+    yellow-700: (162, 82, 10),
+    yellow-800: (127, 64, 16),
+    yellow-900: (100, 51, 17),
+    lime-50: (250, 250, 243),
+    lime-100: (249, 249, 215),
+    lime-200: (242, 242, 148),
+    lime-300: (232, 228, 75),
+    lime-400: (204, 202, 22),
+    lime-500: (169, 174, 7),
+    lime-600: (129, 139, 4),
+    lime-700: (98, 107, 6),
+    lime-800: (74, 80, 11),
+    lime-900: (57, 62, 12),
+    green-50: (243, 249, 247),
+    green-100: (229, 248, 236),
+    green-200: (198, 243, 206),
+    green-300: (148, 233, 167),
+    green-400: (65, 215, 108),
+    green-500: (24, 192, 61),
+    green-600: (19, 164, 41),
+    green-700: (24, 132, 40),
+    green-800: (25, 102, 40),
+    green-900: (23, 81, 37),
+    teal-50: (240, 249, 251),
+    teal-100: (218, 247, 248),
+    teal-200: (173, 238, 241),
+    teal-300: (117, 225, 235),
+    teal-400: (48, 200, 226),
+    teal-500: (17, 168, 213),
+    teal-600: (13, 135, 190),
+    teal-700: (18, 108, 153),
+    teal-800: (19, 83, 113),
+    teal-900: (18, 67, 88),
+    blue-50: (246, 251, 253),
+    blue-100: (231, 248, 253),
+    blue-200: (194, 232, 251),
+    blue-300: (152, 210, 251),
+    blue-400: (95, 167, 250),
+    blue-500: (47, 122, 249),
+    blue-600: (9, 99, 239),
+    blue-700: (27, 67, 221),
+    blue-800: (23, 51, 170),
+    blue-900: (19, 42, 130),
+    indigo-50: (245, 249, 252),
+    indigo-100: (232, 242, 252),
+    indigo-200: (205, 220, 251),
+    indigo-300: (175, 193, 250),
+    indigo-400: (137, 148, 250),
+    indigo-500: (96, 102, 250),
+    indigo-600: (70, 69, 246),
+    indigo-700: (57, 54, 227),
+    indigo-800: (45, 44, 184),
+    indigo-900: (36, 37, 145),
+    purple-50: (246, 245, 250),
+    purple-100: (240, 231, 250),
+    purple-200: (227, 201, 248),
+    purple-300: (214, 168, 247),
+    purple-400: (206, 122, 247),
+    purple-500: (197, 79, 247),
+    purple-600: (171, 50, 241),
+    purple-700: (132, 40, 221),
+    purple-800: (101, 34, 179),
+    purple-900: (81, 30, 142),
+    pink-50: (252, 249, 249),
+    pink-100: (253, 238, 245),
+    pink-200: (251, 206, 234),
+    pink-300: (250, 164, 218),
+    pink-400: (251, 106, 189),
+    pink-500: (252, 64, 156),
+    pink-600: (246, 37, 117),
+    pink-700: (219, 29, 91),
+    pink-800: (174, 24, 68),
+    pink-900: (137, 21, 53),
+    red-50: (252, 248, 246),
+    red-100: (252, 239, 238),
+    red-200: (250, 213, 219),
+    red-300: (249, 177, 186),
+    red-400: (250, 124, 134),
+    red-500: (250, 81, 88),
+    red-600: (243, 50, 58),
+    red-700: (213, 38, 52),
+    red-800: (170, 31, 46),
+    red-900: (134, 26, 39),
   ),
 
   gradients: (
@@ -498,20 +663,20 @@ $default-config: (
     ),
 
     card: (
-      0 4px 60px 0 hsla(220, 80%, 65%, 0.2)
+      0 4px 60px 0 rgba(94, 142, 237, 0.2)
     ),
 
     focus: (
-      0 0 0 4px hsla(220, 80%, 50%, 20%)
+      0 0 0 4px rgba(25, 94, 230, 0.2)
     ),
     success: (
-      0 0 0 4px hsla(80, 80%, 50%, 20%)
+      0 0 0 4px rgba(162, 230, 25, 0.2)
     ),
     warning: (
-      0 0 0 4px hsla(40, 80%, 50%, 20%)
+      0 0 0 4px rgba(230, 162, 25, 0.2)
     ),
     danger: (
-      0 0 0 4px hsla(0, 80%, 50%, 20%)
+      0 0 0 4px rgba(230, 25, 25, 0.2)
     )
   ),
 
@@ -855,164 +1020,28 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 // GET COLORS FUNCTIONS
-@function bg-colors() {
+@function fill($key, $opacity: 1) {
   $result: ();
-  @each $key, $value in $merged-colors {
-    @if meta.type-of($value) == map {
-      $ltn: var(--bg-ltn);
-      @if $key == white {
-        $ltn: 100%;
-      } @else if $key == black {
-        $ltn: 0%;
-      } @else if map.get($value, ltn) != 50% {
-        $ltn: map.get($value, ltn);
-      }
-      $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--bg-opacity) )
-      );
-      $result: map.deep-merge($result, $map);
-    } @else {
-      $map: (
-        $key: $value
-      );
-      $result: map.deep-merge($result, $map);
-    }
-  }
-  @return $result;
-}
-
-@function text-colors() {
-  $result: ();
-  @each $key, $value in $merged-colors {
-    @if meta.type-of($value) == map {
-      $ltn: var(--color-ltn);
-      @if $key == white {
-        $ltn: 100%;
-      } @else if $key == black {
-        $ltn: 0%;
-      } @else if map.get($value, ltn) != 50% {
-        $ltn: map.get($value, ltn);
-      }
-      $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--color-opacity) )
-      );
-      $result: map.deep-merge($result, $map);
-    } @else {
-      $map: (
-        $key: $value
-      );
-      $result: map.deep-merge($result, $map);
-    }
-  }
-  @return $result;
-}
-
-@function placeholder-colors() {
-  $result: ();
-  @each $key, $value in $merged-colors {
-    @if meta.type-of($value) == map {
-      $ltn: var(--ph-ltn);
-      @if $key == white {
-        $ltn: 100%;
-      } @else if $key == black {
-        $ltn: 0%;
-      } @else if map.get($value, ltn) != 50% {
-        $ltn: map.get($value, ltn);
-      }
-      $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--ph-opacity) )
-      );
-      $result: map.deep-merge($result, $map);
-    } @else {
-      $map: (
-        $key: $value
-      );
-      $result: map.deep-merge($result, $map);
-    }
-  }
-  @return $result;
-}
-
-@function border-colors() {
-  $result: ();
-  @each $key, $value in $merged-colors {
-    @if meta.type-of($value) == map {
-      $ltn: var(--border-ltn);
-      @if $key == white {
-        $ltn: 100%;
-      } @else if $key == black {
-        $ltn: 0%;
-      } @else if map.get($value, ltn) != 50% {
-        $ltn: map.get($value, ltn);
-      }
-      $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--border-opacity) )
-      );
-      $result: map.deep-merge($result, $map);
-    } @else {
-      $map: (
-        $key: $value
-      );
-      $result: map.deep-merge($result, $map);
-    }
-  }
-  @return $result;
-}
-
-@function split-colors() {
-  $result: ();
-  @each $key, $value in $merged-colors {
-    @if meta.type-of($value) == map {
-      $ltn: var(--split-ltn);
-      @if $key == white {
-        $ltn: 100%;
-      } @else if $key == black {
-        $ltn: 0%;
-      } @else if map.get($value, ltn) != 50% {
-        $ltn: map.get($value, ltn);
-      }
-      $map: (
-        $key: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, var(--split-opacity) )
-      );
-      $result: map.deep-merge($result, $map);
-    } @else {
-      $map: (
-        $key: $value
-      );
-      $result: map.deep-merge($result, $map);
-    }
-  }
-  @return $result;
-}
-
-@function fill($key, $ltn: 500, $opacity: 1) {
-  $result: ();
-
   @if map.has-key($merged-colors, $key) {
-
-    $value: map.get($merged-colors, $key);
-
-    @if $key == white {
-      $ltn: 100%;
-    } @else if $key == black {
-      $ltn: 0%;
-    } @else if map.get($merged-lightness, $ltn) {
-      $ltn: map.get($merged-lightness, $ltn);
-    } @else {
-      @error "[#{$ltn}] does not exist.";
-    }
-
-    @if meta.type-of($value) == map {
-      $result: hsla( var(--#{$key}-hue), var(--#{$key}-sat), $ltn, $opacity );
-    } @else {
-      $result: map.get($merged-colors, $key);
-    }    
+    $result: rgba( var(--#{$key}), $opacity); 
   } @else {
     @error "[#{$key}] does not exist.";
   }
 
   @return $result;
 }
+
+@function fills($type) {
+  $result: ();
+  @each $key, $value in $merged-colors {
+    $map: (
+      $key: rgba(var(--#{$key}), var(--#{$type}-opacity))
+    );
+    $result: map.merge($result, $map);
+  }
+  @return $result;
+}
+
 
 // GET RADIUS FUNCTION
 @function radius($radius) {

@@ -43,13 +43,13 @@
 @use "utilities/gutter/extension-gutter-y";
 
 // UTILITIES - SPLIT (7)
-@use "utilities/split/extension-split-lightness";
-@use "utilities/split/extension-split-opacity";
-@use "utilities/split/extension-split-color";
-@use "utilities/split/extension-split-reverse";
-@use "utilities/split/extension-split-style";
-@use "utilities/split/extension-split-x-width";
-@use "utilities/split/extension-split-y-width";
+// @use "utilities/split/extension-split-lightness";
+// @use "utilities/split/extension-split-opacity";
+// @use "utilities/split/extension-split-color";
+// @use "utilities/split/extension-split-reverse";
+// @use "utilities/split/extension-split-style";
+// @use "utilities/split/extension-split-x-width";
+// @use "utilities/split/extension-split-y-width";
 
 // UTILITIES - GRID (9)
 @use "utilities/grid/core-grid-auto-flow";
@@ -271,9 +271,9 @@ $responsive-class-set: ();
 	$placeholder-support: map.get($config, placeholder-support);
 	$apply-support: map.get($config, apply-support);
 
-	$utilities: map.get($config, utility);
-	$exclude: map.get($config, exclude);
-	$include: map.get($config, include);
+	$utilities: map.get($config, utilities);
+	$exclude: map.get($config, excludes);
+	$include: map.get($config, includes);
 
 	$all-pseudos: map.get($config, pseudos);
 	$all-screens: map.get($config, screens);
@@ -288,7 +288,7 @@ $responsive-class-set: ();
 				$extra-selector: map.get($utility-value, extra-selector);
 
 				$properties: map.get($utility-value, properties);
-				$custom-properties: map.get($utility-value, custom-properties);
+				$static-properties: map.get($utility-value, static-properties);
 
 				// MERGE EXTENDED VARIANTS
 				$variants: map.get($utility-value, variants);
@@ -313,12 +313,12 @@ $responsive-class-set: ();
 				}
 
 				// MERGE CUSTOM PROPERTIES
-				$merged-custom-properties: ();
-				@each $custom-property, $custom-property-value in $custom-properties {
+				$merged-static-properties: ();
+				@each $static-property, $static-property-value in $static-properties {
 					$map: (
-						#{$custom-property}: $custom-property-value
+						#{$static-property}: $static-property-value
 					);
-					$merged-custom-properties: map.merge($merged-custom-properties, $map);
+					$merged-static-properties: map.merge($merged-static-properties, $map);
 				}
 				
 				$variant-set: ();
@@ -345,7 +345,7 @@ $responsive-class-set: ();
 						}
 					}
 
-					$compiled-properties: map.merge($custom-properties, $merged-properties);
+					$compiled-properties: map.merge($static-properties, $merged-properties);
 					
 					$class-set: (
 						'#{$compiled-class-name}': (
@@ -426,7 +426,7 @@ $responsive-class-set: ();
 						$extra-selector: map.get($utility-value, extra-selector);
 
 						$properties: map.get($utility-value, properties);
-						$custom-properties: map.get($utility-value, custom-properties);
+						$static-properties: map.get($utility-value, static-properties);
 
 						// MERGE EXTENDED VARIANTS
 						$variants: map.get($utility-value, variants);
@@ -451,12 +451,12 @@ $responsive-class-set: ();
 						}
 
 						// MERGE CUSTOM PROPERTIES
-						$merged-custom-properties: ();
-						@each $custom-property, $custom-property-value in $custom-properties {
+						$merged-static-properties: ();
+						@each $static-property, $static-property-value in $static-properties {
 							$map: (
-								#{$custom-property}: $custom-property-value
+								#{$static-property}: $static-property-value
 							);
-							$merged-custom-properties: map.merge($merged-custom-properties, $map);
+							$merged-static-properties: map.merge($merged-static-properties, $map);
 						}
 
 						$variant-set: ();
@@ -483,7 +483,7 @@ $responsive-class-set: ();
 								}
 							}
 				
-							$compiled-properties: map.merge($custom-properties, $merged-properties);
+							$compiled-properties: map.merge($static-properties, $merged-properties);
 				
 							$class-set: (
 								'#{$screen}#{$screen-delimiter}#{$compiled-class-name}': (
@@ -621,7 +621,7 @@ $responsive-class-set: ();
 			$extra-selector: map.get($utility-value, extra-selector);
 
 			$properties: map.get($utility-value, properties);
-			$custom-properties: map.get($utility-value, custom-properties);
+			$static-properties: map.get($utility-value, static-properties);
 
 			$variants: map.get($utility-value, variants);
 			$variant-extends: map.get($utility-value, extend, variants);
@@ -661,8 +661,8 @@ $responsive-class-set: ();
 
 						@if ($placeholder-support == true) {
 							%#{$compiled-class-name}#{$extra-selector} {
-								@each $custom-property, $custom-property-value in $custom-properties {
-									#{$custom-property}: $custom-property-value;
+								@each $static-property, $static-property-value in $static-properties {
+									#{$static-property}: $static-property-value;
 								}
 								@each $key, $value in $merged-variant-value {
 									#{$key}: map.get($merged-variant-value, $key)
@@ -671,8 +671,8 @@ $responsive-class-set: ();
 							}
 						}
 						.#{$compiled-class-name}#{$extra-selector} {
-							@each $custom-property, $custom-property-value in $custom-properties {
-								#{$custom-property}: $custom-property-value;
+							@each $static-property, $static-property-value in $static-properties {
+								#{$static-property}: $static-property-value;
 							}
 							@each $key, $value in $merged-variant-value {
 								#{$key}: map.get($merged-variant-value, $key)
@@ -726,8 +726,8 @@ $responsive-class-set: ();
 
 						@if ($placeholder-support == true) {
 							%#{$compiled-class-name}#{$extra-selector} {
-								@each $custom-property, $custom-property-value in $custom-properties {
-									#{$custom-property}: $custom-property-value;
+								@each $static-property, $static-property-value in $static-properties {
+									#{$static-property}: $static-property-value;
 								}
 								@each $property in $properties {
 									#{$property}: $merged-variant-value if($important == true, !important, null);
@@ -736,8 +736,8 @@ $responsive-class-set: ();
 						}
 
 						.#{$compiled-class-name}#{$extra-selector} {
-							@each $custom-property, $custom-property-value in $custom-properties {
-								#{$custom-property}: $custom-property-value;
+							@each $static-property, $static-property-value in $static-properties {
+								#{$static-property}: $static-property-value;
 							}
 							@each $property in $properties {
 								#{$property}: $merged-variant-value if($important == true, !important, null);
@@ -794,8 +794,8 @@ $responsive-class-set: ();
 
 						@if ($placeholder-support == true) {
 							%#{$compiled-class-name}#{$extra-selector} {
-								@each $custom-property, $custom-property-value in $custom-properties {
-									#{$custom-property}: $custom-property-value;
+								@each $static-property, $static-property-value in $static-properties {
+									#{$static-property}: $static-property-value;
 								}
 								@each $key, $value in $merged-variant-value {
 									#{$key}: map.get($merged-variant-value, $key)
@@ -804,8 +804,8 @@ $responsive-class-set: ();
 							}
 						}
 						.#{$compiled-class-name}#{$extra-selector} {
-							@each $custom-property, $custom-property-value in $custom-properties {
-								#{$custom-property}: $custom-property-value;
+							@each $static-property, $static-property-value in $static-properties {
+								#{$static-property}: $static-property-value;
 							}
 							@each $key, $value in $merged-variant-value {
 								#{$key}: map.get($merged-variant-value, $key)
@@ -858,8 +858,8 @@ $responsive-class-set: ();
 
 						@if ($placeholder-support == true) {
 							%#{$compiled-class-name}#{$extra-selector} {
-								@each $custom-property, $custom-property-value in $custom-properties {
-									#{$custom-property}: $custom-property-value;
+								@each $static-property, $static-property-value in $static-properties {
+									#{$static-property}: $static-property-value;
 								}
 								@each $property in $properties {
 									#{$property}: $merged-variant-value if($important == true, !important, null);
@@ -868,8 +868,8 @@ $responsive-class-set: ();
 						}
 
 						.#{$compiled-class-name}#{$extra-selector} {
-							@each $custom-property, $custom-property-value in $custom-properties {
-								#{$custom-property}: $custom-property-value;
+							@each $static-property, $static-property-value in $static-properties {
+								#{$static-property}: $static-property-value;
 							}
 							@each $property in $properties {
 								#{$property}: $merged-variant-value if($important == true, !important, null);
@@ -923,7 +923,7 @@ $responsive-class-set: ();
 					$extra-selector: map.get($utility-value, extra-selector);
 
 					$properties: map.get($utility-value, properties);
-					$custom-properties: map.get($utility-value, custom-properties);
+					$static-properties: map.get($utility-value, static-properties);
 
 					$variants: map.get($utility-value, variants);
 					$variant-extends: map.get($utility-value, extend, variants);
@@ -964,8 +964,8 @@ $responsive-class-set: ();
 
 									@if ($placeholder-support == true) {
 										%#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-											@each $custom-property, $custom-property-value in $custom-properties {
-												#{$custom-property}: $custom-property-value;
+											@each $static-property, $static-property-value in $static-properties {
+												#{$static-property}: $static-property-value;
 											}
 											@each $key, $value in $merged-variant-value {
 												#{$key}: map.get($merged-variant-value, $key)
@@ -974,8 +974,8 @@ $responsive-class-set: ();
 										}
 									}
 									.#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-										@each $custom-property, $custom-property-value in $custom-properties {
-											#{$custom-property}: $custom-property-value;
+										@each $static-property, $static-property-value in $static-properties {
+											#{$static-property}: $static-property-value;
 										}
 										@each $key, $value in $merged-variant-value {
 											#{$key}: map.get($merged-variant-value, $key)
@@ -1034,8 +1034,8 @@ $responsive-class-set: ();
 
 									@if ($placeholder-support == true) {
 										%#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-											@each $custom-property, $custom-property-value in $custom-properties {
-												#{$custom-property}: $custom-property-value;
+											@each $static-property, $static-property-value in $static-properties {
+												#{$static-property}: $static-property-value;
 											}
 											@each $property in $properties {
 												#{$property}: $merged-variant-value
@@ -1044,8 +1044,8 @@ $responsive-class-set: ();
 										}
 									}
 									.#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-										@each $custom-property, $custom-property-value in $custom-properties {
-											#{$custom-property}: $custom-property-value;
+										@each $static-property, $static-property-value in $static-properties {
+											#{$static-property}: $static-property-value;
 										}
 										@each $property in $properties {
 											#{$property}: $merged-variant-value if($important == true, !important, null);
@@ -1110,8 +1110,8 @@ $responsive-class-set: ();
 
 									@if ($placeholder-support == true) {
 										%#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-											@each $custom-property, $custom-property-value in $custom-properties {
-												#{$custom-property}: $custom-property-value;
+											@each $static-property, $static-property-value in $static-properties {
+												#{$static-property}: $static-property-value;
 											}
 											@each $key, $value in $merged-variant-value {
 												#{$key}: map.get($merged-variant-value, $key)
@@ -1120,8 +1120,8 @@ $responsive-class-set: ();
 										}
 									}
 									.#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-										@each $custom-property, $custom-property-value in $custom-properties {
-											#{$custom-property}: $custom-property-value;
+										@each $static-property, $static-property-value in $static-properties {
+											#{$static-property}: $static-property-value;
 										}
 										@each $key, $value in $merged-variant-value {
 											#{$key}: map.get($merged-variant-value, $key)
@@ -1180,8 +1180,8 @@ $responsive-class-set: ();
 
 									@if ($placeholder-support == true) {
 										%#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-											@each $custom-property, $custom-property-value in $custom-properties {
-												#{$custom-property}: $custom-property-value;
+											@each $static-property, $static-property-value in $static-properties {
+												#{$static-property}: $static-property-value;
 											}
 											@each $property in $properties {
 												#{$property}: $merged-variant-value
@@ -1190,8 +1190,8 @@ $responsive-class-set: ();
 										}
 									}
 									.#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector} {
-										@each $custom-property, $custom-property-value in $custom-properties {
-											#{$custom-property}: $custom-property-value;
+										@each $static-property, $static-property-value in $static-properties {
+											#{$static-property}: $static-property-value;
 										}
 										@each $property in $properties {
 											#{$property}: $merged-variant-value if($important == true, !important, null);

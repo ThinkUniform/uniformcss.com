@@ -2,59 +2,59 @@
   {% include "partials/links.njk" %}
 </div>
 
-<hr class="border-t-4 border-dotted border-cool-gray border-100 mb-48">
+<hr class="border-t-4 border-dotted border-cool-gray-600 border-100 mb-48">
 
 <div class="mb-40 last.mb-0">
-  <h6 class="text-sm semibold color-primary color-900 mb-16">
+  <h6 class="text-sm semibold mb-16">
     Typography
   </h6>
   <nav class="flex flex-col align-items-start">
     {%- for post in collections.typography -%}
-      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-secondary bg-50 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-100 radius-md{% else %} bg-cool-gray-1000 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
     {%- endfor -%}
   </nav>
 </div>
 
 <div class="mb-40 last.mb-0">
-  <h6 class="text-sm semibold color-primary color-900 mb-16">
+  <h6 class="text-sm semibold mb-16">
     Color
   </h6>
   <nav class="flex flex-col align-items-start">
     {%- for post in collections.color -%}
-      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-secondary bg-50 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-100 radius-md{% else %} bg-cool-gray-1000 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
     {%- endfor -%}
   </nav>
 </div>
 
 <div class="mb-40 last.mb-0">
-  <h6 class="text-sm semibold color-primary color-900 mb-16">
+  <h6 class="text-sm semibold mb-16">
     Radius
   </h6>
   <nav class="flex flex-col align-items-start">
     {%- for post in collections.radius -%}
-      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-secondary bg-50 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-100 radius-md{% else %} bg-cool-gray-1000 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
     {%- endfor -%}
   </nav>
 </div>
 
 <div class="mb-40 last.mb-0">
-  <h6 class="text-sm semibold color-primary color-900 mb-16">
+  <h6 class="text-sm semibold mb-16">
     Effect
   </h6>
   <nav class="flex flex-col align-items-start">
     {%- for post in collections.effect -%}
-      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-secondary bg-50 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-100 radius-md{% else %} bg-cool-gray-1000 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
     {%- endfor -%}
   </nav>
 </div>
 
 <div class="mb-40 last.mb-0">
-  <h6 class="text-sm semibold color-primary color-900 mb-16">
+  <h6 class="text-sm semibold mb-16">
     Sizing
   </h6>
   <nav class="flex flex-col align-items-start">
     {%- for post in collections.sizing -%}
-      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-secondary bg-50 color-primary color-900 radius-md{% else %} color-cool-gray color-500 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-100 radius-md{% else %} bg-cool-gray-1000 hover.color-400 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
     {%- endfor -%}
   </nav>
 </div>
