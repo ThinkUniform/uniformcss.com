@@ -2,8 +2,8 @@
 @use "sass:list";
 @use "uniform/core" as *;
 
-$exclude: map.get($all-config, exclude);
-$include: map.get($all-config, include);
+$exclude: map.get($all-config, excludes);
+$include: map.get($all-config, includes);
 $headless: map.get($all-config, headless);
 
 $include-condition: true;

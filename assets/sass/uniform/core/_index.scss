@@ -98,8 +98,8 @@ $default-config: (
   screen-delimiter: '.',
 
   headless: false,
-  placeholder-support: false,
   apply-support: false,
+  comma-compression: false,
 
   excludes: (),
   includes: (),
@@ -981,7 +981,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: map.get($merged-gradients, $gradient);
     @return $result;
   } @else {
-    @error "[#{$gradient}] does not exist";
+    @error "[#{$gradient}] does not exist.";
   }
 }
 
@@ -1048,7 +1048,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--radius-#{$radius});
     @return $result;
   } @else {
-    @error "[#{$radius}] does not exist";
+    @error "[#{$radius}] does not exist.";
   }
 }
 
@@ -1069,7 +1069,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--blur-#{$blur});
     @return $result;
   } @else {
-    @error "[#{$blur}] does not exist";
+    @error "[#{$blur}] does not exist.";
   }
 }
 
@@ -1090,7 +1090,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--shadow-#{$shadow});
     @return $result;
   } @else {
-    @error "[#{$shadow}] does not exist";
+    @error "[#{$shadow}] does not exist.";
   }
 }
 
@@ -1155,7 +1155,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
   } @else if map.has-key($merged-sizes, $size) {
     $result: map.get($merged-sizes, $size);
   } @else {
-    @error "[#{$size}] does not exist";
+    @error "[#{$size}] does not exist.";
   }
   @each $size in $sizes {
     $value: '';
@@ -1167,7 +1167,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
       $value: map.get($merged-sizes, $size);
       $result: list.append($result, $value);
     } @else {
-      @error "[#{$size}] does not exist";
+      @error "[#{$size}] does not exist.";
     }
   }
   @return $result;
@@ -1190,7 +1190,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--font-#{$font-family});
     @return $result;
   } @else {
-    @error "[#{$font-family}] does not exist";
+    @error "[#{$font-family}] does not exist.";
   }
 }
 
@@ -1210,7 +1210,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--font-#{$font-size});
     @return $result;
   } @else {
-    @error "[#{$font-size}] does not exist";
+    @error "[#{$font-size}] does not exist.";
   }
 }
 
@@ -1265,7 +1265,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--#{$font-weight});
     @return $result;
   } @else {
-    @error "[#{$font-weight}] does not exist";
+    @error "[#{$font-weight}] does not exist.";
   }
 }
 
@@ -1285,7 +1285,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--leading-#{$leading});
     @return $result;
   } @else {
-    @error "[#{$leading}] does not exist";
+    @error "[#{$leading}] does not exist.";
   }
 }
 
@@ -1305,7 +1305,7 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
     $result: var(--tracking-#{$tracking});
     @return $result;
   } @else {
-    @error "[#{$tracking}] does not exist";
+    @error "[#{$tracking}] does not exist.";
   }
 }
 
