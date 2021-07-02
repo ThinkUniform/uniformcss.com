@@ -56,6 +56,11 @@
 @use "utilities/flexbox/core-flex-wrap";
 @use "utilities/flexbox/core-order";
 
+// UTILITIES - GUTTER (3)
+@use "utilities/gutter/extension-gutter-reverse";
+@use "utilities/gutter/extension-gutter-x";
+@use "utilities/gutter/extension-gutter-y";
+
 // UTILITIES - GAP (3)
 @use "utilities/gap/core-gap";
 @use "utilities/gap/core-column-gap";
