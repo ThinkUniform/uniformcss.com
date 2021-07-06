@@ -7,7 +7,7 @@
         Power Features
       </div>
       <h2 class="font-5xl md.font-6xl md.font-7xl lg.font-8xl leading-110 extrabold tracking-tighter mb-32">
-        Push your website further
+        Push your site further
       </h2>
       <div class="flex align-items-center justify-content-center">
         <div class="p-6 radius-lg bg-black">
@@ -16,11 +16,11 @@
               :style="'left: ' + left + 'px;' + 'width: ' + width + 'px'"></div>
             <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1 is-active"
               @click.prevent="switcher($event, 0)">
-              Dark mode
+              Max Control
             </a>
             <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1" 
               @click.prevent="switcher($event, 1)">
-              API functions
+              Sass Features
             </a>
           </div>
         </div>
@@ -35,22 +35,37 @@
 
             <div class="text-center md.text-left">
               <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24">
-                <span class="color-blue-500">Apply dark mode</span> <br>on anything
+                <span class="color-blue-500">Every utility</span> <br>made to order
               </h3>
-              <p class="max-w-512 mx-auto text-lg color-gray-400 mb-32">Apply conditional dark theme specific coloring to any element with the dark pseudo. Providing dark theme mode support couldn't be any more simpler.</p>
-              <a href="/docs/dark-mode" class="text-lg color-blue-500 hover.color-blue-600 semibold">Learn about dark mode →</a>
+              <p class="max-w-512 mx-auto text-lg color-gray-400 mb-32">Attach prefixes, change shorthands, remove delimiters, add important flags, enable responsiveness, and even apply extra-selectors. You control exactly how utilities are generated.</p>
+              <a href="/docs/dark-mode" class="text-lg color-blue-500 hover.color-blue-600 semibold">Learn about configuration →</a>
             </div>
 
             <div class="flex justify-content-center md.justify-content-start flex-wrap pt-48 max-w-320 mx-auto md.mx-0" x-cloak>
-              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full"
-                :class="{ 'opacity-20 hover.opacity-100 transition-200' : dark !== 0 }"
-                @click="dark = 0">
-                <ion-icon name="sunny" class="mr-10"></ion-icon> Light
+              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+                :class="{ 'border-1 border-black color-black' : activeConfig !== 0, 'bg-black border-1 border-black color-white' : activeConfig === 0 }"
+                @click="activeConfig = 0">
+                Shorthand
               </button>
-              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full"
-                :class="{ 'opacity-20 hover.opacity-100 transition-200' : dark !== 1 }"
-                @click="dark = 1">
-                <ion-icon name="moon" class="mr-10"></ion-icon> Dark
+              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+                :class="{ 'border-1 border-black color-black' : activeConfig !== 1, 'bg-black border-1 border-black color-white' : activeConfig === 1 }"
+                @click="activeConfig = 1">
+                Important
+              </button>
+              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+                :class="{ 'border-1 border-black color-black' : activeConfig !== 2, 'bg-black border-1 border-black color-white' : activeConfig === 2 }"
+                @click="activeConfig = 2">
+                Delimiter
+              </button>
+              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+                :class="{ 'border-1 border-black color-black' : activeConfig !== 3, 'bg-black border-1 border-black color-white' : activeConfig === 3 }"
+                @click="activeConfig = 3">
+                Comma selector
+              </button>
+              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+                :class="{ 'border-1 border-black color-black' : activeConfig !== 5, 'bg-black border-1 border-black color-white' : activeConfig === 5 }"
+                @click="activeConfig = 5">
+                Exclusion
               </button>
             </div>
           </div>
@@ -96,13 +111,64 @@
             x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
             x-transition:leave-end="opacity-0 transform translate-x-n64 scale-90">  
 
-            <article class="h-512 md.h-100p px-32 flex align-items-center justify-content-center md.radius-xl overflow-hidden bg-gray-100" style="--gradient: 45deg, #b1b9cc, #b6caef;">
+            <div x-show.transition.in.duration.600="activeConfig === 0">
+              <article class="md.radius-xl overflow-hidden bg-white mb-20">
+                <footer>
+                  {% highlight "scss" %}
+                  {{ config_shorthand_input | safe }}
+                  {% endhighlight %}
+                </footer>
+              </article>
 
-              <div :class="{ 'dark' : dark === 1 }">
-                {% include "partials/ui/wallet.njk" %}
-              </div>
+              <article class="md.radius-xl overflow-hidden bg-white mb-20">
+                <footer>
+                  {% highlight "css" %}
+                  {{ config_shorthand_output | safe }}
+                  {% endhighlight %}
+                </footer>
+              </article>
+            </div>
 
-            </article>
+            <div x-cloak x-show.transition.in.duration.600="activeConfig === 1">
+              <article class="md.radius-xl overflow-hidden bg-white mb-20">
+                <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
+                  <p class="text-sm">
+                    <span class="bold mr-10">Step 1.</span> Install package or clone repository
+                  </p>
+                </header>
+                <footer>
+                  {% highlight "bash" %}
+                  {{ clone_uniform | safe }}
+                  {% endhighlight %}
+                </footer>
+              </article>
+
+              <article class="md.radius-xl overflow-hidden bg-white mb-20">
+                <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
+                  <p class="text-sm">
+                    <span class="bold mr-10">Step 2.</span> Load module in Sass and compile
+                  </p>
+                </header>
+                <footer>
+                  {% highlight "scss" %}
+                  {{ compile_uniform | safe }}
+                  {% endhighlight %}
+                </footer>
+              </article>
+
+              <article class="md.radius-xl overflow-hidden bg-white">
+                <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
+                  <p class="text-sm">
+                    <span class="bold mr-10">Step 3.</span> Link stylesheet in your project
+                  </p>
+                </header>
+                <footer>
+                  {% highlight "html" %}
+                  {{ load_uniform | safe }}
+                  {% endhighlight %}
+                </footer>
+              </article>
+            </div>
 
           </div>
           <div class="absolute w-100p top-0 bottom-0 md.mt-n40 md.mb-n40 pb-40 md.pb-0 md.pr-32 md.pr-40 lg.pr-56" 
@@ -123,7 +189,7 @@
               </header>
               <div>
                 {% highlight "scss" %}
-                {{ apiFunctionInput | safe }}
+                {{ api_function_input | safe }}
                 {% endhighlight %}
               </div>
             </article>
@@ -147,7 +213,7 @@
                 </p>
               </header>
               {% highlight "css" %}
-              {{ apiFunctionOutput | safe }}
+              {{ api_function_output | safe }}
               {% endhighlight %}
             </article>
 
@@ -191,9 +257,44 @@
 
   <article class="h-512 px-32 flex align-items-center justify-content-center overflow-hidden bg-gray-100" style="--gradient: 45deg, #b1b9cc, #b6caef;">
 
-    <div :class="{ 'dark' : dark === 1 }">
-      {% include "partials/ui/wallet.njk" %}
-    </div>
+    <article class="md.radius-xl overflow-hidden bg-white mb-20">
+      <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
+        <p class="text-sm">
+          <span class="bold mr-10">Step 1.</span> Install package or clone repository
+        </p>
+      </header>
+      <footer>
+        {% highlight "bash" %}
+        {{ clone_uniform | safe }}
+        {% endhighlight %}
+      </footer>
+    </article>
+
+    <article class="md.radius-xl overflow-hidden bg-white mb-20">
+      <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
+        <p class="text-sm">
+          <span class="bold mr-10">Step 2.</span> Load module in Sass and compile
+        </p>
+      </header>
+      <footer>
+        {% highlight "scss" %}
+        {{ compile_uniform | safe }}
+        {% endhighlight %}
+      </footer>
+    </article>
+
+    <article class="md.radius-xl overflow-hidden bg-white">
+      <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
+        <p class="text-sm">
+          <span class="bold mr-10">Step 3.</span> Link stylesheet in your project
+        </p>
+      </header>
+      <footer>
+        {% highlight "html" %}
+        {{ load_uniform | safe }}
+        {% endhighlight %}
+      </footer>
+    </article>
 
   </article>
 
@@ -242,7 +343,7 @@
     </header>
     <div>
       {% highlight "scss" %}
-      {{ apiFunctionInput | safe }}
+      {{ api_function_input | safe }}
       {% endhighlight %}
     </div>
   </article>
@@ -266,7 +367,7 @@
       </p>
     </header>
     {% highlight "css" %}
-    {{ apiFunctionOutput | safe }}
+    {{ api_function_output | safe }}
     {% endhighlight %}
   </article>
 

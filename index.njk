@@ -1,16 +1,14 @@
 ---
 title: Atomic workflow built in Sass
 layout: layouts/base.njk
-eleventyNavigation:
-  key: Home
-  order: 1
-scssExample: |
+
+scss_example: |
   @use "uniform" as * with (
     $config: (
       important: true
     )
   );
-cssExample: |
+css_example: |
   .text-left { 
     text-align: left !important; 
   }
@@ -26,11 +24,11 @@ cssExample: |
   .flex {
     display: flex !important;
   }
-cloneUniform: |
+clone_uniform: |
   npm install uniformcss
-compileUniform: |
+compile_uniform: |
   @use "uniform" as *;
-loadUniform: |
+load_uniform: |
   <head>
     <!-- Load your compiled stylesheet here -->
     <link rel="stylesheet" href="/uniform.min.css">
@@ -44,15 +42,15 @@ loadUniform: |
       </h1>
     </div>
   </body>
-addAnimation: |
+add_animation: |
   <div class="animate-ping ..."></div>
-loadPlugins: |
+load_plugins: |
   @use "uniform" as *;
   @use "uniform/plugins/wrapper";
   @use "uniform/plugins/markdown";
   @use "uniform/plugins/ratio";
   @use "uniform/plugins/animate";
-animatePlugin: |
+animate_plugin: |
   <main class="wrapper markdown">
 
     <h1 class="fade-in-from-top" style="--animate-delay: 0s;">
@@ -65,7 +63,7 @@ animatePlugin: |
     </p>
 
   </main>
-apiFunctionInput: |
+api_function_input: |
   @use "uniform" as * with (
     $config: (    
       colors: ( navbar: #3a37d3 ),
@@ -79,14 +77,14 @@ apiFunctionInput: |
     box-shadow: shadow(card);
     padding: size(20, 24);
   }
-apiFunctionOutput: |
+api_function_output: |
   .navbar {
     display: flex;
     background: #3a37d3;
     box-shadow: 0 4px 60px 0 rgba(90, 134, 234, 0.2);
     padding: 1.25rem 1.5rem;
   }
-configureSass: |
+configure_sass: |
   @use "uniform" as * with (
     $config: (    
       colors: ( 
@@ -99,13 +97,45 @@ configureSass: |
       )
     )
   );
-configureCSS: |
+configure_css: |
   :root {
     --font-sans: sans-serif;
     --semibold: 600;
     --bold: 700;
     --extrabold: 800;
   }
+
+# SECTION - POWER FEATURES
+config_shorthand_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      utilities: (
+        margin-top: (
+          shorthand: mt
+        ),
+        margin-right: (
+          shorthand: marginRight
+        )
+      )
+    )
+  );
+config_shorthand_output: |
+  /* main.css */
+  
+  .mt-1 {
+    margin-top: 0.062rem;
+  }
+  .mt-2 {
+    margin-top: 0.125rem;
+  }
+  ...
+
+  .marginRight-1 {
+    margin-right: 0.062rem;
+  }
+  ...
 ---
 
 
@@ -130,7 +160,7 @@ configureCSS: |
             <ion-icon name="search-outline"></ion-icon>
           </div>
 
-          <input type="text" placeholder="Stay hydrated" class="w-100p h-40 pr-32 text-sm text-center radius-md bg-gray-500 bg-opacity-6 hover.bg-opacity-8 transition-100 js-docsearch">
+          <input type="text" placeholder="Stay hydrated" class="w-100p h-40 pr-32 text-sm text-center radius-lg bg-gray-500 bg-opacity-8 hover.bg-opacity-10 transition-100 js-docsearch">
         </div>
       </div>
 

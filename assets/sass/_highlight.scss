@@ -134,7 +134,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  // OVERRIDES
 
 .token.comment {
-	color: #8b9ebd;
+	color: fill(gray-500);
 }
 
 .token.selector {
@@ -150,7 +150,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
   
 .token.punctuation {
-	color: fill(gray-500);
+	color: fill(gray-400);
 }
 
 .token.attr-name {
