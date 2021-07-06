@@ -171,29 +171,27 @@ config_delimiter_input: |
 
   @use "uniform" as * with (
     $config: (    
-      utilities: (
-        margin-top: (
-          delimiter: mt
-        ),
-        margin-right: (
-          delimiter: marginRight
-        )
-      )
+      delimiter: '--',
+      pseudo-delimiter: '__',
+      screen-delimiter: '.',
     )
   );
 config_delimiter_output: |
   /* main.css */
   
-  .mt-1 {
-    margin-top: 0.062rem;
+  .bg--black {
+    background-color: black;
   }
-  .mt-2 {
-    margin-top: 0.125rem;
+  .hover__bg--black:hover {
+    background-color: black;
+  }
+  .focus__bg--black:focus {
+    background-color: black;
   }
   ...
 
-  .marginRight-1 {
-    margin-right: 0.062rem;
+  .sm\.text--center {
+    text-align: center;
   }
   ...
 ---

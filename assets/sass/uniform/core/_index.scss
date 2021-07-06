@@ -98,7 +98,6 @@ $default-config: (
   screen-delimiter: '.',
 
   headless: false,
-  apply-support: false,
   comma-compression: false,
 
   excludes: (),
@@ -115,7 +114,6 @@ $default-config: (
     text-sizes: (),
     leadings: (),
     trackings: (),
-    lightness: (),
     radiuses: (),
     blurs: (),
     opacities: (),
@@ -126,7 +124,8 @@ $default-config: (
   screens: (
     sm: 768px,
     md: 1024px,
-    lg: 1280px
+    lg: 1280px,
+    // xl: 1536px
   ),
 
   pseudos: (
@@ -144,28 +143,6 @@ $default-config: (
     disabled: ':disabled',
     empty: ':empty',
     focus-within: ':focus-within'
-  ),
-
-  lightness: (
-    // 50: 95%,
-    // 100: 90%,
-    // 150: 85%,
-    // 200: 80%,
-    // 250: 75%,
-    // 300: 70%,
-    // 350: 65%,
-    // 400: 60%,
-    // 450: 55%,
-    // 500: 50%,
-    // 550: 45%,
-    // 600: 40%,
-    // 650: 35%,
-    // 700: 30%,
-    // 750: 25%,
-    // 800: 20%,
-    // 850: 15%,
-    // 900: 10%,
-    // 950: 5%
   ),
 
   opacities: (
@@ -858,13 +835,6 @@ $merged-blurs: ();
 }
 $merged-blurs: map.deep-merge($merged-blurs, $extend-blurs);
 
-// MERGED LIGHTNESS LEVELS
-$merged-lightness: ();
-@if $lightness != null {
-  $merged-lightness: map.deep-merge($merged-lightness, $lightness);
-}
-$merged-lightness: map.deep-merge($merged-lightness, $extend-lightness);
-
 // MERGED OPACITY LEVELS
 $merged-opacities: ();
 @if $opacities != null {
@@ -918,17 +888,6 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 @function gradients() {
   $result: ();
   @each $key, $value in $merged-gradients {
-    $map: (
-      $key: $value
-    );
-    $result: map.merge($result, $map);
-  }
-  @return $result;
-}
-
-@function lightness() {
-  $result: ();
-  @each $key, $value in $merged-lightness {
     $map: (
       $key: $value
     );
