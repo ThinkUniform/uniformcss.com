@@ -6,7 +6,7 @@
         Enhanced Experience
       </div>
       <h2 class="font-5xl md.font-6xl md.font-7xl lg.font-8xl leading-110 extrabold tracking-tighter mb-32">
-        Tailored to support any design
+        Achieve design perfection
       </h2>
       <div class="flex align-items-center justify-content-center">
         <div class="p-6 radius-lg bg-black">
@@ -41,17 +41,117 @@
               </div>
 
               <div class="pt-48">
-                <div class="grid grid-cols-10 p-16 radius-lg bg-black color-white bold text-xs">
-                  <button class="w-20 h-20 mx-auto radius-full bg-blue-500 hover.bg-blue-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-indigo-500 hover.bg-indigo-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-purple-500 hover.bg-purple-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-pink-500 hover.bg-pink-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-red-500 hover.bg-red-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-orange-500 hover.bg-orange-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-yellow-500 hover.bg-yellow-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-lime-500 hover.bg-lime-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-green-500 hover.bg-green-400 transition-200"></button>
-                  <button class="w-20 h-20 mx-auto radius-full bg-teal-500 hover.bg-teal-400 transition-200"></button>
+                <div class="grid grid-cols-10 px-16 py-18 radius-lg bg-black color-white bold text-xs">
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click.prevent="trackerColor = 'blue'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-blue-500 group-hover.bg-blue-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'blue'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click.prevent="trackerColor = 'indigo'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-indigo-500 group-hover.bg-indigo-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'indigo'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click.prevent="trackerColor = 'purple'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-purple-500 group-hover.bg-purple-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'purple'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'pink'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-pink-500 group-hover.bg-pink-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'pink'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'red'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-red-500 group-hover.bg-red-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'red'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'orange'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-orange-500 group-hover.bg-orange-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'orange'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'yellow'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-yellow-500 group-hover.bg-yellow-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'yellow'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'lime'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-lime-500 group-hover.bg-lime-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'lime'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'green'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-green-500 group-hover.bg-green-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'green'
+                      }" 
+                    ></div>
+                  </button>
+                  <button 
+                    class="flex align-items-center group justify-content-center"
+                    @click="trackerColor = 'teal'"
+                  >
+                    <div 
+                      class="w-14 h-14 radius-full bg-teal-500 group-hover.bg-teal-400 transition-200 transform group-hover.scale-150"
+                      :class="{ 
+                        'scale-150': trackerColor === 'teal'
+                      }" 
+                    ></div>
+                  </button>
                 </div>              
               </div>
             </div>
@@ -65,18 +165,11 @@
                 <a href="/docs/keyframes" class="text-lg color-blue-500 hover.color-blue-600 semibold">Learn about keyframes →</a>
               </div>
 
-              <div class="flex justify-content-center md.justify-content-start flex-wrap pt-48 max-w-320 mx-auto md.mx-0">
-                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
-                  Pulse
-                </div>
-                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
-                  Spin
-                </div>
-                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
-                  Bounce
-                </div>
-                <div class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold border-1 border-black radius-full">
-                  Ping
+              <div class="pt-48">
+                <div class="radius-lg overflow-hidden">
+                  {% highlight "html" %}
+                  {{ addAnimation | safe }}
+                  {% endhighlight %}
                 </div>
                 
               </div>
@@ -113,29 +206,29 @@
 
                 <div class="w-100p h-100p grid grid-rows-2 grid-cols-2 gap-20">
                   <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-24 border-1 border-gray-100 shadow-2xs bg-black">
-                    <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-opacity-20 border-white bg-white bg-opacity-20">
+                    <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-gray-700 bg-gray-900">
                       <div class="grid grid-cols-1 gap-10 animate-pulse p-20">
-                        <div class="w-6-12 h-20 radius-sm bg-white bg-opacity-20"></div>
-                        <div class="w-10-12 h-20 radius-sm bg-white bg-opacity-40"></div>
+                        <div class="w-6-12 h-20 radius-sm bg-gray-700"></div>
+                        <div class="w-10-12 h-20 radius-sm bg-gray-400"></div>
                       </div>
                     </div>
                   </div>
 
                   <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 border-1 border-gray-100 shadow-2xs bg-black">
-                    <button type="button" class="h-48 px-20 pl-14 radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white flex align-items-center semibold cursor-not-allowed" disabled="">
+                    <button type="button" class="h-48 px-20 pl-14 radius-full bg-gray-900 border-4 border-gray-700 color-white flex align-items-center semibold cursor-not-allowed" disabled="">
                       <svg class="fill-current animate-spin h-20 w-20 mr-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M456.433 371.72l-27.79-16.045c-7.192-4.152-10.052-13.136-6.487-20.636 25.82-54.328 23.566-118.602-6.768-171.03-30.265-52.529-84.802-86.621-144.76-91.424C262.35 71.922 256 64.953 256 56.649V24.56c0-9.31 7.916-16.609 17.204-15.96 81.795 5.717 156.412 51.902 197.611 123.408 41.301 71.385 43.99 159.096 8.042 232.792-4.082 8.369-14.361 11.575-22.424 6.92z"></path></svg>
                       Loading
                     </button>
                   </div>
           
                   <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 border-1 border-gray-100 shadow-2xs bg-black">
-                    <div class="flex align-items-center justify-content-center radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white w-64 h-64 animate-bounce">
+                    <div class="flex align-items-center justify-content-center radius-full bg-gray-900 border-4 border-gray-700 color-white w-64 h-64 animate-bounce">
                       <ion-icon name="arrow-down" class="font-2xl"></ion-icon>
                     </div>
                   </div>
 
                   <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-32 border-1 border-gray-100 shadow-2xs bg-black">
-                    <div class="relative align-left p-20 w-100p max-w-320 mx-auto radius-md bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 bold">
+                    <div class="relative align-left p-20 w-100p max-w-320 mx-auto radius-md bg-gray-900 border-4 border-gray-700 bold">
                       <span class="absolute top-0 right-0 mt-n8 mr-n8 flex h-12 w-12">
                         <span class="animate-ping absolute inline-flex h-12 w-12 radius-full bg-green-500 opacity-70"></span>
                         <span class="relative inline-flex radius-full h-12 w-12 bg-green-500"></span>
@@ -181,23 +274,117 @@
     <a href="/docs/color-system" class="text-xl color-blue-500 semibold">See how colors work →</a>
 
     <div class="pt-48">
-      <div class="grid grid-cols-1 gap-20 p-16 radius-lg bg-black color-white bold text-xs max-w-512 sm.mx-auto" style="--slider-track-color: #fff; --slider-color: #fff; --slider-hover-color: #fff;">
-        <div class="flex align-items-center">
-          <div class="flex flex-none align-items-center semibold w-112">
-            <div class="w-20 h-20 mr-12 radius-full bg-linear" style="--gradient: to right, #529fff, #aeff7c;">
-            </div>
-            Hue
-          </div>
-          <input type="range" min="0" max="360" value="220" class="slider" x-model="hue">
-        </div>
-        <div class="flex align-items-center">
-          <div class="flex flex-none align-items-center semibold w-112">
-            <div class="w-20 h-20 mr-12 radius-full bg-linear" style="--gradient: to right, #555, white;">
-            </div>
-            Saturation
-          </div>
-          <input type="range" min="0" max="100" value="43" class="slider" x-model="sat">
-        </div>
+      <div class="grid grid-cols-10 p-16 radius-lg bg-black color-white bold text-xs">
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click.prevent="trackerColor = 'blue'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-blue-500 group-hover.bg-blue-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'blue'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click.prevent="trackerColor = 'indigo'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-indigo-500 group-hover.bg-indigo-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'indigo'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click.prevent="trackerColor = 'purple'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-purple-500 group-hover.bg-purple-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'purple'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'pink'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-pink-500 group-hover.bg-pink-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'pink'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'red'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-red-500 group-hover.bg-red-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'red'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'orange'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-orange-500 group-hover.bg-orange-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'orange'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'yellow'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-yellow-500 group-hover.bg-yellow-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'yellow'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'lime'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-lime-500 group-hover.bg-lime-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'lime'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'green'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-green-500 group-hover.bg-green-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'green'
+            }" 
+          ></div>
+        </button>
+        <button 
+          class="flex align-items-center group justify-content-center"
+          @click="trackerColor = 'teal'"
+        >
+          <div 
+            class="w-14 h-14 radius-full bg-teal-500 group-hover.bg-teal-400 transition-200 transform group-hover.scale-150"
+            :class="{ 
+              'scale-150': trackerColor === 'teal'
+            }" 
+          ></div>
+        </button>
       </div>              
     </div>
   </div>
@@ -234,7 +421,7 @@
 
     <div class="w-100p h-100p grid grid-rows-2 grid-cols-2 gap-20">
       <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-24 border-1 border-gray-100 shadow-2xs bg-black">
-        <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-opacity-20 border-white bg-white bg-opacity-20">
+        <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-gray-700">
           <div class="grid grid-cols-1 gap-10 animate-pulse p-20">
             <div class="w-6-12 h-20 radius-sm bg-white bg-opacity-20"></div>
             <div class="w-10-12 h-20 radius-sm bg-white bg-opacity-40"></div>
@@ -243,20 +430,20 @@
       </div>
 
       <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 border-1 border-gray-100 shadow-2xs bg-black">
-        <button type="button" class="h-48 px-20 pl-14 radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white flex align-items-center semibold cursor-not-allowed" disabled="">
+        <button type="button" class="h-48 px-20 pl-14 radius-full bg-white bg-opacity-20 border-4 border-gray-700 bg-white bg-opacity-20 color-white flex align-items-center semibold cursor-not-allowed" disabled="">
           <svg class="fill-current animate-spin h-20 w-20 mr-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M456.433 371.72l-27.79-16.045c-7.192-4.152-10.052-13.136-6.487-20.636 25.82-54.328 23.566-118.602-6.768-171.03-30.265-52.529-84.802-86.621-144.76-91.424C262.35 71.922 256 64.953 256 56.649V24.56c0-9.31 7.916-16.609 17.204-15.96 81.795 5.717 156.412 51.902 197.611 123.408 41.301 71.385 43.99 159.096 8.042 232.792-4.082 8.369-14.361 11.575-22.424 6.92z"></path></svg>
           Loading
         </button>
       </div>
 
       <div class="flex align-items-center justify-content-center col-1 md.radius-xl px-20 py-24 border-1 border-gray-100 shadow-2xs bg-black">
-        <div class="flex align-items-center justify-content-center radius-full bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 color-white w-64 h-64 animate-bounce">
+        <div class="flex align-items-center justify-content-center radius-full border-4 border-gray-700 color-white w-64 h-64 animate-bounce">
           <ion-icon name="arrow-down" class="font-2xl"></ion-icon>
         </div>
       </div>
 
       <div class="flex align-items-center justify-content-center col-2 md.radius-xl px-20 py-32 border-1 border-gray-100 shadow-2xs bg-black">
-        <div class="relative align-left p-20 w-100p max-w-320 mx-auto radius-md bg-white bg-opacity-20 border-4 border-opacity-20 border-white bg-white bg-opacity-20 bold">
+        <div class="relative align-left p-20 w-100p max-w-320 mx-auto radius-md border-4 border-gray-700 bold">
           <span class="absolute top-0 right-0 mt-n8 mr-n8 flex h-12 w-12">
             <span class="animate-ping absolute inline-flex h-12 w-12 radius-full bg-green-500 opacity-70"></span>
             <span class="relative inline-flex radius-full h-12 w-12 bg-green-500"></span>
