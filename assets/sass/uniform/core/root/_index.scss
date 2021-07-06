@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "sass:list";
 @use "sass:meta";
+@use "sass:color";
 @use "uniform/core" as *;
 
 $exclude: map.get($all-config, excludes);
@@ -20,6 +21,11 @@ $include-condition: true;
 @if ( list.index($include, root) ) {
   $include-condition: true;
 }
+
+@function hex2rgb($hexColor) {
+  @return "#{color.red($hexColor)},#{color.green($hexColor)},#{color.blue($hexColor)}";
+}
+
 
 @if ( $include-condition ) {
   :root {
@@ -79,7 +85,7 @@ $include-condition: true;
     }
     --COLORS------------------------:#11;
     @each $color, $color-value in $merged-colors {
-      --#{'' + $color}: #{$color-value};
+      --#{'' + $color}: #{hex2rgb($color-value)};
     }
   }
 }

@@ -12,7 +12,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
  code[class*="language-"],
  pre[class*="language-"] {
-	 color: fill(cool-gray-400);
+	 color: fill(gray-400);
 	 background: none;
 	 font-family: var(--font-mono);
 	 font-size: var(--font-sm);
@@ -150,7 +150,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
   
 .token.punctuation {
-	color: fill(cool-gray-600);
+	color: fill(gray-600);
 }
 
 .token.attr-name {
@@ -178,7 +178,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.operator {
-	color: fill(cool-gray-300);
+	color: fill(gray-300);
 }
 
 /*! purgecss end ignore */

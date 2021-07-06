@@ -51,9 +51,9 @@
 		font-weight: font-weight(medium);
 		line-height: leading(looser);
 		padding: size(6, 0);
-		color: fill(cool-gray-500);
+		color: fill(gray-500);
 		&:hover {
-			color: fill(cool-gray-600);
+			color: fill(gray-600);
 		}
 	}
 	& > ol {
