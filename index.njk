@@ -136,6 +136,66 @@ config_shorthand_output: |
     margin-right: 0.062rem;
   }
   ...
+config_important_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      important: true
+    )
+  );
+config_important_output: |
+  /* main.css */
+  
+  .align-baseline {
+    vertical-align: baseline !important;
+  }
+  .align-top {
+    vertival-align: top !important;
+  }
+  .align-middle {
+    vertical-align: middle !important;
+  }
+  .align-bottom	{
+    vertival-align: bottom !important;
+  }
+  .align-text-top	{
+    vertical-align: text-top !important;
+  }
+  .align-text-bottom {
+    vertical-align: text-bottom !important;
+  }
+  ...
+config_delimiter_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      utilities: (
+        margin-top: (
+          delimiter: mt
+        ),
+        margin-right: (
+          delimiter: marginRight
+        )
+      )
+    )
+  );
+config_delimiter_output: |
+  /* main.css */
+  
+  .mt-1 {
+    margin-top: 0.062rem;
+  }
+  .mt-2 {
+    margin-top: 0.125rem;
+  }
+  ...
+
+  .marginRight-1 {
+    margin-right: 0.062rem;
+  }
+  ...
 ---
 
 

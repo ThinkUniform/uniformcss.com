@@ -112,61 +112,44 @@
             x-transition:leave-end="opacity-0 transform translate-x-n64 scale-90">  
 
             <div x-show.transition.in.duration.600="activeConfig === 0">
-              <article class="md.radius-xl overflow-hidden bg-white mb-20">
-                <footer>
-                  {% highlight "scss" %}
-                  {{ config_shorthand_input | safe }}
-                  {% endhighlight %}
-                </footer>
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "scss" %}
+                {{ config_shorthand_input | safe }}
+                {% endhighlight %}
               </article>
 
-              <article class="md.radius-xl overflow-hidden bg-white mb-20">
-                <footer>
-                  {% highlight "css" %}
-                  {{ config_shorthand_output | safe }}
-                  {% endhighlight %}
-                </footer>
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "css" %}
+                {{ config_shorthand_output | safe }}
+                {% endhighlight %}
               </article>
             </div>
 
             <div x-cloak x-show.transition.in.duration.600="activeConfig === 1">
-              <article class="md.radius-xl overflow-hidden bg-white mb-20">
-                <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
-                  <p class="text-sm">
-                    <span class="bold mr-10">Step 1.</span> Install package or clone repository
-                  </p>
-                </header>
-                <footer>
-                  {% highlight "bash" %}
-                  {{ clone_uniform | safe }}
-                  {% endhighlight %}
-                </footer>
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "scss" %}
+                {{ config_important_input | safe }}
+                {% endhighlight %}
               </article>
 
-              <article class="md.radius-xl overflow-hidden bg-white mb-20">
-                <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
-                  <p class="text-sm">
-                    <span class="bold mr-10">Step 2.</span> Load module in Sass and compile
-                  </p>
-                </header>
-                <footer>
-                  {% highlight "scss" %}
-                  {{ compile_uniform | safe }}
-                  {% endhighlight %}
-                </footer>
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "css" %}
+                {{ config_important_output | safe }}
+                {% endhighlight %}
+              </article>
+            </div>
+
+            <div x-cloak x-show.transition.in.duration.600="activeConfig === 2">
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "scss" %}
+                {{ config_delimiter_input | safe }}
+                {% endhighlight %}
               </article>
 
-              <article class="md.radius-xl overflow-hidden bg-white">
-                <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
-                  <p class="text-sm">
-                    <span class="bold mr-10">Step 3.</span> Link stylesheet in your project
-                  </p>
-                </header>
-                <footer>
-                  {% highlight "html" %}
-                  {{ load_uniform | safe }}
-                  {% endhighlight %}
-                </footer>
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "css" %}
+                {{ config_delimiter_output | safe }}
+                {% endhighlight %}
               </article>
             </div>
 
@@ -180,7 +163,7 @@
             x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
             x-transition:leave-end="opacity-0 transform translate-x-64 scale-90">  
 
-            <article class="md.radius-xl overflow-hidden bg-white">
+            <article class="md.radius-xl overflow-hidden bg-black">
               <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
                 <ion-icon name="logo-sass" class="text-4xl color-pink-400 mr-20"></ion-icon>
                 <p class="text-sm">
@@ -205,7 +188,7 @@
               </div>
             </div>
 
-            <article class="md.radius-xl overflow-hidden bg-white mb-20">
+            <article class="md.radius-xl overflow-hidden bg-black mb-20">
               <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
                 <span class="inline-flex align-items-center h-20 mr-16 px-6 bg-white color-black uppercase text-2xs extrabold radius-sm">css</span>
                 <p class="text-sm">
@@ -257,7 +240,7 @@
 
   <article class="h-512 px-32 flex align-items-center justify-content-center overflow-hidden bg-gray-100" style="--gradient: 45deg, #b1b9cc, #b6caef;">
 
-    <article class="md.radius-xl overflow-hidden bg-white mb-20">
+    <article class="md.radius-xl overflow-hidden bg-black mb-20">
       <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
         <p class="text-sm">
           <span class="bold mr-10">Step 1.</span> Install package or clone repository
@@ -270,7 +253,7 @@
       </footer>
     </article>
 
-    <article class="md.radius-xl overflow-hidden bg-white mb-20">
+    <article class="md.radius-xl overflow-hidden bg-black mb-20">
       <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
         <p class="text-sm">
           <span class="bold mr-10">Step 2.</span> Load module in Sass and compile
@@ -283,7 +266,7 @@
       </footer>
     </article>
 
-    <article class="md.radius-xl overflow-hidden bg-white">
+    <article class="md.radius-xl overflow-hidden bg-black">
       <header class="flex align-items-center h-56 px-20 bg-gray-900 color-white">
         <p class="text-sm">
           <span class="bold mr-10">Step 3.</span> Link stylesheet in your project
