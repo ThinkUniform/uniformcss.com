@@ -43,7 +43,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
-	 background: fill(black);
+	 background: fill(gray-950);
  }
  
  /* Inline code */
@@ -167,6 +167,14 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
 .token.variable {
 	color: white;
+}
+
+.token.keyword {
+	color: fill(indigo-400);
+}
+
+.token.rule {
+	color: fill(red-400);
 }
 
 .token.property {

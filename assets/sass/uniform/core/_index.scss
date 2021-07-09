@@ -183,6 +183,7 @@ $default-config: (
     red-700: #CC2B2B,
     red-800: #9E2328,
     red-900: #7C1D23,
+    red-950: #390D10,
     orange-50: #FAF6EE,
     orange-100: #FBEED7,
     orange-200: #F8DEAB,
@@ -193,6 +194,7 @@ $default-config: (
     orange-700: #C53D12,
     orange-800: #9F3118,
     orange-900: #812818,
+    orange-950: #3C130B,
     yellow-50: #F9F4E3,
     yellow-100: #FAEEBB,
     yellow-200: #F6E57B,
@@ -203,6 +205,7 @@ $default-config: (
     yellow-700: #B45508,
     yellow-800: #94430E,
     yellow-900: #7A3610,
+    yellow-950: #381907,
     lime-50: #FAFAF3,
     lime-100: #F9F9D7,
     lime-200: #F2F294,
@@ -213,6 +216,7 @@ $default-config: (
     lime-700: #626B06,
     lime-800: #4A500B,
     lime-900: #393E0C,
+    lime-950: #1A1D06,
     green-50: #F2F9F7,
     green-100: #E5F8EC,
     green-200: #C5F3CE,
@@ -223,6 +227,7 @@ $default-config: (
     green-700: #188529,
     green-800: #196629,
     green-900: #165125,
+    green-950: #0A2511,
     teal-50: #EDF9F9,
     teal-100: #D3F7F5,
     teal-200: #A3F0EA,
@@ -233,6 +238,7 @@ $default-config: (
     teal-700: #0F7D79,
     teal-800: #12615E,
     teal-900: #114E4B,
+    teal-950: #082423,
     cyan-50: #F3FAFC,
     cyan-100: #DFF7FB,
     cyan-200: #B6ECF7,
@@ -243,6 +249,7 @@ $default-config: (
     cyan-700: #165ABA,
     cyan-800: #164589,
     cyan-900: #133869,
+    cyan-950: #091A31,
     blue-50: #F5FAFD,
     blue-100: #E5F6FC,
     blue-200: #C3E6FA,
@@ -253,6 +260,7 @@ $default-config: (
     blue-700: #2245D7,
     blue-800: #1D35A6,
     blue-900: #182B80,
+    blue-950: #0B143B,
     indigo-50: #F5F9FC,
     indigo-100: #E8F2FC,
     indigo-200: #CDDCFB,
@@ -263,6 +271,7 @@ $default-config: (
     indigo-700: #3936E3,
     indigo-800: #2D2CB8,
     indigo-900: #242591,
+    indigo-950: #111143,
     purple-50: #F6F5FA,
     purple-100: #F0E7FA,
     purple-200: #E3C9F8,
@@ -273,6 +282,7 @@ $default-config: (
     purple-700: #8428DD,
     purple-800: #6522B3,
     purple-900: #511E8E,
+    purple-950: #250E42,
     pink-50: #FCF9F9,
     pink-100: #FDEEF5,
     pink-200: #FBCEEA,
@@ -283,16 +293,18 @@ $default-config: (
     pink-700: #DB1D5B,
     pink-800: #AE1844,
     pink-900: #891535,
-    gray-50: #F3F4F5,
-    gray-100: #E7E9EC,
-    gray-200: #C9CCD3,
-    gray-300: #A7ADB8,
-    gray-400: #868E9E,
-    gray-500: #687182,
-    gray-600: #545B69,
-    gray-700: #414752,
-    gray-800: #30343C,
-    gray-900: #1F2227,
+    pink-950: #3F0A19,
+    gray-50: #F4F5F6,
+    gray-100: #E8EBEF,
+    gray-200: #CBD0DA,
+    gray-300: #ABB3C3,
+    gray-400: #8C96AD,
+    gray-500: #6F7C95,
+    gray-600: #5C6780,
+    gray-700: #4A556C,
+    gray-800: #3A435A,
+    gray-900: #2A3248,
+    gray-950: #191E2B,
     white: #ffffff,
     black: #000000
   ),
@@ -548,25 +560,25 @@ $default-config: (
 
   shadows: (
     2xs: (
-      0 1px 2px 0 rgba(0, 0, 0, 0.1)
+      0 1px 2px 0 rgba(var(--gray-400), 0.1)
     ),
     xs: (
-      0 2px 4px rgba(0, 0, 0, 0.15)
+      0 2px 4px rgba(var(--gray-400), 0.15)
     ),
     sm: (
-      0 3px 6px rgba(0, 0, 0, 0.2)
+      0 3px 6px rgba(var(--gray-400), 0.2)
     ),
     md: (
-      0 4px 8px rgba(0, 0, 0, 0.25)
+      0 4px 8px rgba(var(--gray-400), 0.25)
     ),
     lg: (
-      0 6px 12px rgba(0, 0, 0, 0.3)
+      0 6px 12px rgba(var(--gray-400), 0.3)
     ),
     xl: (
-      0 12px 24px rgba(0, 0, 0, 0.35)
+      0 12px 24px rgba(var(--gray-400), 0.35)
     ),
     2xl: (
-      0 24px 48px rgba(0, 0, 0, 0.4)
+      0 24px 48px rgba(var(--gray-400), 0.4)
     ),
 
     focus: (
@@ -1074,6 +1086,21 @@ $merged-gradients: map.deep-merge($merged-gradients, $extend-gradients);
 }
 
 // GET TYPOGRAPHY FUNCTIONS
+@function font($font) {
+  @if map.get($merged-font-families, $font) {
+    $result: var(--font-#{$font});
+    @return $result;
+  } @else if map.get($merged-font-sizes, $font) {
+    $result: var(--font-#{$font});
+    @return $result;
+  } @else if map.get($merged-font-weights, $font) {
+    $result: var(--#{$font});
+    @return $result;
+  } @else {
+    @error "[#{$font}] does not exist";
+  }
+}
+
 @function font-family($font-family) {
   @if map.get($merged-font-families, $font-family) {
     $result: var(--font-#{$font-family});

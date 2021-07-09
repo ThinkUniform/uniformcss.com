@@ -179,21 +179,168 @@ config_delimiter_input: |
 config_delimiter_output: |
   /* main.css */
   
-  .bg--black {
-    background-color: black;
+  .bg--opacity-50 {
+    --bg-opacity: 0.5;
   }
-  .hover__bg--black:hover {
-    background-color: black;
+  .hover__bg--opacity-50:hover {
+    --bg-opacity: 0.5;
   }
-  .focus__bg--black:focus {
-    background-color: black;
+  .focus__bg--opacity-50:focus {
+    --bg-opacity: 0.5;
   }
   ...
 
-  .sm\.text--center {
-    text-align: center;
+  @media (min-width: 768px) {
+    .sm\.text--center {
+      text-align: center;
+    }
   }
   ...
+config_comma_compression_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      comma-compression: true
+    )
+  );
+config_comma_compression_output: |
+  /* main.css */
+  
+  .bg-opacity-50, 
+  .focus\.bg-opacity-50:focus, 
+  .group:hover .group-hover\.bg-opacity-50, 
+  .hover\.bg-opacity-50:hover {
+    --bg-opacity: 0.5;
+  }
+  .bg-opacity-55, 
+  .focus\.bg-opacity-55:focus, 
+  .group:hover .group-hover\.bg-opacity-55, 
+  .hover\.bg-opacity-55:hover {
+    --bg-opacity: 0.55;
+  }
+  .bg-opacity-60, 
+  .focus\.bg-opacity-60:focus, 
+  .group:hover .group-hover\.bg-opacity-60, 
+  .hover\.bg-opacity-60:hover {
+    --bg-opacity: 0.6;
+  }
+  ...
+config_prefix_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      prefix: 'u-',
+    )
+  );
+config_prefix_output: |
+  /* main.css */
+  
+  .u-inline {
+    display: inline;
+  }
+  .u-block {
+    display: block;
+  }
+  .u-flex {
+    display: flex;
+  }
+  .u-grid {
+    display: grid;
+  }
+  .u-inline-block {
+    display: inline-block;
+  }
+  .u-inline-flex {
+    display: inline-flex;
+  }
+  ...
+config_apply_input: |
+  // main.scss
+
+  .parent {
+    @include apply('p-40 shadow-2xs radius-2xl');
+    .child {
+      @include apply('hover.opacity-50 p-24 md.p-64');
+    }
+  }
+config_apply_output: |
+  /* main.css */
+
+  .parent {
+    padding: 2.5rem;
+    box-shadow: var(--shadow-2xs);
+    border-radius: var(--radius-2xl);
+  }
+  .parent .child {
+    padding: 1.5rem;
+  }
+  .parent .child:hover {
+    opacity: 0.5;
+  }
+  @media (min-width: 1024px) {
+    .parent .child {
+      padding: 4rem;
+    }
+  }
+config_api_functions_input: |
+  // main.scss
+
+  .parent {
+    padding: size(24, 32); // 1.5rem 2.5rem;
+    background: fill(red-400, .4);
+    border-radius: radius(lg);
+    .child {
+      font-family: font(sans);
+      font-size: font(lg);
+      font-weight: font(semibold);
+      line-height: leading(looser);
+    }
+  }
+config_api_functions_output: |
+  /* main.css */
+
+  .parent {
+    padding: 1.5rem 2rem;
+    background: rgba(var(--red-400), 0.4);
+    border-radius: var(--radius-lg);
+  }
+  .parent .child {
+    font-family: var(--font-sans);
+    font-size: var(--font-lg);
+    font-weight: var(--semibold);
+    line-height: var(--leading-looser);
+  }
+config_helpers_input: |
+  // main.scss
+
+  .element {
+    font-size: rem(11);
+    @include screen(sm) {
+      font-size: rem(13);
+    }
+    @include screen(lg) {
+      font-size: rem(15);
+    }
+  }
+config_helpers_output: |
+  /* main.css */
+
+  .element {
+    font-size: 0.687rem;
+  }
+  @media (min-width: 768px) {
+    .element {
+      font-size: 0.812rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .element {
+      font-size: 0.937rem;
+    }
+  }
+
 ---
 
 
@@ -256,7 +403,7 @@ config_delimiter_output: |
           style="--animate-delay: .9s;">
           Flexible responsive utility class generator and CSS framework designed to help you gain the full power of functional CSS without compromising on Sass.
         </p>
-        <a href="/docs/overview" class="fade-in inline-flex align-items-center h-48 mb-64 px-20 pr-16 border-2 border-black bg-transparent hover.bg-black hover.color-white transition-100 focus.shadow-focus opacity-0 radius-lg semibold text-md"
+        <a href="/docs/overview" class="ring fade-in inline-flex align-items-center h-48 mb-64 px-20 pr-16 border-2 border-black bg-transparent hover.bg-black hover.color-white transition-100 focus.shadow-focus opacity-0 radius-lg semibold text-md"
           style="--animate-delay: 1s;">
           Read the docs <span class="ml-12">→</span>
         </a>
@@ -296,7 +443,7 @@ config_delimiter_output: |
     style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: 24px;">
     <div class="flex align-items-center justify-content-center">
 
-      <div class="sm.flex align-items-center sm.p-40 sm.border-1 border-gray-100 shadow-2xs radius-lg sm.radius-2xl">
+      <div class="sm.flex align-items-center sm.p-40 sm.shadow-lg sm.radius-2xl">
 
         <div class="flex-none w-96 h-96 sm.w-128 sm.h-128 mx-auto mb-36 sm.mb-0 p-4 radius-xl sm.mr-48 border-1 border-gray-100 shadow-2xs bg-black transform rotate-n12">
           <div class="bg-linear radius-xl overflow-hidden transform rotate-12">

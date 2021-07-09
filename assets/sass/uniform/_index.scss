@@ -3,6 +3,7 @@
 @use "sass:map";
 @use "sass:list";
 @use "sass:meta";
+@use "sass:selector";
 
 // DEFAULTS (3)
 @use "core/root";
@@ -347,6 +348,7 @@ $responsive-pseudo-set: ();
 						selector: '.#{$compiled-class-name}#{$extra-selector}',
 						parent: null,
 						category: standard,
+						extra-selector: $extra-selector,
 						properties: (
 							$compiled-properties
 						)
@@ -363,6 +365,8 @@ $responsive-pseudo-set: ();
 								selector: '.group:hover .#{$compiled-pseudo-name}#{$extra-selector}',
 								parent: '.#{$compiled-class-name}',
 								category: pseudo,
+								extra-selector: $extra-selector,
+								pseudo: group-hover,
 								properties: (
 									$compiled-properties
 								)
@@ -375,6 +379,8 @@ $responsive-pseudo-set: ();
 								selector: '.group:focus .#{$compiled-pseudo-name}#{$extra-selector}',
 								parent: '.#{$compiled-class-name}',
 								category: pseudo,
+								extra-selector: $extra-selector,
+								pseudo: group-focus,
 								properties: (
 									$compiled-properties
 								)
@@ -387,6 +393,8 @@ $responsive-pseudo-set: ();
 								selector: '.#{$compiled-pseudo-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
 								parent: '.#{$compiled-class-name}',
 								category: pseudo,
+								extra-selector: $extra-selector,
+								pseudo: $pseudo,
 								properties: (
 									$compiled-properties
 								)
@@ -448,6 +456,7 @@ $responsive-pseudo-set: ();
 								selector: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}#{$extra-selector}',
 								parent: null,
 								category: standard,
+								extra-selector: $extra-selector,
 								screen: $screen,
 								properties: (
 									$compiled-properties
@@ -469,6 +478,8 @@ $responsive-pseudo-set: ();
 											selector: '.group:hover .#{$compiled-responsive-pseudo-name}#{$compiled-class-name}#{$extra-selector}',
 											parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
 											category: pseudo,
+											extra-selector: $extra-selector,
+											pseudo: group-hover,
 											screen: $screen,
 											properties: (
 												$compiled-properties
@@ -482,6 +493,8 @@ $responsive-pseudo-set: ();
 											selector: '.group:focus .#{$compiled-responsive-pseudo-name}#{$compiled-class-name}#{$extra-selector}',
 											parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
 											category: pseudo,
+											extra-selector: $extra-selector,
+											pseudo: group-focus,
 											screen: $screen,
 											properties: (
 												$compiled-properties
@@ -495,6 +508,8 @@ $responsive-pseudo-set: ();
 											selector: '.#{$compiled-responsive-pseudo-name}#{$compiled-class-name}#{$extra-selector}#{map.get($all-pseudos, $pseudo)}',
 											parent: '.#{$screen}#{$screen-delimiter}#{$compiled-class-name}',
 											category: pseudo,
+											extra-selector: $extra-selector,
+											pseudo: $pseudo,
 											screen: $screen,
 											properties: (
 												$compiled-properties
@@ -598,44 +613,142 @@ $merged-class-set: map.merge($standard-class-set, $responsive-class-set);
 	
 }
 
-
+@mixin unify-parent($child) {
+  @at-root #{selector.unify(&, $child)} {
+    @content;
+  }
+}
 
 @mixin apply($utilities) {
   $utility-array: core.string-split($utilities, ' ');
   @each $utility in $utility-array {
     $escaped-utility: core.escape($utility);
 		@if map.get($merged-class-set, $escaped-utility) == null {
-			@error '[#{$utility}] could not be found, please check spelling.';
+			@error '[#{$utility}] could not be found, please check your spelling.';
 		} @else {
 			$target-utility: map.get($merged-class-set, $escaped-utility);
 			$properties: map.get($target-utility, properties);
 			$selector: map.get($target-utility, selector);
 			$category: map.get($target-utility, category);
+			$extra-selector: map.get($target-utility, extra-selector);
+			$pseudo: map.get($target-utility, pseudo);
 			$screen: map.get($target-utility, screen);
 			
 			@if $screen == null {
 				@if $category == pseudo {
-					@at-root #{$selector} {
-						@each $property, $value in $properties {
-							#{$property}: #{$value};
+					@if $pseudo == group-hover {	
+						@at-root .group:hover & {
+							@if $extra-selector == null {
+								@each $property, $value in $properties {
+									#{$property}: #{$value};
+								}
+							} @else {
+								& #{$extra-selector} {
+									@each $property, $value in $properties {
+										#{$property}: #{$value};
+									}
+								}
+							}
+						}
+					} @else if $pseudo == group-focus {
+						@at-root .group:focus & {
+							@if $extra-selector == null {
+								@each $property, $value in $properties {
+									#{$property}: #{$value};
+								}
+							} @else {
+								& #{$extra-selector} {
+									@each $property, $value in $properties {
+										#{$property}: #{$value};
+									}
+								}
+							}
+						}
+					} @else {
+						@at-root &:#{$pseudo} {
+							@if $extra-selector == null {
+								@each $property, $value in $properties {
+									#{$property}: #{$value};
+								}
+							} @else {
+								& #{$extra-selector} {
+									@each $property, $value in $properties {
+										#{$property}: #{$value};
+									}
+								}
+							}
 						}
 					}
 				} @else {
-					@each $property, $value in $properties {
-						#{$property}: #{$value};
+					@if $extra-selector == null {
+						@each $property, $value in $properties {
+							#{$property}: #{$value};
+						}
+					} @else {
+						& #{$extra-selector} {
+							@each $property, $value in $properties {
+								#{$property}: #{$value};
+							}
+						}
 					}
 				}
 			} @else {
 				@media (min-width: map.get($config, screens, $screen)) {
 					@if $category == pseudo {
-						@at-root #{$selector} {
-							@each $property, $value in $properties {
-								#{$property}: #{$value};
+						@if $pseudo == group-hover {	
+							@at-root .group:hover & {
+								@if $extra-selector == null {
+									@each $property, $value in $properties {
+										#{$property}: #{$value};
+									}
+								} @else {
+									& #{$extra-selector} {
+										@each $property, $value in $properties {
+											#{$property}: #{$value};
+										}
+									}
+								}
+							}
+						} @else if $pseudo == group-focus {
+							@at-root .group:focus & {
+								@if $extra-selector == null {
+									@each $property, $value in $properties {
+										#{$property}: #{$value};
+									}
+								} @else {
+									& #{$extra-selector} {
+										@each $property, $value in $properties {
+											#{$property}: #{$value};
+										}
+									}
+								}
+							}
+						} @else {
+							@at-root &:#{$pseudo} {
+								@if $extra-selector == null {
+									@each $property, $value in $properties {
+										#{$property}: #{$value};
+									}
+								} @else {
+									& #{$extra-selector} {
+										@each $property, $value in $properties {
+											#{$property}: #{$value};
+										}
+									}
+								}
 							}
 						}
 					} @else {
-						@each $property, $value in $properties {
-							#{$property}: #{$value};
+						@if $extra-selector == null {
+							@each $property, $value in $properties {
+								#{$property}: #{$value};
+							}
+						} @else {
+							& #{$extra-selector} {
+								@each $property, $value in $properties {
+									#{$property}: #{$value};
+								}
+							}
 						}
 					}
 				}

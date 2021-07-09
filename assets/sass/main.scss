@@ -21,8 +21,23 @@
 	display: none !important;
 }
 
-.element {
-	@include apply('font-3xl bg-red-500 sm.pb-48 h-64')
+.ring {
+	position: relative;
+	&:focus {
+		&:after {
+			box-sizing: content-box;
+			content: "";
+			display: block;
+			height: 100%;
+			width: 100%;
+			border: 2px solid red;
+			border-radius: 8px;
+			padding: 4px;
+			position: absolute;
+			left: -8px;
+			top: -8px;
+		}
+	}
 }
 
 .falling-ball {
@@ -124,3 +139,21 @@
 		}
 	}
 }
+
+.element {
+	padding: size(24, 32); // 1.5rem 2rem
+}
+.element-2 {
+	background: fill(red-400, .4);
+	border-radius: radius(lg);
+	font-size: font-size(lg);
+}
+
+.parent {
+	@include apply('grid p-40 shadow-2xs radius-2xl gutter-x-32');
+	.child {
+		font-weight: font(bold);
+		@include apply('hover.opacity-50 p-24 md.p-64');
+	}
+}
+

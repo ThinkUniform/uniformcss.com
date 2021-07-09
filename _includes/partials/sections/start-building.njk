@@ -26,16 +26,16 @@
       </div>
     </div>
 
-    <div class="border-1 border-gray-100 shadow-2xs radius-2xl">
+    <div class="shadow-2xl bg-gray-400 radius-2xl">
       <div class="grid grid-cols-12">
         <div class="col-12 md.col-5 px-24 md.px-48 md.px-64 py-64">
           <div 
             x-show.transition.in.opacity.duration.400="tab === 0">
 
             <div class="text-center md.text-left">
-              <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-blue-500">Blazingly fast</span> <br>front-end workflow</h3>
-              <p class="max-w-512 mx-auto text-lg color-gray-400 mb-32">Say goodbye to lingering legacy stylesheets and start building without ever touching your CSS.</p>
-              <a href="https://codepen.io/UniformCSS/pen/poNNqaE" class="text-lg color-blue-500 hover.color-blue-600 semibold">Live edit on Codepen →</a>
+              <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-white">Blazingly fast</span> <br>front-end workflow</h3>
+              <p class="max-w-512 mx-auto text-lg color-gray-100 mb-32">Say goodbye to lingering legacy stylesheets and start building without ever touching your CSS.</p>
+              <a href="https://codepen.io/UniformCSS/pen/poNNqaE" class="text-lg color-white hover.color-opacity-90 semibold">Live edit on Codepen →</a>
               <div class="flex justify-content-center md.justify-content-start flex-wrap pt-48 max-w-320 mx-auto md.mx-0" x-cloak>
                 <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
                   :class="{ 'border-1 border-black color-black' : activeUI !== 0, 'bg-black border-1 border-black color-white' : activeUI === 0 }"
@@ -76,7 +76,7 @@
             x-show.transition.in.opacity.duration.400="tab === 1">
 
             <div class="text-center md.text-left">
-              <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-blue-500">Do one thing,</span> <br>but really well</h3>
+              <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-white">Do one thing,</span> <br>but really well</h3>
               <p class="max-w-512 mx-auto text-lg color-gray-400 mb-32">Every class name in Uniform is immutable and carefully named to be intuitive and memorable.</p>
               <a href="/api-reference" class="text-lg color-blue-500 hover.color-blue-600 semibold">See the glossary →</a>
               <div class="flex justify-content-center md.justify-content-start flex-wrap pt-48 max-w-320 mx-auto md.mx-0" x-cloak>
@@ -162,7 +162,7 @@
             x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
             x-transition:leave-end="opacity-0 transform translate-x-64 scale-90">  
 
-            <article class="relative h-512 md.h-100p md.radius-xl overflow-hidden border-1 border-gray-100 shadow-2xs bg-white">
+            <article class="relative h-512 md.h-100p md.radius-xl overflow-hidden shadow-2xl bg-gray-400 bg-white">
 
               <div class="w-100p h-100p" x-show.transition.in.duration.600="activeAPI === 0">
                 {% include "partials/api/sizing.njk" %}
@@ -216,7 +216,7 @@
 <section class="block md.hidden mb-96 last.mb-0" x-data="{activeUI: 0}">
   <div class="px-32 sm.text-center mb-64">
     <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24">
-      <span class="color-blue-500">Blazingly fast</span> <br>front-end workflow
+      <span class="color-white">Blazingly fast</span> <br>front-end workflow
     </h3>
     <p class="sm.max-w-512 mx-auto text-xl color-gray-400 mb-32">Say goodbye to lingering legacy stylesheets and start building without ever touching your CSS.</p>
     <a href="https://codepen.io/UniformCSS/pen/poNNqaE" class="text-xl color-blue-500 semibold">Live edit on Codepen →</a>
@@ -300,7 +300,7 @@
 <section class="block md.hidden mb-96 last.mb-0" x-data="{activeAPI: 0}">
   <div class="px-32 sm.text-center mb-64">
     <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24">
-      <span class="color-blue-500">Do one thing,</span> <br>but really well
+      <span class="color-white">Do one thing,</span> <br>but really well
     </h3>
     <p class="sm.max-w-512 mx-auto text-xl color-gray-400 mb-32">Every class name in Uniform is immutable and carefully named to be intuitive and memorable.</p>
     <a href="/api-reference" class="text-xl color-blue-500 semibold">See the glossary →</a>
@@ -333,7 +333,7 @@
     </div>
   </div>
 
-  <article class="relative h-512 overflow-hidden border-1 border-gray-100 shadow-2xs bg-white">
+  <article class="relative h-512 overflow-hidden shadow-2xl bg-gray-400 bg-white">
 
     <div class="w-100p h-100p" x-show.transition.in.duration.600="activeAPI === 0">
       {% include "partials/api/sizing.njk" %}
