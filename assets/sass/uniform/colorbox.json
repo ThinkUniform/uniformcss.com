@@ -1,173 +1,62 @@
 [
   {
     "properties": {
-      "steps": 10,
+      "steps": 8,
       "hue": {
         "start": 220,
-        "end": 230,
+        "end": 220,
         "curve": "easeOutQuad"
       },
       "saturation": {
         "start": 0,
-        "end": 1,
+        "end": 0.4,
         "rate": 1,
-        "curve": "easeOutQuad"
+        "curve": "linear"
       },
       "brightness": {
         "start": 1,
-        "end": 0.4,
-        "curve": "easeInQuart"
+        "end": 0.15,
+        "curve": "linear"
       }
     },
     "options": {
       "minorSteps": [
         0,
-        0
+        0,
+        1,
+        6
       ],
-      "name": "Blue",
+      "name": "Gray",
       "rotation": "clockwise"
     }
   },
   {
     "properties": {
-      "steps": 10,
+      "steps": 7,
       "hue": {
-        "start": 250,
-        "end": 260,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
         "start": 0,
-        "end": 1,
-        "rate": 0.9,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.4,
-        "curve": "easeInQuart"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Indigo",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 260,
-        "end": 280,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 1,
-        "rate": 1,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.4,
-        "curve": "easeInQuart"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Purple",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 280,
-        "end": 320,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 1,
-        "rate": 1.2,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.4,
-        "curve": "easeInQuad"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Pink",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 310,
-        "end": 340,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 0.8,
-        "rate": 1.4,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.4,
-        "curve": "easeInQuad"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Rose",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 350,
         "end": 0,
         "curve": "easeOutQuad"
       },
       "saturation": {
         "start": 0,
         "end": 1,
-        "rate": 1,
+        "rate": 1.4,
         "curve": "easeOutQuad"
       },
       "brightness": {
         "start": 1,
-        "end": 0.4,
+        "end": 0.175,
         "curve": "easeInQuad"
       }
     },
     "options": {
       "minorSteps": [
         0,
-        0
+        0,
+        1,
+        4,
+        5
       ],
       "name": "Red",
       "rotation": "clockwise"
@@ -175,202 +64,127 @@
   },
   {
     "properties": {
-      "steps": 10,
+      "steps": 7,
       "hue": {
-        "start": 10,
+        "start": 36,
         "end": 16,
         "curve": "easeOutQuad"
       },
       "saturation": {
         "start": 0,
         "end": 1,
-        "rate": 1.1,
+        "rate": 2,
         "curve": "easeOutQuad"
       },
       "brightness": {
         "start": 1,
-        "end": 0.4,
+        "end": 0.15,
         "curve": "easeInQuad"
       }
     },
     "options": {
       "minorSteps": [
         0,
-        0
-      ],
-      "name": "Sunset",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 20,
-        "end": 24,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 0.6,
-        "rate": 1.9,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.45,
-        "curve": "easeInCubic"
-      }
-    },
-    "options": {
-      "minorSteps": [
         0,
-        0
+        1,
+        4,
+        5
       ],
       "name": "Orange",
-      "rotation": "clockwise"
+      "rotation": "counterclockwise"
     }
   },
   {
     "properties": {
-      "steps": 10,
+      "steps": 7,
       "hue": {
-        "start": 24,
-        "end": 34,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 0.65,
-        "rate": 2,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.4,
-        "curve": "easeInCubic"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Amber",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 40,
-        "end": 44,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 0.66,
-        "rate": 1.7,
-        "curve": "easeOutCubic"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.4,
-        "curve": "easeInCubic"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Yellow",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 50,
-        "end": 56,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 0.65,
-        "rate": 1.7,
-        "curve": "easeOutCubic"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.3,
-        "curve": "easeInQuad"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Citron",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 65,
-        "end": 70,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 0.9,
-        "rate": 2,
-        "curve": "easeOutCubic"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.3,
-        "curve": "easeInQuad"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Lime",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 100,
-        "end": 100,
+        "start": 55,
+        "end": 32,
         "curve": "easeOutQuad"
       },
       "saturation": {
         "start": 0,
         "end": 1,
-        "rate": 1.6,
+        "rate": 2,
         "curve": "easeOutQuad"
       },
       "brightness": {
         "start": 1,
-        "end": 0.3,
+        "end": 0.15,
         "curve": "easeInQuad"
       }
     },
     "options": {
       "minorSteps": [
         0,
-        0
+        0,
+        1,
+        4,
+        5
+      ],
+      "name": "Yellow",
+      "rotation": "counterclockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 7,
+      "hue": {
+        "start": 80,
+        "end": 70,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0,
+        "end": 1,
+        "rate": 1.5,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 1,
+        "end": 0.15,
+        "curve": "easeInQuad"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "name": "Lime",
+      "rotation": "counterclockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 7,
+      "hue": {
+        "start": 100,
+        "end": 130,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0,
+        "end": 1,
+        "rate": 1.5,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 1,
+        "end": 0.15,
+        "curve": "easeInQuad"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        0,
+        1,
+        4,
+        5
       ],
       "name": "Green",
       "rotation": "clockwise"
@@ -378,57 +192,31 @@
   },
   {
     "properties": {
-      "steps": 10,
+      "steps": 7,
       "hue": {
-        "start": 140,
-        "end": 160,
-        "curve": "easeOutQuad"
-      },
-      "saturation": {
-        "start": 0,
-        "end": 1,
-        "rate": 1.6,
-        "curve": "easeOutQuad"
-      },
-      "brightness": {
-        "start": 1,
-        "end": 0.3,
-        "curve": "easeInQuad"
-      }
-    },
-    "options": {
-      "minorSteps": [
-        0,
-        0
-      ],
-      "name": "Mint",
-      "rotation": "clockwise"
-    }
-  },
-  {
-    "properties": {
-      "steps": 10,
-      "hue": {
-        "start": 170,
+        "start": 150,
         "end": 180,
         "curve": "easeOutQuad"
       },
       "saturation": {
         "start": 0,
         "end": 1,
-        "rate": 1.2,
+        "rate": 1.5,
         "curve": "easeOutQuad"
       },
       "brightness": {
         "start": 1,
-        "end": 0.3,
+        "end": 0.15,
         "curve": "easeInQuad"
       }
     },
     "options": {
       "minorSteps": [
         0,
-        0
+        0,
+        1,
+        4,
+        5
       ],
       "name": "Teal",
       "rotation": "clockwise"
@@ -436,30 +224,161 @@
   },
   {
     "properties": {
-      "steps": 10,
+      "steps": 7,
       "hue": {
-        "start": 180,
-        "end": 200,
+        "start": 190,
+        "end": 190,
         "curve": "easeOutQuad"
       },
       "saturation": {
         "start": 0,
         "end": 1,
-        "rate": 1.6,
+        "rate": 1.5,
         "curve": "easeOutQuad"
       },
       "brightness": {
         "start": 1,
-        "end": 0.3,
+        "end": 0.15,
         "curve": "easeInQuad"
       }
     },
     "options": {
       "minorSteps": [
         0,
-        0
+        0,
+        1,
+        4,
+        5
       ],
       "name": "Cyan",
+      "rotation": "clockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 7,
+      "hue": {
+        "start": 190,
+        "end": 220,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0,
+        "end": 1,
+        "rate": 1.5,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 1,
+        "end": 0.15,
+        "curve": "easeInQuad"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        0,
+        1,
+        4,
+        5
+      ],
+      "name": "Blue",
+      "rotation": "clockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 7,
+      "hue": {
+        "start": 240,
+        "end": 260,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0,
+        "end": 0.65,
+        "rate": 1.5,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 1,
+        "end": 0.15,
+        "curve": "easeInQuad"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        0,
+        1,
+        4,
+        5
+      ],
+      "name": "Indigo",
+      "rotation": "clockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 7,
+      "hue": {
+        "start": 280,
+        "end": 290,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0,
+        "end": 0.7,
+        "rate": 1.5,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 1,
+        "end": 0.15,
+        "curve": "easeInQuad"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        0,
+        1,
+        4,
+        5
+      ],
+      "name": "Purple",
+      "rotation": "clockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 7,
+      "hue": {
+        "start": 300,
+        "end": 330,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0,
+        "end": 0.7,
+        "rate": 1.5,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 1,
+        "end": 0.15,
+        "curve": "easeInQuad"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        0,
+        1,
+        4,
+        5
+      ],
+      "name": "Pink",
       "rotation": "clockwise"
     }
   }
