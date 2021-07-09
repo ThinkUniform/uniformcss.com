@@ -259,7 +259,7 @@
       "steps": 7,
       "hue": {
         "start": 210,
-        "end": 236,
+        "end": 230,
         "curve": "easeOutQuad"
       },
       "saturation": {
