@@ -14,8 +14,8 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  pre[class*="language-"] {
 	 color: fill(gray-200);
 	 background: none;
-	 font-family: var(--font-mono);
-	 font-size: var(--font-sm);
+	 font-family: font(mono);
+	 font-size: font(sm);
 	 text-align: left;
 	 white-space: pre;
 	 word-spacing: normal;
@@ -134,7 +134,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  // OVERRIDES
 
 .token.comment {
-	color: fill(gray-500);
+	color: fill(gray-400);
 }
 
 .token.selector {
@@ -146,7 +146,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.tag {
-	color: fill(teal-500);
+	color: fill(teal-400);
 }
   
 .token.punctuation {
@@ -158,11 +158,11 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.attr-value {
-	color: fill(yellow-500);
+	color: fill(yellow-400);
 }
 
 .token.string {
-	color: fill(pink-500);
+	color: fill(pink-400);
 }
 
 .token.variable {
@@ -170,7 +170,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.keyword {
-	color: fill(indigo-400);
+	color: fill(indigo-300);
 }
 
 .token.rule {
@@ -178,11 +178,11 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.property {
-	color: fill(orange-400);
+	color: fill(yellow-400);
 }
 
 .token.function {
-  color: fill(orange-500);
+  color: fill(orange-300);
 }
 
 .token.operator {

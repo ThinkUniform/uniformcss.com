@@ -1,8 +1,8 @@
-<section class="hidden md.block mb-128 md.mb-160 md.px-32" x-data="tabs()" x-init="init()">
+<section class="hidden md.block mb-160 md.px-32" x-data="tabs()" x-init="init()">
 
   <div class="max-w-1152 mx-auto">
     <div class="text-center mb-24 md.mb-128">
-      <div class="mb-14 text-xs md.text-sm tracking-loosest semibold uppercase color-gray-200">
+      <div class="mb-14 text-xs md.text-sm tracking-loosest semibold uppercase color-gray-500">
         Enhanced Experience
       </div>
       <h2 class="font-5xl md.font-6xl md.font-7xl lg.font-8xl leading-110 extrabold tracking-tighter mb-32">
@@ -11,7 +11,7 @@
       <div class="flex align-items-center justify-content-center">
         <div class="p-6 radius-lg bg-black">
           <div class="relative flex radius-sm overflow-hidden">
-            <div class="absolute h-100p left-0 top-0 bg-blue-500 radius-sm z-1 transition-all duration-200"
+            <div class="absolute h-100p left-0 top-0 bg-blue-400 radius-sm z-1 transition-all duration-200"
               :style="'left: ' + left + 'px;' + 'width: ' + width + 'px'"></div>
             <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1 is-active"
               @click.prevent="switcher($event, 0)">
@@ -35,9 +35,9 @@
               x-show.transition.in.opacity.duration.400="tab === 0">
 
               <div class="text-center md.text-left">
-                <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-blue-500">Powerful HSL</span> <br>color manipulations</h3>
-                <p class="max-w-512 mx-auto text-lg color-gray-400 mb-32">No need to spend hours configuring colors, just set hue and saturation for your blue, secondary, and secondary colors and you're good to go.</p>
-                <a href="/docs/color-system" class="text-lg color-blue-500 hover.color-blue-600 semibold">See how colors work →</a>
+                <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-blue-400">Powerful HSL</span> <br>color manipulations</h3>
+                <p class="text-lg color-gray-500 mb-32">No need to spend hours configuring colors, just set hue and saturation for your blue, secondary, and secondary colors and you're good to go.</p>
+                <a href="/docs/color-system" class="text-lg color-blue-400 hover.color-blue-600 semibold">See how colors work →</a>
               </div>
 
               <div class="pt-48">
@@ -160,9 +160,9 @@
               x-show.transition.in.opacity.duration.400="tab === 1">
 
               <div class="text-center md.text-left">
-                <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-blue-500">Built-in buttery</span> <br>smooth animations</h3>
-                <p class="max-w-512 mx-auto text-lg color-gray-400 mb-32">Animations are great for providing extra context for your users. Apply bounce, ping, pulse, and spin animations to any element or even add your own.</p>
-                <a href="/docs/keyframes" class="text-lg color-blue-500 hover.color-blue-600 semibold">Learn about keyframes →</a>
+                <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24"><span class="color-blue-400">Built-in buttery</span> <br>smooth animations</h3>
+                <p class="text-lg color-gray-500 mb-32">Animations are great for providing extra context for your users. Apply bounce, ping, pulse, and spin animations to any element or even add your own.</p>
+                <a href="/docs/keyframes" class="text-lg color-blue-400 hover.color-blue-600 semibold">Learn about keyframes →</a>
               </div>
 
               <div class="pt-48">
@@ -185,7 +185,7 @@
               x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
               x-transition:leave-end="opacity-0 transform translate-x-n64 scale-90">  
 
-              <article class="h-512 md.h-100p flex align-items-center justify-content-center md.radius-xl overflow-hidden bg-gray-300" style="--gradient: 45deg, #b1b9cc, #b6caef;">
+              <article class="h-512 md.h-100p flex align-items-center justify-content-center md.radius-xl overflow-hidden bg-gray-300 shadow-2xl" style="--gradient: 45deg, #b1b9cc, #b6caef;">
 
                 {% include "partials/ui/issue-tracker.njk" %}
 
@@ -209,7 +209,7 @@
                     <div class="w-100p max-w-320 mx-auto radius-lg overflow-hidden border-4 border-gray-700 bg-gray-900">
                       <div class="grid grid-cols-1 gap-10 animate-pulse p-20">
                         <div class="w-6-12 h-20 radius-sm bg-gray-700"></div>
-                        <div class="w-10-12 h-20 radius-sm bg-gray-400"></div>
+                        <div class="w-10-12 h-20 radius-sm bg-gray-500"></div>
                       </div>
                     </div>
                   </div>
@@ -268,10 +268,10 @@
 <section class="block md.hidden mb-96 last.mb-0" x-data="tabs()">
   <div class="px-32 sm.text-center mb-64">
     <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24">
-      <span class="color-blue-500">Powerful HSL</span> <br>color control
+      <span class="color-blue-400">Powerful HSL</span> <br>color control
     </h3>
-    <p class="sm.max-w-512 mx-auto text-xl color-gray-400 mb-32">No need to spend hours configuring colors, just set hue and saturation for your blue, secondary, and secondary colors and you're good to go.</p>
-    <a href="/docs/color-system" class="text-xl color-blue-500 semibold">See how colors work →</a>
+    <p class="sm.max-w-512 mx-auto text-xl color-gray-500 mb-32">No need to spend hours configuring colors, just set hue and saturation for your blue, secondary, and secondary colors and you're good to go.</p>
+    <a href="/docs/color-system" class="text-xl color-blue-400 semibold">See how colors work →</a>
 
     <div class="pt-48">
       <div class="grid grid-cols-10 p-16 radius-lg bg-black color-white bold text-xs">
@@ -410,10 +410,10 @@
 <section class="block md.hidden mb-96 last.mb-0" x-data="tabs()">
   <div class="px-32 sm.text-center mb-64">
     <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24">
-      <span class="color-blue-500">Built-in buttery</span> <br>smooth animations
+      <span class="color-blue-400">Built-in buttery</span> <br>smooth animations
     </h3>
-    <p class="sm.max-w-512 mx-auto text-xl color-gray-400 mb-32">Animations are great for providing extra context for your users. Apply bounce, ping, pulse, and spin animations to any element or even add your own.</p>
-    <a href="/docs/keyframes" class="text-xl color-blue-500 semibold">Learn about keyframes →</a>
+    <p class="sm.max-w-512 mx-auto text-xl color-gray-500 mb-32">Animations are great for providing extra context for your users. Apply bounce, ping, pulse, and spin animations to any element or even add your own.</p>
+    <a href="/docs/keyframes" class="text-xl color-blue-400 semibold">Learn about keyframes →</a>
 
   </div>
 

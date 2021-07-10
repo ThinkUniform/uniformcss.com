@@ -61,7 +61,7 @@
 	transition: 200ms;
 	a {
 		display: inline-flex;
-		font-size: font-size(sm);
+		font-size: font(sm);
 		font-weight: font-weight(medium);
 		line-height: leading(looser);
 		padding: size(6, 0);
@@ -127,12 +127,12 @@
 		a:before {
 			display: none;
 			content: '#';
-			font-weight: font-weight(semibold);
+			font-weight: font(semibold);
 		}
 	}
 
 	pre {
-		border-radius: var(--radius-md);
+		border-radius: radius(lg);
 		margin-bottom: 1.5em;
 		&:last-child {
 			margin-bottom: 0;
@@ -146,7 +146,7 @@
 .element-2 {
 	background: fill(red-400, .4);
 	border-radius: radius(lg);
-	font-size: font-size(lg);
+	font-size: font(lg);
 }
 
 .parent {
