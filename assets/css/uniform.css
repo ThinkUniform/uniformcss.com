@@ -3049,6 +3049,102 @@ select {
   display: flow-root;
 }
 
+.placeholder-opacity-0::placeholder {
+  --ph-opacity: 0;
+}
+
+.placeholder-opacity-2::placeholder {
+  --ph-opacity: 0.02;
+}
+
+.placeholder-opacity-4::placeholder {
+  --ph-opacity: 0.04;
+}
+
+.placeholder-opacity-6::placeholder {
+  --ph-opacity: 0.06;
+}
+
+.placeholder-opacity-8::placeholder {
+  --ph-opacity: 0.08;
+}
+
+.placeholder-opacity-10::placeholder {
+  --ph-opacity: 0.1;
+}
+
+.placeholder-opacity-15::placeholder {
+  --ph-opacity: 0.15;
+}
+
+.placeholder-opacity-20::placeholder {
+  --ph-opacity: 0.2;
+}
+
+.placeholder-opacity-25::placeholder {
+  --ph-opacity: 0.25;
+}
+
+.placeholder-opacity-30::placeholder {
+  --ph-opacity: 0.3;
+}
+
+.placeholder-opacity-35::placeholder {
+  --ph-opacity: 0.35;
+}
+
+.placeholder-opacity-40::placeholder {
+  --ph-opacity: 0.4;
+}
+
+.placeholder-opacity-45::placeholder {
+  --ph-opacity: 0.45;
+}
+
+.placeholder-opacity-50::placeholder {
+  --ph-opacity: 0.5;
+}
+
+.placeholder-opacity-55::placeholder {
+  --ph-opacity: 0.55;
+}
+
+.placeholder-opacity-60::placeholder {
+  --ph-opacity: 0.6;
+}
+
+.placeholder-opacity-65::placeholder {
+  --ph-opacity: 0.65;
+}
+
+.placeholder-opacity-70::placeholder {
+  --ph-opacity: 0.7;
+}
+
+.placeholder-opacity-75::placeholder {
+  --ph-opacity: 0.75;
+}
+
+.placeholder-opacity-80::placeholder {
+  --ph-opacity: 0.8;
+}
+
+.placeholder-opacity-85::placeholder {
+  --ph-opacity: 0.85;
+}
+
+.placeholder-opacity-90::placeholder {
+  --ph-opacity: 0.9;
+}
+
+.placeholder-opacity-95::placeholder {
+  --ph-opacity: 0.95;
+}
+
+.placeholder-opacity-100::placeholder {
+  --ph-opacity: 1;
+}
+
 .placeholder-transparent::placeholder {
   --ph-opacity: 1;
   color: transparent;
@@ -17386,6 +17482,294 @@ select {
 
 .last\.flow-root:last-child {
   display: flow-root;
+}
+
+.hover\.placeholder-opacity-0::placeholder:hover {
+  --ph-opacity: 0;
+}
+
+.group:hover .group-hover\.placeholder-opacity-0::placeholder {
+  --ph-opacity: 0;
+}
+
+.focus\.placeholder-opacity-0::placeholder:focus {
+  --ph-opacity: 0;
+}
+
+.hover\.placeholder-opacity-2::placeholder:hover {
+  --ph-opacity: 0.02;
+}
+
+.group:hover .group-hover\.placeholder-opacity-2::placeholder {
+  --ph-opacity: 0.02;
+}
+
+.focus\.placeholder-opacity-2::placeholder:focus {
+  --ph-opacity: 0.02;
+}
+
+.hover\.placeholder-opacity-4::placeholder:hover {
+  --ph-opacity: 0.04;
+}
+
+.group:hover .group-hover\.placeholder-opacity-4::placeholder {
+  --ph-opacity: 0.04;
+}
+
+.focus\.placeholder-opacity-4::placeholder:focus {
+  --ph-opacity: 0.04;
+}
+
+.hover\.placeholder-opacity-6::placeholder:hover {
+  --ph-opacity: 0.06;
+}
+
+.group:hover .group-hover\.placeholder-opacity-6::placeholder {
+  --ph-opacity: 0.06;
+}
+
+.focus\.placeholder-opacity-6::placeholder:focus {
+  --ph-opacity: 0.06;
+}
+
+.hover\.placeholder-opacity-8::placeholder:hover {
+  --ph-opacity: 0.08;
+}
+
+.group:hover .group-hover\.placeholder-opacity-8::placeholder {
+  --ph-opacity: 0.08;
+}
+
+.focus\.placeholder-opacity-8::placeholder:focus {
+  --ph-opacity: 0.08;
+}
+
+.hover\.placeholder-opacity-10::placeholder:hover {
+  --ph-opacity: 0.1;
+}
+
+.group:hover .group-hover\.placeholder-opacity-10::placeholder {
+  --ph-opacity: 0.1;
+}
+
+.focus\.placeholder-opacity-10::placeholder:focus {
+  --ph-opacity: 0.1;
+}
+
+.hover\.placeholder-opacity-15::placeholder:hover {
+  --ph-opacity: 0.15;
+}
+
+.group:hover .group-hover\.placeholder-opacity-15::placeholder {
+  --ph-opacity: 0.15;
+}
+
+.focus\.placeholder-opacity-15::placeholder:focus {
+  --ph-opacity: 0.15;
+}
+
+.hover\.placeholder-opacity-20::placeholder:hover {
+  --ph-opacity: 0.2;
+}
+
+.group:hover .group-hover\.placeholder-opacity-20::placeholder {
+  --ph-opacity: 0.2;
+}
+
+.focus\.placeholder-opacity-20::placeholder:focus {
+  --ph-opacity: 0.2;
+}
+
+.hover\.placeholder-opacity-25::placeholder:hover {
+  --ph-opacity: 0.25;
+}
+
+.group:hover .group-hover\.placeholder-opacity-25::placeholder {
+  --ph-opacity: 0.25;
+}
+
+.focus\.placeholder-opacity-25::placeholder:focus {
+  --ph-opacity: 0.25;
+}
+
+.hover\.placeholder-opacity-30::placeholder:hover {
+  --ph-opacity: 0.3;
+}
+
+.group:hover .group-hover\.placeholder-opacity-30::placeholder {
+  --ph-opacity: 0.3;
+}
+
+.focus\.placeholder-opacity-30::placeholder:focus {
+  --ph-opacity: 0.3;
+}
+
+.hover\.placeholder-opacity-35::placeholder:hover {
+  --ph-opacity: 0.35;
+}
+
+.group:hover .group-hover\.placeholder-opacity-35::placeholder {
+  --ph-opacity: 0.35;
+}
+
+.focus\.placeholder-opacity-35::placeholder:focus {
+  --ph-opacity: 0.35;
+}
+
+.hover\.placeholder-opacity-40::placeholder:hover {
+  --ph-opacity: 0.4;
+}
+
+.group:hover .group-hover\.placeholder-opacity-40::placeholder {
+  --ph-opacity: 0.4;
+}
+
+.focus\.placeholder-opacity-40::placeholder:focus {
+  --ph-opacity: 0.4;
+}
+
+.hover\.placeholder-opacity-45::placeholder:hover {
+  --ph-opacity: 0.45;
+}
+
+.group:hover .group-hover\.placeholder-opacity-45::placeholder {
+  --ph-opacity: 0.45;
+}
+
+.focus\.placeholder-opacity-45::placeholder:focus {
+  --ph-opacity: 0.45;
+}
+
+.hover\.placeholder-opacity-50::placeholder:hover {
+  --ph-opacity: 0.5;
+}
+
+.group:hover .group-hover\.placeholder-opacity-50::placeholder {
+  --ph-opacity: 0.5;
+}
+
+.focus\.placeholder-opacity-50::placeholder:focus {
+  --ph-opacity: 0.5;
+}
+
+.hover\.placeholder-opacity-55::placeholder:hover {
+  --ph-opacity: 0.55;
+}
+
+.group:hover .group-hover\.placeholder-opacity-55::placeholder {
+  --ph-opacity: 0.55;
+}
+
+.focus\.placeholder-opacity-55::placeholder:focus {
+  --ph-opacity: 0.55;
+}
+
+.hover\.placeholder-opacity-60::placeholder:hover {
+  --ph-opacity: 0.6;
+}
+
+.group:hover .group-hover\.placeholder-opacity-60::placeholder {
+  --ph-opacity: 0.6;
+}
+
+.focus\.placeholder-opacity-60::placeholder:focus {
+  --ph-opacity: 0.6;
+}
+
+.hover\.placeholder-opacity-65::placeholder:hover {
+  --ph-opacity: 0.65;
+}
+
+.group:hover .group-hover\.placeholder-opacity-65::placeholder {
+  --ph-opacity: 0.65;
+}
+
+.focus\.placeholder-opacity-65::placeholder:focus {
+  --ph-opacity: 0.65;
+}
+
+.hover\.placeholder-opacity-70::placeholder:hover {
+  --ph-opacity: 0.7;
+}
+
+.group:hover .group-hover\.placeholder-opacity-70::placeholder {
+  --ph-opacity: 0.7;
+}
+
+.focus\.placeholder-opacity-70::placeholder:focus {
+  --ph-opacity: 0.7;
+}
+
+.hover\.placeholder-opacity-75::placeholder:hover {
+  --ph-opacity: 0.75;
+}
+
+.group:hover .group-hover\.placeholder-opacity-75::placeholder {
+  --ph-opacity: 0.75;
+}
+
+.focus\.placeholder-opacity-75::placeholder:focus {
+  --ph-opacity: 0.75;
+}
+
+.hover\.placeholder-opacity-80::placeholder:hover {
+  --ph-opacity: 0.8;
+}
+
+.group:hover .group-hover\.placeholder-opacity-80::placeholder {
+  --ph-opacity: 0.8;
+}
+
+.focus\.placeholder-opacity-80::placeholder:focus {
+  --ph-opacity: 0.8;
+}
+
+.hover\.placeholder-opacity-85::placeholder:hover {
+  --ph-opacity: 0.85;
+}
+
+.group:hover .group-hover\.placeholder-opacity-85::placeholder {
+  --ph-opacity: 0.85;
+}
+
+.focus\.placeholder-opacity-85::placeholder:focus {
+  --ph-opacity: 0.85;
+}
+
+.hover\.placeholder-opacity-90::placeholder:hover {
+  --ph-opacity: 0.9;
+}
+
+.group:hover .group-hover\.placeholder-opacity-90::placeholder {
+  --ph-opacity: 0.9;
+}
+
+.focus\.placeholder-opacity-90::placeholder:focus {
+  --ph-opacity: 0.9;
+}
+
+.hover\.placeholder-opacity-95::placeholder:hover {
+  --ph-opacity: 0.95;
+}
+
+.group:hover .group-hover\.placeholder-opacity-95::placeholder {
+  --ph-opacity: 0.95;
+}
+
+.focus\.placeholder-opacity-95::placeholder:focus {
+  --ph-opacity: 0.95;
+}
+
+.hover\.placeholder-opacity-100::placeholder:hover {
+  --ph-opacity: 1;
+}
+
+.group:hover .group-hover\.placeholder-opacity-100::placeholder {
+  --ph-opacity: 1;
+}
+
+.focus\.placeholder-opacity-100::placeholder:focus {
+  --ph-opacity: 1;
 }
 
 .hover\.placeholder-transparent::placeholder:hover {

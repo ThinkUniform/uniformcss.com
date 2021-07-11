@@ -151,104 +151,548 @@
     "pseudos": ["hover", "group-hover", "focus", "dark"],
     "utilities": [
       {
-        "class": "border-red",
-        "properties": ["border-color: hsla(var(--red-hue), var(--red-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-firebrick",
-        "properties": ["border-color: hsla(var(--firebrick-hue), var(--firebrick-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-orange",
-        "properties": ["border-color: hsla(var(--orange-hue), var(--orange-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-gold",
-        "properties": ["border-color: hsla(var(--gold-hue), var(--gold-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-yellow",
-        "properties": ["border-color: hsla(var(--yellow-hue), var(--yellow-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-lime",
-        "properties": ["border-color: hsla(var(--lime-hue), var(--lime-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-green",
-        "properties": ["border-color: hsla(var(--green-hue), var(--green-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-cyan",
-        "properties": ["border-color: hsla(var(--cyan-hue), var(--cyan-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-blue",
-        "properties": ["border-color: hsla(var(--blue-hue), var(--blue-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-purple",
-        "properties": ["border-color: hsla(var(--purple-hue), var(--purple-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-violet",
-        "properties": ["border-color: hsla(var(--violet-hue), var(--violet-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
-        "class": "border-pink",
-        "properties": ["border-color: hsla(var(--pink-hue), var(--pink-sat), var(--border-ltn), var(--border-opacity));"]
-      },
-      {
         "class": "border-white",
-        "properties": ["border-color: hsla(var(--white-hue), var(--white-sat), var(--border-ltn), var(--border-opacity));"]
+        "properties": ["border: rgba(var(--white), var(--border-opacity));"]
       },
       {
         "class": "border-black",
-        "properties": ["border-color: hsla(var(--black-hue), var(--black-sat), var(--border-ltn), var(--border-opacity));"]
+        "properties": ["border: rgba(var(--black), var(--border-opacity));"]
       },
       {
-        "class": "border-cool-gray",
-        "properties": ["border-color: hsla(var(--cool-gray-hue), var(--cool-gray-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-50",
+        "properties": ["border: rgba(var(--gray-50), var(--border-opacity));"]
       },
       {
-        "class": "border-gray",
-        "properties": ["border-color: hsla(var(--gray-hue), var(--gray-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-100",
+        "properties": ["border: rgba(var(--gray-100), var(--border-opacity));"]
       },
       {
-        "class": "border-warm-gray",
-        "properties": ["border-color: hsla(var(--warm-gray-hue), var(--warm-gray-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-200",
+        "properties": ["border: rgba(var(--gray-200), var(--border-opacity));"]
       },
       {
-        "class": "border-primary",
-        "properties": ["border-color: hsla(var(--primary-hue), var(--primary-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-300",
+        "properties": ["border: rgba(var(--gray-300), var(--border-opacity));"]
       },
       {
-        "class": "border-secondary",
-        "properties": ["border-color: hsla(var(--secondary-hue), var(--secondary-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-400",
+        "properties": ["border: rgba(var(--gray-400), var(--border-opacity));"]
       },
       {
-        "class": "border-tertiary",
-        "properties": ["border-color: hsla(var(--tertiary-hue), var(--tertiary-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-500",
+        "properties": ["border: rgba(var(--gray-500), var(--border-opacity));"]
       },
       {
-        "class": "border-success",
-        "properties": ["border-color: hsla(var(--success-hue), var(--success-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-600",
+        "properties": ["border: rgba(var(--gray-600), var(--border-opacity));"]
       },
       {
-        "class": "border-warning",
-        "properties": ["border-color: hsla(var(--warning-hue), var(--warning-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-700",
+        "properties": ["border: rgba(var(--gray-700), var(--border-opacity));"]
       },
       {
-        "class": "border-danger",
-        "properties": ["border-color: hsla(var(--danger-hue), var(--danger-sat), var(--border-ltn), var(--border-opacity));"]
+        "class": "border-gray-800",
+        "properties": ["border: rgba(var(--gray-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-gray-900",
+        "properties": ["border: rgba(var(--gray-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-gray-950",
+        "properties": ["border: rgba(var(--gray-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-50",
+        "properties": ["border: rgba(var(--red-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-100",
+        "properties": ["border: rgba(var(--red-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-200",
+        "properties": ["border: rgba(var(--red-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-300",
+        "properties": ["border: rgba(var(--red-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-400",
+        "properties": ["border: rgba(var(--red-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-500",
+        "properties": ["border: rgba(var(--red-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-600",
+        "properties": ["border: rgba(var(--red-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-700",
+        "properties": ["border: rgba(var(--red-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-800",
+        "properties": ["border: rgba(var(--red-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-900",
+        "properties": ["border: rgba(var(--red-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-red-950",
+        "properties": ["border: rgba(var(--red-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-50",
+        "properties": ["border: rgba(var(--orange-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-100",
+        "properties": ["border: rgba(var(--orange-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-200",
+        "properties": ["border: rgba(var(--orange-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-300",
+        "properties": ["border: rgba(var(--orange-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-400",
+        "properties": ["border: rgba(var(--orange-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-500",
+        "properties": ["border: rgba(var(--orange-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-600",
+        "properties": ["border: rgba(var(--orange-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-700",
+        "properties": ["border: rgba(var(--orange-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-800",
+        "properties": ["border: rgba(var(--orange-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-900",
+        "properties": ["border: rgba(var(--orange-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-orange-950",
+        "properties": ["border: rgba(var(--orange-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-50",
+        "properties": ["border: rgba(var(--yellow-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-100",
+        "properties": ["border: rgba(var(--yellow-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-200",
+        "properties": ["border: rgba(var(--yellow-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-300",
+        "properties": ["border: rgba(var(--yellow-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-400",
+        "properties": ["border: rgba(var(--yellow-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-500",
+        "properties": ["border: rgba(var(--yellow-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-600",
+        "properties": ["border: rgba(var(--yellow-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-700",
+        "properties": ["border: rgba(var(--yellow-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-800",
+        "properties": ["border: rgba(var(--yellow-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-900",
+        "properties": ["border: rgba(var(--yellow-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-yellow-950",
+        "properties": ["border: rgba(var(--yellow-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-50",
+        "properties": ["border: rgba(var(--lime-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-100",
+        "properties": ["border: rgba(var(--lime-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-200",
+        "properties": ["border: rgba(var(--lime-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-300",
+        "properties": ["border: rgba(var(--lime-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-400",
+        "properties": ["border: rgba(var(--lime-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-500",
+        "properties": ["border: rgba(var(--lime-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-600",
+        "properties": ["border: rgba(var(--lime-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-700",
+        "properties": ["border: rgba(var(--lime-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-800",
+        "properties": ["border: rgba(var(--lime-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-900",
+        "properties": ["border: rgba(var(--lime-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-lime-950",
+        "properties": ["border: rgba(var(--lime-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-50",
+        "properties": ["border: rgba(var(--green-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-100",
+        "properties": ["border: rgba(var(--green-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-200",
+        "properties": ["border: rgba(var(--green-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-300",
+        "properties": ["border: rgba(var(--green-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-400",
+        "properties": ["border: rgba(var(--green-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-500",
+        "properties": ["border: rgba(var(--green-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-600",
+        "properties": ["border: rgba(var(--green-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-700",
+        "properties": ["border: rgba(var(--green-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-800",
+        "properties": ["border: rgba(var(--green-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-900",
+        "properties": ["border: rgba(var(--green-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-green-950",
+        "properties": ["border: rgba(var(--green-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-50",
+        "properties": ["border: rgba(var(--teal-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-100",
+        "properties": ["border: rgba(var(--teal-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-200",
+        "properties": ["border: rgba(var(--teal-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-300",
+        "properties": ["border: rgba(var(--teal-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-400",
+        "properties": ["border: rgba(var(--teal-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-500",
+        "properties": ["border: rgba(var(--teal-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-600",
+        "properties": ["border: rgba(var(--teal-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-700",
+        "properties": ["border: rgba(var(--teal-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-800",
+        "properties": ["border: rgba(var(--teal-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-900",
+        "properties": ["border: rgba(var(--teal-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-teal-950",
+        "properties": ["border: rgba(var(--teal-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-50",
+        "properties": ["border: rgba(var(--cyan-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-100",
+        "properties": ["border: rgba(var(--cyan-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-200",
+        "properties": ["border: rgba(var(--cyan-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-300",
+        "properties": ["border: rgba(var(--cyan-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-400",
+        "properties": ["border: rgba(var(--cyan-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-500",
+        "properties": ["border: rgba(var(--cyan-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-600",
+        "properties": ["border: rgba(var(--cyan-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-700",
+        "properties": ["border: rgba(var(--cyan-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-800",
+        "properties": ["border: rgba(var(--cyan-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-900",
+        "properties": ["border: rgba(var(--cyan-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-cyan-950",
+        "properties": ["border: rgba(var(--cyan-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-50",
+        "properties": ["border: rgba(var(--blue-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-100",
+        "properties": ["border: rgba(var(--blue-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-200",
+        "properties": ["border: rgba(var(--blue-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-300",
+        "properties": ["border: rgba(var(--blue-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-400",
+        "properties": ["border: rgba(var(--blue-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-500",
+        "properties": ["border: rgba(var(--blue-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-600",
+        "properties": ["border: rgba(var(--blue-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-700",
+        "properties": ["border: rgba(var(--blue-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-800",
+        "properties": ["border: rgba(var(--blue-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-900",
+        "properties": ["border: rgba(var(--blue-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-blue-950",
+        "properties": ["border: rgba(var(--blue-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-50",
+        "properties": ["border: rgba(var(--indigo-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-100",
+        "properties": ["border: rgba(var(--indigo-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-200",
+        "properties": ["border: rgba(var(--indigo-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-300",
+        "properties": ["border: rgba(var(--indigo-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-400",
+        "properties": ["border: rgba(var(--indigo-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-500",
+        "properties": ["border: rgba(var(--indigo-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-600",
+        "properties": ["border: rgba(var(--indigo-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-700",
+        "properties": ["border: rgba(var(--indigo-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-800",
+        "properties": ["border: rgba(var(--indigo-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-900",
+        "properties": ["border: rgba(var(--indigo-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-indigo-950",
+        "properties": ["border: rgba(var(--indigo-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-50",
+        "properties": ["border: rgba(var(--purple-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-100",
+        "properties": ["border: rgba(var(--purple-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-200",
+        "properties": ["border: rgba(var(--purple-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-300",
+        "properties": ["border: rgba(var(--purple-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-400",
+        "properties": ["border: rgba(var(--purple-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-500",
+        "properties": ["border: rgba(var(--purple-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-600",
+        "properties": ["border: rgba(var(--purple-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-700",
+        "properties": ["border: rgba(var(--purple-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-800",
+        "properties": ["border: rgba(var(--purple-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-900",
+        "properties": ["border: rgba(var(--purple-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-purple-950",
+        "properties": ["border: rgba(var(--purple-950), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-50",
+        "properties": ["border: rgba(var(--pink-50), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-100",
+        "properties": ["border: rgba(var(--pink-100), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-200",
+        "properties": ["border: rgba(var(--pink-200), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-300",
+        "properties": ["border: rgba(var(--pink-300), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-400",
+        "properties": ["border: rgba(var(--pink-400), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-500",
+        "properties": ["border: rgba(var(--pink-500), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-600",
+        "properties": ["border: rgba(var(--pink-600), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-700",
+        "properties": ["border: rgba(var(--pink-700), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-800",
+        "properties": ["border: rgba(var(--pink-800), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-900",
+        "properties": ["border: rgba(var(--pink-900), var(--border-opacity));"]
+      },
+      {
+        "class": "border-pink-950",
+        "properties": ["border: rgba(var(--pink-950), var(--border-opacity));"]
       },
       {
         "class": "border-transparent",
-        "properties": ["border-color: transparent;"]
+        "properties": ["border: transparent;"]
       },
       {
         "class": "border-current",
-        "properties": ["border-color: current;"]
+        "properties": ["border: current;"]
       }
     ]
   },
