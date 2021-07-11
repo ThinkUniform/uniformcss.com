@@ -52364,7 +52364,12 @@ pre[class*=language-] {
 }
 .markdown h2 a:before {
   display: none;
-  content: "#";
+  content: "";
+  position: relative;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3ELink%3C/title%3E%3Cpath d='M200.66 352H144a96 96 0 010-192h55.41M312.59 160H368a96 96 0 010 192h-56.66M169.07 256h175.86' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='48'/%3E%3C/svg%3E");
   font-weight: var(--semibold);
 }
 .markdown pre {

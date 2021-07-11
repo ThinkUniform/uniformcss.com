@@ -128,7 +128,7 @@ module.exports = function (eleventyConfig) {
     }).use(markdownItAnchor, {
       permalink: true,
       permalinkClass: "direct-link",
-      permalinkSymbol: "#",
+      permalinkSymbol: "",
     });
     return markdownify.render(content);
   });
@@ -141,7 +141,7 @@ module.exports = function (eleventyConfig) {
     }).use(markdownItAnchor, {
       permalink: true,
       permalinkClass: "direct-link",
-      permalinkSymbol: "#",
+      permalinkSymbol: "",
     });
     return markdownInline.renderInline(content);
   });
