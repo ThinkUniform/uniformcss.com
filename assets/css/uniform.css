@@ -52024,8 +52024,8 @@ EMPHASIZE
   height: auto;
   min-width: 100%;
   box-shadow: var(--shadow-sm);
-  border-radius: var(--radius-xl);
-  background: hsla(var(--primary-hue), 95%, var(--ltn-900), 1);
+  border-radius: var(--radius-lg);
+  background: rgba(var(--gray-900), 1);
   overflow: hidden;
 }
 
@@ -52080,12 +52080,12 @@ EMPHASIZE
   top: 0;
   height: 100%;
   width: 1px;
-  background: hsla(var(--primary-hue), 95%, var(--ltn-300), 1);
+  background: rgba(var(--blue-300), 1);
   left: -1px;
 }
 .algolia-docsearch-suggestion--highlight {
-  color: hsla(var(--primary-hue), 95%, var(--ltn-300), 1);
-  background: hsla(var(--primary-hue), 95%, var(--ltn-300), 0.2);
+  color: rgba(var(--blue-300), 1);
+  background: rgba(var(--blue-300), 0.2);
   border-radius: 4px;
   padding: 0.1em 0.1em;
 }
@@ -52108,7 +52108,7 @@ EMPHASIZE
   top: 0;
   height: 100%;
   width: 1px;
-  background: hsla(var(--primary-hue), 95%, var(--ltn-300), 1);
+  background: rgba(var(--blue-300), 1);
   right: 0;
 }
 .algolia-docsearch-suggestion--title {
