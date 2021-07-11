@@ -60,9 +60,9 @@ layout: layouts/base.njk
 
       
 
-      <section class="docsearch-content overflow-auto flex-1 mt-10 sm.mt-20 md.mt-48 mb-112 bg-white border-1 border-gray-100 shadow-2xs radius-2xl px-20 sm.px-72 py-64">
-        <h1 class="text-5xl lg.text-6xl extrabold tracking-tight mb-10">
-          <span class="color-blue-400">{{ title | safe }}</span>
+      <section class="docsearch-content overflow-auto flex-1 mt-10 sm.mt-20 md.mt-48 mb-112 px-32">
+        <h1 class="text-5xl bold tracking-tight mb-10">
+          {{ title | safe }}
         </h1>
         <p class="text-xl tracking-tight mb-56">
           {{ description | safe }}
@@ -84,15 +84,15 @@ layout: layouts/base.njk
 
               
               
-              <div class="radius-md max-h-320 overflow-auto border-1 border-gray-600 border-100">
+              <div class="radius-md max-h-320 overflow-auto border-1 border-gray-200">
                 <table class="w-100p">
                   <tbody>
                     {%- for utility in key.utilities -%}
-                      <tr class="border-b-1 border-gray-600 border-100 last.border-b-0">
-                        <td class="w-4-12 text-sm color-blue-700 select-all border-r-1 border-gray-600 border-100 align-top pr-40 px-20 py-8">
+                      <tr class="border-b-1 border-gray-200 last.border-b-0">
+                        <td class="w-4-12 text-sm bg-gray-50 bg-opacity-50 color-blue-600 select-all border-r-1 border-gray-200 align-top pr-40 px-20 py-8">
                           <code class="space-nowrap">{{utility.class}} <span class="opacity-30">{{ key.extraSelector }}</span></code>
                         </td>
-                        <td class="text-sm color-secondary color-800 align-top px-20 py-8">
+                        <td class="text-sm color-gray-500 align-top px-20 py-8">
                           <pre class="overflow-auto">
                           {%- for item in key.customProperties -%}
                             <code class="opacity-50">{{ item }}</code><br>
