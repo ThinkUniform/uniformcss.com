@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
   let markdownItContainer = require("markdown-it-container");
   let markdownItAttrs = require("markdown-it-attrs");
   let markdownItAnchor = require("markdown-it-anchor");
-  let pluginTOC = require("eleventy-plugin-toc");
+  let pluginTOC = require("eleventy-plugin-nesting-toc");
   let fs = require("fs");
 
   eleventyConfig.addPlugin(pluginRss);

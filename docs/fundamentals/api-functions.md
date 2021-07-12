@@ -21,10 +21,10 @@ Behind the scenes, all default and user-defined theme settings such as colors, s
 .element {
   margin-bottom: size(40);
   padding: size(20, 24);
-  background: fill(primary, 600);
-  font-size: font-size(xl);
-  font-weight: font-weight(semibold);
-  line-height: leading(loose);
+  background: fill(blue-500);
+  font-size: font(xl);
+  font-weight: font(semibold);
+  line-height: leading(looser);
 }
 
 // Example custom loop using map
@@ -41,7 +41,7 @@ Behind the scenes, all default and user-defined theme settings such as colors, s
 
 ## Screen Functions
 
-The `screen()` function returns values from the `screen` map provided an existing variant is passed in as a parameter. `screens()` function returns the entire map, useful for looping.
+The `screen()` function fetches values from the `screen` map provided an existing variant is passed in as a parameter. `screens()` function fetches the entire map, useful for looping.
 
 For more information on breakpoints, visit [media queries](/docs/media-queries).
 
@@ -66,11 +66,11 @@ For more information on breakpoints, visit [media queries](/docs/media-queries).
 
 ## Fill Functions
 
-There are two color helper functions available. The `fill()` function returns values from the `colors` and the `gradient()` function returns values from the `gradients` map provided an existing variant is passed in as a parameter.
+There are two color helper functions available. The `fill()` function fetches values from the `colors` and the `gradient()` function fetches values from the `gradients` map provided an existing variant is passed in as a parameter.
 
 ```scss
 .element {
-  background-color: fill(gray);
+  background-color: fill(gray-500);
 }
 
 .element {
@@ -78,29 +78,21 @@ There are two color helper functions available. The `fill()` function returns va
 }
 ```
 
-#### Advanced Color Manipulation
+#### Controlling Fill Opacity
 
-The `fill()` function can dynamically apply lightness and opacity transformations.
+You can also pass a second argument to the `fill()` function to control opacity.
 
 ```scss
 // main.scss
-.element-1 {
-  background-color: fill(red, 600);
-}
-
-.element-2 {
-  background-color: fill(blue, 400, 0.4);
+.element {
+  background-color: fill(red-500, 0.5);
 }
 ```
 
 ```css
 /* main.css */
-.element-1 { 
-  background-color: hsla(var(--red-hue), var(--red-sat), var(--ltn-600)); 
-}
-
-.element-2 { 
-  background-color: hsla(var(--blue-hue), var(--blue-sat), var(--ltn-400), 0.4); 
+.element { 
+  background-color: rgba(var(--red-500), 0.5); 
 }
 ```
 
@@ -108,7 +100,7 @@ The `fill()` function can dynamically apply lightness and opacity transformation
 
 ## Size Functions
 
-The `size()` function returns values from the size map for both positive and negative sizes.
+The `size()` function fetches values from both positive and negative sizes.
 
 ```scss
 .element {
@@ -125,7 +117,7 @@ The `size()` function can also accept multiple arguments for joint sizing units 
 }
 ```
 
-When pluralized, the `sizes()` function returns all the sizes. By default, the sizes function will return both positive and negative sizes.
+When pluralized, the `sizes()` function fetches all the sizes. By default, the sizes function will return both positive and negative sizes.
 
 ```scss
 @each $size, $size-value in sizes() {
@@ -151,7 +143,7 @@ For more information on sizing, visit [sizing system](/docs/sizing-system).
 
 ## Shadows Functions
 
-The `shadow()` function returns values from the `shadows` map. The `shadows()` function returns the entire map.
+The `shadow()` function fetches values from the `shadows` map. The `shadows()` function fetches the entire map.
 
 ```scss
 .element {
@@ -173,7 +165,7 @@ Uniform provides various functions to pull values from font related maps such as
 
 #### Font Family
 
-The `font-family()` function returns values from the `font-families` map. When pluralized, the `font-families()` function returns the entire map.
+The `font-family()` function fetches values from the `font-families` map. When pluralized, the `font-families()` function fetches the entire map.
 
 ```scss
 .element {
@@ -189,11 +181,11 @@ The `font-family()` function returns values from the `font-families` map. When p
 
 #### Font Size
 
-The `font-size()` function returns values from the `font-sizes`. When pluralized, the `font-sizes()` function returns the entire map.
+The `font()` function fetches values from the `font-sizes`. When pluralized, the `font-sizes()` function fetches the entire map.
 
 ```scss
 .element {
-  font-size: font-size(xl);
+  font-size: font(xl);
 }
 ```
 
@@ -205,11 +197,11 @@ The `font-size()` function returns values from the `font-sizes`. When pluralized
 
 #### Font Weight
 
-The `font-weight()` function returns values from the `font-weights` map. When pluralized, the `font-weights()` function returns the entire map.
+The `font()` function fetches values from the `font-weights` map. When pluralized, the `font-weights()` function fetches the entire map.
 
 ```scss
 .element {
-  font-weight: font-weight(bold);
+  font-weight: font(bold);
 }
 ```
 
@@ -221,7 +213,7 @@ The `font-weight()` function returns values from the `font-weights` map. When pl
 
 #### Line Height
 
-The `leading()` function returns values from the `leadings` map. When pluralized, the `leadings()` function returns the entire map.
+The `leading()` function fetches values from the `leadings` map. When pluralized, the `leadings()` function fetches the entire map.
 
 ```scss
 .element {
@@ -237,7 +229,7 @@ The `leading()` function returns values from the `leadings` map. When pluralized
 
 #### Letter Spacing
 
-The `tracking()` function returns values from the `trackings` map. When pluralized, the `trackings()` function returns the entire map.
+The `tracking()` function fetches values from the `trackings` map. When pluralized, the `trackings()` function fetches the entire map.
 
 ```scss
 .element {
@@ -253,9 +245,23 @@ The `tracking()` function returns values from the `trackings` map. When pluraliz
 
 ---
 
+## Font Shorthand
+
+For `font-family`, `font-size`, `font-weight` properties, you can fetch values simply with the `font()` shorthand.
+
+```scss
+.element {
+  font-family: font(sans);
+  font-size: font(xl);
+  font-weight: font(bold);
+}
+```
+
+---
+
 ## Radius Functions
 
-The `radius()` function returns values from the `radiuses` map. When pluralized the `radiuses()` function returns the entire map.
+The `radius()` function fetches values from the `radiuses` map. When pluralized the `radiuses()` function fetches the entire map.
 
 ```scss
 .element {

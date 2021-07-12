@@ -34,27 +34,38 @@ The `screen()` mixin wraps the content around a `@media` rule.
 
 ---
 
-## Apply Mixin <span class="ml-6 inline-flex align-items-center px-8 h-20 font-sm bold radius-full bg-blue bg-brighten-500 color-white align-middle">Beta</span>
+## Apply Mixin
 
-The `apply()` mixin allows you to apply properties directly using shorthand utility class names. Behind the scene, it parses through the list of arguments and extends placeholder selectors that match the name.
+The `apply()` mixin allows you to apply properties directly using shorthand utility class names. It is important to note, the `apply()` mixin will throw an error when trying to apply properties that are included in the `excludes` setting.
 
 ```scss
-.element {
-  @include apply(
-    'mb-24',
-    'hover.mb-32',
-    'p-20',
-    'bg-white',
-  )
+// main.scss
+
+.parent {
+  @include apply('p-40 shadow-2xs radius-2xl');
+  .child {
+    @include apply('hover.opacity-50 p-24 md.p-64');
+  }
 }
 ```
 
-To enable this feature, placeholders must be set to `true` in your configuration. This will generate Sass placeholder selectors for each property on compilation.
+```css
+/* main.css */
 
-```scss
-@use "uniform" as * with (
-  $config: (
-    placeholders: true,
-  )
-);
+.parent {
+  padding: 2.5rem;
+  box-shadow: var(--shadow-2xs);
+  border-radius: var(--radius-2xl);
+}
+.parent .child {
+  padding: 1.5rem;
+}
+.parent .child:hover {
+  opacity: 0.5;
+}
+@media (min-width: 1024px) {
+  .parent .child {
+    padding: 4rem;
+  }
+}
 ```

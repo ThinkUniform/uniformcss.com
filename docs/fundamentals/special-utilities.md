@@ -55,34 +55,6 @@ You can apply directional properties like `padding` and `margin` horizontally an
 
 ---
 
-## Split
-
-The `split` special utility applies horizontal or vertical dividing borders to child elements. For more information, visit [Split](/docs/split).
-
-```html
-<div class="split-y-2 split-white">
-  <div>...</div>
-  <div>...</div>
-  <div>...</div>
-</div>
-```
-
-```css
-.split-white > * + * {
-  --split-ltn: 50%;
-  --split-opacity: 1;
-  border-color: hsla(var(--white-hue), var(--white-sat), 100%, var(--split-opacity))
-}
-
-.split-y-2 > * + * {
-  --split-top: 1;
-  --split-bottom: 0;
-  border-width: calc(var(--size-2) * var(--split-top)) 0 calc(var(--size-2) * var(--split-bottom)) 0;
-}
-```
-
----
-
 ## Gutter
 
 The `gutter` special utility applies margin-based horizontal or vertical spacing of child elements using the [Lobotomized Owl](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/) selector. For more information, visit [Gutter](/docs/gutter).

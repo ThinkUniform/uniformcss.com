@@ -1,5 +1,5 @@
 ---
-title: Directional Shorthands
+title: Directional
 description: Learn about directional shorthand special utilities
 date: 2021-01-08
 ---
