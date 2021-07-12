@@ -33,12 +33,12 @@ You can apply text sizing by applying the `text-<size>` utility. This utility is
 
 ## Disabling Text Size
 
-To disable this utility, pass `text-size` to the `exclude` setting in your configuration.
+To disable this utility, pass `text-size` to the `excludes` setting in your configuration.
 
 ```scss
 @use "uniform" as * with (
   $config: (
-    exclude: (
+    excludes: (
       text-size
     )
   )

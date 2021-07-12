@@ -30,12 +30,12 @@ To apply directional utilities horizontally or vertically, append `x` or `y` as 
 
 ## Disabling Wrapper
 
-To disable, simply pass in the utility name to the `exclude` setting in your configuration. The following properties have directional shorthands enabled.
+To disable, simply pass in the utility name to the `excludes` setting in your configuration. The following properties have directional shorthands enabled.
 
 ```scss
 @use "uniform" as * with (
   $config: (
-    exclude: (
+    excludes: (
       padding-x,
       padding-y,
       margin-x,

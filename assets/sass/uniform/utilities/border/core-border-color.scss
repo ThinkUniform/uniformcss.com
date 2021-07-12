@@ -17,7 +17,11 @@ $variants: (
     core.fills(border),
     (
       transparent: transparent,
-      current: currentColor
+      current: currentColor,
+      success: var(--border-success, rgba(var(--green-300), var(--bg-opacity))),
+      warning: var(--border-warning, rgba(var(--yellow-300), var(--bg-opacity))),
+      danger: var(--border-danger, rgba(var(--red-200), var(--bg-opacity))),
+      info: var(--border-info, rgba(var(--teal-500), var(--bg-opacity))),
     )
 	)
 );

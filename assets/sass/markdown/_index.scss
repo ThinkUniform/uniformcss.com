@@ -239,7 +239,7 @@ TABLE
 
 .markdown > table th,
 .markdown > table td {
-	border: var(--markdown-table-border, 1px solid #ccc);
+	border: var(--markdown-table-border, 1px solid fill(gray-200));
 }
 .markdown > table	th {
 	padding: var(--markdown-th-padding, 1em);
@@ -247,7 +247,7 @@ TABLE
 	font-weight: var(--markdown-th-weight, 700);
 	text-transform: var(--markdown-th-transform, uppercase);
 	letter-spacing: var(--markdown-th-tracking, 0.04em);
-	color: var(--markdown-th-color, #848f98);
+	color: var(--markdown-th-color, fill(gray-500));
 }
 .markdown > table	td {
 	padding: var(--markdown-td-padding, 0.5em 0.75em);

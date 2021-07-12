@@ -55,7 +55,7 @@ You can of course, override the default settings and enable responsiveness, and 
 ```scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       background-color: (
         responsive: true,
         pseudos: ( hover, focus, active )
@@ -86,7 +86,7 @@ You can drastically further reduce your output size by excluding properties or v
     negative-sizes: null,
 
     // exclude the following properties from build
-    exclude: (
+    excludes: (
       background,
       background-attachment,
       opacity

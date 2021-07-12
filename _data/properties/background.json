@@ -56,6 +56,30 @@
     "pseudos": ["hover", "group-hover", "focus", "dark"],
     "utilities": [
       {
+        "class": "borderbg-transparent",
+        "properties": ["bg: transparent;"]
+      },
+      {
+        "class": "bg-current",
+        "properties": ["background-color: currentColor;"]
+      },
+      {
+        "class": "bg-success",
+        "properties": ["background-color: var(--bg-success, rgba(var(--green-50), var(--bg-opacity)));"]
+      },
+      {
+        "class": "bg-warning",
+        "properties": ["background-color: var(--bg-warning, rgba(var(--yellow-50), var(--bg-opacity)));"]
+      },
+      {
+        "class": "bg-danger",
+        "properties": ["background-color: var(--bg-danger, rgba(var(--red-50), var(--bg-opacity)));"]
+      },
+      {
+        "class": "bg-info",
+        "properties": ["background-color: var(--bg-info, rgba(var(--teal-50), var(--bg-opacity)));"]
+      },
+      {
         "class": "bg-white",
         "properties": ["background-color: rgba(var(--white), var(--bg-opacity));"]
       },

@@ -78,7 +78,7 @@ Utility settings specifies the individual setting of each property.
 ```scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       text-align: (
         ...
       )
@@ -95,11 +95,11 @@ Exclude and include settings specifies which properties should be excluded and i
 ```scss
 @use "uniform" as * with (
   $config: (
-    exclude: (
+    excludes: (
       all,
       // other excluded properties
     ),
-    include: (
+    includes: (
       background-color,
       text-align,
       // other included properties

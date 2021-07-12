@@ -21,7 +21,7 @@ Properties in Uniform CSS are constructed using a template data structure. By pa
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       text-align: (
         shorthand: text,
         responsive: false,
@@ -74,7 +74,7 @@ The `shorthand` setting overrides the default keyword used to identify the prope
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       margin-top: (
         shorthand: customMarginTop
       ),
@@ -105,7 +105,7 @@ If `null` is passed in as a value for `shorthand` the property will omit the sho
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       display: (
         shorthand: null,
         variants: (
@@ -135,7 +135,7 @@ The `responsive` setting enables or disables the responsiveness of a given prope
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       text-align: (
         responsive: true,
       ),
@@ -173,7 +173,7 @@ The `responsive-pseudos` setting when enabled, will enable responsiveness across
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       float: (
         responsive: true,
         responsive-pseudos: true,
@@ -206,7 +206,7 @@ The `extra-selector` setting when defined, will apply CSS combinators to the end
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       gutter-y: (
         shorthand: gutter-y,
         properties: (margin-top),
@@ -239,7 +239,7 @@ The `properties` setting specifies the CSS property to include. You can include 
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       padding-x: (
         shorthand: px,
         properties: (
@@ -279,7 +279,7 @@ The `custom-properties` setting specifies custom properties to include with each
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       background-color: (
         custom-properties: (
           --bg-ltn: 50%,
@@ -316,7 +316,7 @@ The `variants` setting specifies which variants should be generated for a given 
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       margin: (
         shorthand: m,
         properties: (margin),
@@ -353,7 +353,7 @@ If `null` is passed in as a value for a variant key the property will omit the v
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       transition-property: (
         shorthand: transition,
         properties: (transition-property),
@@ -393,7 +393,7 @@ The `pseudos` setting specifies which pseudos set should be generated for a give
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       background-color: (
         pseudos: (
           hover, focus, group-hover

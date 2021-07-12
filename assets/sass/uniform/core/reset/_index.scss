@@ -21,8 +21,6 @@ $include-condition: true;
 }
 
 @if ( $include-condition ) {
-  // inspired from https://piccalil.li/blog/a-modern-css-reset
-
   // reset everything
   *, *::before,*::after {
     box-sizing: border-box;
@@ -59,7 +57,7 @@ $include-condition: true;
     max-width: 100%;
   }
 
-  // Inherit fonts for inputs and buttons
+  // inherit fonts for inputs and buttons
   input,
   button,
   textarea,
@@ -143,6 +141,7 @@ $include-condition: true;
     overflow: auto;
   }
 
+  // reset checkbox and radio style
   [type='checkbox'],
   [type='radio'] {
     -webkit-appearance: none;

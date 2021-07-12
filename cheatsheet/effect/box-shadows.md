@@ -8,7 +8,7 @@ date: 2021-01-03
 
 The following table visually represents all drop shadow effects that are available.
 
-<section class="bg-gray-100 p-20 radius-lg">
+<div class="bg-gray-100 p-20 radius-lg">
   <div class="grid grid-cols-1 gap-20">
     <div class="h-40 shadow-2xs bg-white radius-sm"></div>
     <div class="h-40 shadow-xs bg-white radius-sm"></div>
@@ -18,7 +18,7 @@ The following table visually represents all drop shadow effects that are availab
     <div class="h-40 shadow-xl bg-white radius-sm"></div>
     <div class="h-40 shadow-2xl bg-white radius-sm"></div>
   </div>
-</section>
+</div>
 
 ---
 
@@ -26,7 +26,7 @@ The following table visually represents all drop shadow effects that are availab
 
 The following table visually represents all input states and other semantic effects that are available.
 
-<section class="bg-gray-100 p-20 radius-lg">
+<div class="bg-gray-100 p-20 radius-lg">
   <div class="grid grid-cols-1 gap-20">
     <input type="text" class="h-40 shadow-focus bg-white radius-sm" placeholder="Focus">
     <input type="text" class="h-40 shadow-success bg-white radius-sm" placeholder="Success">
@@ -34,7 +34,7 @@ The following table visually represents all input states and other semantic effe
     <input type="text" class="h-40 shadow-danger bg-white radius-sm" placeholder="Danger">
     <input type="text" class="h-40 shadow-info bg-white radius-sm" placeholder="Info">
   </div>
-</section>
+</div>
 
 ---
 

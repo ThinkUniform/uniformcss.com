@@ -1180,6 +1180,26 @@ select {
   color: currentColor;
 }
 
+.color-success {
+  --color-opacity: 1;
+  color: var(--color-success, rgba(var(--green-800), var(--bg-opacity)));
+}
+
+.color-warning {
+  --color-opacity: 1;
+  color: var(--color-warning, rgba(var(--yellow-800), var(--bg-opacity)));
+}
+
+.color-danger {
+  --color-opacity: 1;
+  color: var(--color-danger, rgba(var(--red-800), var(--bg-opacity)));
+}
+
+.color-info {
+  --color-opacity: 1;
+  color: var(--color-info, rgba(var(--teal-800), var(--bg-opacity)));
+}
+
 .text-2xs {
   font-size: var(--font-2xs);
   line-height: var(--font-2xs-leading);
@@ -1550,7 +1570,7 @@ select {
   line-height: var(--leading-loosest);
 }
 
-.leading-none {
+.leading-100 {
   line-height: 1;
 }
 
@@ -2719,6 +2739,26 @@ select {
 .bg-current {
   --bg-opacity: 1;
   background-color: currentColor;
+}
+
+.bg-success {
+  --bg-opacity: 1;
+  background-color: var(--bg-success, rgba(var(--green-50), var(--bg-opacity)));
+}
+
+.bg-warning {
+  --bg-opacity: 1;
+  background-color: var(--bg-warning, rgba(var(--yellow-50), var(--bg-opacity)));
+}
+
+.bg-danger {
+  --bg-opacity: 1;
+  background-color: var(--bg-danger, rgba(var(--red-50), var(--bg-opacity)));
+}
+
+.bg-info {
+  --bg-opacity: 1;
+  background-color: var(--bg-info, rgba(var(--teal-50), var(--bg-opacity)));
 }
 
 .bg-border {
@@ -7251,6 +7291,26 @@ select {
 .border-current {
   --border-opacity: 1;
   border-color: currentColor;
+}
+
+.border-success {
+  --border-opacity: 1;
+  border-color: var(--border-success, rgba(var(--green-300), var(--bg-opacity)));
+}
+
+.border-warning {
+  --border-opacity: 1;
+  border-color: var(--border-warning, rgba(var(--yellow-300), var(--bg-opacity)));
+}
+
+.border-danger {
+  --border-opacity: 1;
+  border-color: var(--border-danger, rgba(var(--red-200), var(--bg-opacity)));
+}
+
+.border-info {
+  --border-opacity: 1;
+  border-color: var(--border-info, rgba(var(--teal-500), var(--bg-opacity)));
 }
 
 .border-separate {
@@ -12435,6 +12495,11 @@ select {
   color: rgba(var(--white), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-white {
+  --color-opacity: 1;
+  color: rgba(var(--white), var(--color-opacity));
+}
+
 .hover\.color-black:hover {
   --color-opacity: 1;
   color: rgba(var(--black), var(--color-opacity));
@@ -12446,6 +12511,11 @@ select {
 }
 
 .focus\.color-black:focus {
+  --color-opacity: 1;
+  color: rgba(var(--black), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-black {
   --color-opacity: 1;
   color: rgba(var(--black), var(--color-opacity));
 }
@@ -12465,6 +12535,11 @@ select {
   color: rgba(var(--gray-50), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-gray-50 {
+  --color-opacity: 1;
+  color: rgba(var(--gray-50), var(--color-opacity));
+}
+
 .hover\.color-gray-100:hover {
   --color-opacity: 1;
   color: rgba(var(--gray-100), var(--color-opacity));
@@ -12476,6 +12551,11 @@ select {
 }
 
 .focus\.color-gray-100:focus {
+  --color-opacity: 1;
+  color: rgba(var(--gray-100), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-gray-100 {
   --color-opacity: 1;
   color: rgba(var(--gray-100), var(--color-opacity));
 }
@@ -12495,6 +12575,11 @@ select {
   color: rgba(var(--gray-200), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-gray-200 {
+  --color-opacity: 1;
+  color: rgba(var(--gray-200), var(--color-opacity));
+}
+
 .hover\.color-gray-300:hover {
   --color-opacity: 1;
   color: rgba(var(--gray-300), var(--color-opacity));
@@ -12506,6 +12591,11 @@ select {
 }
 
 .focus\.color-gray-300:focus {
+  --color-opacity: 1;
+  color: rgba(var(--gray-300), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-gray-300 {
   --color-opacity: 1;
   color: rgba(var(--gray-300), var(--color-opacity));
 }
@@ -12525,6 +12615,11 @@ select {
   color: rgba(var(--gray-400), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-gray-400 {
+  --color-opacity: 1;
+  color: rgba(var(--gray-400), var(--color-opacity));
+}
+
 .hover\.color-gray-500:hover {
   --color-opacity: 1;
   color: rgba(var(--gray-500), var(--color-opacity));
@@ -12536,6 +12631,11 @@ select {
 }
 
 .focus\.color-gray-500:focus {
+  --color-opacity: 1;
+  color: rgba(var(--gray-500), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-gray-500 {
   --color-opacity: 1;
   color: rgba(var(--gray-500), var(--color-opacity));
 }
@@ -12555,6 +12655,11 @@ select {
   color: rgba(var(--gray-600), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-gray-600 {
+  --color-opacity: 1;
+  color: rgba(var(--gray-600), var(--color-opacity));
+}
+
 .hover\.color-gray-700:hover {
   --color-opacity: 1;
   color: rgba(var(--gray-700), var(--color-opacity));
@@ -12566,6 +12671,11 @@ select {
 }
 
 .focus\.color-gray-700:focus {
+  --color-opacity: 1;
+  color: rgba(var(--gray-700), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-gray-700 {
   --color-opacity: 1;
   color: rgba(var(--gray-700), var(--color-opacity));
 }
@@ -12585,6 +12695,11 @@ select {
   color: rgba(var(--gray-800), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-gray-800 {
+  --color-opacity: 1;
+  color: rgba(var(--gray-800), var(--color-opacity));
+}
+
 .hover\.color-gray-900:hover {
   --color-opacity: 1;
   color: rgba(var(--gray-900), var(--color-opacity));
@@ -12596,6 +12711,11 @@ select {
 }
 
 .focus\.color-gray-900:focus {
+  --color-opacity: 1;
+  color: rgba(var(--gray-900), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-gray-900 {
   --color-opacity: 1;
   color: rgba(var(--gray-900), var(--color-opacity));
 }
@@ -12615,6 +12735,11 @@ select {
   color: rgba(var(--gray-950), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-gray-950 {
+  --color-opacity: 1;
+  color: rgba(var(--gray-950), var(--color-opacity));
+}
+
 .hover\.color-red-50:hover {
   --color-opacity: 1;
   color: rgba(var(--red-50), var(--color-opacity));
@@ -12626,6 +12751,11 @@ select {
 }
 
 .focus\.color-red-50:focus {
+  --color-opacity: 1;
+  color: rgba(var(--red-50), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-red-50 {
   --color-opacity: 1;
   color: rgba(var(--red-50), var(--color-opacity));
 }
@@ -12645,6 +12775,11 @@ select {
   color: rgba(var(--red-100), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-red-100 {
+  --color-opacity: 1;
+  color: rgba(var(--red-100), var(--color-opacity));
+}
+
 .hover\.color-red-200:hover {
   --color-opacity: 1;
   color: rgba(var(--red-200), var(--color-opacity));
@@ -12656,6 +12791,11 @@ select {
 }
 
 .focus\.color-red-200:focus {
+  --color-opacity: 1;
+  color: rgba(var(--red-200), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-red-200 {
   --color-opacity: 1;
   color: rgba(var(--red-200), var(--color-opacity));
 }
@@ -12675,6 +12815,11 @@ select {
   color: rgba(var(--red-300), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-red-300 {
+  --color-opacity: 1;
+  color: rgba(var(--red-300), var(--color-opacity));
+}
+
 .hover\.color-red-400:hover {
   --color-opacity: 1;
   color: rgba(var(--red-400), var(--color-opacity));
@@ -12686,6 +12831,11 @@ select {
 }
 
 .focus\.color-red-400:focus {
+  --color-opacity: 1;
+  color: rgba(var(--red-400), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-red-400 {
   --color-opacity: 1;
   color: rgba(var(--red-400), var(--color-opacity));
 }
@@ -12705,6 +12855,11 @@ select {
   color: rgba(var(--red-500), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-red-500 {
+  --color-opacity: 1;
+  color: rgba(var(--red-500), var(--color-opacity));
+}
+
 .hover\.color-red-600:hover {
   --color-opacity: 1;
   color: rgba(var(--red-600), var(--color-opacity));
@@ -12716,6 +12871,11 @@ select {
 }
 
 .focus\.color-red-600:focus {
+  --color-opacity: 1;
+  color: rgba(var(--red-600), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-red-600 {
   --color-opacity: 1;
   color: rgba(var(--red-600), var(--color-opacity));
 }
@@ -12735,6 +12895,11 @@ select {
   color: rgba(var(--red-700), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-red-700 {
+  --color-opacity: 1;
+  color: rgba(var(--red-700), var(--color-opacity));
+}
+
 .hover\.color-red-800:hover {
   --color-opacity: 1;
   color: rgba(var(--red-800), var(--color-opacity));
@@ -12746,6 +12911,11 @@ select {
 }
 
 .focus\.color-red-800:focus {
+  --color-opacity: 1;
+  color: rgba(var(--red-800), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-red-800 {
   --color-opacity: 1;
   color: rgba(var(--red-800), var(--color-opacity));
 }
@@ -12765,6 +12935,11 @@ select {
   color: rgba(var(--red-900), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-red-900 {
+  --color-opacity: 1;
+  color: rgba(var(--red-900), var(--color-opacity));
+}
+
 .hover\.color-red-950:hover {
   --color-opacity: 1;
   color: rgba(var(--red-950), var(--color-opacity));
@@ -12776,6 +12951,11 @@ select {
 }
 
 .focus\.color-red-950:focus {
+  --color-opacity: 1;
+  color: rgba(var(--red-950), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-red-950 {
   --color-opacity: 1;
   color: rgba(var(--red-950), var(--color-opacity));
 }
@@ -12795,6 +12975,11 @@ select {
   color: rgba(var(--orange-50), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-orange-50 {
+  --color-opacity: 1;
+  color: rgba(var(--orange-50), var(--color-opacity));
+}
+
 .hover\.color-orange-100:hover {
   --color-opacity: 1;
   color: rgba(var(--orange-100), var(--color-opacity));
@@ -12806,6 +12991,11 @@ select {
 }
 
 .focus\.color-orange-100:focus {
+  --color-opacity: 1;
+  color: rgba(var(--orange-100), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-orange-100 {
   --color-opacity: 1;
   color: rgba(var(--orange-100), var(--color-opacity));
 }
@@ -12825,6 +13015,11 @@ select {
   color: rgba(var(--orange-200), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-orange-200 {
+  --color-opacity: 1;
+  color: rgba(var(--orange-200), var(--color-opacity));
+}
+
 .hover\.color-orange-300:hover {
   --color-opacity: 1;
   color: rgba(var(--orange-300), var(--color-opacity));
@@ -12836,6 +13031,11 @@ select {
 }
 
 .focus\.color-orange-300:focus {
+  --color-opacity: 1;
+  color: rgba(var(--orange-300), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-orange-300 {
   --color-opacity: 1;
   color: rgba(var(--orange-300), var(--color-opacity));
 }
@@ -12855,6 +13055,11 @@ select {
   color: rgba(var(--orange-400), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-orange-400 {
+  --color-opacity: 1;
+  color: rgba(var(--orange-400), var(--color-opacity));
+}
+
 .hover\.color-orange-500:hover {
   --color-opacity: 1;
   color: rgba(var(--orange-500), var(--color-opacity));
@@ -12866,6 +13071,11 @@ select {
 }
 
 .focus\.color-orange-500:focus {
+  --color-opacity: 1;
+  color: rgba(var(--orange-500), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-orange-500 {
   --color-opacity: 1;
   color: rgba(var(--orange-500), var(--color-opacity));
 }
@@ -12885,6 +13095,11 @@ select {
   color: rgba(var(--orange-600), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-orange-600 {
+  --color-opacity: 1;
+  color: rgba(var(--orange-600), var(--color-opacity));
+}
+
 .hover\.color-orange-700:hover {
   --color-opacity: 1;
   color: rgba(var(--orange-700), var(--color-opacity));
@@ -12896,6 +13111,11 @@ select {
 }
 
 .focus\.color-orange-700:focus {
+  --color-opacity: 1;
+  color: rgba(var(--orange-700), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-orange-700 {
   --color-opacity: 1;
   color: rgba(var(--orange-700), var(--color-opacity));
 }
@@ -12915,6 +13135,11 @@ select {
   color: rgba(var(--orange-800), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-orange-800 {
+  --color-opacity: 1;
+  color: rgba(var(--orange-800), var(--color-opacity));
+}
+
 .hover\.color-orange-900:hover {
   --color-opacity: 1;
   color: rgba(var(--orange-900), var(--color-opacity));
@@ -12926,6 +13151,11 @@ select {
 }
 
 .focus\.color-orange-900:focus {
+  --color-opacity: 1;
+  color: rgba(var(--orange-900), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-orange-900 {
   --color-opacity: 1;
   color: rgba(var(--orange-900), var(--color-opacity));
 }
@@ -12945,6 +13175,11 @@ select {
   color: rgba(var(--orange-950), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-orange-950 {
+  --color-opacity: 1;
+  color: rgba(var(--orange-950), var(--color-opacity));
+}
+
 .hover\.color-yellow-50:hover {
   --color-opacity: 1;
   color: rgba(var(--yellow-50), var(--color-opacity));
@@ -12956,6 +13191,11 @@ select {
 }
 
 .focus\.color-yellow-50:focus {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-50), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-yellow-50 {
   --color-opacity: 1;
   color: rgba(var(--yellow-50), var(--color-opacity));
 }
@@ -12975,6 +13215,11 @@ select {
   color: rgba(var(--yellow-100), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-yellow-100 {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-100), var(--color-opacity));
+}
+
 .hover\.color-yellow-200:hover {
   --color-opacity: 1;
   color: rgba(var(--yellow-200), var(--color-opacity));
@@ -12986,6 +13231,11 @@ select {
 }
 
 .focus\.color-yellow-200:focus {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-200), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-yellow-200 {
   --color-opacity: 1;
   color: rgba(var(--yellow-200), var(--color-opacity));
 }
@@ -13005,6 +13255,11 @@ select {
   color: rgba(var(--yellow-300), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-yellow-300 {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-300), var(--color-opacity));
+}
+
 .hover\.color-yellow-400:hover {
   --color-opacity: 1;
   color: rgba(var(--yellow-400), var(--color-opacity));
@@ -13016,6 +13271,11 @@ select {
 }
 
 .focus\.color-yellow-400:focus {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-400), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-yellow-400 {
   --color-opacity: 1;
   color: rgba(var(--yellow-400), var(--color-opacity));
 }
@@ -13035,6 +13295,11 @@ select {
   color: rgba(var(--yellow-500), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-yellow-500 {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-500), var(--color-opacity));
+}
+
 .hover\.color-yellow-600:hover {
   --color-opacity: 1;
   color: rgba(var(--yellow-600), var(--color-opacity));
@@ -13046,6 +13311,11 @@ select {
 }
 
 .focus\.color-yellow-600:focus {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-600), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-yellow-600 {
   --color-opacity: 1;
   color: rgba(var(--yellow-600), var(--color-opacity));
 }
@@ -13065,6 +13335,11 @@ select {
   color: rgba(var(--yellow-700), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-yellow-700 {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-700), var(--color-opacity));
+}
+
 .hover\.color-yellow-800:hover {
   --color-opacity: 1;
   color: rgba(var(--yellow-800), var(--color-opacity));
@@ -13076,6 +13351,11 @@ select {
 }
 
 .focus\.color-yellow-800:focus {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-800), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-yellow-800 {
   --color-opacity: 1;
   color: rgba(var(--yellow-800), var(--color-opacity));
 }
@@ -13095,6 +13375,11 @@ select {
   color: rgba(var(--yellow-900), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-yellow-900 {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-900), var(--color-opacity));
+}
+
 .hover\.color-yellow-950:hover {
   --color-opacity: 1;
   color: rgba(var(--yellow-950), var(--color-opacity));
@@ -13106,6 +13391,11 @@ select {
 }
 
 .focus\.color-yellow-950:focus {
+  --color-opacity: 1;
+  color: rgba(var(--yellow-950), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-yellow-950 {
   --color-opacity: 1;
   color: rgba(var(--yellow-950), var(--color-opacity));
 }
@@ -13125,6 +13415,11 @@ select {
   color: rgba(var(--lime-50), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-lime-50 {
+  --color-opacity: 1;
+  color: rgba(var(--lime-50), var(--color-opacity));
+}
+
 .hover\.color-lime-100:hover {
   --color-opacity: 1;
   color: rgba(var(--lime-100), var(--color-opacity));
@@ -13136,6 +13431,11 @@ select {
 }
 
 .focus\.color-lime-100:focus {
+  --color-opacity: 1;
+  color: rgba(var(--lime-100), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-lime-100 {
   --color-opacity: 1;
   color: rgba(var(--lime-100), var(--color-opacity));
 }
@@ -13155,6 +13455,11 @@ select {
   color: rgba(var(--lime-200), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-lime-200 {
+  --color-opacity: 1;
+  color: rgba(var(--lime-200), var(--color-opacity));
+}
+
 .hover\.color-lime-300:hover {
   --color-opacity: 1;
   color: rgba(var(--lime-300), var(--color-opacity));
@@ -13166,6 +13471,11 @@ select {
 }
 
 .focus\.color-lime-300:focus {
+  --color-opacity: 1;
+  color: rgba(var(--lime-300), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-lime-300 {
   --color-opacity: 1;
   color: rgba(var(--lime-300), var(--color-opacity));
 }
@@ -13185,6 +13495,11 @@ select {
   color: rgba(var(--lime-400), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-lime-400 {
+  --color-opacity: 1;
+  color: rgba(var(--lime-400), var(--color-opacity));
+}
+
 .hover\.color-lime-500:hover {
   --color-opacity: 1;
   color: rgba(var(--lime-500), var(--color-opacity));
@@ -13196,6 +13511,11 @@ select {
 }
 
 .focus\.color-lime-500:focus {
+  --color-opacity: 1;
+  color: rgba(var(--lime-500), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-lime-500 {
   --color-opacity: 1;
   color: rgba(var(--lime-500), var(--color-opacity));
 }
@@ -13215,6 +13535,11 @@ select {
   color: rgba(var(--lime-600), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-lime-600 {
+  --color-opacity: 1;
+  color: rgba(var(--lime-600), var(--color-opacity));
+}
+
 .hover\.color-lime-700:hover {
   --color-opacity: 1;
   color: rgba(var(--lime-700), var(--color-opacity));
@@ -13226,6 +13551,11 @@ select {
 }
 
 .focus\.color-lime-700:focus {
+  --color-opacity: 1;
+  color: rgba(var(--lime-700), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-lime-700 {
   --color-opacity: 1;
   color: rgba(var(--lime-700), var(--color-opacity));
 }
@@ -13245,6 +13575,11 @@ select {
   color: rgba(var(--lime-800), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-lime-800 {
+  --color-opacity: 1;
+  color: rgba(var(--lime-800), var(--color-opacity));
+}
+
 .hover\.color-lime-900:hover {
   --color-opacity: 1;
   color: rgba(var(--lime-900), var(--color-opacity));
@@ -13256,6 +13591,11 @@ select {
 }
 
 .focus\.color-lime-900:focus {
+  --color-opacity: 1;
+  color: rgba(var(--lime-900), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-lime-900 {
   --color-opacity: 1;
   color: rgba(var(--lime-900), var(--color-opacity));
 }
@@ -13275,6 +13615,11 @@ select {
   color: rgba(var(--lime-950), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-lime-950 {
+  --color-opacity: 1;
+  color: rgba(var(--lime-950), var(--color-opacity));
+}
+
 .hover\.color-green-50:hover {
   --color-opacity: 1;
   color: rgba(var(--green-50), var(--color-opacity));
@@ -13286,6 +13631,11 @@ select {
 }
 
 .focus\.color-green-50:focus {
+  --color-opacity: 1;
+  color: rgba(var(--green-50), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-green-50 {
   --color-opacity: 1;
   color: rgba(var(--green-50), var(--color-opacity));
 }
@@ -13305,6 +13655,11 @@ select {
   color: rgba(var(--green-100), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-green-100 {
+  --color-opacity: 1;
+  color: rgba(var(--green-100), var(--color-opacity));
+}
+
 .hover\.color-green-200:hover {
   --color-opacity: 1;
   color: rgba(var(--green-200), var(--color-opacity));
@@ -13316,6 +13671,11 @@ select {
 }
 
 .focus\.color-green-200:focus {
+  --color-opacity: 1;
+  color: rgba(var(--green-200), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-green-200 {
   --color-opacity: 1;
   color: rgba(var(--green-200), var(--color-opacity));
 }
@@ -13335,6 +13695,11 @@ select {
   color: rgba(var(--green-300), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-green-300 {
+  --color-opacity: 1;
+  color: rgba(var(--green-300), var(--color-opacity));
+}
+
 .hover\.color-green-400:hover {
   --color-opacity: 1;
   color: rgba(var(--green-400), var(--color-opacity));
@@ -13346,6 +13711,11 @@ select {
 }
 
 .focus\.color-green-400:focus {
+  --color-opacity: 1;
+  color: rgba(var(--green-400), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-green-400 {
   --color-opacity: 1;
   color: rgba(var(--green-400), var(--color-opacity));
 }
@@ -13365,6 +13735,11 @@ select {
   color: rgba(var(--green-500), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-green-500 {
+  --color-opacity: 1;
+  color: rgba(var(--green-500), var(--color-opacity));
+}
+
 .hover\.color-green-600:hover {
   --color-opacity: 1;
   color: rgba(var(--green-600), var(--color-opacity));
@@ -13376,6 +13751,11 @@ select {
 }
 
 .focus\.color-green-600:focus {
+  --color-opacity: 1;
+  color: rgba(var(--green-600), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-green-600 {
   --color-opacity: 1;
   color: rgba(var(--green-600), var(--color-opacity));
 }
@@ -13395,6 +13775,11 @@ select {
   color: rgba(var(--green-700), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-green-700 {
+  --color-opacity: 1;
+  color: rgba(var(--green-700), var(--color-opacity));
+}
+
 .hover\.color-green-800:hover {
   --color-opacity: 1;
   color: rgba(var(--green-800), var(--color-opacity));
@@ -13406,6 +13791,11 @@ select {
 }
 
 .focus\.color-green-800:focus {
+  --color-opacity: 1;
+  color: rgba(var(--green-800), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-green-800 {
   --color-opacity: 1;
   color: rgba(var(--green-800), var(--color-opacity));
 }
@@ -13425,6 +13815,11 @@ select {
   color: rgba(var(--green-900), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-green-900 {
+  --color-opacity: 1;
+  color: rgba(var(--green-900), var(--color-opacity));
+}
+
 .hover\.color-green-950:hover {
   --color-opacity: 1;
   color: rgba(var(--green-950), var(--color-opacity));
@@ -13436,6 +13831,11 @@ select {
 }
 
 .focus\.color-green-950:focus {
+  --color-opacity: 1;
+  color: rgba(var(--green-950), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-green-950 {
   --color-opacity: 1;
   color: rgba(var(--green-950), var(--color-opacity));
 }
@@ -13455,6 +13855,11 @@ select {
   color: rgba(var(--teal-50), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-teal-50 {
+  --color-opacity: 1;
+  color: rgba(var(--teal-50), var(--color-opacity));
+}
+
 .hover\.color-teal-100:hover {
   --color-opacity: 1;
   color: rgba(var(--teal-100), var(--color-opacity));
@@ -13466,6 +13871,11 @@ select {
 }
 
 .focus\.color-teal-100:focus {
+  --color-opacity: 1;
+  color: rgba(var(--teal-100), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-teal-100 {
   --color-opacity: 1;
   color: rgba(var(--teal-100), var(--color-opacity));
 }
@@ -13485,6 +13895,11 @@ select {
   color: rgba(var(--teal-200), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-teal-200 {
+  --color-opacity: 1;
+  color: rgba(var(--teal-200), var(--color-opacity));
+}
+
 .hover\.color-teal-300:hover {
   --color-opacity: 1;
   color: rgba(var(--teal-300), var(--color-opacity));
@@ -13496,6 +13911,11 @@ select {
 }
 
 .focus\.color-teal-300:focus {
+  --color-opacity: 1;
+  color: rgba(var(--teal-300), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-teal-300 {
   --color-opacity: 1;
   color: rgba(var(--teal-300), var(--color-opacity));
 }
@@ -13515,6 +13935,11 @@ select {
   color: rgba(var(--teal-400), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-teal-400 {
+  --color-opacity: 1;
+  color: rgba(var(--teal-400), var(--color-opacity));
+}
+
 .hover\.color-teal-500:hover {
   --color-opacity: 1;
   color: rgba(var(--teal-500), var(--color-opacity));
@@ -13526,6 +13951,11 @@ select {
 }
 
 .focus\.color-teal-500:focus {
+  --color-opacity: 1;
+  color: rgba(var(--teal-500), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-teal-500 {
   --color-opacity: 1;
   color: rgba(var(--teal-500), var(--color-opacity));
 }
@@ -13545,6 +13975,11 @@ select {
   color: rgba(var(--teal-600), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-teal-600 {
+  --color-opacity: 1;
+  color: rgba(var(--teal-600), var(--color-opacity));
+}
+
 .hover\.color-teal-700:hover {
   --color-opacity: 1;
   color: rgba(var(--teal-700), var(--color-opacity));
@@ -13556,6 +13991,11 @@ select {
 }
 
 .focus\.color-teal-700:focus {
+  --color-opacity: 1;
+  color: rgba(var(--teal-700), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-teal-700 {
   --color-opacity: 1;
   color: rgba(var(--teal-700), var(--color-opacity));
 }
@@ -13575,6 +14015,11 @@ select {
   color: rgba(var(--teal-800), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-teal-800 {
+  --color-opacity: 1;
+  color: rgba(var(--teal-800), var(--color-opacity));
+}
+
 .hover\.color-teal-900:hover {
   --color-opacity: 1;
   color: rgba(var(--teal-900), var(--color-opacity));
@@ -13586,6 +14031,11 @@ select {
 }
 
 .focus\.color-teal-900:focus {
+  --color-opacity: 1;
+  color: rgba(var(--teal-900), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-teal-900 {
   --color-opacity: 1;
   color: rgba(var(--teal-900), var(--color-opacity));
 }
@@ -13605,6 +14055,11 @@ select {
   color: rgba(var(--teal-950), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-teal-950 {
+  --color-opacity: 1;
+  color: rgba(var(--teal-950), var(--color-opacity));
+}
+
 .hover\.color-cyan-50:hover {
   --color-opacity: 1;
   color: rgba(var(--cyan-50), var(--color-opacity));
@@ -13616,6 +14071,11 @@ select {
 }
 
 .focus\.color-cyan-50:focus {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-50), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-cyan-50 {
   --color-opacity: 1;
   color: rgba(var(--cyan-50), var(--color-opacity));
 }
@@ -13635,6 +14095,11 @@ select {
   color: rgba(var(--cyan-100), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-cyan-100 {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-100), var(--color-opacity));
+}
+
 .hover\.color-cyan-200:hover {
   --color-opacity: 1;
   color: rgba(var(--cyan-200), var(--color-opacity));
@@ -13646,6 +14111,11 @@ select {
 }
 
 .focus\.color-cyan-200:focus {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-200), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-cyan-200 {
   --color-opacity: 1;
   color: rgba(var(--cyan-200), var(--color-opacity));
 }
@@ -13665,6 +14135,11 @@ select {
   color: rgba(var(--cyan-300), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-cyan-300 {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-300), var(--color-opacity));
+}
+
 .hover\.color-cyan-400:hover {
   --color-opacity: 1;
   color: rgba(var(--cyan-400), var(--color-opacity));
@@ -13676,6 +14151,11 @@ select {
 }
 
 .focus\.color-cyan-400:focus {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-400), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-cyan-400 {
   --color-opacity: 1;
   color: rgba(var(--cyan-400), var(--color-opacity));
 }
@@ -13695,6 +14175,11 @@ select {
   color: rgba(var(--cyan-500), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-cyan-500 {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-500), var(--color-opacity));
+}
+
 .hover\.color-cyan-600:hover {
   --color-opacity: 1;
   color: rgba(var(--cyan-600), var(--color-opacity));
@@ -13706,6 +14191,11 @@ select {
 }
 
 .focus\.color-cyan-600:focus {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-600), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-cyan-600 {
   --color-opacity: 1;
   color: rgba(var(--cyan-600), var(--color-opacity));
 }
@@ -13725,6 +14215,11 @@ select {
   color: rgba(var(--cyan-700), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-cyan-700 {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-700), var(--color-opacity));
+}
+
 .hover\.color-cyan-800:hover {
   --color-opacity: 1;
   color: rgba(var(--cyan-800), var(--color-opacity));
@@ -13736,6 +14231,11 @@ select {
 }
 
 .focus\.color-cyan-800:focus {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-800), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-cyan-800 {
   --color-opacity: 1;
   color: rgba(var(--cyan-800), var(--color-opacity));
 }
@@ -13755,6 +14255,11 @@ select {
   color: rgba(var(--cyan-900), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-cyan-900 {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-900), var(--color-opacity));
+}
+
 .hover\.color-cyan-950:hover {
   --color-opacity: 1;
   color: rgba(var(--cyan-950), var(--color-opacity));
@@ -13766,6 +14271,11 @@ select {
 }
 
 .focus\.color-cyan-950:focus {
+  --color-opacity: 1;
+  color: rgba(var(--cyan-950), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-cyan-950 {
   --color-opacity: 1;
   color: rgba(var(--cyan-950), var(--color-opacity));
 }
@@ -13785,6 +14295,11 @@ select {
   color: rgba(var(--blue-50), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-blue-50 {
+  --color-opacity: 1;
+  color: rgba(var(--blue-50), var(--color-opacity));
+}
+
 .hover\.color-blue-100:hover {
   --color-opacity: 1;
   color: rgba(var(--blue-100), var(--color-opacity));
@@ -13796,6 +14311,11 @@ select {
 }
 
 .focus\.color-blue-100:focus {
+  --color-opacity: 1;
+  color: rgba(var(--blue-100), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-blue-100 {
   --color-opacity: 1;
   color: rgba(var(--blue-100), var(--color-opacity));
 }
@@ -13815,6 +14335,11 @@ select {
   color: rgba(var(--blue-200), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-blue-200 {
+  --color-opacity: 1;
+  color: rgba(var(--blue-200), var(--color-opacity));
+}
+
 .hover\.color-blue-300:hover {
   --color-opacity: 1;
   color: rgba(var(--blue-300), var(--color-opacity));
@@ -13826,6 +14351,11 @@ select {
 }
 
 .focus\.color-blue-300:focus {
+  --color-opacity: 1;
+  color: rgba(var(--blue-300), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-blue-300 {
   --color-opacity: 1;
   color: rgba(var(--blue-300), var(--color-opacity));
 }
@@ -13845,6 +14375,11 @@ select {
   color: rgba(var(--blue-400), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-blue-400 {
+  --color-opacity: 1;
+  color: rgba(var(--blue-400), var(--color-opacity));
+}
+
 .hover\.color-blue-500:hover {
   --color-opacity: 1;
   color: rgba(var(--blue-500), var(--color-opacity));
@@ -13856,6 +14391,11 @@ select {
 }
 
 .focus\.color-blue-500:focus {
+  --color-opacity: 1;
+  color: rgba(var(--blue-500), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-blue-500 {
   --color-opacity: 1;
   color: rgba(var(--blue-500), var(--color-opacity));
 }
@@ -13875,6 +14415,11 @@ select {
   color: rgba(var(--blue-600), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-blue-600 {
+  --color-opacity: 1;
+  color: rgba(var(--blue-600), var(--color-opacity));
+}
+
 .hover\.color-blue-700:hover {
   --color-opacity: 1;
   color: rgba(var(--blue-700), var(--color-opacity));
@@ -13886,6 +14431,11 @@ select {
 }
 
 .focus\.color-blue-700:focus {
+  --color-opacity: 1;
+  color: rgba(var(--blue-700), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-blue-700 {
   --color-opacity: 1;
   color: rgba(var(--blue-700), var(--color-opacity));
 }
@@ -13905,6 +14455,11 @@ select {
   color: rgba(var(--blue-800), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-blue-800 {
+  --color-opacity: 1;
+  color: rgba(var(--blue-800), var(--color-opacity));
+}
+
 .hover\.color-blue-900:hover {
   --color-opacity: 1;
   color: rgba(var(--blue-900), var(--color-opacity));
@@ -13916,6 +14471,11 @@ select {
 }
 
 .focus\.color-blue-900:focus {
+  --color-opacity: 1;
+  color: rgba(var(--blue-900), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-blue-900 {
   --color-opacity: 1;
   color: rgba(var(--blue-900), var(--color-opacity));
 }
@@ -13935,6 +14495,11 @@ select {
   color: rgba(var(--blue-950), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-blue-950 {
+  --color-opacity: 1;
+  color: rgba(var(--blue-950), var(--color-opacity));
+}
+
 .hover\.color-indigo-50:hover {
   --color-opacity: 1;
   color: rgba(var(--indigo-50), var(--color-opacity));
@@ -13946,6 +14511,11 @@ select {
 }
 
 .focus\.color-indigo-50:focus {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-50), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-indigo-50 {
   --color-opacity: 1;
   color: rgba(var(--indigo-50), var(--color-opacity));
 }
@@ -13965,6 +14535,11 @@ select {
   color: rgba(var(--indigo-100), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-indigo-100 {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-100), var(--color-opacity));
+}
+
 .hover\.color-indigo-200:hover {
   --color-opacity: 1;
   color: rgba(var(--indigo-200), var(--color-opacity));
@@ -13976,6 +14551,11 @@ select {
 }
 
 .focus\.color-indigo-200:focus {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-200), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-indigo-200 {
   --color-opacity: 1;
   color: rgba(var(--indigo-200), var(--color-opacity));
 }
@@ -13995,6 +14575,11 @@ select {
   color: rgba(var(--indigo-300), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-indigo-300 {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-300), var(--color-opacity));
+}
+
 .hover\.color-indigo-400:hover {
   --color-opacity: 1;
   color: rgba(var(--indigo-400), var(--color-opacity));
@@ -14006,6 +14591,11 @@ select {
 }
 
 .focus\.color-indigo-400:focus {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-400), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-indigo-400 {
   --color-opacity: 1;
   color: rgba(var(--indigo-400), var(--color-opacity));
 }
@@ -14025,6 +14615,11 @@ select {
   color: rgba(var(--indigo-500), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-indigo-500 {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-500), var(--color-opacity));
+}
+
 .hover\.color-indigo-600:hover {
   --color-opacity: 1;
   color: rgba(var(--indigo-600), var(--color-opacity));
@@ -14036,6 +14631,11 @@ select {
 }
 
 .focus\.color-indigo-600:focus {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-600), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-indigo-600 {
   --color-opacity: 1;
   color: rgba(var(--indigo-600), var(--color-opacity));
 }
@@ -14055,6 +14655,11 @@ select {
   color: rgba(var(--indigo-700), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-indigo-700 {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-700), var(--color-opacity));
+}
+
 .hover\.color-indigo-800:hover {
   --color-opacity: 1;
   color: rgba(var(--indigo-800), var(--color-opacity));
@@ -14066,6 +14671,11 @@ select {
 }
 
 .focus\.color-indigo-800:focus {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-800), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-indigo-800 {
   --color-opacity: 1;
   color: rgba(var(--indigo-800), var(--color-opacity));
 }
@@ -14085,6 +14695,11 @@ select {
   color: rgba(var(--indigo-900), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-indigo-900 {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-900), var(--color-opacity));
+}
+
 .hover\.color-indigo-950:hover {
   --color-opacity: 1;
   color: rgba(var(--indigo-950), var(--color-opacity));
@@ -14096,6 +14711,11 @@ select {
 }
 
 .focus\.color-indigo-950:focus {
+  --color-opacity: 1;
+  color: rgba(var(--indigo-950), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-indigo-950 {
   --color-opacity: 1;
   color: rgba(var(--indigo-950), var(--color-opacity));
 }
@@ -14115,6 +14735,11 @@ select {
   color: rgba(var(--purple-50), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-purple-50 {
+  --color-opacity: 1;
+  color: rgba(var(--purple-50), var(--color-opacity));
+}
+
 .hover\.color-purple-100:hover {
   --color-opacity: 1;
   color: rgba(var(--purple-100), var(--color-opacity));
@@ -14126,6 +14751,11 @@ select {
 }
 
 .focus\.color-purple-100:focus {
+  --color-opacity: 1;
+  color: rgba(var(--purple-100), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-purple-100 {
   --color-opacity: 1;
   color: rgba(var(--purple-100), var(--color-opacity));
 }
@@ -14145,6 +14775,11 @@ select {
   color: rgba(var(--purple-200), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-purple-200 {
+  --color-opacity: 1;
+  color: rgba(var(--purple-200), var(--color-opacity));
+}
+
 .hover\.color-purple-300:hover {
   --color-opacity: 1;
   color: rgba(var(--purple-300), var(--color-opacity));
@@ -14156,6 +14791,11 @@ select {
 }
 
 .focus\.color-purple-300:focus {
+  --color-opacity: 1;
+  color: rgba(var(--purple-300), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-purple-300 {
   --color-opacity: 1;
   color: rgba(var(--purple-300), var(--color-opacity));
 }
@@ -14175,6 +14815,11 @@ select {
   color: rgba(var(--purple-400), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-purple-400 {
+  --color-opacity: 1;
+  color: rgba(var(--purple-400), var(--color-opacity));
+}
+
 .hover\.color-purple-500:hover {
   --color-opacity: 1;
   color: rgba(var(--purple-500), var(--color-opacity));
@@ -14186,6 +14831,11 @@ select {
 }
 
 .focus\.color-purple-500:focus {
+  --color-opacity: 1;
+  color: rgba(var(--purple-500), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-purple-500 {
   --color-opacity: 1;
   color: rgba(var(--purple-500), var(--color-opacity));
 }
@@ -14205,6 +14855,11 @@ select {
   color: rgba(var(--purple-600), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-purple-600 {
+  --color-opacity: 1;
+  color: rgba(var(--purple-600), var(--color-opacity));
+}
+
 .hover\.color-purple-700:hover {
   --color-opacity: 1;
   color: rgba(var(--purple-700), var(--color-opacity));
@@ -14216,6 +14871,11 @@ select {
 }
 
 .focus\.color-purple-700:focus {
+  --color-opacity: 1;
+  color: rgba(var(--purple-700), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-purple-700 {
   --color-opacity: 1;
   color: rgba(var(--purple-700), var(--color-opacity));
 }
@@ -14235,6 +14895,11 @@ select {
   color: rgba(var(--purple-800), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-purple-800 {
+  --color-opacity: 1;
+  color: rgba(var(--purple-800), var(--color-opacity));
+}
+
 .hover\.color-purple-900:hover {
   --color-opacity: 1;
   color: rgba(var(--purple-900), var(--color-opacity));
@@ -14246,6 +14911,11 @@ select {
 }
 
 .focus\.color-purple-900:focus {
+  --color-opacity: 1;
+  color: rgba(var(--purple-900), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-purple-900 {
   --color-opacity: 1;
   color: rgba(var(--purple-900), var(--color-opacity));
 }
@@ -14265,6 +14935,11 @@ select {
   color: rgba(var(--purple-950), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-purple-950 {
+  --color-opacity: 1;
+  color: rgba(var(--purple-950), var(--color-opacity));
+}
+
 .hover\.color-pink-50:hover {
   --color-opacity: 1;
   color: rgba(var(--pink-50), var(--color-opacity));
@@ -14276,6 +14951,11 @@ select {
 }
 
 .focus\.color-pink-50:focus {
+  --color-opacity: 1;
+  color: rgba(var(--pink-50), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-pink-50 {
   --color-opacity: 1;
   color: rgba(var(--pink-50), var(--color-opacity));
 }
@@ -14295,6 +14975,11 @@ select {
   color: rgba(var(--pink-100), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-pink-100 {
+  --color-opacity: 1;
+  color: rgba(var(--pink-100), var(--color-opacity));
+}
+
 .hover\.color-pink-200:hover {
   --color-opacity: 1;
   color: rgba(var(--pink-200), var(--color-opacity));
@@ -14306,6 +14991,11 @@ select {
 }
 
 .focus\.color-pink-200:focus {
+  --color-opacity: 1;
+  color: rgba(var(--pink-200), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-pink-200 {
   --color-opacity: 1;
   color: rgba(var(--pink-200), var(--color-opacity));
 }
@@ -14325,6 +15015,11 @@ select {
   color: rgba(var(--pink-300), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-pink-300 {
+  --color-opacity: 1;
+  color: rgba(var(--pink-300), var(--color-opacity));
+}
+
 .hover\.color-pink-400:hover {
   --color-opacity: 1;
   color: rgba(var(--pink-400), var(--color-opacity));
@@ -14336,6 +15031,11 @@ select {
 }
 
 .focus\.color-pink-400:focus {
+  --color-opacity: 1;
+  color: rgba(var(--pink-400), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-pink-400 {
   --color-opacity: 1;
   color: rgba(var(--pink-400), var(--color-opacity));
 }
@@ -14355,6 +15055,11 @@ select {
   color: rgba(var(--pink-500), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-pink-500 {
+  --color-opacity: 1;
+  color: rgba(var(--pink-500), var(--color-opacity));
+}
+
 .hover\.color-pink-600:hover {
   --color-opacity: 1;
   color: rgba(var(--pink-600), var(--color-opacity));
@@ -14366,6 +15071,11 @@ select {
 }
 
 .focus\.color-pink-600:focus {
+  --color-opacity: 1;
+  color: rgba(var(--pink-600), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-pink-600 {
   --color-opacity: 1;
   color: rgba(var(--pink-600), var(--color-opacity));
 }
@@ -14385,6 +15095,11 @@ select {
   color: rgba(var(--pink-700), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-pink-700 {
+  --color-opacity: 1;
+  color: rgba(var(--pink-700), var(--color-opacity));
+}
+
 .hover\.color-pink-800:hover {
   --color-opacity: 1;
   color: rgba(var(--pink-800), var(--color-opacity));
@@ -14396,6 +15111,11 @@ select {
 }
 
 .focus\.color-pink-800:focus {
+  --color-opacity: 1;
+  color: rgba(var(--pink-800), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-pink-800 {
   --color-opacity: 1;
   color: rgba(var(--pink-800), var(--color-opacity));
 }
@@ -14415,6 +15135,11 @@ select {
   color: rgba(var(--pink-900), var(--color-opacity));
 }
 
+.group:focus .group-focus\.color-pink-900 {
+  --color-opacity: 1;
+  color: rgba(var(--pink-900), var(--color-opacity));
+}
+
 .hover\.color-pink-950:hover {
   --color-opacity: 1;
   color: rgba(var(--pink-950), var(--color-opacity));
@@ -14426,6 +15151,11 @@ select {
 }
 
 .focus\.color-pink-950:focus {
+  --color-opacity: 1;
+  color: rgba(var(--pink-950), var(--color-opacity));
+}
+
+.group:focus .group-focus\.color-pink-950 {
   --color-opacity: 1;
   color: rgba(var(--pink-950), var(--color-opacity));
 }
@@ -14445,6 +15175,11 @@ select {
   color: transparent;
 }
 
+.group:focus .group-focus\.color-transparent {
+  --color-opacity: 1;
+  color: transparent;
+}
+
 .hover\.color-current:hover {
   --color-opacity: 1;
   color: currentColor;
@@ -14458,6 +15193,91 @@ select {
 .focus\.color-current:focus {
   --color-opacity: 1;
   color: currentColor;
+}
+
+.group:focus .group-focus\.color-current {
+  --color-opacity: 1;
+  color: currentColor;
+}
+
+.hover\.color-success:hover {
+  --color-opacity: 1;
+  color: var(--color-success, rgba(var(--green-800), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.color-success {
+  --color-opacity: 1;
+  color: var(--color-success, rgba(var(--green-800), var(--bg-opacity)));
+}
+
+.focus\.color-success:focus {
+  --color-opacity: 1;
+  color: var(--color-success, rgba(var(--green-800), var(--bg-opacity)));
+}
+
+.group:focus .group-focus\.color-success {
+  --color-opacity: 1;
+  color: var(--color-success, rgba(var(--green-800), var(--bg-opacity)));
+}
+
+.hover\.color-warning:hover {
+  --color-opacity: 1;
+  color: var(--color-warning, rgba(var(--yellow-800), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.color-warning {
+  --color-opacity: 1;
+  color: var(--color-warning, rgba(var(--yellow-800), var(--bg-opacity)));
+}
+
+.focus\.color-warning:focus {
+  --color-opacity: 1;
+  color: var(--color-warning, rgba(var(--yellow-800), var(--bg-opacity)));
+}
+
+.group:focus .group-focus\.color-warning {
+  --color-opacity: 1;
+  color: var(--color-warning, rgba(var(--yellow-800), var(--bg-opacity)));
+}
+
+.hover\.color-danger:hover {
+  --color-opacity: 1;
+  color: var(--color-danger, rgba(var(--red-800), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.color-danger {
+  --color-opacity: 1;
+  color: var(--color-danger, rgba(var(--red-800), var(--bg-opacity)));
+}
+
+.focus\.color-danger:focus {
+  --color-opacity: 1;
+  color: var(--color-danger, rgba(var(--red-800), var(--bg-opacity)));
+}
+
+.group:focus .group-focus\.color-danger {
+  --color-opacity: 1;
+  color: var(--color-danger, rgba(var(--red-800), var(--bg-opacity)));
+}
+
+.hover\.color-info:hover {
+  --color-opacity: 1;
+  color: var(--color-info, rgba(var(--teal-800), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.color-info {
+  --color-opacity: 1;
+  color: var(--color-info, rgba(var(--teal-800), var(--bg-opacity)));
+}
+
+.focus\.color-info:focus {
+  --color-opacity: 1;
+  color: var(--color-info, rgba(var(--teal-800), var(--bg-opacity)));
+}
+
+.group:focus .group-focus\.color-info {
+  --color-opacity: 1;
+  color: var(--color-info, rgba(var(--teal-800), var(--bg-opacity)));
 }
 
 .hover\.ultralight:hover {
@@ -16846,6 +17666,66 @@ select {
 .focus\.bg-current:focus {
   --bg-opacity: 1;
   background-color: currentColor;
+}
+
+.hover\.bg-success:hover {
+  --bg-opacity: 1;
+  background-color: var(--bg-success, rgba(var(--green-50), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.bg-success {
+  --bg-opacity: 1;
+  background-color: var(--bg-success, rgba(var(--green-50), var(--bg-opacity)));
+}
+
+.focus\.bg-success:focus {
+  --bg-opacity: 1;
+  background-color: var(--bg-success, rgba(var(--green-50), var(--bg-opacity)));
+}
+
+.hover\.bg-warning:hover {
+  --bg-opacity: 1;
+  background-color: var(--bg-warning, rgba(var(--yellow-50), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.bg-warning {
+  --bg-opacity: 1;
+  background-color: var(--bg-warning, rgba(var(--yellow-50), var(--bg-opacity)));
+}
+
+.focus\.bg-warning:focus {
+  --bg-opacity: 1;
+  background-color: var(--bg-warning, rgba(var(--yellow-50), var(--bg-opacity)));
+}
+
+.hover\.bg-danger:hover {
+  --bg-opacity: 1;
+  background-color: var(--bg-danger, rgba(var(--red-50), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.bg-danger {
+  --bg-opacity: 1;
+  background-color: var(--bg-danger, rgba(var(--red-50), var(--bg-opacity)));
+}
+
+.focus\.bg-danger:focus {
+  --bg-opacity: 1;
+  background-color: var(--bg-danger, rgba(var(--red-50), var(--bg-opacity)));
+}
+
+.hover\.bg-info:hover {
+  --bg-opacity: 1;
+  background-color: var(--bg-info, rgba(var(--teal-50), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.bg-info {
+  --bg-opacity: 1;
+  background-color: var(--bg-info, rgba(var(--teal-50), var(--bg-opacity)));
+}
+
+.focus\.bg-info:focus {
+  --bg-opacity: 1;
+  background-color: var(--bg-info, rgba(var(--teal-50), var(--bg-opacity)));
 }
 
 .hover\.bg-opacity-0:hover {
@@ -23010,6 +23890,66 @@ select {
   border-color: currentColor;
 }
 
+.hover\.border-success:hover {
+  --border-opacity: 1;
+  border-color: var(--border-success, rgba(var(--green-300), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.border-success {
+  --border-opacity: 1;
+  border-color: var(--border-success, rgba(var(--green-300), var(--bg-opacity)));
+}
+
+.focus\.border-success:focus {
+  --border-opacity: 1;
+  border-color: var(--border-success, rgba(var(--green-300), var(--bg-opacity)));
+}
+
+.hover\.border-warning:hover {
+  --border-opacity: 1;
+  border-color: var(--border-warning, rgba(var(--yellow-300), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.border-warning {
+  --border-opacity: 1;
+  border-color: var(--border-warning, rgba(var(--yellow-300), var(--bg-opacity)));
+}
+
+.focus\.border-warning:focus {
+  --border-opacity: 1;
+  border-color: var(--border-warning, rgba(var(--yellow-300), var(--bg-opacity)));
+}
+
+.hover\.border-danger:hover {
+  --border-opacity: 1;
+  border-color: var(--border-danger, rgba(var(--red-200), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.border-danger {
+  --border-opacity: 1;
+  border-color: var(--border-danger, rgba(var(--red-200), var(--bg-opacity)));
+}
+
+.focus\.border-danger:focus {
+  --border-opacity: 1;
+  border-color: var(--border-danger, rgba(var(--red-200), var(--bg-opacity)));
+}
+
+.hover\.border-info:hover {
+  --border-opacity: 1;
+  border-color: var(--border-info, rgba(var(--teal-500), var(--bg-opacity)));
+}
+
+.group:hover .group-hover\.border-info {
+  --border-opacity: 1;
+  border-color: var(--border-info, rgba(var(--teal-500), var(--bg-opacity)));
+}
+
+.focus\.border-info:focus {
+  --border-opacity: 1;
+  border-color: var(--border-info, rgba(var(--teal-500), var(--bg-opacity)));
+}
+
 .first\.border-t-1:first-child {
   border-top-width: 0.0625rem;
 }
@@ -26585,7 +27525,7 @@ select {
     line-height: var(--leading-loosest);
   }
 
-  .sm\.leading-none {
+  .sm\.leading-100 {
     line-height: 1;
   }
 
@@ -35111,7 +36051,7 @@ select {
     line-height: var(--leading-loosest);
   }
 
-  .md\.leading-none {
+  .md\.leading-100 {
     line-height: 1;
   }
 
@@ -43637,7 +44577,7 @@ select {
     line-height: var(--leading-loosest);
   }
 
-  .lg\.leading-none {
+  .lg\.leading-100 {
     line-height: 1;
   }
 
@@ -52135,7 +53075,7 @@ TABLE
 
 .markdown > table th,
 .markdown > table td {
-  border: var(--markdown-table-border, 1px solid #ccc);
+  border: var(--markdown-table-border, 1px solid rgba(var(--gray-200), 1));
 }
 
 .markdown > table th {
@@ -52144,7 +53084,7 @@ TABLE
   font-weight: var(--markdown-th-weight, 700);
   text-transform: var(--markdown-th-transform, uppercase);
   letter-spacing: var(--markdown-th-tracking, 0.04em);
-  color: var(--markdown-th-color, #848f98);
+  color: var(--markdown-th-color, rgba(var(--gray-500), 1));
 }
 
 .markdown > table td {
@@ -52632,7 +53572,7 @@ pre[class*=language-] {
 }
 
 .token.rule {
-  color: rgba(var(--red-400), 1);
+  color: rgba(var(--red-200), 1);
 }
 
 .token.property {
@@ -52762,39 +53702,4 @@ pre[class*=language-] {
 }
 .markdown pre:last-child {
   margin-bottom: 0;
-}
-
-.element {
-  padding: 1.5rem 2rem;
-}
-
-.element-2 {
-  background: rgba(var(--red-400), 0.4);
-  border-radius: var(--radius-lg);
-  font-size: var(--font-lg);
-}
-
-.parent {
-  display: grid;
-  padding: 2.5rem;
-  box-shadow: var(--shadow-2xs);
-  border-radius: var(--radius-2xl);
-}
-.parent > * + * {
-  --gutter-right: 0;
-  --gutter-left: 1;
-  margin: 0 calc(2rem * var(--gutter-right)) 0 calc(2rem * var(--gutter-left));
-}
-.parent .child {
-  font-weight: var(--bold);
-  padding: 1.5rem;
-}
-.parent .child:hover {
-  opacity: 0.5;
-}
-
-@media (min-width: 1024px) {
-  .parent .child {
-    padding: 4rem;
-  }
 }

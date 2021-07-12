@@ -20,7 +20,7 @@ You can use the same data structure of a utility setting to generate your own pr
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       leading-trim: (
         responsive: true,
         shorthand: leading,
@@ -52,13 +52,13 @@ You can use the same data structure of a utility setting to generate your own pr
 
 ## Excluding Custom Properties
 
-Any new utilities generated through the `utility` settings map will behave like any other utility and can be included or excluded using the `include` and `exclude` setting.
+Any new utilities generated through the `utility` settings map will behave like any other utility and can be included or excluded using the `includes` and `excludes` setting.
 
 ```scss
 // default values
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       leading-trim: (
         responsive: true,
         shorthand: leading,
@@ -68,10 +68,10 @@ Any new utilities generated through the `utility` settings map will behave like 
         )
       ),
     ),
-    exclude: (
+    excludes: (
       all
     ),
-    include: (
+    includes: (
       leading-trim
     )
   )
@@ -107,7 +107,7 @@ $variants: ();
 $pseudos: ();
 
 $config: (
-  utility: (
+  utilities: (
     $name: (
       shorthand: $shorthand,
       responsive: $responsive,
@@ -150,7 +150,7 @@ Once your custom property has been added into the core library, it will behave l
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       leading-trim: (
         ...
       )

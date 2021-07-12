@@ -80,7 +80,7 @@ By design, Uniform only enables responsiveness to a subset of CSS properties. Yo
 ```scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       letter-spacing: ( responsive: true ),
       list-style-type: ( responsive: true ),
       color-transform: ( responsive: true )

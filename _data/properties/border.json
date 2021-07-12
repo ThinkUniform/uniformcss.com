@@ -151,6 +151,30 @@
     "pseudos": ["hover", "group-hover", "focus", "dark"],
     "utilities": [
       {
+        "class": "border-transparent",
+        "properties": ["border: transparent;"]
+      },
+      {
+        "class": "border-current",
+        "properties": ["border: currentColor;"]
+      },
+      {
+        "class": "border-success",
+        "properties": ["border: var(--border-success, rgba(var(--green-300), var(--bg-opacity)));"]
+      },
+      {
+        "class": "border-warning",
+        "properties": ["border: var(--border-warning, rgba(var(--yellow-300), var(--bg-opacity)));"]
+      },
+      {
+        "class": "border-danger",
+        "properties": ["border: var(--border-danger, rgba(var(--red-200), var(--bg-opacity)));"]
+      },
+      {
+        "class": "border-info",
+        "properties": ["border: var(--border-info, rgba(var(--teal-500), var(--bg-opacity)));"]
+      },
+      {
         "class": "border-white",
         "properties": ["border: rgba(var(--white), var(--border-opacity));"]
       },

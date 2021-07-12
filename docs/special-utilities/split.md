@@ -16,7 +16,7 @@ The `split` utility applies horizontal or vertical dividing borders to child ele
 
 To apply `split`, assign the class `split-x-<size>` or `split-y-<size>` to any parent element.
 
-<div class="radius-md bg-tertiary bg-50 split-y-2 px-20 split-cool-gray mb-20">
+<div class="radius-md bg-gray-50 split-y-2 px-20 split-cool-gray mb-20">
   <div class="py-10">A</div>
   <div class="py-10">B</div>
   <div class="py-10">C</div>
@@ -105,12 +105,12 @@ All `border` related properties such as color, style, and opacity can be applied
 
 ## Disabling Split
 
-To disable `split` utilities, pass in each utility name to the `exclude` setting in your configuration.
+To disable `split` utilities, pass in each utility name to the `excludes` setting in your configuration.
 
 ```scss
 @use "uniform" as * with (
   $config: (
-    exclude: (
+    excludes: (
       split-x,
       split-y,
       split-reverse,

@@ -77,7 +77,7 @@ While shiny new CSS specs become standardized, you don’t have to wait for Unif
 // main.scss
 @use "uniform" as * with (
   $config: (
-    utility: (
+    utilities: (
       leading-trim: (
         responsive: true,
         shorthand: leading,
@@ -134,10 +134,10 @@ Every aspect of Uniform CSS is optional, you can easily remove all properties an
 // main.scss
 @use "uniform" as * with (
   $config: (
-    exclude: (
+    excludes: (
       all // exclude all
     ),
-    include: (
+    includes: (
       background-color, 
       margin, 
       padding,
