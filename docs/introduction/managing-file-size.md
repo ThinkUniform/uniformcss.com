@@ -1,7 +1,7 @@
 ---
 title: Managing File Size
 description: Learn how to keep file-size in check.
-date: 2021-01-03
+date: 2021-01-04
 ---
 
 ## Managing File Size

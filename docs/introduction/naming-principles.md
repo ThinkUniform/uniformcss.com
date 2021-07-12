@@ -1,7 +1,7 @@
 ---
 title: Naming Principles
 description: How properties are named for scale and consistency.
-date: 2021-01-08
+date: 2021-01-05
 ---
 
 ## Naming Principles

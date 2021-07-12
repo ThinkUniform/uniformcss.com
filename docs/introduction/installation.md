@@ -1,7 +1,7 @@
 ---
 title: Installation
 description: Learn how to install and get started with Uniform CSS.
-date: 2021-01-09
+date: 2021-01-02
 ---
 
 ## Getting up and running

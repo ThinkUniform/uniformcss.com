@@ -1,3 +1,5 @@
+@use "uniform" as *;
+
 /* 
 ==================================================
 MARKDOWN PLUGIN
@@ -78,9 +80,9 @@ MARKDOWN PLUGIN
 */
 
 .markdown {
-	font-size: var(--markdown-font-size, 1rem);
-	line-height: var(--markdown-leading, 1.875);
-	color: var(--markdown-color, #5c6370);
+	font-size: var(--markdown-font-size, font(md));
+	line-height: var(--markdown-leading, leading(looser));
+	color: var(--markdown-color, fill(gray-600));
 }
 
 .markdown > h1,
@@ -89,7 +91,7 @@ MARKDOWN PLUGIN
 .markdown > h4,
 .markdown > h5,
 .markdown > h6 {
-	color: var(--markdown-heading-color, black);
+	color: var(--markdown-heading-color, fill(black));
 }
 
 .markdown > h1:first-child,
@@ -164,9 +166,9 @@ PARAGRAPH
 */
 
 .markdown > p, .markdown > ul p, .markdown > ol p {
-	margin-top: var(--markdown-p-margin, 1.25rem);
-	margin-bottom: var(--markdown-p-margin, 1.25rem);
-	font-weight: var(--markdown-p-weight, 400);
+	margin-top: var(--markdown-p-margin, size(24));
+	margin-bottom: var(--markdown-p-margin, size(24));
+	font-weight: var(--markdown-p-weight, font(regular));
 }
 
 /* 
@@ -176,9 +178,9 @@ HORIZONTAL RULE
 */
 
 .markdown > hr {
-	margin-top: var(--markdown-hr-margin, 4rem);
-	margin-bottom: var(--markdown-hr-margin, 4rem);
-	border-top: var(--markdown-hr-border, 4px dotted #E3E5E8);
+	margin-top: var(--markdown-hr-margin, size(64));
+	margin-bottom: var(--markdown-hr-margin, size(64));
+	border-top: var(--markdown-hr-border, 4px dotted fill(gray-200));
 }
 
 /* 
@@ -193,11 +195,11 @@ CODE
 .markdown > ul li code,
 .markdown > table td code {
 	padding: var(--markdown-code-padding, 0);
-	font-size: var(--markdown-code-font-size, 0.875rem);
+	font-size: var(--markdown-code-font-size, font(sm));
 	border-radius: var(--markdown-code-radius, 0);
 	background: var(--markdown-code-bg, transparent);
 	border: var(--markdown-code-border, 0);
-	color: var(--markdown-code-color, #4072bf);
+	color: var(--markdown-code-color, fill(cyan-500));
 	white-space: nowrap;
 	user-select: all;
 }
@@ -209,12 +211,12 @@ BLOCKQUOTE
 */
 
 .markdown > blockquote {
-	margin-bottom: var(--markdown-blockquote-margin, 1.25em);
-	padding: var(--markdown-blockquote-padding, 1rem 1.5rem);
-	background: var(--markdown-blockquote-bg, #f3f5f7);
-	border-radius: var(--markdown-blockquote-radius, 8px);
-	box-shadow: var(--markdown-blockquote-shadow, inset 4px 0px 0px 0px transprent);
-	border: var(--markdown-blockquote-border, 1px solid transparent);
+	margin-bottom: var(--markdown-blockquote-margin, size(20));
+	padding: var(--markdown-blockquote-padding, size(16, 24));
+	background: var(--markdown-blockquote-bg, fill(gray-50));
+	border-radius: var(--markdown-blockquote-radius, size(8));
+	box-shadow: var(--markdown-blockquote-shadow, none);
+	border: var(--markdown-blockquote-border, 0);
 }
 
 /* 
@@ -225,8 +227,8 @@ TABLE
 
 .markdown > table {
 	width: 100%;
-	margin-bottom: var(--markdown-table-margin, 1.25em);
-	line-height: var(--markdown-table-leading, 1.375);
+	margin-bottom: var(--markdown-table-margin, size(20));
+	line-height: var(--markdown-table-leading, leading(loose));
 	border-collapse: collapse;
 	border-spacing: 0;
 }
@@ -307,7 +309,7 @@ LINK
 .markdown > ol li a,
 .markdown > ul li a,
 .markdown > table td a {
-	color: var(--markdown-link-color, #4072bf);
+	color: var(--markdown-link-color, fill(blue-500));
 }
 
 .markdown > p a:hover,
@@ -315,7 +317,7 @@ LINK
 .markdown > ol li a:hover,
 .markdown > ul li a:hover,
 .markdown > table td a:hover {
-	color: var(--markdown-link-hover-color, #4072bf);
+	color: var(--markdown-link-hover-color, fill(blue-500));
 	text-decoration: underline;
 }
 

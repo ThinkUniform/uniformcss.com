@@ -2,7 +2,6 @@
 title: Overview
 description: Quick dive into Uniform CSS and its features.
 date: 2021-01-01
-lastUpdated: 2020-10-20
 ---
 
 ## Introducing Uniform

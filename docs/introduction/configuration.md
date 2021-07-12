@@ -1,7 +1,7 @@
 ---
 title: Configuration
 description: A quick introduction to how customization works.
-date: 2021-01-10
+date: 2021-01-03
 ---
 
 ## Customizing Uniform
