@@ -14,13 +14,13 @@ Due to its low-level nature, utility-first CSS frameworks are generally known to
 
 ## How Uniform Compares
 
-Uniform comes in at **48kb brotli** and **675kb minified**. Below is a comparison of how Uniform ranks compared to other popular frameworks.
+Uniform comes in at **30kb brotli** and **523kb minified**. Below is a comparison of how Uniform ranks compared to other popular frameworks.
 
 | Framework | Minified | Gzip | Brotli |
 | -| - | - | - |
 | Tailwind | 2927.5kb | 297.4kb | 74.3kb |
 | Semantic UI | 628.5kb | 102.3kb | 79.6kb |
-| **Uniform** | **444.5kb** | **64.7kb** | **38.2kb** |
+| **Uniform** | **523.1kb** | **74.6kb** | **30.6kb** |
 | Bulma | 205.4kb | 27.1kb | 20.7kb |
 | Foundation | 182.0kb | 38.5kb | 32.1kb |
 | Bootstrap | 155.6kb | 22.9kb | 20.4kb |
