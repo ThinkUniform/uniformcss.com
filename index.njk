@@ -348,6 +348,23 @@ config_helpers_output: |
 
 ---
 
+<div
+  class="fixed xy-0 z-4 flex align-items-center justify-items-center overflow-auto bg-cool-gray-900 bg-opacity-50"
+  x-cloak
+  x-show="modal == true"
+  x-transition:enter.opacity.duration.200ms
+>
+  <!-- Modal inner -->
+  <div 
+    class="w-100p max-w-896 mx-auto radius-lg overflow-hidden shadow-2xl bg-black"
+    @click.away="closeModal"
+  >
+    <div class='ratio-16-9'>
+      <iframe class="absolute top-0 left-0 w-100p h-100p js-embedFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
 <div class="hidden md.block h-20 bg-white">
   <!-- spacer -->
 </div>
@@ -419,7 +436,7 @@ config_helpers_output: |
           style="--animate-delay: 1.1s;">
           <a 
             class="inline-flex align-items-center color-black font-sm leading-140"
-            @click="showModal = ! showModal"
+            @click="showModal"
           >
             <div class="relative flex align-items-center justify-content-center w-24 h-24 pl-2 mr-10 radius-full border-1 border-black color-black" style="--border-1 border-cool-gray-100 shadow-2xs: 0 4px 20px 0 rgba(90, 134, 234, 0.3)">
               <div class="animate-spin absolute top-0 left-0 w-100p h-100p radius-full" style="animation-duration: 3s;">
@@ -489,21 +506,3 @@ config_helpers_output: |
 {% include "partials/sections/easy-setup.njk" %}
 
 {% include "partials/footer.njk" %}
-
-<div
-  class="fixed xy-0 z-4 flex align-items-center justify-items-center overflow-auto bg-cool-gray-900 bg-opacity-50"
-  x-cloak
-  x-show="showModal == true"
-  x-transition:enter.opacity.duration.200ms
->
-  <!-- Modal inner -->
-  <div 
-    class="w-100p max-w-896 mx-auto radius-lg overflow-hidden shadow-2xl bg-black"
-    @click.away="showModal = false"
-  >
-    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-    <div class='ratio-16-9'>
-      <iframe loading="lazy" class="absolute top-0 left-0 w-100p h-100p" data-src='https://www.youtube.com/embed/Zz6eOVaaelI' frameborder='0' allowfullscreen></iframe>
-    </div>
-  </div>
-</div>

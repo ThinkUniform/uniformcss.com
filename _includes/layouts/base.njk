@@ -42,7 +42,10 @@
   <!-- AlpineJS -->
   <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
 </head>
-<body id="top" x-data="{mobileNav: false, showModal: false}">
+<body 
+  id="top"
+  x-data="main"
+>
 
 {{ content | safe }}
 
@@ -50,18 +53,6 @@
 <script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
-
-// Defer YouTube embeds
-function deferVideo() {
-  var vidDefer = document.getElementsByTagName('iframe');
-  for (var i=0; i<vidDefer.length; i++) {
-    if(vidDefer[i].getAttribute('data-src')) {
-      vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
-    } 
-  } 
-}
-
-window.onload = deferVideo;
 
 // Scroll to top
 var myElement = document.querySelector('.js-scrollUp') !== null;
@@ -100,10 +91,39 @@ document.addEventListener('alpine:init', () => {
       this.left =  active.offsetLeft;
     },
     switchTabs(e, targetTab) {
-      this.tab = targetTab,
+      this.tab = targetTab;
       this.width = e.currentTarget.offsetWidth;
       this.left =  e.currentTarget.offsetLeft;
     }
+  })),
+  
+  Alpine.data('main', () => ({
+    mobileNav: false, 
+    modal: false,
+
+    init: function() {
+
+    },
+    showModal() {
+      this.modal = ! this.modal;
+
+      var iframe = document.querySelector('.js-embedFrame') !== null;
+      if (iframe) {
+        var iframe = document.querySelector('.js-embedFrame');
+      }
+
+      iframe.src = "https://www.youtube.com/embed/Zz6eOVaaelI?autoplay=1";
+    },
+    closeModal() {
+      this.modal = ! this.modal;
+
+      var iframe = document.querySelector('.js-embedFrame') !== null;
+      if (iframe) {
+        var iframe = document.querySelector('.js-embedFrame');
+      }
+
+      iframe.src = "";
+    },
   }))
 })
 
