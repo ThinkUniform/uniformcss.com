@@ -96,15 +96,15 @@ npm install uniformcss
 Add the following line to your main `.scss` stylesheet to add Uniform in your project.
 
 ```scss
-@use "../node_modules/uniformcss/uniform" as *;
+@use "uniform" as *;
 ```
 
 ### 3. Compile and watch for changes
 
-Compile your Sass project using your preferred CSS preprocessor. Optionally, the Uniform `package.json` provides useful build scripts you can run to compile and watch Sass. For more information please check out the [build scripts](/docs/build-scripts) page.
+Compile your Sass project using your preferred Sass build process. Optionally, you can interface with Dart Sass CLI to build. For more information on Dart Sass CLI visit the [Official Sass Docs](https://sass-lang.com/documentation/cli/dart-sass).
 
 ```bash
-yarn uniform
+sass --load-path=./node_modules/uniformcss --watch main.scss dist/uniform.min.css --style compressed
 ```
 
 > Please note, if you are using the built-in build scripts or using the Sass CLI to compile, ensure the `--load-path` of your build command includes the `node_module/uniformcss/` path. For more information on load paths visit [Dart Sass Command Line Interface](https://sass-lang.com/documentation/cli/dart-sass#load-path).
