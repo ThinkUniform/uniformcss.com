@@ -51,7 +51,19 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
 
-// grab an element
+// Defer YouTube embeds
+function deferVideo() {
+  var vidDefer = document.getElementsByTagName('iframe');
+  for (var i=0; i<vidDefer.length; i++) {
+    if(vidDefer[i].getAttribute('data-src')) {
+      vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+    } 
+  } 
+}
+
+window.onload = deferVideo;
+
+// Scroll to top
 var myElement = document.querySelector('.js-scrollUp') !== null;
 if (myElement) {
   var myElement = document.querySelector('.js-scrollUp');
