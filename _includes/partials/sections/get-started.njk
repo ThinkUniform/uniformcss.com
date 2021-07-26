@@ -1,0 +1,315 @@
+
+<section 
+  class="hidden md.block mb-160 md.px-32" 
+  x-data="tabs"
+>
+
+  <div class="max-w-1152 mx-auto">
+    <div class="text-center mb-24 md.mb-128">
+      <div class="mb-14 text-xs md.text-sm tracking-loosest semibold uppercase color-cool-gray-600">
+        Get Started
+      </div>
+      <h2 class="font-5xl md.font-6xl md.font-7xl lg.font-5xl md.font-6xl md.font-7xl lg.font-8xl leading-110 extrabold tracking-tighter mb-32">
+        Setup in minutes
+      </h2>
+      <div class="flex align-items-center justify-content-center">
+        <div class="p-6 radius-lg bg-black">
+          <div class="relative flex radius-sm overflow-hidden">
+            <div class="absolute h-100p left-0 top-0 bg-primary-400 radius-sm z-1 transition-all duration-200"
+              :style="'left: ' + left + 'px;' + 'width: ' + width + 'px'"></div>
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1 is-active"
+              @click="switchTabs($event, 0)">
+              Overview
+            </a>
+            <a class="flex align-items-center text-md semibold color-white px-16 sm.px-18 h-28 md.h-40 z-1" 
+              @click="switchTabs($event, 1)">
+              Installation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow-2xl bg-white radius-2xl">
+      <div class="grid grid-cols-12">
+        <div class="col-12 md.col-5 px-24 md.px-48 md.px-64 py-64">
+          <article
+            x-show="tab === 0"
+            x-transition:enter.duration.400ms
+          >
+            
+            <div class="text-center md.text-left">
+              <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24">
+                <span class="color-primary-400">Load and control</span> <br>directly in Sass
+              </h3>
+              <p class="text-lg color-cool-gray-600 mb-32">Infuse any Sass-built project with the power of utility-first CSS. Fully configure directly in Sass, or add helpful utilities progressively without requiring a complete project overhaul.</p>
+              <a href="/docs/installation" class="text-lg color-primary-400 hover.color-primary-600 semibold">Learn how to get started →</a>
+            </div>
+
+            <div class="hidden md.grid grid-cols-2 pt-48">
+              <div class="font-md leading-170">
+                <div class="flex align-items-center font-xl semibold tracking-tight">
+                  {% set iconClass = 'w-20 h-20 mr-8' %}
+                  {% include "icons/cloud-download-outline.njk" %} 39KB
+                </div>
+                with brotli
+              </div>
+              <div class="font-md leading-160">
+                <div class="flex align-items-center font-xl semibold tracking-tight">
+                  {% set iconClass = 'w-20 h-20 mr-8' %}
+                  {% include "icons/flash-outline.njk" %} 1.2s
+                </div>
+                build time
+              </div>
+            </div>
+          </article>
+          
+          <article
+            x-cloak
+            x-show="tab === 1"
+            x-transition:enter.duration.400ms
+          >
+
+            <div class="text-center md.text-left">
+              <h3 class="font-3xl leading-130 md.text-4xl lg.text-5xl extrabold tracking-tight mb-24">
+                <span class="color-primary-400">Literally just</span> <br>one line of code
+              </h3>
+              <p class="text-lg color-cool-gray-600 mb-32">Installing Uniform is a drop-in process. Just load Uniform as a module, compile, then compose, it's that simple. You can even load the CDN version to get started even faster.</p>
+              <a href="/docs/installation" class="text-lg color-primary-400 hover.color-primary-600 semibold">See how to install →</a>
+            </div>
+
+            <div class="hidden md.flex align-items-center pt-48">
+              <a href="https://github.com/ThinkUniform/uniformcss" class="mr-32 last.mr-0">
+                {% set iconClass = 'w-36 h-36 color-black' %}
+                {% include "icons/logo-github.njk" %}
+              </a>
+              <a href="https://sass-lang.com/" class="mr-32 last.mr-0">
+                {% set iconClass = 'w-36 h-36 color-black' %}
+                {% include "icons/logo-sass.njk" %}
+              </a>
+              <a href="https://www.npmjs.com/package/uniformcss" class="mr-32 last.mr-0">
+                {% set iconClass = 'w-36 h-36 color-black' %}
+                {% include "icons/logo-npm.njk" %}
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 md.col-7 relative">
+          <div class="absolute w-100p top-0 bottom-0 md.mt-n40 md.mb-n40 pb-40 md.pb-0 md.pr-32 md.pr-40 lg.pr-56" 
+            x-show="tab === 0"
+            x-transition:enter="transition-800"
+            x-transition:enter-start="opacity-0 transform translate-x-n64 scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition-400"
+            x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
+            x-transition:leave-end="opacity-0 transform translate-x-n64 scale-90">  
+
+            <article class="md.radius-xl overflow-hidden bg-black">
+
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+                {% set iconClass = 'w-32 h-32 color-pink-400 mr-20' %}
+                {% include "icons/logo-sass.njk" %}
+                <p class="text-sm">
+                  Configure Uniform directly in Sass
+                </p>
+              </header>
+              <footer>
+                {% highlight "scss" %}
+                {{ scss_example | safe }}
+                {% endhighlight %}
+              </footer>
+
+            </article>
+
+            <div class="flex justify-content-center h-48 overflow-hidden">
+              <div class="relative grid grid-cols-1 gap-10">
+                <span class="falling-ball"></span>
+                <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+                <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+                <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+                <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+                <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+              </div>
+            </div>
+
+            <article class="md.radius-xl overflow-hidden bg-black">
+
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+                <span class="inline-flex align-items-center h-20 mr-16 px-6 bg-white color-black uppercase text-2xs extrabold radius-sm">css</span>
+                <p class="text-sm">
+                  Generate<span class="hidden md.inline"> suite of</span> utilities properties
+                </p>
+              </header>
+              <footer>
+                {% highlight "css" %}
+                {{ css_example | safe }}
+                {% endhighlight %}
+              </footer>
+
+            </article>
+
+          </div>
+
+          <div class="absolute w-100p top-0 bottom-0 md.mt-n40 md.mb-n40 pb-40 md.pb-0 md.pr-32 md.pr-40 lg.pr-56"
+            x-cloak
+            x-show="tab === 1"
+            x-transition:enter="transition-800"
+            x-transition:enter-start="opacity-0 transform translate-x-64 scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition-400"
+            x-transition:leave-start="opacity-100 transform translate-x-0 scale-100"
+            x-transition:leave-end="opacity-0 transform translate-x-64 scale-90">  
+
+            <article class="md.radius-xl overflow-hidden bg-black mb-20">
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+                <p class="text-sm">
+                  <span class="bold mr-10">Step 1.</span> Install package or clone repository
+                </p>
+              </header>
+              <footer>
+                {% highlight "bash" %}
+                {{ clone_uniform | safe }}
+                {% endhighlight %}
+              </footer>
+            </article>
+
+            <article class="md.radius-xl overflow-hidden bg-black mb-20">
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+                <p class="text-sm">
+                  <span class="bold mr-10">Step 2.</span> Load module in Sass and compile
+                </p>
+              </header>
+              <footer>
+                {% highlight "scss" %}
+                {{ compile_uniform | safe }}
+                {% endhighlight %}
+              </footer>
+            </article>
+
+            <article class="md.radius-xl overflow-hidden bg-black">
+              <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+                <p class="text-sm">
+                  <span class="bold mr-10">Step 3.</span> Link stylesheet in your project
+                </p>
+              </header>
+              <footer>
+                {% highlight "html" %}
+                {{ load_uniform | safe }}
+                {% endhighlight %}
+              </footer>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="block md.hidden mb-96 last.mb-0">
+  <div class="px-32 sm.text-center mb-64">
+    <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24">
+      <span class="color-primary-400">Load and control</span> <br>directly in Sass
+    </h3>
+    <p class="sm.max-w-512 mx-auto text-xl color-cool-gray-600 mb-32">Infuse any Sass-built project with the power of utility-first CSS. Fully configure directly in Sass, or add helpful utilities progressively without requiring a complete project overhaul.</p>
+    <a href="/docs/installation" class="text-xl color-primary-400 semibold">Learn how to get started →</a>
+  </div>
+
+  <article class="md.radius-xl overflow-hidden bg-black">
+
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+      {% set iconClass = 'w-32 h-32 color-pink-400 mr-20' %}
+      {% include "icons/logo-sass.njk" %}
+      <p class="text-sm">
+        Configure Uniform directly in Sass
+      </p>
+    </header>
+    <footer>
+      {% highlight "scss" %}
+      {{ scss_example | safe }}
+      {% endhighlight %}
+    </footer>
+
+  </article>
+
+  <div class="flex justify-content-center h-48 overflow-hidden">
+    <div class="relative grid grid-cols-1 gap-10">
+      <span class="falling-ball"></span>
+      <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+      <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+      <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+      <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+      <span class="block w-4 h-4 radius-full bg-cool-gray-500"></span>
+    </div>
+  </div>
+
+  <article class="md.radius-xl overflow-hidden bg-black">
+
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+      <span class="inline-flex align-items-center h-20 mr-16 px-6 bg-white color-black uppercase text-2xs extrabold radius-sm">css</span>
+      <p class="text-sm">
+        Generate<span class="hidden md.inline"> suite of</span> utilities properties
+      </p>
+    </header>
+    <footer>
+      {% highlight "css" %}
+      {{ css_example | safe }}
+      {% endhighlight %}
+    </footer>
+
+  </article>
+
+</section>
+
+
+<section class="block md.hidden mb-96 last.mb-0">
+  <div class="px-32 sm.text-center mb-64">
+    <h3 class="font-8xl leading-100 extrabold tracking-tight mb-24">
+      <span class="color-primary-400">Literally just</span> <br>one line of code
+    </h3>
+    <p class="sm.max-w-512 mx-auto text-xl color-cool-gray-600 mb-32">Installing Uniform is a drop-in process. Just load Uniform as a module, compile, then compose, it's that simple. You can even load the CDN version to get started even faster.</p>
+    <a href="/docs/installation" class="text-xl color-primary-400 semibold">Learn how to get started →</a>
+  </div>
+
+  <article class="md.radius-xl overflow-hidden bg-black mb-20">
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+      <p class="text-sm">
+        <span class="bold mr-10">Step 1.</span> Install package or clone repository
+      </p>
+    </header>
+    <footer>
+      {% highlight "bash" %}
+      {{ clone_uniform | safe }}
+      {% endhighlight %}
+    </footer>
+  </article>
+
+  <article class="md.radius-xl overflow-hidden bg-black mb-20">
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+      <p class="text-sm">
+        <span class="bold mr-10">Step 2.</span> Load module in Sass and compile
+      </p>
+    </header>
+    <footer>
+      {% highlight "scss" %}
+      {{ compile_uniform | safe }}
+      {% endhighlight %}
+    </footer>
+  </article>
+
+  <article class="md.radius-xl overflow-hidden bg-black">
+    <header class="flex align-items-center h-56 px-20 bg-cool-gray-900 color-white">
+      <p class="text-sm">
+        <span class="bold mr-10">Step 3.</span> Link stylesheet in your project
+      </p>
+    </header>
+    <footer>
+      {% highlight "html" %}
+      {{ load_uniform | safe }}
+      {% endhighlight %}
+    </footer>
+  </article>
+
+</section>

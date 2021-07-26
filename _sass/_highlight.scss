@@ -1,0 +1,192 @@
+@use "uniform" as *;
+
+/*! purgecss start ignore */
+
+/* PrismJS 1.22.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
+/**
+ * prism:js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+	 color: fill(cool-gray-200);
+	 background: none;
+	 font-family: font(mono);
+	 font-size: font(sm);
+	 text-align: left;
+	 white-space: pre;
+	 word-spacing: normal;
+	 word-break: normal;
+	 word-wrap: normal;
+	 line-height: 1.5;
+ 
+	 -moz-tab-size: 4;
+	 -o-tab-size: 4;
+	 tab-size: 4;
+ 
+	 -webkit-hyphens: none;
+	 -moz-hyphens: none;
+	 -ms-hyphens: none;
+	 hyphens: none;
+ 
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+	 padding: size(16, 20);
+	//  margin: .5em 0;
+	 overflow: auto;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+	 background: fill(cool-gray-950);
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+	 padding: .1em;
+	 border-radius: .3em;
+	 white-space: normal;
+ }
+ 
+
+
+// THEME COLORS
+//  .token.comment,
+//  .token.block-comment,
+//  .token.prolog,
+//  .token.doctype,
+//  .token.cdata {
+// 	 color: #999;
+//  }
+ 
+//  .token.punctuation {
+// 	 color: #ccc;
+//  }
+ 
+//  .token.tag,
+//  .token.attr-name,
+//  .token.namespace,
+//  .token.deleted {
+// 	 color: #e2777a;
+//  }
+ 
+//  .token.function-name {
+// 	 color: #6196cc;
+//  }
+ 
+//  .token.boolean,
+//  .token.number,
+//  .token.function {
+// 	 color: #f08d49;
+//  }
+ 
+//  .token.property,
+//  .token.class-name,
+//  .token.constant,
+//  .token.symbol {
+// 	 color: #f8c555;
+//  }
+ 
+//  .token.selector,
+//  .token.important,
+//  .token.atrule,
+//  .token.keyword,
+//  .token.builtin {
+// 	 color: #cc99cd;
+//  }
+ 
+//  .token.string,
+//  .token.char,
+//  .token.attr-value,
+//  .token.regex,
+//  .token.variable {
+// 	 color: #7ec699;
+//  }
+ 
+//  .token.operator,
+//  .token.entity,
+//  .token.url {
+// 	 color: #67cdcc;
+//  }
+ 
+//  .token.important,
+//  .token.bold {
+// 	 font-weight: bold;
+//  }
+//  .token.italic {
+// 	 font-style: italic;
+//  }
+ 
+//  .token.entity {
+// 	 cursor: help;
+//  }
+ 
+//  .token.inserted {
+// 	 color: green;
+//  }
+ 
+ 
+ // OVERRIDES
+
+.token.comment {
+	color: fill(cool-gray-400);
+}
+
+.token.selector {
+	color: fill(cyan-400);
+}
+
+.token.important {
+	color: #f14d31;
+}
+
+.token.tag {
+	color: fill(teal-400);
+}
+  
+.token.punctuation {
+	color: fill(cool-gray-400);
+}
+
+.token.attr-name {
+	color: fill(green-500);
+}
+
+.token.attr-value {
+	color: fill(yellow-400);
+}
+
+.token.string {
+	color: fill(pink-400);
+}
+
+.token.variable {
+	color: rgb(var(--teal-500));
+}
+
+.token.keyword {
+	color: fill(indigo-300);
+}
+
+.token.rule {
+	color: fill(red-200);
+}
+
+.token.property {
+	color: fill(yellow-400);
+}
+
+.token.function {
+  color: fill(orange-300);
+}
+
+.token.operator {
+	color: fill(cool-gray-300);
+}
+
+/*! purgecss end ignore */

@@ -1,0 +1,54 @@
+{
+  "name": "uniformcss-docs",
+  "version": "1.0.0",
+  "description": "Documentation site for Uniform CSS, a utility-first CSS framework built for Sass.",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy",
+    "uniform": "sass --load-path=./_sass --no-source-map _sass/main.scss assets/css/uniform.css",
+    "uniform:compressed": "sass --load-path=./_sass --no-source-map _sass/main.scss assets/css/uniform.min.css --style compressed",
+    "uniform:watch": "sass --load-path=./_sass --no-source-map --watch _sass/main.scss assets/css/uniform.css",
+    "uniform:watch-compressed": "sass --load-path=./_sass --no-source-map --watch _sass/main.scss assets/css/uniform.min.css --style compressed",
+    "uniform:purge": "purgecss -c purgecss.config.js -o assets/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ThinkUniform/uniformcss.com.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "functional css",
+    "atomic css",
+    "responsive css",
+    "utility first",
+    "uniformcss"
+  ],
+  "author": {
+    "name": "Jin Su Park",
+    "email": "jinsupark@icloud.com",
+    "url": "https://jinsupark.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThinkUniform/uniformcss.com/issues"
+  },
+  "homepage": "https://github.com/ThinkUniform/uniformcss.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.2.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "eleventy-plugin-nesting-toc": "^1.3.0",
+    "luxon": "^1.25.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.0.1",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-container": "^3.0.0",
+    "postcss-cli": "^7.1.0",
+    "purgecss": "^3.0.0"
+  }
+}

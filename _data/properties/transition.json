@@ -1,0 +1,313 @@
+[
+  {
+    "name": "transition-delay",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "delay-100",
+        "properties": ["transition-delay: 100ms;"]
+      },
+      {
+        "class": "delay-200",
+        "properties": ["transition-delay: 200ms;"]
+      },
+      {
+        "class": "delay-300",
+        "properties": ["transition-delay: 300ms;"]
+      },
+      {
+        "class": "delay-400",
+        "properties": ["transition-delay: 400ms;"]
+      },
+      {
+        "class": "delay-500",
+        "properties": ["transition-delay: 500ms;"]
+      },
+      {
+        "class": "delay-600",
+        "properties": ["transition-delay: 600ms;"]
+      },
+      {
+        "class": "delay-700",
+        "properties": ["transition-delay: 700ms;"]
+      },
+      {
+        "class": "delay-800",
+        "properties": ["transition-delay: 800ms;"]
+      },
+      {
+        "class": "delay-900",
+        "properties": ["transition-delay: 900ms;"]
+      },
+      {
+        "class": "delay-1000",
+        "properties": ["transition-delay: 1000ms;"]
+      }
+    ]
+  },
+  {
+    "name": "transition-duration",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "duration-100",
+        "properties": ["transition-duration: 100ms;"]
+      },
+      {
+        "class": "duration-200",
+        "properties": ["transition-duration: 200ms;"]
+      },
+      {
+        "class": "duration-300",
+        "properties": ["transition-duration: 300ms;"]
+      },
+      {
+        "class": "duration-400",
+        "properties": ["transition-duration: 400ms;"]
+      },
+      {
+        "class": "duration-500",
+        "properties": ["transition-duration: 500ms;"]
+      },
+      {
+        "class": "duration-600",
+        "properties": ["transition-duration: 600ms;"]
+      },
+      {
+        "class": "duration-700",
+        "properties": ["transition-duration: 700ms;"]
+      },
+      {
+        "class": "duration-800",
+        "properties": ["transition-duration: 800ms;"]
+      },
+      {
+        "class": "duration-900",
+        "properties": ["transition-duration: 900ms;"]
+      },
+      {
+        "class": "duration-1000",
+        "properties": ["transition-duration: 1000ms;"]
+      }
+    ]
+  },
+  {
+    "name": "transition-property",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "transition-none",
+        "properties": ["transition-property: none;"]
+      },
+      {
+        "class": "transition-all",
+        "properties": ["transition-property: all;"]
+      },
+      {
+        "class": "transition-transition",
+        "properties": ["transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, top, right, bottom, left;"]
+      },
+      {
+        "class": "transition-transition-colors",
+        "properties": ["transition-property: background-color, border-color, color, fill, stroke;"]
+      },
+      {
+        "class": "transition-bg",
+        "properties": ["transition-property: background-color;"]
+      },
+      {
+        "class": "transition-color",
+        "properties": ["transition-property: color;"]
+      },
+      {
+        "class": "transition-border",
+        "properties": ["transition-property: border-color;"]
+      },
+      {
+        "class": "transition-fill",
+        "properties": ["transition-property: fill;"]
+      },
+      {
+        "class": "transition-stroke",
+        "properties": ["transition-property: stroke;"]
+      },
+      {
+        "class": "transition-opacity",
+        "properties": ["transition-property: opacity;"]
+      },
+      {
+        "class": "transition-shadow",
+        "properties": ["transition-property: box-shadow;"]
+      },
+      {
+        "class": "transition-transform",
+        "properties": ["transition-property: transform;"]
+      }
+    ]
+  },
+  {
+    "name": "transition-timing-function",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "linear",
+        "properties": ["transition-timing-function: linear;"]
+      },
+      {
+        "class": "ease",
+        "properties": ["transition-timing-function: ease;"]
+      },
+      {
+        "class": "ease-in",
+        "properties": ["transition-timing-function: ease-in;"]
+      },
+      {
+        "class": "ease-in-out",
+        "properties": ["transition-timing-function: ease-in-out;"]
+      }
+    ]
+  },
+  {
+    "name": "transition",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "transition-100",
+        "properties": [
+          "transition: background-color 100ms;",
+          "border-color 100ms;",
+          "color 100ms;",
+          "fill 100ms;",
+          "stroke 100ms;",
+          "opacity 100ms;",
+          "box-shadow 100ms;",
+          "transform 100ms;"
+        ]
+      },
+      {
+        "class": "transition-200",
+        "properties": [
+          "transition: background-color 200ms;",
+          "border-color 200ms;",
+          "color 200ms;",
+          "fill 200ms;",
+          "stroke 200ms;",
+          "opacity 200ms;",
+          "box-shadow 200ms;",
+          "transform 200ms;"
+        ]
+      },
+      {
+        "class": "transition-300",
+        "properties": [
+          "transition: background-color 300ms;",
+          "border-color 300ms;",
+          "color 300ms;",
+          "fill 300ms;",
+          "stroke 300ms;",
+          "opacity 300ms;",
+          "box-shadow 300ms;",
+          "transform 300ms;"
+        ]
+      },
+      {
+        "class": "transition-400",
+        "properties": [
+          "transition: background-color 400ms;",
+          "border-color 400ms;",
+          "color 400ms;",
+          "fill 400ms;",
+          "stroke 400ms;",
+          "opacity 400ms;",
+          "box-shadow 400ms;",
+          "transform 400ms;"
+        ]
+      },
+      {
+        "class": "transition-500",
+        "properties": [
+          "transition: background-color 500ms;",
+          "border-color 500ms;",
+          "color 500ms;",
+          "fill 500ms;",
+          "stroke 500ms;",
+          "opacity 500ms;",
+          "box-shadow 500ms;",
+          "transform 500ms;"
+        ]
+      },
+      {
+        "class": "transition-600",
+        "properties": [
+          "transition: background-color 600ms;",
+          "border-color 600ms;",
+          "color 600ms;",
+          "fill 600ms;",
+          "stroke 600ms;",
+          "opacity 600ms;",
+          "box-shadow 600ms;",
+          "transform 600ms;"
+        ]
+      },
+      {
+        "class": "transition-700",
+        "properties": [
+          "transition: background-color 700ms;",
+          "border-color 700ms;",
+          "color 700ms;",
+          "fill 700ms;",
+          "stroke 700ms;",
+          "opacity 700ms;",
+          "box-shadow 700ms;",
+          "transform 700ms;"
+        ]
+      },
+      {
+        "class": "transition-800",
+        "properties": [
+          "transition: background-color 800ms;",
+          "border-color 800ms;",
+          "color 800ms;",
+          "fill 800ms;",
+          "stroke 800ms;",
+          "opacity 800ms;",
+          "box-shadow 800ms;",
+          "transform 800ms;"
+        ]
+      },
+      {
+        "class": "transition-900",
+        "properties": [
+          "transition: background-color 900ms;",
+          "border-color 900ms;",
+          "color 900ms;",
+          "fill 900ms;",
+          "stroke 900ms;",
+          "opacity 900ms;",
+          "box-shadow 900ms;",
+          "transform 900ms;"
+        ]
+      }
+    ]
+  }
+]

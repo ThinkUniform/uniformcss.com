@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/notice.njk" %}
+{% include "partials/nav.njk" %}
+
+<button @click="mobileNav = !mobileNav" class="fixed sm.hidden bottom-0 right-0 flex align-items-center justify-content-center w-56 h-56 mb-32 mr-32 bg-black radius-full z-3">
+  <div class="gutter-y-6">
+    <div class="w-24 h-2 bg-white"></div>
+    <div class="w-24 h-2 bg-white"></div>
+  </div>
+</button>
+
+<div class="relative z-3 md.hidden">
+  <div class="fixed top-0 left-0 w-100p h-100vh bg-black bg-opacity-20 z-1"
+    x-cloak
+    @click="mobileNav = !mobileNav"
+    x-show.transition.opacity.duration.300="mobileNav === true">
+  </div>
+
+  <div class="fixed top-0 left-0 w-288 h-100vh py-48 pl-28 pr-0 overflow-auto bg-white z-1"
+    x-cloak
+    x-show="mobileNav === true"
+    x-transition:enter="transition-300"
+    x-transition:enter-start="transform translate-x-n288"
+    x-transition:enter-end="transform"
+    x-transition:leave="transition-300"
+    x-transition:leave-start="transform translate-x-0"
+    x-transition:leave-end="transform translate-x-n288">
+    {% include "partials/sidebar-cheatsheet.njk" %}
+  </div>
+</div>
+
+<main class="px-20 sm.px-32">
+  <div class="max-w-1280 mx-auto">
+  
+    <div class="flex flex-col sm.flex-row">
+      <aside class="sm.w-256 flex-none">
+        <div class="hidden sm.block top-72 sticky h-100vh overflow-auto pl-20 pr-40 pt-48 pb-192 ml-n20">
+          {% include "partials/sidebar-cheatsheet.njk" %}
+        </div>
+      </aside>
+      
+      <section class="docsearch-content overflow-auto flex-1 mt-48 mb-112 sm.pl-32">
+        <h1 class="text-5xl bold tracking-tight mb-10">
+          {{ title | safe }}
+        </h1>
+        <p class="text-xl color-cool-gray-600 tracking-tight mb-56">
+          {{ description | safe }}
+        </p>
+        <hr class="border-t-4 border-dotted border-cool-gray-100 mb-56">
+        <article class="markdown color-black">
+          {{ content | safe }}
+        </article>
+      </section>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

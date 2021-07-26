@@ -1,0 +1,509 @@
+---
+title: Lightning Fast Utility Generator for Sass
+layout: layouts/base.njk
+
+scss_example: |
+  @use "uniform" as * with (
+    $config: (
+      important: true
+    )
+  );
+css_example: |
+  .text-left { 
+    text-align: left !important; 
+  }
+  .text-center { 
+    text-align: center !important; 
+  }
+  .text-right { 
+    text-align: right !important; 
+  }
+  .block {
+    display: block !important;
+  }
+  .flex {
+    display: flex !important;
+  }
+clone_uniform: |
+  npm install uniformcss
+compile_uniform: |
+  @use "uniform" as *;
+load_uniform: |
+  <head>
+    <!-- Load your compiled stylesheet here -->
+    <link rel="stylesheet" href="/uniform.min.css">
+  </head>
+
+  <body>
+    <!-- Style components using composable utilities -->
+    <div class="max-w-1025 mx-auto py-48">
+      <h1 class="text-4xl text-center extrabold color-pink-500 mb-24">
+        Hello World!
+      </h1>
+    </div>
+  </body>
+add_animation: |
+  <div class="animate-ping ..."></div>
+load_plugins: |
+  @use "uniform" as *;
+  @use "uniform/plugins/wrapper";
+  @use "uniform/plugins/markdown";
+  @use "uniform/plugins/ratio";
+  @use "uniform/plugins/animate";
+  @use "uniform/plugins/ring";
+animate_plugin: |
+  <main class="wrapper markdown">
+
+    <h1 class="fade-in-from-top" style="--animate-delay: 0s;">
+      Typewriter delectus cred
+    </h1>
+
+    <p class="fade-in-from-top" style="--animate-delay: 0.2s;">
+      Cosby sweater plaid shabby chic kitsch pour-over ex. 
+      Meggings kogi vinyl meh, food truck banh mi Etsy.
+    </p>
+
+    <button class="ring">Focus me</button>
+
+  </main>
+api_function_input: |
+  @use "uniform" as * with (
+    $config: (    
+      colors: ( navbar: #3a37d3 ),
+      shadows: ( card: 0 4px 60px 0 rgba(90, 134, 234, 0.2) )
+    )
+  );
+
+  .navbar {
+    display: flex;
+    background: fill(navbar);
+    box-shadow: shadow(card);
+    padding: size(20, 24);
+  }
+api_function_output: |
+  .navbar {
+    display: flex;
+    background: #3a37d3;
+    box-shadow: 0 4px 60px 0 rgba(90, 134, 234, 0.2);
+    padding: 1.25rem 1.5rem;
+  }
+configure_sass: |
+  @use "uniform" as * with (
+    $config: (    
+      colors: ( 
+        navbar: #3a37d3,
+        footer: #5a6072,
+        seagreen: #188657,
+      ),
+      shadows: (
+        card: 0 4px 60px 0 rgba(90, 134, 234, 0.2)
+      )
+    )
+  );
+configure_css: |
+  :root {
+    --font-sans: sans-serif;
+    --font-mono: menlo;
+    
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+  }
+
+# SECTION - POWER FEATURES
+config_shorthand_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      utilities: (
+        margin-top: (
+          shorthand: mt
+        ),
+        margin-right: (
+          shorthand: marginRight
+        )
+      )
+    )
+  );
+config_shorthand_output: |
+  /* main.css */
+  
+  .mt-1 {
+    margin-top: 0.062rem;
+  }
+  .mt-2 {
+    margin-top: 0.125rem;
+  }
+  ...
+
+  .marginRight-1 {
+    margin-right: 0.062rem;
+  }
+  ...
+config_important_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      important: true
+    )
+  );
+config_important_output: |
+  /* main.css */
+  
+  .align-baseline {
+    vertical-align: baseline !important;
+  }
+  .align-top {
+    vertival-align: top !important;
+  }
+  .align-middle {
+    vertical-align: middle !important;
+  }
+  .align-bottom	{
+    vertival-align: bottom !important;
+  }
+  .align-text-top	{
+    vertical-align: text-top !important;
+  }
+  .align-text-bottom {
+    vertical-align: text-bottom !important;
+  }
+  ...
+config_delimiter_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      delimiter: '--',
+      pseudo-delimiter: '__',
+      screen-delimiter: '.',
+    )
+  );
+config_delimiter_output: |
+  /* main.css */
+  
+  .bg--opacity-50 {
+    --bg-opacity: 0.5;
+  }
+  .hover__bg--opacity-50:hover {
+    --bg-opacity: 0.5;
+  }
+  .focus__bg--opacity-50:focus {
+    --bg-opacity: 0.5;
+  }
+  ...
+
+  @media (min-width: 768px) {
+    .sm\.text--center {
+      text-align: center;
+    }
+  }
+  ...
+config_comma_compression_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      comma-compression: true
+    )
+  );
+config_comma_compression_output: |
+  /* main.css */
+  
+  .bg-opacity-50, 
+  .focus\.bg-opacity-50:focus, 
+  .group:hover .group-hover\.bg-opacity-50, 
+  .hover\.bg-opacity-50:hover {
+    --bg-opacity: 0.5;
+  }
+  .bg-opacity-55, 
+  .focus\.bg-opacity-55:focus, 
+  .group:hover .group-hover\.bg-opacity-55, 
+  .hover\.bg-opacity-55:hover {
+    --bg-opacity: 0.55;
+  }
+  .bg-opacity-60, 
+  .focus\.bg-opacity-60:focus, 
+  .group:hover .group-hover\.bg-opacity-60, 
+  .hover\.bg-opacity-60:hover {
+    --bg-opacity: 0.6;
+  }
+  ...
+config_prefix_input: |
+  // main.scss
+
+  @use "uniform" as * with (
+    $config: (    
+      prefix: 'u-',
+    )
+  );
+config_prefix_output: |
+  /* main.css */
+  
+  .u-inline {
+    display: inline;
+  }
+  .u-block {
+    display: block;
+  }
+  .u-flex {
+    display: flex;
+  }
+  .u-grid {
+    display: grid;
+  }
+  .u-inline-block {
+    display: inline-block;
+  }
+  .u-inline-flex {
+    display: inline-flex;
+  }
+  ...
+config_apply_input: |
+  // main.scss
+
+  .parent {
+    @include apply('p-40 shadow-2xs radius-2xl');
+    .child {
+      @include apply('hover.opacity-50 p-24 md.p-64');
+    }
+  }
+config_apply_output: |
+  /* main.css */
+
+  .parent {
+    padding: 2.5rem;
+    box-shadow: var(--shadow-2xs);
+    border-radius: var(--radius-2xl);
+  }
+  .parent .child {
+    padding: 1.5rem;
+  }
+  .parent .child:hover {
+    opacity: 0.5;
+  }
+  @media (min-width: 1024px) {
+    .parent .child {
+      padding: 4rem;
+    }
+  }
+config_api_functions_input: |
+  // main.scss
+
+  .parent {
+    padding: size(24, 32); // 1.5rem 2.5rem;
+    background: fill(red-400, .4);
+    border-radius: radius(lg);
+    .child {
+      font-family: font(sans);
+      font-size: font(lg);
+      font-weight: font(semibold);
+      line-height: leading(looser);
+    }
+  }
+config_api_functions_output: |
+  /* main.css */
+
+  .parent {
+    padding: 1.5rem 2rem;
+    background: rgba(var(--red-400), 0.4);
+    border-radius: var(--radius-lg);
+  }
+  .parent .child {
+    font-family: var(--font-sans);
+    font-size: var(--font-lg);
+    font-weight: var(--semibold);
+    line-height: var(--leading-looser);
+  }
+config_helpers_input: |
+  // main.scss
+
+  .element {
+    font-size: rem(11);
+    @include screen(sm) {
+      font-size: rem(13);
+    }
+    @include screen(lg) {
+      font-size: rem(15);
+    }
+  }
+config_helpers_output: |
+  /* main.css */
+
+  .element {
+    font-size: 0.687rem;
+  }
+  @media (min-width: 768px) {
+    .element {
+      font-size: 0.812rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .element {
+      font-size: 0.937rem;
+    }
+  }
+
+---
+
+<div
+  class="fixed xy-0 z-4 flex align-items-center justify-items-center overflow-auto bg-cool-gray-900 bg-opacity-50"
+  x-cloak
+  x-show="showModal == true"
+  x-transition:enter.opacity.duration.200ms
+>
+  <!-- Modal inner -->
+  <div 
+    class="w-100p max-w-896 mx-auto radius-lg overflow-hidden shadow-2xl bg-black"
+    @click.away="showModal = false"
+  >
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <div class='ratio-16-9'>
+      <iframe class="absolute top-0 left-0 w-100p h-100p" src='https://www.youtube.com/embed/Zz6eOVaaelI' frameborder='0' allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="hidden md.block h-20 bg-white">
+  <!-- spacer -->
+</div>
+<nav class="fade-in-from-top opacity-0 hidden md.block sticky top-n1 px-32 bg-white relative z-3"
+  style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: -24px;">
+  <div class="max-w-1152 mx-auto">
+    <div class="flex align-items-center justify-content-between h-72 mx-auto">
+      <div class="w-256 flex align-items-center">
+        <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+          <img src="/assets/img/uniform-logo.svg" class="h-24 mr-12"><span class="hidden sm.inline-flex align-items-center px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
+        </a>
+      </div>
+
+      <div class="w-100p max-w-448 group">
+        <div class="relative text-sm leading-100">
+          <div class="absolute z-2 top-0 left-0 w-40 h-40 flex align-items-center justify-content-center color-cool-gray-700 font-md">
+            {% set iconClass = 'fill-current w-16 h-16' %}
+            {% include "icons/search.njk" %}
+          </div>
+
+          <input type="text" placeholder="Search the docs" class="w-100p h-40 pl-40 pr-48 text-sm radius-lg bg-cool-gray-50 focus.bg-cool-gray-100 color-cool-gray-800 js-docsearch">
+
+          <div class="absolute z-2 top-0 right-0 w-48 h-40 flex align-items-center justify-content-center color-cool-gray-500 font-sm medium">
+            ⌘K
+          </div>
+        </div>
+      </div>
+
+      <div class="w-256 flex justify-content-end gutter-x-16">
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'fill-current w-24 h-24' %}
+          {% include "icons/logo-github.njk" %}
+        </a>
+        <a href="https://twitter.com/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'fill-current w-24 h-24' %}
+          {% include "icons/logo-twitter.njk" %}
+        </a>
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'fill-current w-24 h-24' %}
+          {% include "icons/logo-youtube.njk" %}
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="overflow-hidden">
+  <header>
+    <div class="relative px-32 sm.text-center">
+      <div class="max-w-900px pt-56 sm.pt-128 pb-128">
+        <div class="inline-flex md.hidden align-items-center mb-36 text-xl semibold tracking-tight">
+          <img src="/assets/img/uniform-logo.svg" class="h-28 mr-12"><span class="inline-flex align-items-center px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
+        </div>
+        <h1 class="fade-in opacity-0 font-8xl sm.font-11xl md.font-11xl lg.font-11xl leading-110 extrabold m-auto mb-32 tracking-tighter"
+          style="--animate-delay: .8s;">
+          <span class="color-primary-400">Lightning Fast&nbsp;</span><br>Generator for Sass
+        </h1>
+        
+        <p class="fade-in opacity-0 text-xl md.text-xl tracking-tight sm.max-w-640 md.max-w-screen-sm sm.mx-auto mb-48 color-cool-gray-600"
+          style="--animate-delay: .9s;">
+          Flexible responsive utility class generator and CSS framework designed to help you gain the full power of functional CSS without compromising on Sass.
+        </p>
+        <a href="/docs/overview" class="fade-in inline-flex align-items-center h-48 mb-64 px-20 pr-16 border-2 border-black bg-transparent hover.bg-black hover.color-white transition-100 focus.shadow-focus opacity-0 radius-lg semibold text-md"
+          style="--animate-delay: 1s;">
+          Read the docs <span class="ml-12">→</span>
+        </a>
+        <div class="fade-in opacity-0"
+          style="--animate-delay: 1.1s;">
+          <a 
+            class="inline-flex align-items-center color-black font-sm leading-140"
+            @click="showModal = ! showModal"
+          >
+            <div class="relative flex align-items-center justify-content-center w-24 h-24 pl-2 mr-10 radius-full border-1 border-black color-black" style="--border-1 border-cool-gray-100 shadow-2xs: 0 4px 20px 0 rgba(90, 134, 234, 0.3)">
+              <div class="animate-spin absolute top-0 left-0 w-100p h-100p radius-full" style="animation-duration: 3s;">
+                <div class="absolute top-0 left-50p transform translate-x-n50p w-4 h-4 mt-n2 bg-black radius-full"></div>
+              </div>
+              {% set iconClass = 'fill-current w-12 h-12' %}
+              {% include "icons/play-sharp.njk" %}
+            </div>
+            <div class="text-left">
+              Why in under 2 minutes
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="ripple">
+        <div class="ripple__content">
+          <div class="ripple__one"></div>
+          <div class="ripple__two"></div>
+          <div class="ripple__three"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="block sm.hidden mb-96 sm.mb-160 px-96">
+    <div class="border-t-4 border-dotted border-cool-gray-100"></div>
+  </div>
+
+
+  <section class="mb-96 sm.mb-160 fade-in-from-bottom opacity-0 px-32"
+    style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: 24px;">
+    <div class="flex align-items-center justify-content-center">
+
+      <div class="sm.flex align-items-center sm.p-40 sm.shadow-lg sm.radius-2xl">
+
+        <div class="flex-none w-96 h-96 sm.w-128 sm.h-128 mx-auto mb-36 sm.mb-0 p-4 radius-xl sm.mr-48 border-1 border-cool-gray-100 shadow-2xs bg-black transform rotate-n12">
+          <div class="bg-linear radius-xl overflow-hidden transform rotate-12">
+            <img src="/assets/img/jin.svg" class="w-100p">
+          </div>
+        </div>
+
+        <div class="text-md text-center sm.text-left max-w-448">
+          <p class="text-lg mb-20 color-cool-gray-600">"Sass already provides great functionality out of the box. Uniform CSS builds on this strength to help web developers be more productive with the power of immensely flexible utility-first classes."</p>
+          <div class="text-xs uppercase bold tracking-looser">
+            — Jin Su Park, Product Designer<a href="https://castle.io" class="color-primary-400 ml-6">@Castle</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="block sm.hidden mb-96 sm.mb-160 px-96">
+    <div class="border-t-4 border-dotted border-cool-gray-100"></div>
+  </div>
+
+</div>
+
+{% include "partials/sections/get-started.njk" %}
+{% include "partials/sections/start-building.njk" %}
+{% include "partials/sections/power-features.njk" %}
+{% include "partials/sections/enhanced-experience.njk" %}
+{% include "partials/sections/easy-setup.njk" %}
+
+{% include "partials/footer.njk" %}

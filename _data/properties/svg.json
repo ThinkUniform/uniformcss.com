@@ -1,0 +1,68 @@
+[
+  {
+    "name": "fill",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "fill-current",
+        "properties": ["fill: currentColor;"]
+      }
+    ]
+  },
+  {
+    "name": "stroke-width",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "stroke-0",
+        "properties": ["stroke-width: 0;"]
+      },
+      {
+        "class": "stroke-1",
+        "properties": ["stroke-width: 1;"]
+      },
+      {
+        "class": "stroke-2",
+        "properties": ["stroke-width: 2;"]
+      },
+      {
+        "class": "stroke-3",
+        "properties": ["stroke-width: 3;"]
+      },
+      {
+        "class": "stroke-4",
+        "properties": ["stroke-width: 4;"]
+      },
+      {
+        "class": "stroke-5",
+        "properties": ["stroke-width: 5;"]
+      },
+      {
+        "class": "stroke-6",
+        "properties": ["stroke-width: 6;"]
+      }
+    ]
+  },
+  {
+    "name": "stroke",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "stroke-currentC",
+        "properties": ["stroke: currentColor"]
+      }
+    ]
+  }
+]

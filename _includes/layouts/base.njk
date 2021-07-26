@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" class="antialiased font-sans">
+<head>
+  <title>{{ metadata.sitename }}{{ title or metadata.title }}</title>
+
+  <!-- Page Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="{{ description or metadata.description }}">
+
+  <!-- Social Media Open Graph -->
+  <meta property="og:title" content="{{ metadata.sitename }}{{ title or metadata.title }}" />
+  <meta property="og:url" content="{{ permalink | url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ description or metadata.description }}" />
+  <meta property="og:image" content="/screenshot.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@UniformCSS" />
+  <meta name="twitter:creator" content="@UniformCSS" />
+  <meta property="twitter:url" content="{{ permalink | url }}" />
+  <meta property="twitter:title" content="{{ metadata.sitename }}{{ title or metadata.title }}" />
+  <meta property="twitter:description" content="{{ description or metadata.description }}" />
+  <meta property="twitter:image" content="/screenshot.png" />
+
+  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/uniform.min.css' | url }}">
+
+  <!-- SplitBee Analytics -->
+  <script async src="https://cdn.splitbee.io/sb.js"></script>
+
+  <!-- AlpineJS -->
+  <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+</head>
+<body id="top" x-data="{mobileNav: false, showModal: false}">
+
+{{ content | safe }}
+
+
+<script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+
+// grab an element
+var myElement = document.querySelector('.js-scrollUp') !== null;
+if (myElement) {
+  var myElement = document.querySelector('.js-scrollUp');
+  // construct an instance of Headroom, passing the element
+  var headroom  = new Headroom(myElement);
+  // initialise
+  headroom.init();
+}
+
+// Command + K shortcut support
+function searchShortcut(e) {
+  var selection = document.querySelector('.js-docsearch') !== null;
+  if (selection) {
+    var selection = document.querySelector('.js-docsearch');
+  }
+  var evtobj = window.event? event : e;
+  if (evtobj.keyCode == 75 && evtobj.metaKey) {
+    selection.focus();
+  };
+}
+
+document.onkeydown = searchShortcut;
+
+// Initialize AlpineJS
+document.addEventListener('alpine:init', () => {
+  Alpine.data('tabs', () => ({
+    width: 0,
+    left: 0,
+    tab: 0,
+
+    init: function() {
+      active = this.$el.querySelector('.is-active');
+      this.width =  active.offsetWidth;
+      this.left =  active.offsetLeft;
+    },
+    switchTabs(e, targetTab) {
+      this.tab = targetTab,
+      this.width = e.currentTarget.offsetWidth;
+      this.left =  e.currentTarget.offsetLeft;
+    }
+  }))
+})
+
+// Docsearch setting
+docsearch({
+  apiKey: '041931dc20e82036bcc5ef4b413bbfdb',
+  indexName: 'uniformcss',
+  inputSelector: '.js-docsearch',
+  debug: false
+});
+</script>
+</body>
+</html>

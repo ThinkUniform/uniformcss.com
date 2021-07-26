@@ -1,0 +1,324 @@
+<div 
+  class="flex flex-none w-640 transform translate-x-128 sm.translate-x-0 md.translate-x-128 translate-y-72 radius-lg color-white overflow-hidden shadow-xl transition-100"
+  :class="{ 
+    'bg-primary-800': trackerColor === 'primary',
+    'bg-indigo-800': trackerColor === 'indigo',
+    'bg-purple-800': trackerColor === 'purple',
+    'bg-pink-800': trackerColor === 'pink',
+    'bg-red-800': trackerColor === 'red',
+    'bg-orange-800': trackerColor === 'orange',
+    'bg-yellow-800': trackerColor === 'yellow',
+    'bg-lime-800': trackerColor === 'lime',
+    'bg-green-800': trackerColor === 'green',
+    'bg-teal-800': trackerColor === 'teal',
+  }"
+>
+  <div class="w-224 flex-none">
+    <div class="flex p-14">
+      <div class="radius-full w-10 h-10 mr-6 bg-red-500"></div>
+      <div class="radius-full w-10 h-10 mr-6 bg-yellow-500"></div>
+      <div class="radius-full w-10 h-10 mr-6 bg-green-500"></div>
+    </div>
+    <div class="flex align-items-center justify-content-between border-b-1 border-white border-opacity-20">
+      <div class="flex align-items-center p-14 text-xs semibold">
+        <div class="flex align-items-center justify-content-center w-20 h-20 radius-sm bg-primary-500 bold text-xs mr-10">P</div>
+        Pigi Money
+      </div>
+
+      <a class="flex align-items-center p-14 text-xs semibold">
+        <div class="relative mr-10">
+          <img src="/assets/img/profiles/profile-1.jpg" class="flex align-items-center justify-content-center w-24 h-24 radius-full">
+          <div class="absolute bottom-0 right-0 h-8 w-8">
+            <div class="animate-ping absolute h-8 w-8 radius-full bg-green-500 opacity-70"></div>
+            <div class="relative radius-full h-8 w-8 bg-green-500"></div>
+          </div>
+        </div>
+        {% set iconClass = 'w-14 h-14' %}
+        {% include "icons/chevron-down.njk" %}
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 p-10 mb-12">
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        {% set iconClass = 'fill-current w-14 h-14 mr-12 opacity-50' %}
+        {% include "icons/search.njk" %}
+        Search
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        {% set iconClass = 'fill-current w-14 h-14 mr-12 opacity-50' %}
+        {% include "icons/file-tray-full.njk" %}
+        Inbox
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold bg-white bg-opacity-10 transition-200">
+        {% set iconClass = 'fill-current w-14 h-14 mr-12 opacity-50' %}
+        {% include "icons/pricetag.njk" %}
+        My issues
+      </a>
+    </div>
+    
+    <div class="px-20 text-xs bold color-opacity-50">
+      Favourites
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 p-10 mb-12">
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 h-10 bg-red-500 radius-full mr-12"></div>
+        Bug
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 h-10 bg-yellow-500 radius-full mr-12"></div>
+        Improvement
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 h-10 bg-teal-500 radius-full mr-12"></div>
+        Backlog
+      </a>
+    </div>
+
+    <div class="px-20 text-xs bold color-opacity-50">
+      Your teams
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 p-10 mb-12">
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 mr-12">
+          #
+        </div>
+        Engineering
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 mr-12">
+          #
+        </div>
+        Product
+      </a>
+
+      <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
+        <div class="w-10 mr-12">
+          #
+        </div>
+        Design
+      </a>
+    </div>
+  </div>
+  <div class="w-100p bg-black bg-opacity-50">
+    <div class="px-20 py-14 text-xs semibold border-b-1 border-white border-opacity-20">
+      Active issues <span class="ml-6 opacity-40">12</span>
+      <a class="inline-flex ml-12 px-8 radius-sm text-xs bg-white bg-opacity-10 hover.bg-opacity-20 color-white transition-200">+ Filter</a>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-12
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Welcome to Pigi Money
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-13
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Fix header menu bar alignment
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-14
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Bring policies forward
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-15
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Update front-end dependencies
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-16
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Support latest dart sass module system
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-17
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Configure UniformCSS variables
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+    >
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-18
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Delete old cached users
+      </div>
+    </div>
+
+    <div class="flex align-items-center px-16 py-12 border-b-1 border-white border-opacity-20 hover.bg-white bg-opacity-0 hover.bg-opacity-4 hover.cursor-default">
+      <input type="checkbox" class="w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 w-16 h-16 radius-xs bg-transparent border-1 border-white border-opacity-20 hover.border-opacity-30 border-cool-gray transition-100 mr-12"
+        :class="{ 
+          'color-primary-400': trackerColor === 'primary',
+          'color-indigo-500': trackerColor === 'indigo',
+          'color-purple-500': trackerColor === 'purple',
+          'color-pink-500': trackerColor === 'pink',
+          'color-red-500': trackerColor === 'red',
+          'color-orange-500': trackerColor === 'orange',
+          'color-yellow-500': trackerColor === 'yellow',
+          'color-lime-500': trackerColor === 'lime',
+          'color-green-500': trackerColor === 'green',
+          'color-teal-500': trackerColor === 'teal',
+        }"
+     checked="">
+      <div class="flex align-items-center justify-content-center w-12 h-12 opacity-50 hover.opacity-100 cursor-pointer">
+        <svg class="w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+      </div>
+      <div class="w-48 ml-12 text-xs semibold opacity-40">
+        PGM-19
+      </div>
+      <div class="mx-12 text-xs semibold opacity-100">
+        Fix dropdown bug
+      </div>
+    </div>
+
+  </div>
+</div>

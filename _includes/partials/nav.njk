@@ -1,0 +1,53 @@
+<nav class="sm.sticky top-n1 px-20 sm.px-32 bg-white relative z-2 border-b-1 border-cool-gray-100">
+  <div class="max-w-1280 mx-auto">
+    <div class="flex align-items-center justify-content-between h-72 mx-auto">
+      <div class="w-256 flex align-items-center">
+        <a href="/" class="inline-flex align-items-center text-md semibold tracking-tight">
+          <img src="/assets/img/uniform-logo.svg" class="h-20">
+        </a>
+      </div>
+
+      <div class="hidden sm.block w-448 relative text-sm leading-100 group">
+        <div class="absolute z-2 top-0 left-0 w-40 h-40 flex align-items-center justify-content-center color-cool-gray-700 font-md">
+          {% set iconClass = 'fill-current w-16 h-16' %}
+          {% include "icons/search.njk" %}
+        </div>
+
+        <input type="text" placeholder="Search the docs" class="w-100p h-40 pl-40 pr-48 text-sm radius-lg bg-cool-gray-50 focus.bg-cool-gray-100 color-cool-gray-800 js-docsearch">
+
+        <div class="absolute z-2 top-0 right-0 w-48 h-40 flex align-items-center justify-content-center color-cool-gray-500 font-sm medium">
+          ⌘K
+        </div>
+      </div>
+
+      <div class="w-256 flex justify-content-end gutter-x-16">
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'fill-current w-24 h-24' %}
+          {% include "icons/logo-github.njk" %}
+        </a>
+        <a href="https://twitter.com/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'fill-current w-24 h-24' %}
+          {% include "icons/logo-twitter.njk" %}
+        </a>
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'fill-current w-24 h-24' %}
+          {% include "icons/logo-youtube.njk" %}
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+
+<nav class="sticky sm.relative bg-white z-1 top-0 px-20 sm.px-32 border-b-1 border-cool-gray-100 overflow-auto">
+  <div class="max-w-1280 mx-auto">
+    <div class="flex align-items-center gutter-x-28 py-14">
+      <a href="/docs/overview/" class="flex-none text-sm medium color-cool-gray-600 hover.color-cool-gray-900 last.pr-28">Docs</a>
+      <a href="/api-reference/" class="flex-none text-sm medium color-cool-gray-600 hover.color-cool-gray-900 last.pr-28">API Reference</a>
+      <a href="/cheatsheet/font-sizes/" class="flex-none text-sm medium color-cool-gray-600 hover.color-cool-gray-900 last.pr-28">Cheatsheet</a>
+      <a href="https://codepen.io/UniformCSS/pen/poNNqaE" class="flex-none text-sm medium color-cool-gray-600 hover.color-cool-gray-900 last.pr-28">Playground</a>
+      <a href="https://codepen.io/UniformCSS/pen/poNNqaE" class="flex-none text-sm medium color-cool-gray-600 hover.color-cool-gray-900 last.pr-28">Tutorials</a>
+    </div>
+  </div>
+</nav>

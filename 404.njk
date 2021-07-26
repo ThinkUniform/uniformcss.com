@@ -1,0 +1,79 @@
+---
+title: Oops! Not Found
+layout: layouts/base.njk
+permalink: 404.html
+---
+
+<div class="hidden md.block h-20 bg-white">
+  <!-- spacer -->
+</div>
+<nav class="hidden md.block sticky top-n1 px-32 bg-white relative z-3">
+  <div class="max-w-1152 mx-auto">
+    <div class="flex align-items-center justify-content-between h-72 mx-auto">
+      <div class="w-256 flex align-items-center">
+        <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+          <img src="/assets/img/uniform-brandmark.svg" class="w-24 h-24 mr-12">
+          Uniform CSS<span class="hidden sm.inline-flex align-items-center ml-12 px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
+        </a>
+      </div>
+
+      <div class="w-100p max-w-448 group">
+        <div class="relative text-sm leading-100">
+          <div class="absolute z-2 top-0 left-0 w-40 h-40 flex align-items-center justify-content-center color-cool-gray-700 font-md">
+            {% set iconClass = 'w-16 h-16' %}
+            {% include "icons/search.njk" %}
+          </div>
+
+          <input type="text" placeholder="Search the docs" class="w-100p h-40 pl-40 pr-48 text-sm radius-lg bg-cool-gray-50 focus.bg-cool-gray-100 color-cool-gray-800 js-docsearch">
+
+          <div class="absolute z-2 top-0 right-0 w-48 h-40 flex align-items-center justify-content-center color-cool-gray-500 font-sm medium">
+            ⌘K
+          </div>
+        </div>
+      </div>
+
+      <div class="w-256 flex justify-content-end gutter-x-16">
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'w-24 h-24' %}
+          {% include "icons/logo-github.njk" %}
+        </a>
+        <a href="https://twitter.com/uniformcss" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'w-24 h-24' %}
+          {% include "icons/logo-twitter.njk" %}
+        </a>
+        <a href="https://www.youtube.com/channel/UCtxIMsFHxO8RMOyy7V2QUSA" class="flex align-items-center hover.color-primary-400 transition-100">
+          {% set iconClass = 'w-24 h-24' %}
+          {% include "icons/logo-youtube.njk" %}
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+<main class="px-20 sm.px-32">
+  <div class="max-w-1152 mx-auto">
+    <div class="pt-56 sm.pt-128 pb-128">
+      <div class="text-center">
+        <div class="inline-flex md.hidden align-items-center mb-36 text-xl semibold tracking-tight">
+          <img src="/assets/img/uniform-brandmark.svg" class="w-28 h-28 mr-12">
+          Uniform CSS <span class="inline-flex align-items-center ml-12 px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
+        </div>
+
+        <h1 class="font-8xl sm.font-11xl md.font-11xl lg.font-11xl leading-110 extrabold m-auto mb-32 tracking-tighter">
+          <span class="color-primary-400">404&nbsp;</span><br>Page not found
+        </h1>
+
+        <p class="text-xl md.text-xl tracking-tight sm.max-w-640 md.max-w-screen-sm sm.mx-auto mb-48 color-cool-gray-600">
+          Oops! We couldn't find the page you were looking for.
+        </p>
+
+        <a href="/" class="inline-flex align-items-center h-48 px-20 pr-16 border-2 border-black bg-transparent hover.bg-black hover.color-white transition-100 focus.shadow-focus radius-lg semibold text-md">
+          Go to homepage <span class="ml-12">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include "partials/footer.njk" %}

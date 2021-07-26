@@ -1,0 +1,18 @@
+<div class="relative w-320 bg-white shadow-md radius-lg p-20">
+  <button class="absolute top-0 right-0 flex align-items-center justify-content-center radius-full bg-primary-500 hover.bg-primary-600 color-white w-28 h-28 mt-n8 mr-n8 shadow-sm text-lg">
+    {% set iconClass = 'w-18 h-18' %}
+    {% include "icons/close.njk" %}
+  </button>
+  <h4 class="tracking-loose uppercase text-xs bold color-black color-opacity-40 mb-10 text-center">Purchased by 10 of your friends</h4>
+  <div class="flex align-items-center justify-content-center mb-24 gutter-x-n14">
+    <img src="/assets/img/profiles/profile-1.jpg" class="transform hover.scale-110 transition-200 cursor-pointer w-40 h-40 sm.w-48 sm.h-48 radius-full border-2 sm.border-3 border-white">
+    <img src="/assets/img/profiles/profile-2.jpg" class="transform hover.scale-110 transition-200 cursor-pointer w-40 h-40 sm.w-48 sm.h-48 radius-full border-2 sm.border-3 border-white">
+    <img src="/assets/img/profiles/profile-3.jpg" class="transform hover.scale-110 transition-200 cursor-pointer w-40 h-40 sm.w-48 sm.h-48 radius-full border-2 sm.border-3 border-white">
+    <img src="/assets/img/profiles/profile-4.jpg" class="transform hover.scale-110 transition-200 cursor-pointer w-40 h-40 sm.w-48 sm.h-48 radius-full border-2 sm.border-3 border-white">
+    <div class="relative transform transition-200 cursor-pointer w-40 h-40 sm.w-48 sm.h-48 radius-full border-2 sm.border-3 border-white overflow-hidden">
+      <div class="absolute t-0 l-0 w-100p h-100p flex align-items-center justify-content-center bg-black bg-opacity-40 hover.bg-opacity-60 transition-200 color-white bold text-sm">+5</div>
+      <img src="/assets/img/profiles/profile-6.jpg">
+    </div>
+  </div>
+  <button class="inline-flex align-items-center justify-content-center w-100p h-40 px-20 radius-xs text-sm color-white bg-primary-500 hover.bg-primary-600 focus.shadow-focus transition-100">Buy this course <span class="opacity-60 ml-10">$4.99</span></button>
+</div>

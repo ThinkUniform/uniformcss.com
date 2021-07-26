@@ -1,0 +1,52 @@
+<ul class="gutter-y-40">
+  <li>
+    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
+      Typography
+    </h6>
+    <nav class="flex flex-col align-items-start">
+      {%- for post in collections.typography -%}
+        <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-50 color-black radius-md{% else %} color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      {%- endfor -%}
+    </nav>
+  </li>
+  <li>
+    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
+      Color
+    </h6>
+    <nav class="flex flex-col align-items-start">
+      {%- for post in collections.color -%}
+        <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-50 color-black radius-md{% else %} color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      {%- endfor -%}
+    </nav>
+  </li>
+  <li>
+    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
+      Radius
+    </h6>
+    <nav class="flex flex-col align-items-start">
+      {%- for post in collections.radius -%}
+        <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-50 color-black radius-md{% else %} color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      {%- endfor -%}
+    </nav>
+  </li>
+  <li>
+    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
+      Effect
+    </h6>
+    <nav class="flex flex-col align-items-start">
+      {%- for post in collections.effect -%}
+        <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-50 color-black radius-md{% else %} color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      {%- endfor -%}
+    </nav>
+  </li>
+  <li>
+    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
+      Sizing
+    </h6>
+    <nav class="flex flex-col align-items-start">
+      {%- for post in collections.sizing -%}
+        <a href="{{ post.url }}" class="font-sm medium transition-200 transform translate-x-0 {% if post.url == page.url %}flex align-items-center w-100p px-14 ml-n14 bg-cool-gray-50 color-black radius-md{% else %} color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6{% endif %} py-12">{{ post.data.title }}</a>
+      {%- endfor -%}
+    </nav>
+  </li>
+</ul>

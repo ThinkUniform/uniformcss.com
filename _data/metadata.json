@@ -1,0 +1,12 @@
+{
+  "sitename": "Uniform CSS - ",
+  "title": "Uniform CSS",
+  "url": "https://uniformcss.com/",
+  "description": "A fully configurable utility class generator and CSS framework built for Sass projects.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jin Su Park",
+    "email": "jinsupark@icloud.com",
+    "url": "https://jinsupark.com/"
+  }
+}

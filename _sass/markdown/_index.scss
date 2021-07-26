@@ -1,0 +1,360 @@
+@use "uniform" as *;
+
+/*! purgecss start ignore */
+
+/* 
+==================================================
+MARKDOWN PLUGIN
+
+--markdown-font-size
+--markdown-leading,
+--markdown-color
+
+--markdown-h1-margin
+--markdown-h1-size
+--markdown-h1-weight
+--markdown-h1-tracking
+
+--markdown-h2-margin
+--markdown-h2-size
+--markdown-h2-weight
+--markdown-h2-tracking
+
+--markdown-h3-margin
+--markdown-h3-size
+--markdown-h3-weight
+--markdown-h3-tracking
+
+--markdown-h4-margin
+--markdown-h4-size
+--markdown-h4-weight
+--markdown-h4-tracking
+
+--markdown-h5-margin
+--markdown-h5-size
+--markdown-h5-weight
+--markdown-h5-tracking
+
+--markdown-h6-margin
+--markdown-h6-size
+--markdown-h6-weight
+--markdown-h6-tracking
+
+--markdown-p-margin
+--markdown-p-weight
+--markdown-p-font-size
+--markdown-p-weight
+--markdown-p-leading
+--markdown-p-color
+
+--markdown-hr-margin
+--markdown-hr-border
+
+--markdown-table-margin
+--markdown-table-leading
+--markdown-table-border
+--markdown-th-padding
+--markdown-th-size
+--markdown-th-weight
+--markdown-th-transform
+--markdown-th-tracking
+--markdown-th-bg-color
+--markdown-th-color
+--markdown-td-padding
+
+--markdown-blockquote-margin
+--markdown-blockquote-padding
+--markdown-blockquote-bg
+--markdown-blockquote-radius
+--markdown-blockquote-shadow
+
+--markdown-code-padding
+--markdown-code-font-size
+--markdown-code-radius
+--markdown-code-bg
+--markdown-code-border
+--markdown-code-color
+
+--markdown-list-margin
+--markdown-list-leading
+--markdown-list-padding
+
+--markdown-link-color
+--markdown-link-hover-color
+================================================== 
+*/
+
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+	color: var(--markdown-heading-color, fill(black));
+}
+
+.markdown > h1:first-child,
+.markdown > h2:first-child,
+.markdown > h3:first-child,
+.markdown > h4:first-child,
+.markdown > h5:first-child,
+.markdown > h6:first-child {
+	margin-top: 0;
+}
+
+.markdown > p:last-child,
+.markdown > ol:last-child,
+.markdown > li:last-child,
+.markdown > hr:last-child,
+.markdown > blockquote:last-child  {
+	margin-bottom: 0;
+}
+
+.markdown > h1 {
+	margin: var(--markdown-h1-margin, 1em 0 .5em 0);
+	font-size: var(--markdown-h1-size, 2.5rem);
+	font-weight: var(--markdown-h1-weight, 800);
+	line-height: var(--markdown-h1-leading, 1.25);
+	letter-spacing: var(--markdown-h1-tracking, -0.02em);
+}
+
+.markdown > h2 {
+	margin: var(--markdown-h2-margin, 1.5em 0 .75em 0);
+	font-size: var(--markdown-h2-size, 1.5rem);
+	font-weight: var(--markdown-h2-weight, 700);
+	line-height: var(--markdown-h2-leading, 1.4);
+	letter-spacing: var(--markdown-h2-tracking, -0.02em);
+}
+
+.markdown > h3 {
+	margin: var(--markdown-h3-margin, 2em 0 1em 0);
+	font-size: var(--markdown-h3-size, 1.125rem);
+	font-weight: var(--markdown-h3-weight, 700);
+	line-height: var(--markdown-h3-leading, 1.4);
+	letter-spacing: var(--markdown-h3-tracking, -0.02em);
+}
+
+.markdown > h4 {
+	margin: var(--markdown-h4-margin, 2em 0 1em 0);
+	font-size: var(--markdown-h4-size, 1.125rem);
+	font-weight: var(--markdown-h4-weight, 700);
+	line-height: var(--markdown-h4-leading, 1.4);
+	letter-spacing: var(--markdown-h4-tracking, -0.02em);
+}
+
+.markdown > h5 {
+	margin: var(--markdown-h5-margin, 2.25em 0 1.25em 0);
+	font-size: var(--markdown-h5-size, 1rem);
+	font-weight: var(--markdown-h5-weight, 700);
+	line-height: var(--markdown-h5-leading, 1.4);
+	letter-spacing: var(--markdown-h5-tracking, 0);
+}
+
+.markdown > h6 {
+	margin: var(--markdown-h6-margin, 2.25em 0 1.25em 0);
+	font-size: var(--markdown-h6-size, 1rem);
+	font-weight: var(--markdown-h6-weight, 700);
+	line-height: var(--markdown-h6-leading, 1.4);
+	letter-spacing: var(--markdown-h6-tracking, 0);
+}
+
+/* 
+==================================================
+PARAGRAPH
+================================================== 
+*/
+
+.markdown > p, 
+.markdown > blockquote p, 
+.markdown > table,
+.markdown > ul, 
+.markdown > ul p, 
+.markdown > ol p {
+	margin-top: var(--markdown-p-margin, size(24));
+	margin-bottom: var(--markdown-p-margin, size(24));
+	font-size: var(--markdown-p-font-size, font(md));
+	font-weight: var(--markdown-p-weight, font(regular));
+	line-height: var(--markdown-p-leading, leading(looser));
+	color: var(--markdown-p-color, fill(gray-600));
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* 
+==================================================
+HORIZONTAL RULE
+================================================== 
+*/
+
+.markdown > hr {
+	margin-top: var(--markdown-hr-margin, size(64));
+	margin-bottom: var(--markdown-hr-margin, size(64));
+	border-top: var(--markdown-hr-border, 4px dotted fill(gray-200));
+}
+
+/* 
+==================================================
+CODE
+================================================== 
+*/
+
+.markdown > p code,
+.markdown > blockquote code,
+.markdown > ol li code,
+.markdown > ul li code,
+.markdown > table td code {
+	padding: var(--markdown-code-padding, size(4, 6));
+	font-size: var(--markdown-code-font-size, font(sm));
+	border-radius: var(--markdown-code-radius, radius(sm));
+	background: var(--markdown-code-bg, fill(cyan-50));
+	border: var(--markdown-code-border, 0);
+	color: var(--markdown-code-color, fill(cyan-500));
+	white-space: nowrap;
+	user-select: all;
+}
+
+/* 
+==================================================
+BLOCKQUOTE
+================================================== 
+*/
+
+.markdown > blockquote {
+	margin-bottom: var(--markdown-blockquote-margin, size(20));
+	padding: var(--markdown-blockquote-padding, size(16, 24));
+	background: var(--markdown-blockquote-bg, fill(gray-50));
+	border-radius: var(--markdown-blockquote-radius, size(8));
+	box-shadow: var(--markdown-blockquote-shadow, none);
+	border: var(--markdown-blockquote-border, 0);
+}
+
+/* 
+==================================================
+TABLE
+================================================== 
+*/
+
+.markdown > table {
+	width: 100%;
+	margin-bottom: var(--markdown-table-margin, size(20));
+	line-height: var(--markdown-table-leading, leading(loose));
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.markdown table:last-child {
+	margin-bottom: 0;
+}
+
+.markdown > table th,
+.markdown > table td {
+	border: var(--markdown-table-border, 1px solid fill(gray-100));
+}
+.markdown > table	th {
+	padding: var(--markdown-th-padding, 1em);
+	font-size: var(--markdown-th-size, 0.75rem);
+	font-weight: var(--markdown-th-weight, 700);
+	text-transform: var(--markdown-th-transform, uppercase);
+	letter-spacing: var(--markdown-th-tracking, 0.04em);
+	background-color: var(--markdown-th-bg-color, fill(gray-50, .4));
+	color: var(--markdown-th-color, fill(gray-500));
+}
+.markdown > table	td {
+	padding: var(--markdown-td-padding, 0.5em 0.75em);
+}
+
+
+
+/* 
+==================================================
+LISTS
+================================================== 
+*/
+
+.markdown > ol,
+.markdown > ul {
+	margin-bottom: var(--markdown-list-margin, 1.25em);
+	line-height: var(--markdown-list-leading, 1.875);
+	color: var(--markdown-p-color, fill(gray-600));
+}
+
+.markdown > ol li,
+.markdown > ul li,
+.markdown > ol ol li,
+.markdown > ul ul li {
+	margin-bottom: var(--markdown-list-margin, 0.625rem);
+}
+
+.markdown > ul {
+	padding-left: var(--markdown-list-padding, 2.5rem);
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+.markdown > ul ul {
+	padding-left: var(--markdown-list-padding, 2.5rem);
+	list-style-type: circle;
+	list-style-position: outside;
+}
+
+.markdown > ol {
+	padding-left: var(--markdown-list-padding, 2.5rem);
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+
+.markdown > ol ol {
+	padding-left: var(--markdown-list-padding, 2.5rem);
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+
+/* 
+==================================================
+LINK
+================================================== 
+*/
+
+.markdown > p a,
+.markdown > blockquote a,
+.markdown > ol li a,
+.markdown > ul li a,
+.markdown > table td a {
+	color: var(--markdown-link-color, fill(indigo-500));
+	box-shadow: var(--markdown-link-shadow, inset 0 -0.125em 0 0 #fff, inset 0 -0.375em 0 0 fill(indigo-500, .15))
+}
+
+/* 
+==================================================
+STRONG
+================================================== 
+*/
+
+.markdown > p strong,
+.markdown > blockquote strong,
+.markdown > ol li strong,
+.markdown > ul li strong,
+.markdown > table td strong {
+	font-weight: var(--markdown-strong-weight, font(bold));
+	color: var(--markdown-strong-color, fill(gray-700));
+}
+
+/* 
+==================================================
+EMPHASIZE
+================================================== 
+*/
+
+.markdown > p em,
+.markdown > blockquote em,
+.markdown > ol li em,
+.markdown > ul li em,
+.markdown > table td em {
+	font-style: italic;
+}
+
+/*! purgecss end ignore */

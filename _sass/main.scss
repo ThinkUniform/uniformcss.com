@@ -1,0 +1,119 @@
+@use "uniform" as * with (
+  $config: (
+		font-families: (
+			sans: 'Inter'
+		),
+		utilities: (
+			color: (
+				extend: (
+					pseudos: (group-focus)
+				)
+			)
+		),
+		// css-variables: false,
+		comma-compression: true,
+    excludes: (
+			
+    ),
+    includes: (
+
+    )
+  )
+);
+
+@use "_root";
+@use "markdown";
+@use "animate";
+@use "_font";
+@use "_ripple";
+@use "_docsearch";
+@use "_highlight";
+
+[x-cloak] {
+	display: none !important;
+}
+
+.headroom {
+	// transform: translateY(100px);
+	&.headroom--pinned {
+		--translate-y: 0;
+	}
+}
+
+.falling-ball {
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: -3px;
+	width: 10px;
+	height: 10px;
+	background: #FF62B1;
+	border-radius: 9999px;
+	animation: falling-ball 1.5s linear infinite;
+}
+
+@keyframes falling-ball {
+  from {top: -10px;}
+  to {top: 60px;}
+}
+
+.toc {
+	transition: 200ms;
+	a {
+		display: inline-flex;
+		font-size: font(sm);
+		font-weight: font-weight(medium);
+		line-height: leading(looser);
+		padding: size(6, 0);
+		color: fill(cool-gray-600);
+		&:hover {
+			color: fill(cool-gray-900);
+		}
+	}
+	& > ol {
+		ol {
+			display: none;
+		}
+	}
+}
+
+.markdown {
+	.css-value {
+		background: transparent;
+		color: fill(gray-600)
+	}
+	h2 {
+		position: relative;
+		padding-left: size(24);
+		margin-left: size(n24);
+		&:hover {
+			a:before {
+				display: inline-block;
+			}
+		}
+		a {
+			&:before {
+				display: none;
+				content: '#';
+				position: absolute;
+				left: 0;
+				color: rgb(var(--blue-200));
+				font-weight: font(medium);
+			}
+			&:hover {
+				&:before {
+					color: rgb(var(--blue-400));
+				}
+			}
+		}
+	}
+
+	pre {
+		border-radius: radius(lg);
+		margin-bottom: 1.5em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
