@@ -175,7 +175,7 @@ PARAGRAPH
 	font-size: var(--markdown-p-font-size, font(md));
 	font-weight: var(--markdown-p-weight, font(regular));
 	line-height: var(--markdown-p-leading, leading(looser));
-	color: var(--markdown-p-color, fill(gray-600));
+	color: var(--markdown-p-color, fill(cool-gray-700));
 	&:first-child {
 		margin-top: 0;
 	}
@@ -193,7 +193,7 @@ HORIZONTAL RULE
 .markdown > hr {
 	margin-top: var(--markdown-hr-margin, size(64));
 	margin-bottom: var(--markdown-hr-margin, size(64));
-	border-top: var(--markdown-hr-border, 4px dotted fill(gray-200));
+	border-top: var(--markdown-hr-border, 4px dotted fill(cool-gray-200));
 }
 
 /* 
@@ -226,7 +226,7 @@ BLOCKQUOTE
 .markdown > blockquote {
 	margin-bottom: var(--markdown-blockquote-margin, size(20));
 	padding: var(--markdown-blockquote-padding, size(16, 24));
-	background: var(--markdown-blockquote-bg, fill(gray-50));
+	background: var(--markdown-blockquote-bg, fill(cool-gray-50));
 	border-radius: var(--markdown-blockquote-radius, size(8));
 	box-shadow: var(--markdown-blockquote-shadow, none);
 	border: var(--markdown-blockquote-border, 0);
@@ -252,7 +252,7 @@ TABLE
 
 .markdown > table th,
 .markdown > table td {
-	border: var(--markdown-table-border, 1px solid fill(gray-100));
+	border: var(--markdown-table-border, 1px solid fill(cool-gray-100));
 }
 .markdown > table	th {
 	padding: var(--markdown-th-padding, 1em);
@@ -260,8 +260,8 @@ TABLE
 	font-weight: var(--markdown-th-weight, 700);
 	text-transform: var(--markdown-th-transform, uppercase);
 	letter-spacing: var(--markdown-th-tracking, 0.04em);
-	background-color: var(--markdown-th-bg-color, fill(gray-50, .4));
-	color: var(--markdown-th-color, fill(gray-500));
+	background-color: var(--markdown-th-bg-color, fill(cool-gray-50, .4));
+	color: var(--markdown-th-color, fill(cool-gray-500));
 }
 .markdown > table	td {
 	padding: var(--markdown-td-padding, 0.5em 0.75em);
@@ -279,7 +279,7 @@ LISTS
 .markdown > ul {
 	margin-bottom: var(--markdown-list-margin, 1.25em);
 	line-height: var(--markdown-list-leading, 1.875);
-	color: var(--markdown-p-color, fill(gray-600));
+	color: var(--markdown-p-color, fill(cool-gray-700));
 }
 
 .markdown > ol li,
@@ -340,7 +340,7 @@ STRONG
 .markdown > ul li strong,
 .markdown > table td strong {
 	font-weight: var(--markdown-strong-weight, font(bold));
-	color: var(--markdown-strong-color, fill(gray-700));
+	color: var(--markdown-strong-color, fill(cool-gray-700));
 }
 
 /* 
