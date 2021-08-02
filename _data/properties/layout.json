@@ -12,7 +12,7 @@
         "properties": ["box-decoration-break: slice;"]
       },
       {
-        "class": "content-box",
+        "class": "decoration-clone",
         "properties": ["box-decoration-break: clone;"]
       }
     ]
