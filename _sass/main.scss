@@ -95,8 +95,7 @@
 			&:before {
 				display: none;
 				content: '#';
-				position: absolute;
-				left: 0;
+				margin-left: size(8);
 				color: rgb(var(--blue-200));
 				font-weight: font(medium);
 			}
