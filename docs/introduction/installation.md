@@ -116,7 +116,7 @@ sass --load-path=./node_modules/uniformcss --watch main.scss dist/uniform.min.cs
 For a even quicker way to get started, simply add the following stylesheet in the head of your project.
 
 ```html
-<link href="https://cdn.jsdelivr.net/ThinkUniform/uniformcss/css/uniform.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/uniformcss@1.0.0/dist/uniform.min.css" rel="stylesheet" />
 ```
 
 > Unlike the native installation, using the pre-compiled version will only allow for limited customizations, you will not get access to more advanced customization options such as prefixing and custom variants.
