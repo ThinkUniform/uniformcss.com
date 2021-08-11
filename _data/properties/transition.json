@@ -117,31 +117,15 @@
       },
       {
         "class": "transition",
-        "properties": ["transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, top, right, bottom, left, width, height;"]
+        "properties": ["transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;"]
       },
       {
         "class": "transition-colors",
         "properties": ["transition-property: background-color, border-color, color, fill, stroke;"]
       },
       {
-        "class": "transition-bg",
-        "properties": ["transition-property: background-color;"]
-      },
-      {
-        "class": "transition-color",
-        "properties": ["transition-property: color;"]
-      },
-      {
-        "class": "transition-border",
-        "properties": ["transition-property: border-color;"]
-      },
-      {
-        "class": "transition-fill",
-        "properties": ["transition-property: fill;"]
-      },
-      {
-        "class": "transition-stroke",
-        "properties": ["transition-property: stroke;"]
+        "class": "transition-filters",
+        "properties": ["transition-property: filter, backdrop-filter;"]
       },
       {
         "class": "transition-opacity",
@@ -154,14 +138,6 @@
       {
         "class": "transition-transform",
         "properties": ["transition-property: transform;"]
-      },
-      {
-        "class": "transition-width",
-        "properties": ["transition-property: width;"]
-      },
-      {
-        "class": "transition-height",
-        "properties": ["transition-property: height;"]
       }
     ]
   },
