@@ -116,11 +116,11 @@
         "properties": ["transition-property: all;"]
       },
       {
-        "class": "transition-transition",
-        "properties": ["transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, top, right, bottom, left;"]
+        "class": "transition",
+        "properties": ["transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, top, right, bottom, left, width, height;"]
       },
       {
-        "class": "transition-transition-colors",
+        "class": "transition-colors",
         "properties": ["transition-property: background-color, border-color, color, fill, stroke;"]
       },
       {
@@ -154,6 +154,14 @@
       {
         "class": "transition-transform",
         "properties": ["transition-property: transform;"]
+      },
+      {
+        "class": "transition-width",
+        "properties": ["transition-property: width;"]
+      },
+      {
+        "class": "transition-height",
+        "properties": ["transition-property: height;"]
       }
     ]
   },
