@@ -49,6 +49,7 @@
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-container": "^3.0.0",
     "postcss-cli": "^7.1.0",
-    "purgecss": "^3.0.0"
+    "purgecss": "^3.0.0",
+    "uniformcss": "^1.2.5"
   }
 }
