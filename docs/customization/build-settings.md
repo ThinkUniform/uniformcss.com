@@ -57,23 +57,60 @@ The following advanced build setting definitions apply.
 
 | Setting | Default | Description |
 | - | - | - |
-| `headless` | `false` | Loads Uniform CSS in Headless Mode. |
+| `output` | `css` | Controls the format of output. |
 | `comma-compression` | `false` | Collapses pseudo variants. |
 | `css-variables` | `true` | Enable theme overrides via CSS variables. |
 
 {.text-left style=""}
 
-### Headless Mode
+### Output Mode
 
-When `headless` is enabled, Uniform CSS will be loaded but nothing will be generated in the final output file. This can be useful in situations where you need access to helper mixins or API functions without importing the entire library.
+The Output mode setting control the format of how classes are represented. There are three different output modes, `css`, `json`, and `headless`. 
+
+- When `output` is set as `'css'`, Uniform will generate classes as css. 
+
+- When `output` is set as `'json'`, Uniform will generate a JSON schema of all available classes with customizations applied. This is particularly useful for auto-generating your own class references docs. 
+
+- When `output` is set as `'headless'`, you will still have access to API Functions, the `apply` mixin, and other Uniform Sass features, however, no default classes will be included on compilation. 
 
 ```scss
+// main.scss
 @use "uniform" as * with (
   $config: (
-    headless: true, // false by default
+    output: 'json',
+    excludes: (all),
+    includes: (text-align)
   )
 );
 ```
+
+```json
+{
+  "text-align": {
+    "important": "false",
+    "extra-selector": "",
+    "responsive": "true",
+    "pseudos": "none",
+    "classes": {
+      "text-left": {
+        "text-align": "left"
+      },
+      "text-center": {
+        "text-align": "center"
+      },
+      "text-right": {
+        "text-align": "right"
+      },
+      "text-justify": {
+        "text-align": "justify"
+      }
+    }
+  }
+}
+...
+```
+
+
 
 ### Comma Compression
 
@@ -115,4 +152,37 @@ When `comma-compression` is enabled, pseudo variants will be joined to its stand
 
 ### CSS Variables
 
-When `css-variables` is enabled, theme settings become variablized as custom properties allowing them to be overridable.
+When `css-variables` is disabled, instead of using css custom properties, theme values becone statically represented.
+
+
+```scss
+// main.scss
+
+@use "uniform" as * with (
+  $config: (    
+    css-variables: false // `true` by default
+  )
+);
+```
+
+```css
+/* main.css */
+.ultralight {
+  font-weight: 100;
+}
+
+.extralight {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+...
+...
+```

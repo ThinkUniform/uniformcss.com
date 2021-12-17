@@ -27,6 +27,7 @@ Properties in Uniform CSS are constructed using a template data structure. By pa
         responsive: false,
       ),
       margin-top: (
+        important: true,
         shorthand: customMarginTop
       )
     )
@@ -40,8 +41,8 @@ Properties in Uniform CSS are constructed using a template data structure. By pa
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
-.customMarginTop-1 { margin-top: 0.062rem; }
-.customMarginTop-2 { margin-top: 0.125rem; }
+.customMarginTop-1 { margin-top: 0.062rem !important; }
+.customMarginTop-2 { margin-top: 0.125rem !important; }
 ...
 ```
 
@@ -53,6 +54,7 @@ The following utility setting definitions apply.
 
 | Setting | Type | Description |
 | - | - | - |
+| `important` | `boolean` | Enable important to this utility only. |
 | `shorthand` | `string` | Shorthand word to represent property. |
 | `responsive` | `boolean` | Set responsiveness. |
 | `responsive-pseudos` | `boolean` | Responsiveness across pseudo variants. |
@@ -65,6 +67,30 @@ The following utility setting definitions apply.
 {.text-left style=""}
 
 ---
+
+## Important
+
+The `important` setting enables localized important for this utility only.
+
+```scss
+// main.scss
+@use "uniform" as * with (
+  $config: (
+    utilities: (
+      margin-right: (
+        important: true
+      )
+    )
+  )
+);
+```
+
+```css
+/* main.css */
+.mr-1 { margin-right: 0.062rem !important; }
+.mr-2 { margin-right: 0.125rem !important; }
+...
+```
 
 ## Shorthand
 
@@ -99,7 +125,7 @@ The `shorthand` setting overrides the default keyword used to identify the prope
 
 ### Null Shorthand
 
-If `null` is passed in as a value for `shorthand` the property will omit the shorthand and use the variant name to identify the property instead.
+If `null` is passed in as a value for `shorthand` the property will omit the shorthand and use the variant name to represent the property instead.
 
 ```scss
 // main.scss
