@@ -8,10 +8,11 @@
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
-    "uniform": "sass --load-path=./_sass --no-source-map _sass/main.scss assets/css/uniform.css",
-    "uniform:compressed": "sass --load-path=./_sass --no-source-map _sass/main.scss assets/css/uniform.min.css --style compressed",
-    "uniform:watch": "sass --load-path=./_sass --no-source-map --watch _sass/main.scss assets/css/uniform.css",
-    "uniform:watch-compressed": "sass --load-path=./_sass --no-source-map --watch _sass/main.scss assets/css/uniform.min.css --style compressed",
+
+    "uniform": "sass --load-path=./node_modules/uniformcss --load-path=./ --load-path=./optional-sass-path --no-source-map _sass/main.scss assets/css/uniform.css",
+    "uniform:compressed": "sass --load-path=./node_modules/uniformcss --load-path=./ --load-path=./optional-sass-path --no-source-map _sass/main.scss assets/css/uniform.min.css --style compressed",
+    "uniform:watch": "sass --load-path=./node_modules/uniformcss --load-path=./ --load-path=./optional-sass-path --no-source-map --watch _sass/main.scss assets/css/uniform.css",
+    "uniform:watch-compressed": "sass --load-path=./node_modules/uniformcss --load-path=./ --load-path=./optional-sass-path --no-source-map --watch _sass/main.scss assets/css/uniform.min.css --style compressed",
     "uniform:purge": "purgecss -c purgecss.config.js -o assets/css/"
   },
   "repository": {
@@ -50,6 +51,6 @@
     "markdown-it-container": "^3.0.0",
     "postcss-cli": "^7.1.0",
     "purgecss": "^3.0.0",
-    "uniformcss": "^1.2.5"
+    "uniformcss": "^1.2.6"
   }
 }
