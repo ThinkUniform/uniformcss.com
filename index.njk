@@ -266,6 +266,7 @@ config_apply_input: |
 
   .parent {
     @include apply('p-40 shadow-2xs radius-2xl');
+
     .child {
       @include apply('hover.opacity-50 p-24 md.p-64');
     }
@@ -284,6 +285,7 @@ config_apply_output: |
   .parent .child:hover {
     opacity: 0.5;
   }
+
   @media (min-width: 1024px) {
     .parent .child {
       padding: 4rem;
@@ -296,6 +298,7 @@ config_api_functions_input: |
     padding: size(24, 32); // 1.5rem 2.5rem;
     background: fill(red-400, .4);
     border-radius: radius(lg);
+
     .child {
       font-family: font(sans);
       font-size: font(lg);
@@ -311,6 +314,7 @@ config_api_functions_output: |
     background: rgba(var(--red-400), 0.4);
     border-radius: var(--radius-lg);
   }
+
   .parent .child {
     font-family: var(--font-sans);
     font-size: var(--font-lg);
@@ -322,6 +326,7 @@ config_helpers_input: |
 
   .element {
     font-size: rem(11);
+    
     @include screen(sm) {
       font-size: rem(13);
     }
@@ -335,6 +340,7 @@ config_helpers_output: |
   .element {
     font-size: 0.687rem;
   }
+
   @media (min-width: 768px) {
     .element {
       font-size: 0.812rem;
@@ -345,7 +351,35 @@ config_helpers_output: |
       font-size: 0.937rem;
     }
   }
+config_json_input: |
+  // main.scss
 
+  @use "uniform" as * with (
+    $config: (
+      output: 'json'
+    )
+  );
+config_json_output: |
+  {
+    "text-decoration": {
+      "important": "false",
+      "extra-selector": "",
+      "responsive": "false",
+      "pseudos": "hover, group-hover, focus",
+      "classes": {
+        "underline": {
+          "text-decoration": "underline"
+        },
+        "line-through": {
+          "text-decoration": "line-through"
+        },
+        "no-underline": {
+          "text-decoration": "none"
+        }
+      }
+    }
+  },
+  ...
 ---
 
 <div
@@ -419,6 +453,13 @@ config_helpers_output: |
         <div class="inline-flex md.hidden align-items-center mb-36 text-xl semibold tracking-tight">
           <img src="/assets/img/uniform-logo.svg" class="h-28 mr-12"><span class="inline-flex align-items-center px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
         </div>
+
+        <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
+          <a href="https://www.producthunt.com/posts/uniform-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uniform-css" class="inline-flex align-items-center text-lg semibold tracking-tight">
+            <img src="/assets/img/featured.svg" class="max-w-192">
+          </a>
+        </div>
+
         <h1 class="fade-in opacity-0 font-8xl sm.font-11xl md.font-11xl lg.font-11xl leading-110 extrabold m-auto mb-32 tracking-tighter"
           style="--animate-delay: .8s;">
           <span class="color-primary-500">Lightning Fast&nbsp;</span><br>Generator for Sass

@@ -110,6 +110,11 @@
                 @click="activeFeature = 2">
                 Helpers
               </button>
+              <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+                :class="{ 'border-1 border-white color-white hover.bg-white hover.color-black' : activeFeature !== 3, 'bg-white border-1 border-white color-black' : activeFeature === 3 }"
+                @click="activeFeature = 3">
+                JSON Output
+              </button>
             </div>
             
           </div>
@@ -273,6 +278,24 @@
               <article class="md.radius-xl overflow-hidden bg-black mb-20">
                 {% highlight "css" %}
                 {{ config_helpers_output | safe }}
+                {% endhighlight %}
+              </article>
+            </div>
+
+            <div 
+              x-cloak 
+              x-show="activeFeature === 3"
+              x-transition:enter.duration.600ms
+            >
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "scss" %}
+                {{ config_json_input | safe }}
+                {% endhighlight %}
+              </article>
+
+              <article class="md.radius-xl overflow-hidden bg-black mb-20">
+                {% highlight "json" %}
+                {{ config_json_output | safe }}
                 {% endhighlight %}
               </article>
             </div>
@@ -454,6 +477,11 @@
         @click="activeFeature = 2">
         Helpers
       </button>
+      <button class="inline-flex align-items-center flex-none h-32 mr-12 mb-12 px-12 text-sm semibold radius-full transition-200"
+        :class="{ 'border-1 border-black color-black hover.bg-black hover.color-white' : activeFeature !== 3, 'bg-black border-1 border-black color-white' : activeFeature === 3 }"
+        @click="activeFeature = 3">
+        JSON Output
+      </button>
     </div>
   </div>
 
@@ -506,6 +534,24 @@
     <article class="md.radius-xl overflow-hidden bg-black mb-20">
       {% highlight "css" %}
       {{ config_helpers_output | safe }}
+      {% endhighlight %}
+    </article>
+  </div>
+
+  <div 
+    x-cloak 
+    x-show="activeFeature === 3"
+    x-transition:enter.duration.600ms
+  >
+    <article class="md.radius-xl overflow-hidden bg-black mb-20">
+      {% highlight "scss" %}
+      {{ config_json_input | safe }}
+      {% endhighlight %}
+    </article>
+
+    <article class="md.radius-xl overflow-hidden bg-black mb-20">
+      {% highlight "css" %}
+      {{ config_json_output | safe }}
       {% endhighlight %}
     </article>
   </div>
