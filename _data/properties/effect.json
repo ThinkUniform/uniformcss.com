@@ -627,23 +627,23 @@
       },
       {
         "class": "filter-hue-rotate-15",
-        "properties": ["filter-hue-rotate: 15deg;"]
+        "properties": ["--filter-hue-rotate: 15deg;"]
       },
       {
         "class": "filter-hue-rotate-30",
-        "properties": ["filter-hue-rotate: 30deg;"]
+        "properties": ["--filter-hue-rotate: 30deg;"]
       },
       {
         "class": "filter-hue-rotate-60",
-        "properties": ["filter-hue-rotate: 60deg;"]
+        "properties": ["--filter-hue-rotate: 60deg;"]
       },
       {
         "class": "filter-hue-rotate-90",
-        "properties": ["filter-hue-rotate: 90deg;"]
+        "properties": ["--filter-hue-rotate: 90deg;"]
       },
       {
         "class": "filter-hue-rotate-180",
-        "properties": ["filter-hue-rotate: 180deg;"]
+        "properties": ["--filter-hue-rotate: 180deg;"]
       }
     ]
   },
