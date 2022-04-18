@@ -178,8 +178,8 @@
         "properties": ["overflow-y: visible;"]
       },
       {
-        "class": "overflow-y-sroll",
-        "properties": ["overflow-y: sroll;"]
+        "class": "overflow-y-scroll",
+        "properties": ["overflow-y: scroll;"]
       }
     ]
   },
