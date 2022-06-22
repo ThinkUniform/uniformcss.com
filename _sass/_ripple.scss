@@ -38,7 +38,7 @@
     left: 0;
     width: 2px;
     height: 2px;
-    border-radius: 2px;
+    border-radius: 9999px;
   }
   &__one {
     animation: trough-ripple var(--ripple-duration) forwards ease-out;
