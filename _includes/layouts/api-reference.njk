@@ -62,8 +62,8 @@ layout: layouts/base.njk
             <article>
               <header class="mb-20">
                 <div class="markdown">
-                  <h2 id="{{ key.name | slug }}" class="flex align-items-end mb-20 pt-64 text-2xl bold tracking-tight">
-                    {{ key.name }}<a href="#{{ key.name | slug }}" class="direct-link"></a>
+                  <h2 id="{{ key.name | slugify }}" class="flex align-items-end mb-20 pt-64 text-2xl bold tracking-tight">
+                    {{ key.name }}<a href="#{{ key.name | slugify }}" class="direct-link"></a>
                   </h2>
                 </div>
 

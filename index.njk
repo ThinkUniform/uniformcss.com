@@ -383,7 +383,7 @@ config_json_output: |
 ---
 
 <div
-  class="fixed xy-0 z-4 flex align-items-center justify-items-center overflow-auto bg-cool-gray-900 bg-opacity-50"
+  class="fixed xy-0 z-4 flex align-items-center justify-items-center overflow-auto"
   x-cloak
   x-show="modal == true"
   x-transition:enter.opacity.duration.200ms
@@ -399,79 +399,64 @@ config_json_output: |
   </div>
 </div>
 
-<div class="hidden md.block h-20 bg-white">
-  <!-- spacer -->
-</div>
-<nav class="fade-in-from-top opacity-0 hidden md.block sticky top-n1 px-32 bg-white relative z-3"
+
+<nav class="fade-in-from-top opacity-0 hidden md.block sticky top-n1 px-32 bg-shade-1 relative z-3"
   style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: -24px;">
   <div class="max-w-1152 mx-auto">
-    <div class="flex align-items-center justify-content-between h-72 mx-auto">
+    <div class="flex align-items-center justify-content-between py-24 mx-auto">
       <div class="w-256 flex align-items-center">
         <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
-          <img src="/assets/img/uniform-logo.svg" class="h-24 mr-12"><span class="hidden sm.inline-flex align-items-center px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
+          <img src="/assets/img/uniform-logo-white.svg" class="h-24 mr-6">
+          <span class="relative mt-n6 color-accent-pink-2 uppercase font-xs bold tracking-loose">
+            2.0
+          </span>
         </a>
       </div>
 
-      <div class="w-100p max-w-448 group">
-        <div class="relative text-sm leading-100">
-          <div class="absolute z-2 top-0 left-0 w-40 h-40 flex align-items-center justify-content-center color-cool-gray-700 font-md">
-            {% set iconClass = 'fill-current w-16 h-16' %}
-            {% include "icons/search.njk" %}
-          </div>
-
-          <input type="text" placeholder="Search the docs" class="w-100p h-40 pl-40 pr-48 text-sm radius-lg bg-cool-gray-50 focus.bg-cool-gray-100 color-cool-gray-800 js-docsearch">
-
-          <div class="absolute z-2 top-0 right-0 w-48 h-40 flex align-items-center justify-content-center color-cool-gray-500 font-sm medium">
-            ⌘K
-          </div>
-        </div>
-      </div>
-
-      <div class="w-256 flex justify-content-end gutter-x-16">
-        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-500 transition-100">
-          {% set iconClass = 'fill-current w-24 h-24' %}
-          {% include "icons/logo-github.njk" %}
+      <div class="flex align-items-center justify-content-end gutter-x-24">
+        <a class="text-md medium color-pink-200 color-opacity-50 hover.color-opacity-70">
+          Get started
         </a>
-        <a href="https://twitter.com/uniformcss" class="flex align-items-center hover.color-primary-500 transition-100">
-          {% set iconClass = 'fill-current w-24 h-24' %}
-          {% include "icons/logo-twitter.njk" %}
+        <a class="text-md medium color-pink-200 color-opacity-50 hover.color-opacity-70">
+          API Reference
         </a>
-        <a href="https://www.youtube.com/watch?v=5owdoXV_rYM&list=PL9jAsp0Y5-LTA6OOH4LdwDoP_PdqrkUJT" class="flex align-items-center hover.color-primary-500 transition-100">
-          {% set iconClass = 'fill-current w-24 h-24' %}
-          {% include "icons/logo-youtube.njk" %}
+        <a class="text-md medium color-pink-200 color-opacity-50 hover.color-opacity-70">
+          Documentation
         </a>
+        <a class="text-md medium color-pink-200 color-opacity-50 hover.color-opacity-70">
+          Cheatsheet
+        </a>
+        <a class="text-md medium color-pink-200 color-opacity-50 hover.color-opacity-70">
+          Cheatsheet
+        </a>
+        
       </div>
       
     </div>
   </div>
 </nav>
 
-<div class="overflow-hidden">
+<div>
   <header>
-    <div class="relative px-32 sm.text-center">
-      <div class="max-w-900px pt-56 sm.pt-128 pb-128">
-        <div class="inline-flex md.hidden align-items-center mb-36 text-xl semibold tracking-tight">
-          <img src="/assets/img/uniform-logo.svg" class="h-28 mr-12"><span class="inline-flex align-items-center px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
-        </div>
+    <div class="relative px-32">
+      <div class="max-w-1152 mx-auto pt-56 sm.pt-128 pb-128">
 
-        <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
+        {# <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
           <a href="https://www.producthunt.com/posts/uniform-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uniform-css" class="inline-flex align-items-center text-lg semibold tracking-tight">
             <img src="/assets/img/featured.svg" class="max-w-192">
           </a>
-        </div>
+        </div> #}
 
-        <h1 class="fade-in opacity-0 font-8xl sm.font-11xl md.font-11xl lg.font-11xl leading-110 extrabold m-auto mb-32 tracking-tighter"
-          style="--animate-delay: .8s;">
-          <span class="color-primary-500">Lightning Fast&nbsp;</span><br>Generator for Sass
+        <h1 class="font-8xl sm.font-11xl md.font-11xl lg.font-9xl leading-110 extrabold m-auto mb-32 tracking-tighter color-accent-pink-2">
+          <span class="color-accent-pink-1">Roll your own flexible</span> utility class generator built for Sass projects
         </h1>
         
-        <p class="fade-in opacity-0 text-xl md.text-xl tracking-tight sm.max-w-640 md.max-w-screen-sm sm.mx-auto mb-48 color-cool-gray-600"
-          style="--animate-delay: .9s;">
+        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
           Flexible responsive utility class generator and CSS framework designed to help you gain the full power of functional CSS without compromising on Sass.
         </p>
-        <a href="/docs/overview" class="fade-in inline-flex align-items-center h-48 mb-64 px-20 pr-16 border-2 border-black bg-transparent hover.bg-black hover.color-white transition-100 focus.shadow-focus opacity-0 radius-lg semibold text-md"
+        <a href="/docs/overview" class="inline-flex align-items-center h-40 mb-64 px-16 pr-16 color-black bg-yellow-300 hover.bg-yellow-200 transition-100 focus.shadow-focus radius-lg semibold text-md"
           style="--animate-delay: 1s;">
-          Read the docs <span class="ml-12">→</span>
+          Read docs
         </a>
         <div class="fade-in opacity-0"
           style="--animate-delay: 1.1s;">
@@ -493,13 +478,6 @@ config_json_output: |
         </div>
       </div>
 
-      <div class="ripple">
-        <div class="ripple__content">
-          <div class="ripple__one"></div>
-          <div class="ripple__two"></div>
-          <div class="ripple__three"></div>
-        </div>
-      </div>
     </div>
   </header>
 

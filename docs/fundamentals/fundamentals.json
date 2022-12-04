@@ -1,5 +1,0 @@
-{
-  "layout": "layouts/docs.njk",
-  "permalink": "docs/{{ title | slug }}/index.html",
-  "tags": ["fundamentals"]
-}

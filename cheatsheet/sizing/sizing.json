@@ -1,5 +1,0 @@
-{
-  "layout": "layouts/cheatsheet.njk",
-  "permalink": "cheatsheet/{{ title | slug }}/index.html",
-  "tags": ["sizing"]
-}

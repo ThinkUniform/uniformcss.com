@@ -1,5 +1,12 @@
 @use "uniform" as * with (
   $config: (
+		colors: (
+			shade-1: #440A3B,
+			shade-2: #531249,
+			accent-pink-1: #FFA4C4,
+			accent-pink-2: #FF5C8D,
+			paragraph: #FFBAD2
+		),
 		font-families: (
 			sans: 'Inter'
 		),
@@ -25,7 +32,6 @@
 @use "markdown";
 @use "animate";
 @use "_font";
-@use "_ripple";
 @use "_docsearch";
 @use "_highlight";
 

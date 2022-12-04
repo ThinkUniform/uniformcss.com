@@ -5,7 +5,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.animation -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -17,7 +17,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.background -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -29,7 +29,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.border -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -41,7 +41,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.layout -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -53,7 +53,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.effect -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -65,7 +65,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.flexbox -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -77,7 +77,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.gap -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -89,7 +89,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.grid -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -101,7 +101,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.gutter -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -113,7 +113,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.interactive -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -125,7 +125,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.margin -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -137,7 +137,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.padding -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -149,7 +149,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.sizing -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -161,7 +161,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.svg -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -173,7 +173,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.transform -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -185,7 +185,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.transition -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
@@ -197,7 +197,7 @@
     </h6>
     <nav class="flex flex-col align-items-start">
       {%- for property in properties.typography -%}
-        <a href="#{{ property.name | slug }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
+        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
           {{ property.name }}
         </a>
       {%- endfor -%}
