@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="antialiased font-sans bg-shade-1">
+<html lang="en" class="antialiased font-sans bg-background">
 <head>
   <title>{{ metadata.sitename }}{{ title or metadata.title }}</title>
 
@@ -36,9 +36,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/uniform.min.css' | url }}">
 
-  <!-- SplitBee Analytics -->
-  <script async src="https://cdn.splitbee.io/sb.js"></script>
-
   <!-- AlpineJS -->
   <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
 
@@ -54,7 +51,10 @@
 
 
 <script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
 <script>
 
 // Scroll to top

@@ -1,11 +1,20 @@
 @use "uniform" as * with (
   $config: (
 		colors: (
+			background: #531249,
 			shade-1: #440A3B,
 			shade-2: #531249,
 			accent-pink-1: #FFA4C4,
-			accent-pink-2: #FF5C8D,
-			paragraph: #FFBAD2
+			accent-pink-2: #FF5CAA,
+			paragraph: #FFBAD2,
+
+			// btn: #FFC960,
+			// btn-hover: #F2B641,
+
+			input-background: #190C2D,
+			input-border: #804076,
+			input-border-hover: #9F6A97
+
 		),
 		font-families: (
 			sans: 'Inter'
@@ -34,10 +43,25 @@
 @use "_font";
 @use "_docsearch";
 @use "_highlight";
+@use "_carbon";
 
 [x-cloak] {
 	display: none !important;
 }
+
+
+.glass-container {
+	border-radius: 48px;
+	background: rgba(255,164,196,.24);
+}
+.glass-container-inner {
+	background: linear-gradient(180deg, #28063D 0%, rgba(40, 6, 61, 0) 100%);
+	border: 2px solid #FFB1CE;
+	box-shadow: 0px 0px 24px #FF5C8D;
+	border-radius: 24px;
+}
+
+
 
 .headroom {
 	// transform: translateY(100px);
@@ -45,6 +69,11 @@
 		--translate-y: 0;
 	}
 }
+
+.input-border {
+	outline: 1px solid fill(input-border);
+}
+
 
 .falling-ball {
 	display: block;
