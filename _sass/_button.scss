@@ -1,0 +1,184 @@
+@use "uniform" as *;
+
+.btn {
+  @include apply(
+    'inline-flex align-items-center h-32 px-12 bg-blue-500 hover.bg-blue-600 radius-md transition-200 text-xs color-white semibold space-nowrap'
+  );
+
+  &.is-disabled {
+    @include apply(
+      'bg-blue-900 bg-opacity-40 hover.bg-blue-900 hover.bg-opacity-40 pointer-events-none'
+    );
+  }
+
+  &.is-danger {
+    @include apply('bg-red-600 hover.bg-red-700');
+  }
+  
+  &-fluid {
+    @include apply('w-100p justify-content-center');
+  }
+
+  &-sharp {
+    @include apply('radius-none');
+    &:first-child {
+      @include apply('radius-none');
+    }
+    &:last-child {
+      @include apply('radius-none');
+    }
+  }
+
+  &-first {
+    @include apply('radius-l-md');
+    &:first-child {
+      @include apply('radius-l-md');
+    }
+  }
+
+  &-last {
+    @include apply('radius-r-md');
+    &:last-child {
+      @include apply('radius-r-md');
+    }
+  }
+
+  &-border-l {
+    @include apply('border-l-1 border-black border-opacity-40');
+  }
+
+  &-border-r {
+    @include apply('border-r-1 border-black border-opacity-40');
+  }
+
+  &-outline {
+    @include apply(
+      'bg-white hover.bg-cool-gray-50 border-1 border-cool-gray-200 hover.border-cool-gray-300 shadow-2xs hover.shadow-xs color-cool-gray-700'
+    );
+    &.is-active {
+      @include apply('bg-cool-gray-100');
+    }
+  }
+
+  &-ghost {
+    @include apply(
+      'bg-white hover.bg-cool-gray-50 color-cool-gray-900'
+    );
+    &.is-active {
+      @include apply('bg-cool-gray-50 color-cool-gray-900');
+    }
+  }
+
+  &-invert {
+    @include apply(
+      'bg-secondary-500 hover.bg-secondary-600'
+    );
+  }
+
+  &-shade {
+    @include apply(
+      'shadow-none border-0 bg-cool-gray-50 hover.bg-cool-gray-100 color-cool-gray-800 hover.color-cool-gray-900'
+    );
+  }
+
+  &-round {
+    @include apply(
+      'radius-full'
+    )
+  }
+
+  &-trait {
+    @include apply(
+      'flex align-items-center justify-content-start px-12 py-8 h-auto text-left shadow-none border-0 bg-transparent hover.bg-cool-gray-50 hover.color-cool-gray-900'
+    )
+  }
+
+  &-dotted {
+    @include apply(
+      'color-cool-gray-600 bg-transparent hover.bg-cool-gray-100'
+    );
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='6' ry='6' stroke='%23C0C0D0' stroke-width='3' stroke-dasharray='2%2c8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    &:hover {
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='6' ry='6' stroke='%23C0C0D0' stroke-width='3' stroke-dasharray='2%2c8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    }
+  }
+
+
+  &-xs {
+    @include apply('h-24 px-8');
+    &.btn-square {
+      @include apply('w-24');
+    }
+  }
+
+  &-sm {
+    @include apply('h-28 px-10');
+    &.btn-square {
+      @include apply('w-28');
+    }
+  }
+
+  &-lg {
+    @include apply('h-36 px-14');
+    &.btn-square {
+      @include apply('w-36');
+    }
+  }
+
+  &-xl {
+    @include apply('h-40 px-16');
+  }
+
+  &-square {
+    @include apply('px-0 w-32 justify-content-center');
+  }
+
+}
+
+.btn-group {
+  @include apply(
+    'flex align-items-center border-0 border-cool-gray-200 hover.border-cool-gray-200 shadow-2xs hover.shadow-xs radius-md transition-200'
+  );
+
+  .btn {
+    @include apply('radius-none border-r-0');
+
+    &:first-child {
+      @include apply('radius-l-md');
+      // &:nth-child(odd) {
+      //   @include apply('border-r-1');
+      // }
+    }
+    &:last-child {
+      @include apply('radius-r-md border-r-1');
+    }
+
+    &-outline {
+      @include apply('hover.border-cool-gray-200')
+    }
+
+    &-sharp {
+      @include apply('radius-none');
+      &:first-child {
+        @include apply('radius-none');
+      }
+      &:last-child {
+        @include apply('radius-none');
+      }
+    }
+
+    &-first {
+      @include apply('radius-l-md');
+      &:first-child {
+        @include apply('radius-l-md');
+      }
+    }
+
+    &-last {
+      @include apply('radius-r-md');
+      &:last-child {
+        @include apply('radius-r-md');
+      }
+    }
+  }
+}

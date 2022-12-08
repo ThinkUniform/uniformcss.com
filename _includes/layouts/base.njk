@@ -39,6 +39,10 @@
   <!-- AlpineJS -->
   <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
 
+  <!-- GSAP -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+
   <!-- Fathom - beautiful, simple website analytics -->
   <script src="https://cdn.usefathom.com/script.js" data-site="MVUUJQYW" defer></script>
 </head>
@@ -46,97 +50,17 @@
   id="page-top"
   x-data="main"
 >
-
+<div class="overflow-hidden">
 {{ content | safe }}
+</div>
 
 
+
+<!-- Scripts -->
 <script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-
-<script>
-
-// Scroll to top
-var myElement = document.querySelector('.js-scrollUp') !== null;
-if (myElement) {
-  var myElement = document.querySelector('.js-scrollUp');
-  // construct an instance of Headroom, passing the element
-  var headroom  = new Headroom(myElement);
-  // initialise
-  headroom.init();
-}
-
-// Command + K shortcut support
-function searchShortcut(e) {
-  var selection = document.querySelector('.js-docsearch') !== null;
-  if (selection) {
-    var selection = document.querySelector('.js-docsearch');
-  }
-  var evtobj = window.event? event : e;
-  if (evtobj.keyCode == 75 && evtobj.metaKey) {
-    selection.focus();
-  };
-}
-
-document.onkeydown = searchShortcut;
-
-// Initialize AlpineJS
-document.addEventListener('alpine:init', () => {
-  Alpine.data('tabs', () => ({
-    width: 0,
-    left: 0,
-    tab: 0,
-
-    init: function() {
-      active = this.$el.querySelector('.is-active');
-      this.width =  active.offsetWidth;
-      this.left =  active.offsetLeft;
-    },
-    switchTabs(e, targetTab) {
-      this.tab = targetTab;
-      this.width = e.currentTarget.offsetWidth;
-      this.left =  e.currentTarget.offsetLeft;
-    }
-  })),
-  
-  Alpine.data('main', () => ({
-    mobileNav: false, 
-    modal: false,
-
-    init: function() {
-
-    },
-    showModal() {
-      this.modal = ! this.modal;
-
-      var iframe = document.querySelector('.js-embedFrame') !== null;
-      if (iframe) {
-        var iframe = document.querySelector('.js-embedFrame');
-      }
-
-      iframe.src = "https://www.youtube.com/embed/_hH65eaPdPo?autoplay=1";
-    },
-    closeModal() {
-      this.modal = ! this.modal;
-
-      var iframe = document.querySelector('.js-embedFrame') !== null;
-      if (iframe) {
-        var iframe = document.querySelector('.js-embedFrame');
-      }
-
-      iframe.src = "";
-    },
-  }))
-})
-
-// Docsearch setting
-docsearch({
-  apiKey: '041931dc20e82036bcc5ef4b413bbfdb',
-  indexName: 'uniformcss',
-  inputSelector: '.js-docsearch',
-  debug: false
-});
-</script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>

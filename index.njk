@@ -382,13 +382,13 @@ config_json_output: |
   ...
 ---
 
-<nav class="fade-in-from-top opacity-0 hidden md.block sticky top-n1 px-32 bg-background relative z-3"
+<nav class="fade-in-from-topx opacity-0x hidden md.block stickyx mt-36 top-n1 px-32 bg-xbackground relative z-10"
   style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: -24px;">
   <div class="max-w-1152 mx-auto">
-    <div class="flex align-items-center justify-content-between py-24 mx-auto">
+    <div class="flex align-items-center justify-content-between py-10 mx-auto">
       <div class="w-256 flex align-items-center">
         <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
-          <img src="/assets/img/uniform-logo-white.svg" class="h-24 mr-6">
+          <img src="/assets/img/uniform-logo-white.svg" class="w-144 mr-6">
           <span class="relative mt-n6 color-accent-pink-2 uppercase font-xs bold tracking-loose">
             2.0
           </span>
@@ -396,20 +396,20 @@ config_json_output: |
       </div>
 
       <div class="flex align-items-center justify-content-end gutter-x-24">
-        <a class="text-md medium color-pink-200 color-opacity-70 hover.color-opacity-90">
+        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
           Get started
         </a>
-        <a class="text-md medium color-pink-200 color-opacity-70 hover.color-opacity-90">
+        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
           Appendix
         </a>
-        <a class="text-md medium color-pink-200 color-opacity-70 hover.color-opacity-90">
+        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
           Docs
         </a>
-        <a class="text-md medium color-pink-200 color-opacity-70 hover.color-opacity-90">
+        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
           Cheatsheet
         </a>
-        <a class="text-3xl medium color-pink-100 hover.color-white">
-          <ion-icon name="logo-github"></ion-icon>
+        <a class="flex align-items-center medium color-pink-100 hover.color-white">
+          <ion-icon name="logo-github" class="w-28 h-28"></ion-icon>
         </a>
         
       </div>
@@ -418,59 +418,87 @@ config_json_output: |
   </div>
 </nav>
 
-<section>
+<section class="mb-256">
   <div class="px-32">
-    <div class="fade-in max-w-1152 mx-auto pt-56 sm.pt-72 pb-72">
-
-      {# <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
-        <a href="https://www.producthunt.com/posts/uniform-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uniform-css" class="inline-flex align-items-center text-lg semibold tracking-tight">
-          <img src="/assets/img/featured.svg" class="max-w-192">
-        </a>
-      </div> #}
-
-      <div class="inline-flex align-items-center bg-white bg-opacity-8 mb-14 px-18 py-4 semibold text-sm radius-full color-white">
-        Built entirely in <ion-icon name="logo-sass" class="w-28 h-28 ml-10 color-pink-400"></ion-icon>
+    <div class="relative max-w-1152 mx-auto pt-56 sm.pt-72 pb-72">
+      <div class="hero-glass">
+        <div class="hero-glass-outer">
+          <div class="hero-glass-inner"></div>
+        </div>
+      </div>
+      <div class="hero-glass">
+        <div class="hero-glass-outer">
+          <div class="hero-glass-inner"></div>
+        </div>
+      </div>
+      <div class="hero-glass">
+        <div class="hero-glass-outer">
+          <div class="hero-glass-inner"></div>
+        </div>
+      </div>
+      <div class="hero-glass">
+        <div class="hero-glass-outer">
+          <div class="hero-glass-inner"></div>
+        </div>
       </div>
 
-      <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-accent-pink-2">
-        <span class="color-accent-pink-1">Roll your own flexible</span> utility class <br>generator built for Sass projects
-      </h1>
-      
-      <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
-        Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
-      </p>
-      
-      <div class="flex gap-10">
-        <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md"
-        style="--animate-delay: 1s;">
-          Read docs
-        </a>
-        <div class="inline-flex align-items-center h-40 radius-md px-16 bg-input-background input-border text-sm color-white">
-          <pre><code><span class="color-pink-300">npm install</span> uniformcss</code></pre>
-          <div x-data="{
-            tooltip: false
-          }">
-            <div class="ml-12 flex align-items-center relative" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false">
-              <button class="text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
-                <ion-icon name="copy"></ion-icon>
-              </button>
-              <div class="absolute bottom-100p left-50p transform translate-x-n50p z-10 mb-8 bg-black radius-sm shadow-md space-normal z-2 pointer-events-none" x-show="tooltip" x-transition:enter="duration-200" x-transition:enter-start="opacity-0 mb-0" x-transition:enter-end="opacity-100 mb-8" x-transition:leave="duration-200" x-transition:leave-start="opacity-100 mb-0" x-transition:leave-end="opacity-0 mb-8" style="display: none;">
-                <div class="flex align-items-center px-10 py-8 space-nowrap text-xs leading-100 regular color-white">
-                  Copy
+      <div class="glass-keylight is-hero">
+        <div class="glass-keylight-outer">
+          <div class="glass-keylight-inner">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-4 fade-inx">
+        {# <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
+          <a href="https://www.producthunt.com/posts/uniform-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uniform-css" class="inline-flex align-items-center text-lg semibold tracking-tight">
+            <img src="/assets/img/featured.svg" class="max-w-192">
+          </a>
+        </div> #}
+
+        <div class="inline-flex align-items-center bg-white bg-opacity-8 mb-14 px-18 py-4 semibold text-sm radius-full color-white">
+          Built entirely in <ion-icon name="logo-sass" class="w-28 h-28 ml-10 color-pink-400"></ion-icon>
+        </div>
+
+        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-accent-pink-2">
+          <span class="color-accent-pink-1">Roll your own</span> flexible utility <br>class generator built for Sass
+        </h1>
+        
+        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
+          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        </p>
+        
+        <div class="flex gap-10">
+          <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
+            Read docs
+          </a>
+          <div class="inline-flex align-items-center h-40 radius-md px-16 bg-input-background input-border text-sm color-white">
+            <pre><code><span class="color-pink-300">npm install</span> uniformcss</code></pre>
+            <div x-data="{
+              tooltip: false
+            }">
+              <div class="ml-12 flex align-items-center relative" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false">
+                <button class="text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
+                  <ion-icon name="copy"></ion-icon>
+                </button>
+                <div class="absolute bottom-100p left-50p transform translate-x-n50p z-10 mb-8 bg-black radius-sm shadow-md space-normal z-2 pointer-events-none" x-show="tooltip" x-transition:enter="duration-200" x-transition:enter-start="opacity-0 mb-0" x-transition:enter-end="opacity-100 mb-8" x-transition:leave="duration-200" x-transition:leave-start="opacity-100 mb-0" x-transition:leave-end="opacity-0 mb-8" style="display: none;">
+                  <div class="flex align-items-center px-10 py-8 space-nowrap text-xs leading-100 regular color-white">
+                    Copy
+                  </div>
+                  
                 </div>
-                
               </div>
             </div>
+            
           </div>
-          
         </div>
       </div>
     </div>
   </div>
 
-  <div class="px-32">
+  <div class="relative z-4 px-32">
     <div class="max-w-1152 mx-auto">
-      <div class=" flex align-items-end justify-content-between mb-72">
+      <div class="fade-inx flex align-items-end justify-content-between mb-72">
         <div>
           <div class="mb-16 uppercase tracking-looser semibold text-xs color-pink-200 color-opacity-60">
             Used and loved by
@@ -481,7 +509,7 @@ config_json_output: |
               <img src="/assets/img/logos/castle.svg" class="w-96">
             </a>
             <a href="https://rewatch.com/" target="_blank">
-              <img src="/assets/img/logos/rewatch.svg" class="w-128">
+              <img src="/assets/img/logos/rewatch.svg" class="h-28">
             </a>
             <a href="https://hopmedic.com" target="_blank">
               <img src="/assets/img/logos/hopmedic.svg" class="relative top-2 w-128">
@@ -498,7 +526,7 @@ config_json_output: |
         </div>
       </div>
 
-      <div class="glass-container p-28">
+      <div class="fade-in-from-bottomx glass-container" style="--animate-from: 100px; --animate-duration: .8s;">
         <div class="glass-container-inner h-640">
           <ul class="flex align-items-center border-b-1 border-white border-opacity-30">
             <li class="border-r-1 border-white border-opacity-20">
@@ -522,6 +550,12 @@ config_json_output: |
 
             </li>
           </ul>
+
+          <div class="glass-code">
+            {% highlight "scss" %}
+            {{ config_shorthand_input | safe }}
+            {% endhighlight %}
+          </div>
         </div>
       </div>
 
@@ -529,10 +563,428 @@ config_json_output: |
   </div>
 </section>
 
-{# {% include "partials/sections/get-started.njk" %}
-{% include "partials/sections/start-building.njk" %}
-{% include "partials/sections/power-features.njk" %}
-{% include "partials/sections/enhanced-experience.njk" %}
-{% include "partials/sections/easy-setup.njk" %} #}
-<div class="h-512"></div>
+
+
+
+
+
+
+
+<section class="mb-256 gsap-section-1">
+  <div class="px-32">
+    <div class="relative max-w-1152 mx-auto">
+
+      <div class="glass-frame">
+        <div class="glass-frame-outer">
+          <div class="glass-frame-inner"></div>
+        </div>
+      </div>
+      <div class="glass-keylight">
+        <div class="glass-keylight-outer">
+          <div class="glass-keylight-inner">
+          </div>
+        </div>
+      </div>
+      <div class="relative z-1">
+        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-accent-pink-2">
+          <span class="color-accent-pink-1">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        </h1>
+        
+        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
+          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        </p>
+        
+        <div class="flex gap-10 mb-72">
+          <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
+            Play on Codepen
+          </a>
+        </div>
+
+        <div class="grid grid-cols-7 gap-48">
+          <div class="col-2 grid grid-cols-1 gap-48">
+            <div class="grid grid-cols-1 gap-48">
+              {% include "partials/ui/calendar.njk" %}
+              {% include "partials/ui/calendar-detail.njk" %}
+              {% include "partials/ui/sign-in.njk" %}
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="grid grid-cols-1 gap-48">
+              {% include "partials/ui/ecommerce.njk" %}
+              <div class="bg-white radius-xl overflow-hidden">
+                <div class="p-12 pb-0">
+                  <div class="relative">
+                    <div class="absolute top-0 left-0 flex align-items-center justify-content-center w-40 h-40">
+                      <ion-icon name="search" class="w-20 h-20"></ion-icon>
+                    </div>
+                    <input type="text" class="h-40 pl-40 bg-cool-gray-100 hover.bg-cool-gray-200 hover.bg-opacity-80 radius-md text-sm" placeholder="Search">
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="px-18 py-16 pb-4 tracking-loose uppercase text-xs tracking-loose bold color-cool-gray-400">
+                    Recent searches
+                  </h4>
+
+                  <div class="px-18 pb-18 gutter-y-1">
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 bg-cool-gray-100 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                      Custom event properties
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                    </button>
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                      Device fingerprint
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                    </button>
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                      Shipping address
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                    </button>
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                      Email
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                    </button>
+                  </div>
+
+                  <div>
+                    <div class="border-t-1x border-indigo-200 ">
+                      <button class="px-12 py-12 w-100p flex align-items-center justify-content-center text-xs semibold bg-indigo-50 hover.bg-indigo-100 color-indigo-800 hover.color-indigo-900">
+                        <ion-icon name="add-circle" class="w-20 h-20 mr-8 color-indigo-500"></ion-icon>
+                        Add new advanced signal
+                      </button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-8 gap-48">
+                <div class="col-5">
+                  {% include "partials/ui/pop-up.njk" %}
+                </div>
+                <div class="col-3">
+                  <div class="grid grid-cols-1 gap-32">
+                    <div class="flex align-items-center border-1 border-cool-gray-200 hover.border-cool-gray-200 shadow-2xs hover.shadow-xs radius-md overflow-hidden transition-200 w-100p">
+                      <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-100 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40">
+                        1D
+                      </button>
+                      <button class="inline-flex align-items-center justify-content-center bg-white bg-cool-gray-100 hover.bg-cool-gray-100 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40">
+                        5D
+                      </button>
+                      <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-100 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40">
+                        1M
+                      </button>
+                      <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-100 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40">
+                        6M
+                      </button>
+                    </div>
+
+                    <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-50 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40 radius-md">
+                      <ion-icon name="star" class="w-16 h-16 mr-8 color-yellow-400"></ion-icon> 
+                      Starred
+                      <div class="ml-10 px-8 py-4 leading-100 radius-full bg-cool-gray-200">
+                        2.8k
+                      </div>
+                    </button>
+
+                    <div class="flex align-items-center gap-24">
+                      <button type="button" class="bg-teal-500 inline-flex h-24 w-40 p-4 radius-full" role="switch" aria-checked="false">
+                        <span class="block h-16 w-16 radius-full bg-white shadow-xs duration-200 ease-in-out"></span>
+                      </button>
+
+                      <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-50 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap h-28 px-12 radius-md">
+                        Button
+                      </button>
+                    </div>
+
+                  </div>
+
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="grid grid-cols-1 gap-48">
+              {% include "partials/ui/player.njk" %}
+              {% include "partials/ui/activity.njk" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="mb-256 gsap-section-2">
+  <div class="px-32">
+    <div class="relative max-w-1152 mx-auto">
+
+      <div class="glass-frame">
+        <div class="glass-frame-outer">
+          <div class="glass-frame-inner"></div>
+        </div>
+      </div>
+      <div class="glass-keylight">
+        <div class="glass-keylight-outer">
+          <div class="glass-keylight-inner">
+          </div>
+        </div>
+      </div>
+      <div class="relative z-1">
+        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-accent-pink-2">
+          <span class="color-accent-pink-1">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        </h1>
+        
+        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
+          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        </p>
+        
+        <div class="flex gap-10 mb-72">
+          <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
+            Play on Codepen
+          </a>
+        </div>
+
+        <div class="glass-container">
+          <div class="glass-container-inner h-640">
+            <ul class="flex align-items-center border-b-1 border-white border-opacity-30">
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold">
+                  <ion-icon name="logo-sass" class="w-24 h-24 color-pink-300 mr-10"></ion-icon> styles.scss
+                </button>
+              </li>
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6">
+                  <span class="text-lg color-blue-300 mr-12">#</span> index.html
+                </button>
+              </li>
+              
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6">
+                  <span class="text-lg color-blue-300 mr-12">#</span> styles.css
+                </button>
+              </li>
+
+              <li class="flex-1 bg-white bg-opacity-6 h-56">
+
+              </li>
+            </ul>
+
+            <div class="glass-code">
+              {% highlight "scss" %}
+              {{ config_shorthand_input | safe }}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="mb-256 gsap-section-3">
+  <div class="px-32">
+    <div class="relative max-w-1152 mx-auto">
+
+      <div class="glass-frame">
+        <div class="glass-frame-outer">
+          <div class="glass-frame-inner"></div>
+        </div>
+      </div>
+      <div class="glass-keylight">
+        <div class="glass-keylight-outer">
+          <div class="glass-keylight-inner">
+          </div>
+        </div>
+      </div>
+      <div class="relative z-1">
+        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-accent-pink-2">
+          <span class="color-accent-pink-1">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        </h1>
+        
+        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
+          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        </p>
+        
+        <div class="flex gap-10 mb-72">
+          <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
+            Learn more
+          </a>
+        </div>
+
+        <div class="glass-container">
+          <div class="glass-container-inner h-640">
+            <ul class="flex align-items-center border-b-1 border-white border-opacity-30">
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold">
+                  <ion-icon name="logo-sass" class="w-24 h-24 color-pink-300 mr-10"></ion-icon> styles.scss
+                </button>
+              </li>
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6">
+                  <span class="text-lg color-blue-300 mr-12">#</span> index.html
+                </button>
+              </li>
+              
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6">
+                  <span class="text-lg color-blue-300 mr-12">#</span> styles.css
+                </button>
+              </li>
+
+              <li class="flex-1 bg-white bg-opacity-6 h-56">
+
+              </li>
+            </ul>
+
+            <div class="glass-code">
+              {% highlight "scss" %}
+              {{ config_shorthand_input | safe }}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="gsap-section-4" x-data="{ trackerColor: 'null' }">
+  <div class="px-32">
+    <div class="relative max-w-1152 mx-auto">
+
+      <div class="glass-frame">
+        <div class="glass-frame-outer">
+          <div class="glass-frame-inner"></div>
+        </div>
+      </div>
+      <div class="glass-keylight">
+        <div class="glass-keylight-outer">
+          <div class="glass-keylight-inner">
+          </div>
+        </div>
+      </div>
+      <div class="relative z-1">
+        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-accent-pink-2">
+          <span class="color-accent-pink-1">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        </h1>
+        
+        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
+          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        </p>
+        
+        <div class="flex mb-72">
+          <div class="grid grid-cols-10 px-20 py-16 gap-18 radius-lg bg-black radius-full color-white bold text-xs">
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'null'">
+              <div class="w-14 h-14 radius-full border-2 border-pink-300 border-opacity-100 bg-transparent group-hover.bg-transparent transition-200 transform group-hover.scale-150 scale-150" :class="{ 
+                  'scale-150': trackerColor === 'null'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'indigo'">
+              <div class="w-14 h-14 radius-full bg-indigo-500 group-hover.bg-indigo-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'indigo'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'purple'">
+              <div class="w-14 h-14 radius-full bg-purple-500 group-hover.bg-purple-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'purple'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'pink'">
+              <div class="w-14 h-14 radius-full bg-pink-500 group-hover.bg-pink-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'pink'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'red'">
+              <div class="w-14 h-14 radius-full bg-red-500 group-hover.bg-red-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'red'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'orange'">
+              <div class="w-14 h-14 radius-full bg-orange-500 group-hover.bg-orange-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'orange'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'yellow'">
+              <div class="w-14 h-14 radius-full bg-yellow-500 group-hover.bg-yellow-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'yellow'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'lime'">
+              <div class="w-14 h-14 radius-full bg-lime-500 group-hover.bg-lime-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'lime'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'green'">
+              <div class="w-14 h-14 radius-full bg-green-500 group-hover.bg-green-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'green'
+                }"></div>
+            </button>
+            <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'teal'">
+              <div class="w-14 h-14 radius-full bg-teal-500 group-hover.bg-teal-400 transition-200 transform group-hover.scale-150" :class="{ 
+                  'scale-150': trackerColor === 'teal'
+                }"></div>
+            </button>
+          </div>
+        </div>
+
+        <div class="glass-container">
+          <div class="glass-container-inner h-640">
+            {% include "partials/ui/issue-tracker.njk" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="py-128">
+  <div class="px-32">
+    <div class="relative max-w-640 mx-auto">
+      <div class="flex align-items-center justify-content-center mb-32">
+        <a href="https://rewatch.com/" target="_blank">
+          <svg class="w-128" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.297 0.459484C15.9698 0.651134 16.1593 1.47609 15.6915 1.99757C15.5909 2.11036 15.4689 2.19606 15.3351 2.25392C15.1075 2.35231 14.8458 2.37037 14.5978 2.30397C11.2501 1.41017 7.53037 2.27662 4.90342 4.90333C2.20811 7.5984 1.36631 11.4453 2.37803 14.8601C2.49424 15.2515 2.39854 15.6809 2.10166 15.9617C1.59287 16.4429 0.762796 16.2769 0.552835 15.6089C-0.745017 11.4797 0.242288 6.78736 3.51475 3.51466C6.70518 0.324474 11.2452 -0.694081 15.297 0.459484ZM9.13975 21.6223C8.96397 21.5703 8.78037 21.5608 8.60655 21.593C8.55869 21.6018 8.51182 21.6138 8.46592 21.6287C8.41905 21.6441 8.37315 21.6626 8.32823 21.6846L8.28721 21.7066L8.23252 21.7388L8.19444 21.7637C8.13877 21.8027 8.08604 21.8477 8.03819 21.8984C7.55772 22.407 7.72373 23.2371 8.39073 23.447C12.5206 24.7451 17.213 23.7578 20.4855 20.4854C23.6759 17.2949 24.6944 12.7551 23.5401 8.70314C23.4415 8.35499 23.173 8.13649 22.8644 8.0713C22.5763 8.01026 22.254 8.08277 22.0021 8.30812C21.6983 8.58082 21.5909 9.00734 21.6964 9.40211C22.5899 12.75 21.7237 16.4702 19.0968 19.0967C16.4015 21.792 12.5548 22.6338 9.13975 21.6223ZM18.8497 5.06617C19.5733 5.06617 20.1593 4.47999 20.1593 3.75709C20.1593 3.37867 19.9991 3.03785 19.7423 2.79884C19.5079 2.58107 19.1944 2.44801 18.8497 2.44801C18.1271 2.44801 17.5411 3.03395 17.5411 3.75709C17.5411 4.47999 18.1271 5.06617 18.8497 5.06617ZM6.45908 20.1106C6.45908 20.8335 5.87315 21.4197 5.15049 21.4197C4.42686 21.4197 3.84092 20.8335 3.84092 20.1106C3.84092 19.3875 4.42686 18.8015 5.15049 18.8015C5.87315 18.8015 6.45908 19.3875 6.45908 20.1106ZM16.1866 11.5161C16.6446 11.7393 16.6446 12.3911 16.1866 12.6143L9.421 15.9131C9.01475 16.1111 8.54209 15.8154 8.54209 15.364V8.76637C8.54209 8.31495 9.01475 8.0193 9.421 8.2173L16.1866 11.5161ZM95.7032 10.8662C94.6349 10.8662 93.8927 11.5852 93.8868 12.8125V18.3164H91.2716V5.62233H93.8126V10.4756H93.923C94.3526 9.35377 95.3097 8.67189 96.7413 8.67189C98.7052 8.67189 100.006 10.0232 100 12.2544V18.3164H97.3849V12.7256C97.3907 11.5542 96.7647 10.8662 95.7032 10.8662ZM85.7325 18.5025C88.2433 18.5025 89.8204 17.0149 89.9435 14.8267H87.4757C87.3224 15.8433 86.6593 16.4136 85.7628 16.4136C84.5411 16.4136 83.7501 15.3784 83.7501 13.5562C83.7501 11.7588 84.548 10.7297 85.7628 10.7297C86.7208 10.7297 87.3341 11.3682 87.4757 12.3164H89.9435C89.8321 10.116 88.1817 8.67189 85.7198 8.67189C82.8595 8.67189 81.0919 10.6738 81.0919 13.5933C81.0919 16.488 82.8292 18.5025 85.7325 18.5025ZM78.4415 8.79591H80.2159V10.7793H78.4415V15.3909C78.4415 16.1223 78.8038 16.3208 79.3263 16.3208C79.5421 16.3208 79.7823 16.2727 79.9239 16.2442L79.9767 16.2339L80.3878 18.1987C80.1241 18.2857 79.6446 18.4219 78.9698 18.4468C77.0733 18.5274 75.8146 17.6038 75.8272 15.738V10.7793H74.5382V8.79591H75.8272V6.5149H78.4415V8.79591ZM68.2091 18.4963C69.6017 18.4963 70.504 17.8826 70.9649 16.9963H71.0382V18.3164H73.5177V11.895C73.5177 9.62648 71.6153 8.67189 69.5157 8.67189C67.2569 8.67189 65.7716 9.76271 65.4093 11.4983L67.8282 11.6968C68.006 11.0645 68.5646 10.5996 69.504 10.5996C70.3937 10.5996 70.9034 11.052 70.9034 11.833V11.8701C70.9034 12.4839 70.2589 12.5645 68.6202 12.7256C66.754 12.8992 65.0782 13.5315 65.0782 15.6575C65.0782 17.5418 66.4103 18.4963 68.2091 18.4963ZM68.9571 16.6738C68.1534 16.6738 67.5763 16.2957 67.5763 15.5706C67.5763 14.8267 68.1837 14.4612 69.1046 14.3311C69.6759 14.2505 70.6085 14.114 70.922 13.9033V14.9136C70.922 15.9114 70.1056 16.6738 68.9571 16.6738ZM55.7862 18.3167H53.0235L50.4581 8.79591H53.1036L54.5646 15.1926H54.6505L56.173 8.79591H58.7687L60.3155 15.1555H60.3956L61.8321 8.79591H64.4718L61.9122 18.3167H59.1437L57.5235 12.3291H57.4064L55.7862 18.3167ZM45.5431 18.5025C47.8761 18.5025 49.4474 17.3557 49.8155 15.5891L47.3976 15.428C47.1329 16.1533 46.4581 16.5315 45.586 16.5315C44.2794 16.5315 43.4503 15.6575 43.4503 14.238L49.8712 14.2317V13.5066C49.8712 10.271 47.9308 8.67189 45.4396 8.67189C42.6651 8.67189 40.8663 10.6614 40.8663 13.5996C40.8663 16.6182 42.6397 18.5025 45.5431 18.5025ZM43.4503 12.5955C43.506 11.5108 44.3224 10.6428 45.4825 10.6428C46.6173 10.6428 47.4034 11.4612 47.4093 12.5955H43.4503ZM33.1085 18.3164H30.4503V5.62233H35.4103C38.2638 5.62233 39.9151 7.24635 39.9151 9.76905C39.9151 11.5044 39.1231 12.7627 37.6935 13.3826L40.3634 18.3164H37.4288L35.048 13.8164H33.1085V18.3164ZM33.1085 7.81642V11.6594H34.9122C36.4347 11.6594 37.1778 11.0274 37.1778 9.76905C37.1778 8.50441 36.4347 7.81642 34.9005 7.81642H33.1085Z" fill="#fff"/>
+            </svg>
+
+        </a>
+      </div>
+      <h3 class="font-6xl sm.font-7xl md.font-8xl lg.font-5xl leading-110 extrabold mb-36 tracking-tighter text-center color-accent-pink-2">
+        “It's been a fantastic tool to help with automating the generation of a custom set of utility classes that we need.”
+      </h3>
+
+      <div class="flex align-items-center justify-content-center">
+        <img src="/assets/img/profiles/conormuirhead.jpeg" class="w-48 h-48 radius-full border-2 border-white mr-14">
+        <div>
+          <div class="color-white font-md semibold mb-10">Conor Muirhead</div>
+          <div class="color-white color-opacity-70 font-xs semibold">Head Of Design</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 {% include "partials/footer.njk" %}
