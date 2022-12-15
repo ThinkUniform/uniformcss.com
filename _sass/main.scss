@@ -2,11 +2,14 @@
   $config: (
 		colors: (
 			background: #531249,
+			doc-background: #440A3B,
 			shade-1: #440A3B,
 			shade-2: #531249,
-			accent-pink-1: #FFA4C4,
-			accent-pink-2: #FF5CAA,
+			heading-accent: #FFA4C4,
+			heading: #FF5CAA,
 			paragraph: #FFBAD2,
+			nav-item-active: #ff91b8,
+
 
 			// btn: #FFC960,
 			// btn-hover: #F2B641,
@@ -14,29 +17,6 @@
 			input-background: #190C2D,
 			input-border: #804076,
 			input-border-hover: #9F6A97,
-
-			primary-50: #EDF1FF,
-			primary-100: #DAE2FF,
-			primary-200: #B0C2FF,
-			primary-300: #89A3FF,
-			primary-400: #6385FF,
-			primary-500: #446CFA,
-			primary-600: #2650EB,
-			primary-700: #002AC8,
-			primary-800: #00209A,
-			primary-900: #001566,
-			primary-950: #000A33,
-			secondary-50: #EAEEFC,
-			secondary-100: #D6DDFA,
-			secondary-200: #AEBCF4,
-			secondary-300: #8B9EE9,
-			secondary-400: #6A81DD,
-			secondary-500: #5269C8,
-			secondary-600: #3C54B3,
-			secondary-700: #2B4093,
-			secondary-800: #1E2F74,
-			secondary-900: #142154,
-			secondary-950: #0B1333,
 
 		),
 		font-families: (
@@ -79,7 +59,6 @@
 [x-cloak] {
 	display: none !important;
 }
-
 
 .glass-container {
 	position: relative;
@@ -338,15 +317,7 @@
 .toc {
 	transition: 200ms;
 	a {
-		display: inline-flex;
-		font-size: font(sm);
-		font-weight: font-weight(medium);
-		line-height: leading(looser);
-		padding: size(6, 0);
-		color: fill(cool-gray-600);
-		&:hover {
-			color: fill(cool-gray-900);
-		}
+		@include apply('inline-flex py-2 text-sm semibold transition-200 transform translate-x-0 color-pink-200 color-opacity-50 hover.color-opacity-70 hover.translate-x-6')
 	}
 	& > ol {
 		ol {
@@ -356,14 +327,26 @@
 }
 
 .markdown {
+	--markdown-p-color: #d5a9ce;
+	--markdown-hr-border: 2px solid rgba(var(--pink-200), .3);
+	--markdown-heading-color: white;
+	--markdown-h2-size: 20px;
+	--markdown-h3-size: 16px;
+	--markdown-strong-color: #ffccf9;
+	--markdown-code-bg: rgba(0,0,0,.4);
+	--markdown-code-color: rgba(var(--yellow-300), 1);
+	--markdown-blockquote-bg: rgba(0,0,0,.4);
+	--markdown-link-color: #ff91b8;
+	--markdown-link-shadow: none;
+	--markdown-th-bg-color: rgba(0,0,0, 0.2);
+	--markdown-th-color: rgba(var(--pink-200), 1);
+	--markdown-table-border: 1px solid rgba(var(--pink-200), .3);
+
 	.css-value {
 		background: transparent;
 		color: fill(gray-600)
 	}
-	h2 {
-		position: relative;
-		padding-left: size(24);
-		margin-left: size(n24);
+	h2, h3 {
 		&:hover {
 			a:before {
 				display: inline-block;
@@ -373,23 +356,35 @@
 			&:before {
 				display: none;
 				content: '#';
-				margin-left: size(8);
-				color: rgb(var(--blue-200));
+				margin-left: size(2);
+				color: rgb(var(--pink-400));
 				font-weight: font(medium);
 			}
 			&:hover {
 				&:before {
-					color: rgb(var(--blue-400));
+					color: rgb(var(--pink-400));
 				}
 			}
 		}
 	}
+	h2 {
+		position: relative;
+		padding-left: size(24);
+		margin-left: size(n24);
+	}
 
 	pre {
-		border-radius: radius(lg);
+		border-radius: radius(xl);
 		margin-bottom: 1.5em;
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	& > p a, & > blockquote a, & > ol li a, & > ul li a, & > table td a {
+		font-weight: font-weight(semibold);
+    &:hover {
+			text-decoration: underline;
 		}
 	}
 }
