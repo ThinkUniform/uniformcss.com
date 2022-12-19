@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/cheatsheet.njk",
+  "permalink": "cheatsheet/{{ title | slugify }}/index.html",
+  "tags": ["effect"]
+}

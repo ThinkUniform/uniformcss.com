@@ -1,0 +1,115 @@
+---
+layout: layouts/base-docs.njk
+bodyClass: bg-doc-background
+---
+
+
+
+<main class="">
+  
+  <div class="flex">
+    <aside class="border-r-2 border-heading-accent flex-none">
+      <div class="sticky top-0 w-288 h-100vh overflow-auto px-24 py-32">
+        <div class="flex align-items-center justify-content-between mb-32">
+          <div class="flex align-items-center">
+            <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+              <img src="/assets/img/uniform-logo-white.svg" class="w-128 mr-6">
+            </a>
+            <button class="relative top-2 flex align-items-center ml-2 px-6 py-6 radius-sm hover.bg-black hover.bg-opacity-40 color-heading uppercase font-xs semibold transition-200">
+              2.0 <ion-icon name="chevron-down" class="w-14 h-14 ml-4"></ion-icon>
+            </button>
+          </div>
+          <div class="flex align-items-center">
+            
+            <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
+              <ion-icon name="logo-github" class="w-24 h-24"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="js-docsearch mb-32">
+          
+        </div>
+
+        <div class="">
+          {% include "partials/sidebar-docs.njk" %}
+        </div>
+      </div>
+    </aside>
+
+    {% include "partials/sidebar-api-reference.njk" %}
+    
+
+    <div class="flex flex-1 justify-content-center gap-48 px-24">
+      <section class="docsearch-content overflow-auto w-100p max-w-768 flex-none mt-72 mb-112">
+        <h1 class="inline-flex align-items-center bg-pink-400 bg-opacity-20 mb-14 px-14 py-4 semibold text-sm radius-full color-pink-200 tracking-tight">
+          {{ title | safe }}
+        </h1>
+        <h2 class="font-6xl sm.font-7xl md.font-8xl lg.font-7xl leading-110 extrabold mb-28 tracking-tighter color-heading">
+          {{ description | safe }}
+        </h2>
+
+        <p class="text-lg color-paragraph mb-56">
+          This list was generated using Uniform's JSON Output feature. <a href="#" class="color-pink-300 bold">Learn more</a>
+        </p>
+
+        {# <p class="text-lg color-paragraph mb-32">
+          {{ intro | safe }}
+        </p> #}
+
+        {# <div class="flex align-items-center mb-72">
+          <img src="/assets/img/profiles/jin.jpg" class="w-36 h-36 mr-14 border-2 border-white radius-full">
+          <div>
+            <div class="text-sm semibold color-white mb-4">
+              Jin Su Park
+            </div>
+            <div class="text-xs leading-100 color-pink-200 color-opacity-60">
+              Last updated {{ date | asPostDate }}
+            </div>
+          </div>
+        </div> #}
+        <hr class="border-t-2 border-pink-300 border-opacity-30">
+        
+        {%- for name in properties -%}
+          {%- for key, value in name -%}
+            <article>
+              <header class="mb-20">
+                <div class="markdown">
+                  <h2 id="{{ key | slugify }}" class="flex align-items-end mb-20 pt-64 text-2xl bold tracking-tight">
+                    {{ key }}<a href="#{{ key | slugify }}" class="direct-link"></a>
+                  </h2>
+
+                  <div class="radius-lg overflow-hidden">
+<pre class="language-scss"><code class="language-scss"><span class="token property">responsive</span><span class="token punctuation">: </span><span class="token boolean">{{ value.responsive }}</span><span class="token punctuation">,</span> <span class="token property">pseudos</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>{{ value.pseudos }}<span class="token punctuation">)</span></code></pre>
+                  </div>
+                </div>
+              </header>
+
+              <div class="max-h-320 overflow-auto">
+                <table class="w-100p">
+                  <tbody>
+                    {%- for className, classContent in value.classes -%}
+                      <tr>
+                        <td class="w-4-12 text-sm bg-black bg-opacity-20 color-pink-300 select-all border-1 border-pink-300 border-opacity-30 align-top pr-40 px-20 py-8">
+                          <code class="space-nowrap">.{{className}} <span class="opacity-30">{{ value.extraSelector }}</span></code>
+                        </td>
+                        <td class="text-sm border-1 border-pink-300 border-opacity-30 color-teal-300 align-top px-20 py-8 overflow-auto">
+                          <pre class="overflow-auto">
+                          {%- for cssProperty, cssValue in classContent -%}
+                            <code class="opacity-60">{{ cssProperty }}: </code><code>{{ cssValue }}</code><br>
+                          {%- endfor -%}
+                          </pre>
+                        </td>
+                      </tr>
+                    {%- endfor -%}
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          {%- endfor -%}
+        {%- endfor -%}
+
+      </section>
+    </div>
+  </div>
+</main>

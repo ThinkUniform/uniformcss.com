@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   let markdownIt = require('markdown-it');
   let markdownItAnchor = require('markdown-it-anchor');
   let markdownItContainer = require("markdown-it-container");
-  // let markdownItAttrs = require("markdown-it-attrs");
+  let markdownItAttrs = require("markdown-it-attrs");
 
   let fs = require('fs');
 
@@ -68,22 +68,55 @@ module.exports = function (eleventyConfig) {
   // Markdown
   eleventyConfig.setLibrary(
     'md',
-    markdownIt().use(markdownItAnchor, {
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    })
+      .use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: 'direct-link',
+        permalinkSymbol: '',
+      })
+      .use(require('markdown-it-attrs'))
+      .use(require('markdown-it-container'), '', {
+        validate: () => true,
+        render: (tokens, idx) => {
+          if (tokens[idx].nesting === 1) {
+            const classList = tokens[idx].info.trim();
+            return `<div ${classList && `class="${classList}"`}>`;
+          } else {
+            return `</div>`;
+          }
+        },
+      })
+  );
+
+  eleventyConfig.addFilter('markdownify', (content) => {
+    let markdownify = markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    }).use(markdownItAnchor, {
       permalink: true,
       permalinkClass: 'direct-link',
       permalinkSymbol: '',
-    }).use(require("markdown-it-container"), "", {
-      validate: () => true,
-      render: (tokens, idx) => {
-        if (tokens[idx].nesting === 1) {
-          const classList = tokens[idx].info.trim();
-          return `<div ${classList && `class="${classList}"`}>`;
-        } else {
-          return `</div>`;
-        }
-      },
-    })
-  );
+    });
+    return markdownify.render(content);
+  });
+
+  eleventyConfig.addFilter('markdownInline', (content) => {
+    let markdownInline = markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    }).use(markdownItAnchor, {
+      permalink: true,
+      permalinkClass: 'direct-link',
+      permalinkSymbol: '',
+    });
+    return markdownInline.renderInline(content);
+  });
 
   return {
     markdownTemplateEngine: 'njk',

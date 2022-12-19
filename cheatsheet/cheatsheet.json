@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/cheatsheet.njk",
+  "permalink": "cheatsheet/{{ title | slugify }}/index.html",
+  "pagetype": "cheatsheet",
+  "tags": ["cheatsheet"]
+}

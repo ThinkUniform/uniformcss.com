@@ -4,10 +4,11 @@ bodyClass: bg-doc-background
 ---
 
 
+
 <main class="">
   
   <div class="flex">
-    <aside class="border-r-1 border-heading-accent">
+    <aside class="border-r-2 border-heading-accent flex-none">
       <div class="sticky top-0 w-288 h-100vh overflow-auto px-24 py-32">
         <div class="flex align-items-center justify-content-between mb-32">
           <div class="flex align-items-center">
@@ -34,24 +35,10 @@ bodyClass: bg-doc-background
           {% include "partials/sidebar-docs.njk" %}
         </div>
       </div>
-    </aside>
-
-    {# <div class="docs-pane-divider">
-      
-    </div> #}
-
-    {# <aside class="border-r-1 border-heading-accent border-opacity-30 flex-none">
-      <div class="sticky top-0 w-256 h-100vh overflow-auto px-24 py-32 bg-black bg-opacity-10">
-
-
-        <div class="">
-          {% include "partials/sidebar-docs.njk" %}
-        </div>
-      </div>
-    </aside> #}
+    </aside>    
 
     <div class="flex flex-1 justify-content-center gap-48 px-24">
-      <section class="docsearch-content overflow-auto w-100p max-w-640 flex-none mt-72 mb-112">
+      <section class="docsearch-content overflow-auto w-100p max-w-896 flex-none mt-72 mb-112">
         <h1 class="inline-flex align-items-center bg-pink-400 bg-opacity-20 mb-14 px-14 py-4 semibold text-sm radius-full color-pink-200 tracking-tight">
           {{ title | safe }}
         </h1>
@@ -59,13 +46,11 @@ bodyClass: bg-doc-background
           {{ description | safe }}
         </h2>
 
-        {%- if intro -%}
-          <div class="text-lg color-paragraph">
-            {{ intro | markdownify | safe }}
-          </div>
-        {%- endif -%}
+        {# <p class="text-lg color-paragraph mb-32">
+          {{ intro | safe }}
+        </p> #}
 
-        {# <div class="flex align-items-center mb-72">
+        {# <div class="flex align-items-center mb-56">
           <img src="/assets/img/profiles/jin.jpg" class="w-36 h-36 mr-14 border-2 border-white radius-full">
           <div>
             <div class="text-sm semibold color-white mb-4">
@@ -76,14 +61,12 @@ bodyClass: bg-doc-background
             </div>
           </div>
         </div> #}
-
         <hr class="border-t-2 border-pink-200 border-opacity-30 my-56">
-
         <article class="markdown color-black">
           {{ content | safe }}
         </article>
       </section>
-      <div class="hidden lg.block relative flex-none">
+      {# <div class="hidden lg.block relative flex-none">
         <div class="sticky w-192 top-64 radius-lg">
           <div class="w-100p">
             
@@ -96,7 +79,7 @@ bodyClass: bg-doc-background
             
           </div>
         </div>
-      </div>
+      </div> #}
     </div>
   </div>
 </main>

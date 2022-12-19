@@ -1,0 +1,1052 @@
+[
+  {
+    "name": "padding-left",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "pl-0",
+        "properties": ["padding-left: 0;"]
+      },
+      {
+        "class": "pl-1",
+        "properties": ["padding-left: 0.0625rem;"]
+      },
+      {
+        "class": "pl-2",
+        "properties": ["padding-left: 0.125rem;"]
+      },
+      {
+        "class": "pl-4",
+        "properties": ["padding-left: 0.25rem;"]
+      },
+      {
+        "class": "pl-6",
+        "properties": ["padding-left: 0.375rem;"]
+      },
+      {
+        "class": "pl-8",
+        "properties": ["padding-left: 0.5rem;"]
+      },
+      {
+        "class": "pl-10",
+        "properties": ["padding-left: 0.625rem;"]
+      },
+      {
+        "class": "pl-12",
+        "properties": ["padding-left: 0.75rem;"]
+      },
+      {
+        "class": "pl-14",
+        "properties": ["padding-left: 0.875rem;"]
+      },
+      {
+        "class": "pl-16",
+        "properties": ["padding-left: 1rem;"]
+      },
+      {
+        "class": "pl-18",
+        "properties": ["padding-left: 1.125rem;"]
+      },
+      {
+        "class": "pl-20",
+        "properties": ["padding-left: 1.25rem;"]
+      },
+      {
+        "class": "pl-24",
+        "properties": ["padding-left: 1.5rem;"]
+      },
+      {
+        "class": "pl-28",
+        "properties": ["padding-left: 1.75rem;"]
+      },
+      {
+        "class": "pl-32",
+        "properties": ["padding-left: 2rem;"]
+      },
+      {
+        "class": "pl-36",
+        "properties": ["padding-left: 2.25rem;"]
+      },
+      {
+        "class": "pl-40",
+        "properties": ["padding-left: 2.5rem;"]
+      },
+      {
+        "class": "pl-48",
+        "properties": ["padding-left: 3rem;"]
+      },
+      {
+        "class": "pl-56",
+        "properties": ["padding-left: 3.5rem;"]
+      },
+      {
+        "class": "pl-64",
+        "properties": ["padding-left: 4rem;"]
+      },
+      {
+        "class": "pl-72",
+        "properties": ["padding-left: 4.5rem;"]
+      },
+      {
+        "class": "pl-80",
+        "properties": ["padding-left: 5rem;"]
+      },
+      {
+        "class": "pl-96",
+        "properties": ["padding-left: 6rem;"]
+      },
+      {
+        "class": "pl-112",
+        "properties": ["padding-left: 7rem;"]
+      },
+      {
+        "class": "pl-128",
+        "properties": ["padding-left: 8rem;"]
+      },
+      {
+        "class": "pl-144",
+        "properties": ["padding-left: 9rem;"]
+      },
+      {
+        "class": "pl-160",
+        "properties": ["padding-left: 10rem;"]
+      },
+      {
+        "class": "pl-192",
+        "properties": ["padding-left: 12rem;"]
+      },
+      {
+        "class": "pl-224",
+        "properties": ["padding-left: 14rem;"]
+      },
+      {
+        "class": "pl-256",
+        "properties": ["padding-left: 16rem;"]
+      },
+      {
+        "class": "pl-288",
+        "properties": ["padding-left: 18rem;"]
+      },
+      {
+        "class": "pl-320",
+        "properties": ["padding-left: 20rem;"]
+      },
+      {
+        "class": "pl-384",
+        "properties": ["padding-left: 24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "padding-right",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "pr-0",
+        "properties": ["padding-right: 0;"]
+      },
+      {
+        "class": "pr-1",
+        "properties": ["padding-right: 0.0625rem;"]
+      },
+      {
+        "class": "pr-2",
+        "properties": ["padding-right: 0.125rem;"]
+      },
+      {
+        "class": "pr-4",
+        "properties": ["padding-right: 0.25rem;"]
+      },
+      {
+        "class": "pr-6",
+        "properties": ["padding-right: 0.375rem;"]
+      },
+      {
+        "class": "pr-8",
+        "properties": ["padding-right: 0.5rem;"]
+      },
+      {
+        "class": "pr-10",
+        "properties": ["padding-right: 0.625rem;"]
+      },
+      {
+        "class": "pr-12",
+        "properties": ["padding-right: 0.75rem;"]
+      },
+      {
+        "class": "pr-14",
+        "properties": ["padding-right: 0.875rem;"]
+      },
+      {
+        "class": "pr-16",
+        "properties": ["padding-right: 1rem;"]
+      },
+      {
+        "class": "pr-18",
+        "properties": ["padding-right: 1.125rem;"]
+      },
+      {
+        "class": "pr-20",
+        "properties": ["padding-right: 1.25rem;"]
+      },
+      {
+        "class": "pr-24",
+        "properties": ["padding-right: 1.5rem;"]
+      },
+      {
+        "class": "pr-28",
+        "properties": ["padding-right: 1.75rem;"]
+      },
+      {
+        "class": "pr-32",
+        "properties": ["padding-right: 2rem;"]
+      },
+      {
+        "class": "pr-36",
+        "properties": ["padding-right: 2.25rem;"]
+      },
+      {
+        "class": "pr-40",
+        "properties": ["padding-right: 2.5rem;"]
+      },
+      {
+        "class": "pr-48",
+        "properties": ["padding-right: 3rem;"]
+      },
+      {
+        "class": "pr-56",
+        "properties": ["padding-right: 3.5rem;"]
+      },
+      {
+        "class": "pr-64",
+        "properties": ["padding-right: 4rem;"]
+      },
+      {
+        "class": "pr-72",
+        "properties": ["padding-right: 4.5rem;"]
+      },
+      {
+        "class": "pr-80",
+        "properties": ["padding-right: 5rem;"]
+      },
+      {
+        "class": "pr-96",
+        "properties": ["padding-right: 6rem;"]
+      },
+      {
+        "class": "pr-112",
+        "properties": ["padding-right: 7rem;"]
+      },
+      {
+        "class": "pr-128",
+        "properties": ["padding-right: 8rem;"]
+      },
+      {
+        "class": "pr-144",
+        "properties": ["padding-right: 9rem;"]
+      },
+      {
+        "class": "pr-160",
+        "properties": ["padding-right: 10rem;"]
+      },
+      {
+        "class": "pr-192",
+        "properties": ["padding-right: 12rem;"]
+      },
+      {
+        "class": "pr-224",
+        "properties": ["padding-right: 14rem;"]
+      },
+      {
+        "class": "pr-256",
+        "properties": ["padding-right: 16rem;"]
+      },
+      {
+        "class": "pr-288",
+        "properties": ["padding-right: 18rem;"]
+      },
+      {
+        "class": "pr-320",
+        "properties": ["padding-right: 20rem;"]
+      },
+      {
+        "class": "pr-384",
+        "properties": ["padding-right: 24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "padding-top",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "pt-0",
+        "properties": ["padding-top: 0;"]
+      },
+      {
+        "class": "pt-1",
+        "properties": ["padding-top: 0.0625rem;"]
+      },
+      {
+        "class": "pt-2",
+        "properties": ["padding-top: 0.125rem;"]
+      },
+      {
+        "class": "pt-4",
+        "properties": ["padding-top: 0.25rem;"]
+      },
+      {
+        "class": "pt-6",
+        "properties": ["padding-top: 0.375rem;"]
+      },
+      {
+        "class": "pt-8",
+        "properties": ["padding-top: 0.5rem;"]
+      },
+      {
+        "class": "pt-10",
+        "properties": ["padding-top: 0.625rem;"]
+      },
+      {
+        "class": "pt-12",
+        "properties": ["padding-top: 0.75rem;"]
+      },
+      {
+        "class": "pt-14",
+        "properties": ["padding-top: 0.875rem;"]
+      },
+      {
+        "class": "pt-16",
+        "properties": ["padding-top: 1rem;"]
+      },
+      {
+        "class": "pt-18",
+        "properties": ["padding-top: 1.125rem;"]
+      },
+      {
+        "class": "pt-20",
+        "properties": ["padding-top: 1.25rem;"]
+      },
+      {
+        "class": "pt-24",
+        "properties": ["padding-top: 1.5rem;"]
+      },
+      {
+        "class": "pt-28",
+        "properties": ["padding-top: 1.75rem;"]
+      },
+      {
+        "class": "pt-32",
+        "properties": ["padding-top: 2rem;"]
+      },
+      {
+        "class": "pt-36",
+        "properties": ["padding-top: 2.25rem;"]
+      },
+      {
+        "class": "pt-40",
+        "properties": ["padding-top: 2.5rem;"]
+      },
+      {
+        "class": "pt-48",
+        "properties": ["padding-top: 3rem;"]
+      },
+      {
+        "class": "pt-56",
+        "properties": ["padding-top: 3.5rem;"]
+      },
+      {
+        "class": "pt-64",
+        "properties": ["padding-top: 4rem;"]
+      },
+      {
+        "class": "pt-72",
+        "properties": ["padding-top: 4.5rem;"]
+      },
+      {
+        "class": "pt-80",
+        "properties": ["padding-top: 5rem;"]
+      },
+      {
+        "class": "pt-96",
+        "properties": ["padding-top: 6rem;"]
+      },
+      {
+        "class": "pt-112",
+        "properties": ["padding-top: 7rem;"]
+      },
+      {
+        "class": "pt-128",
+        "properties": ["padding-top: 8rem;"]
+      },
+      {
+        "class": "pt-144",
+        "properties": ["padding-top: 9rem;"]
+      },
+      {
+        "class": "pt-160",
+        "properties": ["padding-top: 10rem;"]
+      },
+      {
+        "class": "pt-192",
+        "properties": ["padding-top: 12rem;"]
+      },
+      {
+        "class": "pt-224",
+        "properties": ["padding-top: 14rem;"]
+      },
+      {
+        "class": "pt-256",
+        "properties": ["padding-top: 16rem;"]
+      },
+      {
+        "class": "pt-288",
+        "properties": ["padding-top: 18rem;"]
+      },
+      {
+        "class": "pt-320",
+        "properties": ["padding-top: 20rem;"]
+      },
+      {
+        "class": "pt-384",
+        "properties": ["padding-top: 24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "padding-bottom",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["first", "last"],
+    "utilities": [
+      {
+        "class": "pb-0",
+        "properties": ["padding-bottom: 0;"]
+      },
+      {
+        "class": "pb-1",
+        "properties": ["padding-bottom: 0.0625rem;"]
+      },
+      {
+        "class": "pb-2",
+        "properties": ["padding-bottom: 0.125rem;"]
+      },
+      {
+        "class": "pb-4",
+        "properties": ["padding-bottom: 0.25rem;"]
+      },
+      {
+        "class": "pb-6",
+        "properties": ["padding-bottom: 0.375rem;"]
+      },
+      {
+        "class": "pb-8",
+        "properties": ["padding-bottom: 0.5rem;"]
+      },
+      {
+        "class": "pb-10",
+        "properties": ["padding-bottom: 0.625rem;"]
+      },
+      {
+        "class": "pb-12",
+        "properties": ["padding-bottom: 0.75rem;"]
+      },
+      {
+        "class": "pb-14",
+        "properties": ["padding-bottom: 0.875rem;"]
+      },
+      {
+        "class": "pb-16",
+        "properties": ["padding-bottom: 1rem;"]
+      },
+      {
+        "class": "pb-18",
+        "properties": ["padding-bottom: 1.125rem;"]
+      },
+      {
+        "class": "pb-20",
+        "properties": ["padding-bottom: 1.25rem;"]
+      },
+      {
+        "class": "pb-24",
+        "properties": ["padding-bottom: 1.5rem;"]
+      },
+      {
+        "class": "pb-28",
+        "properties": ["padding-bottom: 1.75rem;"]
+      },
+      {
+        "class": "pb-32",
+        "properties": ["padding-bottom: 2rem;"]
+      },
+      {
+        "class": "pb-36",
+        "properties": ["padding-bottom: 2.25rem;"]
+      },
+      {
+        "class": "pb-40",
+        "properties": ["padding-bottom: 2.5rem;"]
+      },
+      {
+        "class": "pb-48",
+        "properties": ["padding-bottom: 3rem;"]
+      },
+      {
+        "class": "pb-56",
+        "properties": ["padding-bottom: 3.5rem;"]
+      },
+      {
+        "class": "pb-64",
+        "properties": ["padding-bottom: 4rem;"]
+      },
+      {
+        "class": "pb-72",
+        "properties": ["padding-bottom: 4.5rem;"]
+      },
+      {
+        "class": "pb-80",
+        "properties": ["padding-bottom: 5rem;"]
+      },
+      {
+        "class": "pb-96",
+        "properties": ["padding-bottom: 6rem;"]
+      },
+      {
+        "class": "pb-112",
+        "properties": ["padding-bottom: 7rem;"]
+      },
+      {
+        "class": "pb-128",
+        "properties": ["padding-bottom: 8rem;"]
+      },
+      {
+        "class": "pb-144",
+        "properties": ["padding-bottom: 9rem;"]
+      },
+      {
+        "class": "pb-160",
+        "properties": ["padding-bottom: 10rem;"]
+      },
+      {
+        "class": "pb-192",
+        "properties": ["padding-bottom: 12rem;"]
+      },
+      {
+        "class": "pb-224",
+        "properties": ["padding-bottom: 14rem;"]
+      },
+      {
+        "class": "pb-256",
+        "properties": ["padding-bottom: 16rem;"]
+      },
+      {
+        "class": "pb-288",
+        "properties": ["padding-bottom: 18rem;"]
+      },
+      {
+        "class": "pb-320",
+        "properties": ["padding-bottom: 20rem;"]
+      },
+      {
+        "class": "pb-384",
+        "properties": ["padding-bottom: 24rem;"]
+      }
+    ]
+  },
+  {
+    "name": "padding-x",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "px-0",
+        "properties": [
+          "padding-left: 0;",
+          "padding-right: 0;"
+        ]
+      },
+      {
+        "class": "px-1",
+        "properties": [
+          "padding-left: 0.0625rem;",
+          "padding-right: 0.0625rem;"
+        ]
+      },
+      {
+        "class": "px-2",
+        "properties": [
+          "padding-left: 0.125rem;",
+          "padding-right: 0.125rem;"
+        ]
+      },
+      {
+        "class": "px-4",
+        "properties": [
+          "padding-left: 0.25rem;",
+          "padding-right: 0.25rem;"
+        ]
+      },
+      {
+        "class": "px-6",
+        "properties": [
+          "padding-left: 0.375rem;",
+          "padding-right: 0.375rem;"
+        ]
+      },
+      {
+        "class": "px-8",
+        "properties": [
+          "padding-left: 0.5rem;",
+          "padding-right: 0.5rem;"
+        ]
+      },
+      {
+        "class": "px-10",
+        "properties": [
+          "padding-left: 0.625rem;",
+          "padding-right: 0.625rem;"
+        ]
+      },
+      {
+        "class": "px-12",
+        "properties": [
+          "padding-left: 0.75rem;",
+          "padding-right: 0.75rem;"
+        ]
+      },
+      {
+        "class": "px-14",
+        "properties": [
+          "padding-left: 0.875rem;",
+          "padding-right: 0.875rem;"
+        ]
+      },
+      {
+        "class": "px-16",
+        "properties": [
+          "padding-left: 1rem;",
+          "padding-right: 1rem;"
+        ]
+      },
+      {
+        "class": "px-18",
+        "properties": [
+          "padding-left: 1.125rem;",
+          "padding-right: 1.125rem;"
+        ]
+      },
+      {
+        "class": "px-20",
+        "properties": [
+          "padding-left: 1.25rem;",
+          "padding-right: 1.25rem;"
+        ]
+      },
+      {
+        "class": "px-24",
+        "properties": [
+          "padding-left: 1.5rem;",
+          "padding-right: 1.5rem;"
+        ]
+      },
+      {
+        "class": "px-28",
+        "properties": [
+          "padding-left: 1.75rem;",
+          "padding-right: 1.75rem;"
+        ]
+      },
+      {
+        "class": "px-32",
+        "properties": [
+          "padding-left: 2rem;",
+          "padding-right: 2rem;"
+        ]
+      },
+      {
+        "class": "px-36",
+        "properties": [
+          "padding-left: 2.25rem;",
+          "padding-right: 2.25rem;"
+        ]
+      },
+      {
+        "class": "px-40",
+        "properties": [
+          "padding-left: 2.5rem;",
+          "padding-right: 2.5rem;"
+        ]
+      },
+      {
+        "class": "px-48",
+        "properties": [
+          "padding-left: 3rem;",
+          "padding-right: 3rem;"
+        ]
+      },
+      {
+        "class": "px-56",
+        "properties": [
+          "padding-left: 3.5rem;",
+          "padding-right: 3.5rem;"
+        ]
+      },
+      {
+        "class": "px-64",
+        "properties": [
+          "padding-left: 4rem;",
+          "padding-right: 4rem;"
+        ]
+      },
+      {
+        "class": "px-72",
+        "properties": [
+          "padding-left: 4.5rem;",
+          "padding-right: 4.5rem;"
+        ]
+      },
+      {
+        "class": "px-80",
+        "properties": [
+          "padding-left: 5rem;",
+          "padding-right: 5rem;"
+        ]
+      },
+      {
+        "class": "px-96",
+        "properties": [
+          "padding-left: 6rem;",
+          "padding-right: 6rem;"
+        ]
+      },
+      {
+        "class": "px-112",
+        "properties": [
+          "padding-left: 7rem;",
+          "padding-right: 7rem;"
+        ]
+      },
+      {
+        "class": "px-128",
+        "properties": [
+          "padding-left: 8rem;",
+          "padding-right: 8rem;"
+        ]
+      },
+      {
+        "class": "px-144",
+        "properties": [
+          "padding-left: 9rem;",
+          "padding-right: 9rem;"
+        ]
+      },
+      {
+        "class": "px-160",
+        "properties": [
+          "padding-left: 10rem;",
+          "padding-right: 10rem;"
+        ]
+      },
+      {
+        "class": "px-192",
+        "properties": [
+          "padding-left: 12rem;",
+          "padding-right: 12rem;"
+        ]
+      },
+      {
+        "class": "px-224",
+        "properties": [
+          "padding-left: 14rem;",
+          "padding-right: 14rem;"
+        ]
+      },
+      {
+        "class": "px-256",
+        "properties": [
+          "padding-left: 16rem;",
+          "padding-right: 16rem;"
+        ]
+      },
+      {
+        "class": "px-288",
+        "properties": [
+          "padding-left: 18rem;",
+          "padding-right: 18rem;"
+        ]
+      },
+      {
+        "class": "px-320",
+        "properties": [
+          "padding-left: 20rem;",
+          "padding-right: 20rem;"
+        ]
+      },
+      {
+        "class": "px-384",
+        "properties": [
+          "padding-left: 24rem;",
+          "padding-right: 24rem;"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "padding-y",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "py-0",
+        "properties": [
+          "padding-top: 0;",
+          "padding-bottom: 0;"
+        ]
+      },
+      {
+        "class": "py-1",
+        "properties": [
+          "padding-top: 0.0625rem;",
+          "padding-bottom: 0.0625rem;"
+        ]
+      },
+      {
+        "class": "py-2",
+        "properties": [
+          "padding-top: 0.125rem;",
+          "padding-bottom: 0.125rem;"
+        ]
+      },
+      {
+        "class": "py-4",
+        "properties": [
+          "padding-top: 0.25rem;",
+          "padding-bottom: 0.25rem;"
+        ]
+      },
+      {
+        "class": "py-6",
+        "properties": [
+          "padding-top: 0.375rem;",
+          "padding-bottom: 0.375rem;"
+        ]
+      },
+      {
+        "class": "py-8",
+        "properties": [
+          "padding-top: 0.5rem;",
+          "padding-bottom: 0.5rem;"
+        ]
+      },
+      {
+        "class": "py-10",
+        "properties": [
+          "padding-top: 0.625rem;",
+          "padding-bottom: 0.625rem;"
+        ]
+      },
+      {
+        "class": "py-12",
+        "properties": [
+          "padding-top: 0.75rem;",
+          "padding-bottom: 0.75rem;"
+        ]
+      },
+      {
+        "class": "py-14",
+        "properties": [
+          "padding-top: 0.875rem;",
+          "padding-bottom: 0.875rem;"
+        ]
+      },
+      {
+        "class": "py-16",
+        "properties": [
+          "padding-top: 1rem;",
+          "padding-bottom: 1rem;"
+        ]
+      },
+      {
+        "class": "py-18",
+        "properties": [
+          "padding-top: 1.125rem;",
+          "padding-bottom: 1.125rem;"
+        ]
+      },
+      {
+        "class": "py-20",
+        "properties": [
+          "padding-top: 1.25rem;",
+          "padding-bottom: 1.25rem;"
+        ]
+      },
+      {
+        "class": "py-24",
+        "properties": [
+          "padding-top: 1.5rem;",
+          "padding-bottom: 1.5rem;"
+        ]
+      },
+      {
+        "class": "py-28",
+        "properties": [
+          "padding-top: 1.75rem;",
+          "padding-bottom: 1.75rem;"
+        ]
+      },
+      {
+        "class": "py-32",
+        "properties": [
+          "padding-top: 2rem;",
+          "padding-bottom: 2rem;"
+        ]
+      },
+      {
+        "class": "py-36",
+        "properties": [
+          "padding-top: 2.25rem;",
+          "padding-bottom: 2.25rem;"
+        ]
+      },
+      {
+        "class": "py-40",
+        "properties": [
+          "padding-top: 2.5rem;",
+          "padding-bottom: 2.5rem;"
+        ]
+      },
+      {
+        "class": "py-48",
+        "properties": [
+          "padding-top: 3rem;",
+          "padding-bottom: 3rem;"
+        ]
+      },
+      {
+        "class": "py-56",
+        "properties": [
+          "padding-top: 3.5rem;",
+          "padding-bottom: 3.5rem;"
+        ]
+      },
+      {
+        "class": "py-64",
+        "properties": [
+          "padding-top: 4rem;",
+          "padding-bottom: 4rem;"
+        ]
+      },
+      {
+        "class": "py-72",
+        "properties": [
+          "padding-top: 4.5rem;",
+          "padding-bottom: 4.5rem;"
+        ]
+      },
+      {
+        "class": "py-80",
+        "properties": [
+          "padding-top: 5rem;",
+          "padding-bottom: 5rem;"
+        ]
+      },
+      {
+        "class": "py-96",
+        "properties": [
+          "padding-top: 6rem;",
+          "padding-bottom: 6rem;"
+        ]
+      },
+      {
+        "class": "py-112",
+        "properties": [
+          "padding-top: 7rem;",
+          "padding-bottom: 7rem;"
+        ]
+      },
+      {
+        "class": "py-128",
+        "properties": [
+          "padding-top: 8rem;",
+          "padding-bottom: 8rem;"
+        ]
+      },
+      {
+        "class": "py-144",
+        "properties": [
+          "padding-top: 9rem;",
+          "padding-bottom: 9rem;"
+        ]
+      },
+      {
+        "class": "py-160",
+        "properties": [
+          "padding-top: 10rem;",
+          "padding-bottom: 10rem;"
+        ]
+      },
+      {
+        "class": "py-192",
+        "properties": [
+          "padding-top: 12rem;",
+          "padding-bottom: 12rem;"
+        ]
+      },
+      {
+        "class": "py-224",
+        "properties": [
+          "padding-top: 14rem;",
+          "padding-bottom: 14rem;"
+        ]
+      },
+      {
+        "class": "py-256",
+        "properties": [
+          "padding-top: 16rem;",
+          "padding-bottom: 16rem;"
+        ]
+      },
+      {
+        "class": "py-288",
+        "properties": [
+          "padding-top: 18rem;",
+          "padding-bottom: 18rem;"
+        ]
+      },
+      {
+        "class": "py-320",
+        "properties": [
+          "padding-top: 20rem;",
+          "padding-bottom: 20rem;"
+        ]
+      },
+      {
+        "class": "py-384",
+        "properties": [
+          "padding-top: 24rem;",
+          "padding-bottom: 24rem;"
+        ]
+      }
+    ]
+  }
+]

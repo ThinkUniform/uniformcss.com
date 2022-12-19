@@ -1,0 +1,1084 @@
+[
+  {
+    "name": "backdrop-filter",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [
+      "--backdrop-blur: 0", 
+      "--backdrop-brightness: 1", 
+      "--backdrop-contrast: 1", 
+      "--backdrop-grayscale: 0", 
+      "--backdrop-hue-rotate: 0deg",
+      "--backdrop-invert: 0", 
+      "--backdrop-opacity: 1",  
+      "--backdrop-saturate: 1",
+      "--backdrop-sepia: 0"
+    ],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop",
+        "properties": ["backdrop-filter: blur(var(--backdrop-blur)) brightness(var(--backdrop-brightness)) contrast(var(--backdrop-contrast)) grayscale(var(--backdrop-grayscale)) hue-rotate(var(--backdrop-hue-rotate)) invert(var(--backdrop-invert)) opacity(var(--backdrop-opacity)) saturate(var(--backdrop-saturate)) sepia(var(--backdrop-sepia));"]
+      },
+      {
+        "class": "backdrop",
+        "properties": ["backdrop-filter: none;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-blur",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-blur-2xs",
+        "properties": ["--backdrop-blur: 4px;"]
+      },
+      {
+        "class": "backdrop-blur-xs",
+        "properties": ["--backdrop-blur: 8px;"]
+      },
+      {
+        "class": "backdrop-blur-sm",
+        "properties": ["--backdrop-blur: 12px;"]
+      },
+      {
+        "class": "backdrop-blur-md",
+        "properties": ["--backdrop-blur: 16px;"]
+      },
+      {
+        "class": "backdrop-blur-lg",
+        "properties": ["--backdrop-blur: 24px;"]
+      },
+      {
+        "class": "backdrop-blur-xl",
+        "properties": ["--backdrop-blur: 32px;"]
+      },
+      {
+        "class": "backdrop-blur-2xl",
+        "properties": ["--backdrop-blur: 48px;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-brightness",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-brightness-100",
+        "properties": ["--backdrop-brightness: 1;"]
+      },
+      {
+        "class": "backdrop-brightness-110",
+        "properties": ["--backdrop-brightness: 1.1;"]
+      },
+      {
+        "class": "backdrop-brightness-120",
+        "properties": ["--backdrop-brightness: 1.2;"]
+      },
+      {
+        "class": "backdrop-brightness-130",
+        "properties": ["--backdrop-brightness: 1.3;"]
+      },
+      {
+        "class": "backdrop-brightness-140",
+        "properties": ["--backdrop-brightness: 1.4;"]
+      },
+      {
+        "class": "backdrop-brightness-150",
+        "properties": ["--backdrop-brightness: 1.5;"]
+      },
+      {
+        "class": "backdrop-brightness-160",
+        "properties": ["--backdrop-brightness: 1.6;"]
+      },
+      {
+        "class": "backdrop-brightness-170",
+        "properties": ["--backdrop-brightness: 1.7;"]
+      },
+      {
+        "class": "backdrop-brightness-180",
+        "properties": ["--backdrop-brightness: 1.8;"]
+      },
+      {
+        "class": "backdrop-brightness-190",
+        "properties": ["--backdrop-brightness: 1.9;"]
+      },
+      {
+        "class": "backdrop-brightness-200",
+        "properties": ["--backdrop-brightness: 2;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-contrast",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-contrast-0",
+        "properties": ["--backdrop-contrast: 0;"]
+      },
+      {
+        "class": "backdrop-contrast-10",
+        "properties": ["--backdrop-contrast: 0.1;"]
+      },
+      {
+        "class": "backdrop-contrast-20",
+        "properties": ["--backdrop-contrast: 0.2;"]
+      },
+      {
+        "class": "backdrop-contrast-30",
+        "properties": ["--backdrop-contrast: 0.3;"]
+      },
+      {
+        "class": "backdrop-contrast-40",
+        "properties": ["--backdrop-contrast: 0.4;"]
+      },
+      {
+        "class": "backdrop-contrast-50",
+        "properties": ["--backdrop-contrast: 0.5;"]
+      },
+      {
+        "class": "backdrop-contrast-60",
+        "properties": ["--backdrop-contrast: 0.6;"]
+      },
+      {
+        "class": "backdrop-contrast-70",
+        "properties": ["--backdrop-contrast: 0.7;"]
+      },
+      {
+        "class": "backdrop-contrast-80",
+        "properties": ["--backdrop-contrast: 0.8;"]
+      },
+      {
+        "class": "backdrop-contrast-90",
+        "properties": ["--backdrop-contrast: 0.9;"]
+      },
+      {
+        "class": "backdrop-contrast-100",
+        "properties": ["--backdrop-contrast: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-grayscale",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-grayscale-0",
+        "properties": ["--backdrop-grayscale: 0;"]
+      },
+      {
+        "class": "backdrop-grayscale-100",
+        "properties": ["--backdrop-grayscale: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-hue-rotate",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-hue-rotate-0",
+        "properties": ["--backdrop-hue-rotate: 0deg;"]
+      },
+      {
+        "class": "backdrop-hue-rotate-15",
+        "properties": ["backdrop-hue-rotate: 15deg;"]
+      },
+      {
+        "class": "backdrop-hue-rotate-30",
+        "properties": ["backdrop-hue-rotate: 30deg;"]
+      },
+      {
+        "class": "backdrop-hue-rotate-60",
+        "properties": ["backdrop-hue-rotate: 60deg;"]
+      },
+      {
+        "class": "backdrop-hue-rotate-90",
+        "properties": ["backdrop-hue-rotate: 90deg;"]
+      },
+      {
+        "class": "backdrop-hue-rotate-180",
+        "properties": ["backdrop-hue-rotate: 180deg;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-invert",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-invert-0",
+        "properties": ["--backdrop-invert: 0;"]
+      },
+      {
+        "class": "backdrop-invert-100",
+        "properties": ["--backdrop-invert: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-opacity",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-opacity-0",
+        "properties": ["--backdrop-opacity: 0;"]
+      },
+      {
+        "class": "backdrop-opacity-2",
+        "properties": ["--backdrop-opacity: 0.02;"]
+      },
+      {
+        "class": "backdrop-opacity-4",
+        "properties": ["--backdrop-opacity: 0.04;"]
+      },
+      {
+        "class": "backdrop-opacity-6",
+        "properties": ["--backdrop-opacity: 0.06;"]
+      },
+      {
+        "class": "backdrop-opacity-8",
+        "properties": ["--backdrop-opacity: 0.08;"]
+      },
+      {
+        "class": "backdrop-opacity-10",
+        "properties": ["--backdrop-opacity: 0.1;"]
+      },
+      {
+        "class": "backdrop-opacity-15",
+        "properties": ["--backdrop-opacity: 0.15;"]
+      },
+      {
+        "class": "backdrop-opacity-20",
+        "properties": ["--backdrop-opacity: 0.2;"]
+      },
+      {
+        "class": "backdrop-opacity-25",
+        "properties": ["--backdrop-opacity: 0.25;"]
+      },
+      {
+        "class": "backdrop-opacity-30",
+        "properties": ["--backdrop-opacity: 0.3;"]
+      },
+      {
+        "class": "backdrop-opacity-35",
+        "properties": ["--backdrop-opacity: 0.35;"]
+      },
+      {
+        "class": "backdrop-opacity-40",
+        "properties": ["--backdrop-opacity: 0.4;"]
+      },
+      {
+        "class": "backdrop-opacity-45",
+        "properties": ["--backdrop-opacity: 0.45;"]
+      },
+      {
+        "class": "backdrop-opacity-50",
+        "properties": ["--backdrop-opacity: 0.5;"]
+      },
+      {
+        "class": "backdrop-opacity-55",
+        "properties": ["--backdrop-opacity: 0.55;"]
+      },
+      {
+        "class": "backdrop-opacity-60",
+        "properties": ["--backdrop-opacity: 0.6;"]
+      },
+      {
+        "class": "backdrop-opacity-65",
+        "properties": ["--backdrop-opacity: 0.65;"]
+      },
+      {
+        "class": "backdrop-opacity-70",
+        "properties": ["--backdrop-opacity: 0.7;"]
+      },
+      {
+        "class": "backdrop-opacity-75",
+        "properties": ["--backdrop-opacity: 0.75;"]
+      },
+      {
+        "class": "backdrop-opacity-80",
+        "properties": ["--backdrop-opacity: 0.8;"]
+      },
+      {
+        "class": "backdrop-opacity-85",
+        "properties": ["--backdrop-opacity: 0.85;"]
+      },
+      {
+        "class": "backdrop-opacity-90",
+        "properties": ["--backdrop-opacity: 0.9;"]
+      },
+      {
+        "class": "backdrop-opacity-95",
+        "properties": ["--backdrop-opacity: 0.95;"]
+      },
+      {
+        "class": "backdrop-opacity-100",
+        "properties": ["--backdrop-opacity: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-saturate",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-saturate-100",
+        "properties": ["--backdrop-saturate: 1;"]
+      },
+      {
+        "class": "backdrop-saturate-110",
+        "properties": ["--backdrop-saturate: 1.1;"]
+      },
+      {
+        "class": "backdrop-saturate-120",
+        "properties": ["--backdrop-saturate: 1.2;"]
+      },
+      {
+        "class": "backdrop-saturate-130",
+        "properties": ["--backdrop-saturate: 1.3;"]
+      },
+      {
+        "class": "backdrop-saturate-140",
+        "properties": ["--backdrop-saturate: 1.4;"]
+      },
+      {
+        "class": "backdrop-saturate-150",
+        "properties": ["--backdrop-saturate: 1.5;"]
+      },
+      {
+        "class": "backdrop-saturate-160",
+        "properties": ["--backdrop-saturate: 1.6;"]
+      },
+      {
+        "class": "backdrop-saturate-170",
+        "properties": ["--backdrop-saturate: 1.7;"]
+      },
+      {
+        "class": "backdrop-saturate-180",
+        "properties": ["--backdrop-saturate: 1.8;"]
+      },
+      {
+        "class": "backdrop-saturate-190",
+        "properties": ["--backdrop-saturate: 1.9;"]
+      },
+      {
+        "class": "backdrop-saturate-200",
+        "properties": ["--backdrop-saturate: 2;"]
+      }
+    ]
+  },
+  {
+    "name": "backdrop-sepia",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "backdrop-sepia-0",
+        "properties": ["--backdrop-sepia: 0;"]
+      },
+      {
+        "class": "backdrop-sepia-100",
+        "properties": ["--backdrop-sepia: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [
+      "--filter-blur: 0", 
+      "--filter-brightness: 1", 
+      "--filter-contrast: 1", 
+      "--filter-grayscale: 0", 
+      "--filter-hue-rotate: 0deg",
+      "--filter-invert: 0", 
+      "--filter-opacity: 1",  
+      "--filter-saturate: 1",
+      "--filter-sepia: 0"
+    ],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter",
+        "properties": ["filter: blur(var(--filter-blur)) brightness(var(--filter-brightness)) contrast(var(--filter-contrast)) grayscale(var(--filter-grayscale)) hue-rotate(var(--filter-hue-rotate)) invert(var(--filter-invert)) opacity(var(--filter-opacity)) saturate(var(--filter-saturate)) sepia(var(--filter-sepia));"]
+      },
+      {
+        "class": "filter-none",
+        "properties": ["filter: none;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-blur",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-blur-2xs",
+        "properties": ["--filter-blur: 4px;"]
+      },
+      {
+        "class": "filter-blur-xs",
+        "properties": ["--filter-blur: 8px;"]
+      },
+      {
+        "class": "filter-blur-sm",
+        "properties": ["--filter-blur: 12px;"]
+      },
+      {
+        "class": "filter-blur-md",
+        "properties": ["--filter-blur: 16px;"]
+      },
+      {
+        "class": "filter-blur-lg",
+        "properties": ["--filter-blur: 24px;"]
+      },
+      {
+        "class": "filter-blur-xl",
+        "properties": ["--filter-blur: 32px;"]
+      },
+      {
+        "class": "filter-blur-2xl",
+        "properties": ["--filter-blur: 48px;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-brightness",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-brightness-100",
+        "properties": ["--filter-brightness: 1;"]
+      },
+      {
+        "class": "filter-brightness-110",
+        "properties": ["--filter-brightness: 1.1;"]
+      },
+      {
+        "class": "filter-brightness-120",
+        "properties": ["--filter-brightness: 1.2;"]
+      },
+      {
+        "class": "filter-brightness-130",
+        "properties": ["--filter-brightness: 1.3;"]
+      },
+      {
+        "class": "filter-brightness-140",
+        "properties": ["--filter-brightness: 1.4;"]
+      },
+      {
+        "class": "filter-brightness-150",
+        "properties": ["--filter-brightness: 1.5;"]
+      },
+      {
+        "class": "filter-brightness-160",
+        "properties": ["--filter-brightness: 1.6;"]
+      },
+      {
+        "class": "filter-brightness-170",
+        "properties": ["--filter-brightness: 1.7;"]
+      },
+      {
+        "class": "filter-brightness-180",
+        "properties": ["--filter-brightness: 1.8;"]
+      },
+      {
+        "class": "filter-brightness-190",
+        "properties": ["--filter-brightness: 1.9;"]
+      },
+      {
+        "class": "filter-brightness-200",
+        "properties": ["--filter-brightness: 2;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-contrast",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-contrast-0",
+        "properties": ["--filter-contrast: 0;"]
+      },
+      {
+        "class": "filter-contrast-10",
+        "properties": ["--filter-contrast: 0.1;"]
+      },
+      {
+        "class": "filter-contrast-20",
+        "properties": ["--filter-contrast: 0.2;"]
+      },
+      {
+        "class": "filter-contrast-30",
+        "properties": ["--filter-contrast: 0.3;"]
+      },
+      {
+        "class": "filter-contrast-40",
+        "properties": ["--filter-contrast: 0.4;"]
+      },
+      {
+        "class": "filter-contrast-50",
+        "properties": ["--filter-contrast: 0.5;"]
+      },
+      {
+        "class": "filter-contrast-60",
+        "properties": ["--filter-contrast: 0.6;"]
+      },
+      {
+        "class": "filter-contrast-70",
+        "properties": ["--filter-contrast: 0.7;"]
+      },
+      {
+        "class": "filter-contrast-80",
+        "properties": ["--filter-contrast: 0.8;"]
+      },
+      {
+        "class": "filter-contrast-90",
+        "properties": ["--filter-contrast: 0.9;"]
+      },
+      {
+        "class": "filter-contrast-100",
+        "properties": ["--filter-contrast: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-grayscale",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-grayscale-0",
+        "properties": ["--filter-grayscale: 0;"]
+      },
+      {
+        "class": "filter-grayscale-100",
+        "properties": ["--filter-grayscale: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-hue-rotate",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-hue-rotate-0",
+        "properties": ["--filter-hue-rotate: 0deg;"]
+      },
+      {
+        "class": "filter-hue-rotate-15",
+        "properties": ["--filter-hue-rotate: 15deg;"]
+      },
+      {
+        "class": "filter-hue-rotate-30",
+        "properties": ["--filter-hue-rotate: 30deg;"]
+      },
+      {
+        "class": "filter-hue-rotate-60",
+        "properties": ["--filter-hue-rotate: 60deg;"]
+      },
+      {
+        "class": "filter-hue-rotate-90",
+        "properties": ["--filter-hue-rotate: 90deg;"]
+      },
+      {
+        "class": "filter-hue-rotate-180",
+        "properties": ["--filter-hue-rotate: 180deg;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-invert",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-invert-0",
+        "properties": ["--filter-invert: 0;"]
+      },
+      {
+        "class": "filter-invert-100",
+        "properties": ["--filter-invert: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-opacity",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-opacity-0",
+        "properties": ["--filter-opacity: 0;"]
+      },
+      {
+        "class": "filter-opacity-2",
+        "properties": ["--filter-opacity: 0.02;"]
+      },
+      {
+        "class": "filter-opacity-4",
+        "properties": ["--filter-opacity: 0.04;"]
+      },
+      {
+        "class": "filter-opacity-6",
+        "properties": ["--filter-opacity: 0.06;"]
+      },
+      {
+        "class": "filter-opacity-8",
+        "properties": ["--filter-opacity: 0.08;"]
+      },
+      {
+        "class": "filter-opacity-10",
+        "properties": ["--filter-opacity: 0.1;"]
+      },
+      {
+        "class": "filter-opacity-15",
+        "properties": ["--filter-opacity: 0.15;"]
+      },
+      {
+        "class": "filter-opacity-20",
+        "properties": ["--filter-opacity: 0.2;"]
+      },
+      {
+        "class": "filter-opacity-25",
+        "properties": ["--filter-opacity: 0.25;"]
+      },
+      {
+        "class": "filter-opacity-30",
+        "properties": ["--filter-opacity: 0.3;"]
+      },
+      {
+        "class": "filter-opacity-35",
+        "properties": ["--filter-opacity: 0.35;"]
+      },
+      {
+        "class": "filter-opacity-40",
+        "properties": ["--filter-opacity: 0.4;"]
+      },
+      {
+        "class": "filter-opacity-45",
+        "properties": ["--filter-opacity: 0.45;"]
+      },
+      {
+        "class": "filter-opacity-50",
+        "properties": ["--filter-opacity: 0.5;"]
+      },
+      {
+        "class": "filter-opacity-55",
+        "properties": ["--filter-opacity: 0.55;"]
+      },
+      {
+        "class": "filter-opacity-60",
+        "properties": ["--filter-opacity: 0.6;"]
+      },
+      {
+        "class": "filter-opacity-65",
+        "properties": ["--filter-opacity: 0.65;"]
+      },
+      {
+        "class": "filter-opacity-70",
+        "properties": ["--filter-opacity: 0.7;"]
+      },
+      {
+        "class": "filter-opacity-75",
+        "properties": ["--filter-opacity: 0.75;"]
+      },
+      {
+        "class": "filter-opacity-80",
+        "properties": ["--filter-opacity: 0.8;"]
+      },
+      {
+        "class": "filter-opacity-85",
+        "properties": ["--filter-opacity: 0.85;"]
+      },
+      {
+        "class": "filter-opacity-90",
+        "properties": ["--filter-opacity: 0.9;"]
+      },
+      {
+        "class": "filter-opacity-95",
+        "properties": ["--filter-opacity: 0.95;"]
+      },
+      {
+        "class": "filter-opacity-100",
+        "properties": ["--filter-opacity: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-saturate",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-saturate-100",
+        "properties": ["--filter-saturate: 1;"]
+      },
+      {
+        "class": "filter-saturate-110",
+        "properties": ["--filter-saturate: 1.1;"]
+      },
+      {
+        "class": "filter-saturate-120",
+        "properties": ["--filter-saturate: 1.2;"]
+      },
+      {
+        "class": "filter-saturate-130",
+        "properties": ["--filter-saturate: 1.3;"]
+      },
+      {
+        "class": "filter-saturate-140",
+        "properties": ["--filter-saturate: 1.4;"]
+      },
+      {
+        "class": "filter-saturate-150",
+        "properties": ["--filter-saturate: 1.5;"]
+      },
+      {
+        "class": "filter-saturate-160",
+        "properties": ["--filter-saturate: 1.6;"]
+      },
+      {
+        "class": "filter-saturate-170",
+        "properties": ["--filter-saturate: 1.7;"]
+      },
+      {
+        "class": "filter-saturate-180",
+        "properties": ["--filter-saturate: 1.8;"]
+      },
+      {
+        "class": "filter-saturate-190",
+        "properties": ["--filter-saturate: 1.9;"]
+      },
+      {
+        "class": "filter-saturate-200",
+        "properties": ["--filter-saturate: 2;"]
+      }
+    ]
+  },
+  {
+    "name": "filter-sepia",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "filter-sepia-0",
+        "properties": ["--filter-sepia: 0;"]
+      },
+      {
+        "class": "filter-sepia-100",
+        "properties": ["--filter-sepia: 1;"]
+      }
+    ]
+  },
+  {
+    "name": "box-shadow",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["hover", "group-hover", "focus"],
+    "utilities": [
+      {
+        "class": "shadow-none",
+        "properties": ["box-shadow: 0;"]
+      },
+      {
+        "class": "shadow-2xs",
+        "properties": ["box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);"]
+      },
+      {
+        "class": "shadow-xs",
+        "properties": ["box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.2);"]
+      },
+      {
+        "class": "shadow-sm",
+        "properties": ["box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);"]
+      },
+      {
+        "class": "shadow-md",
+        "properties": ["box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);"]
+      },
+      {
+        "class": "shadow-lg",
+        "properties": ["box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2);"]
+      },
+      {
+        "class": "shadow-xl",
+        "properties": ["box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 15px 10px rgba(0, 0, 0, 0.2);"]
+      },
+      {
+        "class": "shadow-2xl",
+        "properties": ["box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.3);"]
+      },
+      {
+        "class": "shadow-focus",
+        "properties": ["box-shadow: 0 0 0 4px hsla(220, 75%, 50%, 20%);"]
+      },
+      {
+        "class": "shadow-success",
+        "properties": ["box-shadow: 0 0 0 4px hsla(80, 75%, 50%, 20%);"]
+      },
+      {
+        "class": "shadow-warning",
+        "properties": ["box-shadow: 0 0 0 4px hsla(40, 75%, 50%, 20%);"]
+      },
+      {
+        "class": "shadow-danger",
+        "properties": ["box-shadow: 0 0 0 4px hsla(0, 75%, 50%, 20%);"]
+      }
+    ]
+  },
+  {
+    "name": "mix-blend-mode",
+    "responsive": false,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["none"],
+    "utilities": [
+      {
+        "class": "blend-normal",
+        "properties": ["mix-blend-mode: normal;"]
+      },
+      {
+        "class": "blend-multiply;",
+        "properties": ["mix-blend-mode: multiply;"]
+      },
+      {
+        "class": "blend-screen;",
+        "properties": ["mix-blend-mode: screen;"]
+      },
+      {
+        "class": "blend-overlay;",
+        "properties": ["mix-blend-mode: overlay;"]
+      },
+      {
+        "class": "blend-darken;",
+        "properties": ["mix-blend-mode: darken;"]
+      },
+      {
+        "class": "blend-lighten;",
+        "properties": ["mix-blend-mode: lighten;"]
+      },
+      {
+        "class": "blend-color-dodge;",
+        "properties": ["mix-blend-mode: color-dodge;"]
+      },
+      {
+        "class": "blend-color-burn;",
+        "properties": ["mix-blend-mode: color-burn;"]
+      },
+      {
+        "class": "blend-hard-light;",
+        "properties": ["mix-blend-mode: hard-light;"]
+      },
+      {
+        "class": "blend-soft-light;",
+        "properties": ["mix-blend-mode: soft-light;"]
+      },
+      {
+        "class": "blend-difference;",
+        "properties": ["mix-blend-mode: difference;"]
+      },
+      {
+        "class": "blend-exclusion;",
+        "properties": ["mix-blend-mode: exclusion;"]
+      },
+      {
+        "class": "blend-hue;",
+        "properties": ["mix-blend-mode: hue;"]
+      },
+      {
+        "class": "blend-saturation;",
+        "properties": ["mix-blend-mode: saturation;"]
+      },
+      {
+        "class": "blend-color;",
+        "properties": ["mix-blend-mode: color;"]
+      },
+      {
+        "class": "blend-luminosity;",
+        "properties": ["mix-blend-mode: luminosity;"]
+      }
+    ]
+  },
+  {
+    "name": "opacity",
+    "responsive": true,
+    "responsive-pseudos": false,
+    "extraSelector": "",
+    "staticProperties": [],
+    "pseudos": ["hover", "group-hover", "focus"],
+    "utilities": [
+      {
+        "class": "opacity-0",
+        "properties": ["opacity: 0;"]
+      },
+      {
+        "class": "opacity-2",
+        "properties": ["opacity: 0.02;"]
+      },
+      {
+        "class": "opacity-4",
+        "properties": ["opacity: 0.04;"]
+      },
+      {
+        "class": "opacity-6",
+        "properties": ["opacity: 0.06;"]
+      },
+      {
+        "class": "opacity-8",
+        "properties": ["opacity: 0.08;"]
+      },
+      {
+        "class": "opacity-10",
+        "properties": ["opacity: 0.1;"]
+      },
+      {
+        "class": "opacity-15",
+        "properties": ["opacity: 0.15;"]
+      },
+      {
+        "class": "opacity-20",
+        "properties": ["opacity: 0.2;"]
+      },
+      {
+        "class": "opacity-25",
+        "properties": ["opacity: 0.25;"]
+      },
+      {
+        "class": "opacity-30",
+        "properties": ["opacity: 0.3;"]
+      },
+      {
+        "class": "opacity-35",
+        "properties": ["opacity: 0.35;"]
+      },
+      {
+        "class": "opacity-40",
+        "properties": ["opacity: 0.4;"]
+      },
+      {
+        "class": "opacity-45",
+        "properties": ["opacity: 0.45;"]
+      },
+      {
+        "class": "opacity-50",
+        "properties": ["opacity: 0.5;"]
+      },
+      {
+        "class": "opacity-55",
+        "properties": ["opacity: 0.55;"]
+      },
+      {
+        "class": "opacity-60",
+        "properties": ["opacity: 0.6;"]
+      },
+      {
+        "class": "opacity-65",
+        "properties": ["opacity: 0.65;"]
+      },
+      {
+        "class": "opacity-70",
+        "properties": ["opacity: 0.7;"]
+      },
+      {
+        "class": "opacity-75",
+        "properties": ["opacity: 0.75;"]
+      },
+      {
+        "class": "opacity-80",
+        "properties": ["opacity: 0.8;"]
+      },
+      {
+        "class": "opacity-85",
+        "properties": ["opacity: 0.85;"]
+      },
+      {
+        "class": "opacity-90",
+        "properties": ["opacity: 0.9;"]
+      },
+      {
+        "class": "opacity-95",
+        "properties": ["opacity: 0.95;"]
+      },
+      {
+        "class": "opacity-100",
+        "properties": ["opacity: 1;"]
+      }
+    ]
+  }
+]

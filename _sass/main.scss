@@ -261,6 +261,29 @@
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,164,196,1) 10%, rgba(255,164,196,0) 40%);
 }
 
+
+.docs-pane-divider {
+	@include apply('relative sticky top-0 w-1 h-100vh flex-none pointer-events-none');
+	mix-blend-mode: overlay;
+	&:before {
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 90%;
+    background: #ff9aff;
+    filter: blur(40px);
+    
+    border-radius: 100%;
+    z-index: 0;
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(-50%) translateY(-50%);
+	} 
+}
+
 .glowing-divider {
 	position: relative;
 	pointer-events: none;
@@ -332,15 +355,18 @@
 	--markdown-heading-color: white;
 	--markdown-h2-size: 20px;
 	--markdown-h3-size: 16px;
+	--markdown-h3-margin: 2.5em 0 1em 0;
 	--markdown-strong-color: #ffccf9;
 	--markdown-code-bg: rgba(0,0,0,.4);
 	--markdown-code-color: rgba(var(--yellow-300), 1);
 	--markdown-blockquote-bg: rgba(0,0,0,.4);
 	--markdown-link-color: #ff91b8;
 	--markdown-link-shadow: none;
-	--markdown-th-bg-color: rgba(0,0,0, 0.2);
+	--markdown-th-bg-color: rgba(0,0,0, 0.1);
 	--markdown-th-color: rgba(var(--pink-200), 1);
-	--markdown-table-border: 1px solid rgba(var(--pink-200), .3);
+	--markdown-table-border: 1px solid rgba(var(--pink-300), .3);
+	--markdown-p-margin: 1.2rem;
+	
 
 	.css-value {
 		background: transparent;
@@ -356,7 +382,7 @@
 			&:before {
 				display: none;
 				content: '#';
-				margin-left: size(2);
+				margin-left: size(6);
 				color: rgb(var(--pink-400));
 				font-weight: font(medium);
 			}
@@ -370,6 +396,7 @@
 	h2 {
 		position: relative;
 		padding-left: size(24);
+		margin-top: size(48);
 		margin-left: size(n24);
 	}
 

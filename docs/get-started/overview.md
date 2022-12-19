@@ -1,13 +1,14 @@
 ---
 title: Overview
 description: <span class="color-heading-accent">Quick dive</span> into Uniform CSS and its features ✌️
-intro: Uniform CSS is a fully configurable utility generator and CSS framework **built entirely in Sass**. This means you get the power of a utility-first workflow without losing the productiveness of Sass. You can get started via the CDN or as a Sass dependency.
+intro: The power of a utility-first workflow losing the power of Sass.
 date: 2021-01-01
 ---
 
-## Introducing Uniform
+## What is Uniform CSS?
 
-Uniform CSS is a fully configurable utility generator and CSS framework **built entirely in Sass**. This means you get the power of a utility-first workflow without losing the productiveness of Sass. You can get started via the CDN or as a Sass dependency.
+Uniform CSS is a fully configurable utility generator and CSS framework **built entirely in Sass**. This means you have access to all the features of Sass while also having the power of an integrated utility-first framework.
+
 
 ---
 

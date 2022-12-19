@@ -38,28 +38,6 @@ The following base colors are available to be be applied to color related proper
 
 | Color | Name { .w-160 } | HEX |
 | - | - | - |
-| { .bg-primary-50 } | `primary-50` | `#E8F1FD` |
-| { .bg-primary-100 } | `primary-100` | `#D1E2FB` |
-| { .bg-primary-200 } | `primary-200` | `#A3C6F7` |
-| { .bg-primary-300 } | `primary-300` | `#4D91F0` |
-| { .bg-primary-400 } | `primary-400` | `#1267DD` |
-| { .bg-primary-500 } | `primary-500` | `#0054CB` |
-| { .bg-primary-600 } | `primary-600` | `#0046A8` |
-| { .bg-primary-700 } | `primary-700` | `#003785` |
-| { .bg-primary-800 } | `primary-800` | `#002F71` |
-| { .bg-primary-900 } | `primary-900` | `#00265C` |
-| { .bg-primary-950 } | `primary-950` | `#001533` |
-| { .bg-secondary-50 } | `secondary-50` | `#FDF8D2` |
-| { .bg-secondary-100 } | `secondary-100` | `#FBEDA6` |
-| { .bg-secondary-200 } | `secondary-200` | `#F7CC4F` |
-| { .bg-secondary-300 } | `secondary-300` | `#ECA713` |
-| { .bg-secondary-400 } | `secondary-400` | `#E18C00` |
-| { .bg-secondary-500 } | `secondary-500` | `#D27F00` |
-| { .bg-secondary-600 } | `secondary-600` | `#C37300` |
-| { .bg-secondary-700 } | `secondary-700` | `#A45B00` |
-| { .bg-secondary-800 } | `secondary-800` | `#884B00` |
-| { .bg-secondary-900 } | `secondary-900` | `#6B3B00` |
-| { .bg-secondary-950 } | `secondary-950` | `#331B00` |
 | { .bg-white } | `white` | `#ffffff` |
 | { .bg-black } | `black` | `#000000` |
 | { .bg-warm-gray-50 } | `warm-gray-50` | `#F7F6F5` |
@@ -72,7 +50,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-warm-gray-700 } | `warm-gray-700` | `#645B56` |
 | { .bg-warm-gray-800 } | `warm-gray-800` | `#453D39` |
 | { .bg-warm-gray-900 } | `warm-gray-900` | `#362F2C` |
-| { .bg-warm-gray-950 } | `warm-gray-950` | `#26211F` |
 | { .bg-gray-50 } | `gray-50` | `#F7F7F7` |
 | { .bg-gray-100 } | `gray-100` | `#F0F0F0` |
 | { .bg-gray-200 } | `gray-200` | `#E0E0E0` |
@@ -83,7 +60,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-gray-700 } | `gray-700` | `#646464` |
 | { .bg-gray-800 } | `gray-800` | `#454545` |
 | { .bg-gray-900 } | `gray-900` | `#363636` |
-| { .bg-gray-950 } | `gray-950` | `#262626` |
 | { .bg-cool-gray-50 } | `cool-gray-50` | `#F4F5F7` |
 | { .bg-cool-gray-100 } | `cool-gray-100` | `#E9EBF0` |
 | { .bg-cool-gray-200 } | `cool-gray-200` | `#D3D8E0` |
@@ -94,7 +70,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-cool-gray-700 } | `cool-gray-700` | `#485164` |
 | { .bg-cool-gray-800 } | `cool-gray-800` | `#2D3545` |
 | { .bg-cool-gray-900 } | `cool-gray-900` | `#222836` |
-| { .bg-cool-gray-950 } | `cool-gray-950` | `#171C26` |
 | { .bg-red-50 } | `red-50` | `#FDE1E5` |
 | { .bg-red-100 } | `red-100` | `#FBC3C9` |
 | { .bg-red-200 } | `red-200` | `#F7898F` |
@@ -105,7 +80,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-red-700 } | `red-700` | `#841300` |
 | { .bg-red-800 } | `red-800` | `#691000` |
 | { .bg-red-900 } | `red-900` | `#4E0D00` |
-| { .bg-red-950 } | `red-950` | `#330800` |
 | { .bg-orange-50 } | `orange-50` | `#FBEBD6` |
 | { .bg-orange-100 } | `orange-100` | `#F8D5AF` |
 | { .bg-orange-200 } | `orange-200` | `#F1A363` |
@@ -116,7 +90,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-orange-700 } | `orange-700` | `#8D2900` |
 | { .bg-orange-800 } | `orange-800` | `#792200` |
 | { .bg-orange-900 } | `orange-900` | `#661C00` |
-| { .bg-orange-950 } | `orange-950` | `#401100` |
 | { .bg-yellow-50 } | `yellow-50` | `#FDF8D2` |
 | { .bg-yellow-100 } | `yellow-100` | `#FBEDA6` |
 | { .bg-yellow-200 } | `yellow-200` | `#F7CC4F` |
@@ -127,7 +100,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-yellow-700 } | `yellow-700` | `#A45B00` |
 | { .bg-yellow-800 } | `yellow-800` | `#884B00` |
 | { .bg-yellow-900 } | `yellow-900` | `#6B3B00` |
-| { .bg-yellow-950 } | `yellow-950` | `#331B00` |
 | { .bg-lime-50 } | `lime-50` | `#DCFBD2` |
 | { .bg-lime-100 } | `lime-100` | `#C0F7A6` |
 | { .bg-lime-200 } | `lime-200` | `#9CEF53` |
@@ -138,7 +110,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-lime-700 } | `lime-700` | `#637D00` |
 | { .bg-lime-800 } | `lime-800` | `#536800` |
 | { .bg-lime-900 } | `lime-900` | `#425200` |
-| { .bg-lime-950 } | `lime-950` | `#202600` |
 | { .bg-green-50 } | `green-50` | `#E3FBE0` |
 | { .bg-green-100 } | `green-100` | `#C4F7C1` |
 | { .bg-green-200 } | `green-200` | `#86EF8D` |
@@ -149,7 +120,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-green-700 } | `green-700` | `#007D26` |
 | { .bg-green-800 } | `green-800` | `#006820` |
 | { .bg-green-900 } | `green-900` | `#00521A` |
-| { .bg-green-950 } | `green-950` | `#00260D` |
 | { .bg-teal-50 } | `teal-50` | `#E7FDF3` |
 | { .bg-teal-100 } | `teal-100` | `#D0FBE8` |
 | { .bg-teal-200 } | `teal-200` | `#A3F7D6` |
@@ -160,7 +130,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-teal-700 } | `teal-700` | `#007D79` |
 | { .bg-teal-800 } | `teal-800` | `#006865` |
 | { .bg-teal-900 } | `teal-900` | `#005251` |
-| { .bg-teal-950 } | `teal-950` | `#002626` |
 | { .bg-cyan-50 } | `cyan-50` | `#EAFDFD` |
 | { .bg-cyan-100 } | `cyan-100` | `#D5FAFB` |
 | { .bg-cyan-200 } | `cyan-200` | `#ACF2F7` |
@@ -171,7 +140,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-cyan-700 } | `cyan-700` | `#005C85` |
 | { .bg-cyan-800 } | `cyan-800` | `#004D71` |
 | { .bg-cyan-900 } | `cyan-900` | `#003E5C` |
-| { .bg-cyan-950 } | `cyan-950` | `#002233` |
 | { .bg-blue-50 } | `blue-50` | `#E8F1FD` |
 | { .bg-blue-100 } | `blue-100` | `#D1E2FB` |
 | { .bg-blue-200 } | `blue-200` | `#A3C6F7` |
@@ -182,7 +150,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-blue-700 } | `blue-700` | `#003785` |
 | { .bg-blue-800 } | `blue-800` | `#002F71` |
 | { .bg-blue-900 } | `blue-900` | `#00265C` |
-| { .bg-blue-950 } | `blue-950` | `#001533` |
 | { .bg-indigo-50 } | `indigo-50` | `#F0F0FD` |
 | { .bg-indigo-100 } | `indigo-100` | `#E2E1FB` |
 | { .bg-indigo-200 } | `indigo-200` | `#C7C3F8` |
@@ -193,7 +160,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-indigo-700 } | `indigo-700` | `#38128D` |
 | { .bg-indigo-800 } | `indigo-800` | `#300D79` |
 | { .bg-indigo-900 } | `indigo-900` | `#280A66` |
-| { .bg-indigo-950 } | `indigo-950` | `#180440` |
 | { .bg-purple-50 } | `purple-50` | `#F3EEFD` |
 | { .bg-purple-100 } | `purple-100` | `#E8DDFB` |
 | { .bg-purple-200 } | `purple-200` | `#D4BCF7` |
@@ -204,7 +170,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-purple-700 } | `purple-700` | `#52027D` |
 | { .bg-purple-800 } | `purple-800` | `#430068` |
 | { .bg-purple-900 } | `purple-900` | `#360052` |
-| { .bg-purple-950 } | `purple-950` | `#1A0026` |
 | { .bg-pink-50 } | `pink-50` | `#FDEEFD` |
 | { .bg-pink-100 } | `pink-100` | `#FBDCF9` |
 | { .bg-pink-200 } | `pink-200` | `#F7BAF0` |
@@ -215,13 +180,12 @@ The following base colors are available to be be applied to color related proper
 | { .bg-pink-700 } | `pink-700` | `#7D0043` |
 | { .bg-pink-800 } | `pink-800` | `#680036` |
 | { .bg-pink-900 } | `pink-900` | `#52002A` |
-| { .bg-pink-950 } | `pink-950` | `#260013` |
 
 :::
 
 ---
 
-## Semantic Colors
+<!-- ## Semantic Colors
 
 Uniform also provides semantic colors to handle form states. The following semantic colors are available to be be applied to color related properties such as `border`, `color`, and `background-color`.
 
@@ -279,9 +243,9 @@ Uniform also provides semantic colors to handle form states. The following seman
 | { .bg-red-800 } | `color-danger` | `red-800` | 
 | { .bg-info } | `bg-info` | `teal-50` |
 | { .bg-teal-500 } | `border-info` | `teal-500` |
-| { .bg-teal-800 } | `color-info` | `teal-800` |
+| { .bg-teal-800 } | `color-info` | `teal-800` | 
 
----
+--- -->
 
 ## Color Opacity
 
@@ -289,26 +253,26 @@ All colors are initially configured in hexadecimal format e.g. `#ffffff`. Howeve
 
 | Color | Name { .w-160 } | Opacity |
 | - | - | - |
-| Opacity 2 { .bold .color-blue-500 .color-opacity-2  } | `opacity-2` | `opacity: 0.02;` |
-| Opacity 4 { .bold .color-blue-500 .color-opacity-4  } | `opacity-4` | `opacity: 0.04;` |
-| Opacity 6 { .bold .color-blue-500 .color-opacity-6  } | `opacity-6` | `opacity: 0.06;` |
-| Opacity 8 { .bold .color-blue-500 .color-opacity-8  } | `opacity-8` | `opacity: 0.08;` |
-| Opacity 10 { .bold .color-blue-500 .color-opacity-10  } | `opacity-10` | `opacity: 10;` |
-| Opacity 15 { .bold .color-blue-500 .color-opacity-15  } | `opacity-15` | `opacity: 15;` |
-| Opacity 20 { .bold .color-blue-500 .color-opacity-20  } | `opacity-20` | `opacity: 20;` |
-| Opacity 25 { .bold .color-blue-500 .color-opacity-25  } | `opacity-25` | `opacity: 25;` |
-| Opacity 30 { .bold .color-blue-500 .color-opacity-30  } | `opacity-30` | `opacity: 30;` |
-| Opacity 35 { .bold .color-blue-500 .color-opacity-35  } | `opacity-35` | `opacity: 35;` |
-| Opacity 40 { .bold .color-blue-500 .color-opacity-40  } | `opacity-40` | `opacity: 40;` |
-| Opacity 45 { .bold .color-blue-500 .color-opacity-45  } | `opacity-45` | `opacity: 45;` |
-| Opacity 50 { .bold .color-blue-500 .color-opacity-50  } | `opacity-50` | `opacity: 50;` |
-| Opacity 55 { .bold .color-blue-500 .color-opacity-55  } | `opacity-55` | `opacity: 55;` |
-| Opacity 60 { .bold .color-blue-500 .color-opacity-60  } | `opacity-60` | `opacity: 60;` |
-| Opacity 65 { .bold .color-blue-500 .color-opacity-65  } | `opacity-65` | `opacity: 65;` |
-| Opacity 70 { .bold .color-blue-500 .color-opacity-70  } | `opacity-70` | `opacity: 70;` |
-| Opacity 75 { .bold .color-blue-500 .color-opacity-75  } | `opacity-75` | `opacity: 75;` |
-| Opacity 80 { .bold .color-blue-500 .color-opacity-80  } | `opacity-80` | `opacity: 80;` |
-| Opacity 85 { .bold .color-blue-500 .color-opacity-85  } | `opacity-85` | `opacity: 85;` |
-| Opacity 90 { .bold .color-blue-500 .color-opacity-90  } | `opacity-90` | `opacity: 90;` |
-| Opacity 95 { .bold .color-blue-500 .color-opacity-95  } | `opacity-95` | `opacity: 95;` |
-| Opacity 100 { .bold .color-blue-500 .color-opacity-100  } | `opacity-100` | `opacity: 100;` |
+| Opacity 2 { .bold .color-pink-300 .color-opacity-2  } | `opacity-2` | `opacity: 0.02;` |
+| Opacity 4 { .bold .color-pink-300 .color-opacity-4  } | `opacity-4` | `opacity: 0.04;` |
+| Opacity 6 { .bold .color-pink-300 .color-opacity-6  } | `opacity-6` | `opacity: 0.06;` |
+| Opacity 8 { .bold .color-pink-300 .color-opacity-8  } | `opacity-8` | `opacity: 0.08;` |
+| Opacity 10 { .bold .color-pink-300 .color-opacity-10  } | `opacity-10` | `opacity: 10;` |
+| Opacity 15 { .bold .color-pink-300 .color-opacity-15  } | `opacity-15` | `opacity: 15;` |
+| Opacity 20 { .bold .color-pink-300 .color-opacity-20  } | `opacity-20` | `opacity: 20;` |
+| Opacity 25 { .bold .color-pink-300 .color-opacity-25  } | `opacity-25` | `opacity: 25;` |
+| Opacity 30 { .bold .color-pink-300 .color-opacity-30  } | `opacity-30` | `opacity: 30;` |
+| Opacity 35 { .bold .color-pink-300 .color-opacity-35  } | `opacity-35` | `opacity: 35;` |
+| Opacity 40 { .bold .color-pink-300 .color-opacity-40  } | `opacity-40` | `opacity: 40;` |
+| Opacity 45 { .bold .color-pink-300 .color-opacity-45  } | `opacity-45` | `opacity: 45;` |
+| Opacity 50 { .bold .color-pink-300 .color-opacity-50  } | `opacity-50` | `opacity: 50;` |
+| Opacity 55 { .bold .color-pink-300 .color-opacity-55  } | `opacity-55` | `opacity: 55;` |
+| Opacity 60 { .bold .color-pink-300 .color-opacity-60  } | `opacity-60` | `opacity: 60;` |
+| Opacity 65 { .bold .color-pink-300 .color-opacity-65  } | `opacity-65` | `opacity: 65;` |
+| Opacity 70 { .bold .color-pink-300 .color-opacity-70  } | `opacity-70` | `opacity: 70;` |
+| Opacity 75 { .bold .color-pink-300 .color-opacity-75  } | `opacity-75` | `opacity: 75;` |
+| Opacity 80 { .bold .color-pink-300 .color-opacity-80  } | `opacity-80` | `opacity: 80;` |
+| Opacity 85 { .bold .color-pink-300 .color-opacity-85  } | `opacity-85` | `opacity: 85;` |
+| Opacity 90 { .bold .color-pink-300 .color-opacity-90  } | `opacity-90` | `opacity: 90;` |
+| Opacity 95 { .bold .color-pink-300 .color-opacity-95  } | `opacity-95` | `opacity: 95;` |
+| Opacity 100 { .bold .color-pink-300 .color-opacity-100  } | `opacity-100` | `opacity: 100;` |

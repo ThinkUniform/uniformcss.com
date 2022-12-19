@@ -1,206 +1,68 @@
-<ul class="gutter-y-40">
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Animation
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.animation -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Background
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.background -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Border
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.border -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Layout
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.layout -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Effect
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.effect -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Flexbox
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.flexbox -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Gap
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.gap -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Grid
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.grid -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Gutter
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.gutter -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Interactive
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.interactive -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Margin
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.margin -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Padding
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.padding -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Sizing
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.sizing -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      SVG
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.svg -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Transform
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.transform -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Transition
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.transition -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-  <li>
-    <h6 class="text-xs uppercase tracking-looser color-cool-gray-400 semibold mb-16">
-      Typography
-    </h6>
-    <nav class="flex flex-col align-items-start">
-      {%- for property in properties.typography -%}
-        <a href="#{{ property.name | slugify }}" class="font-sm medium transition-200 transform translate-x-0 color-cool-gray-600 hover.color-cool-gray-900 hover.translate-x-6 py-12">
-          {{ property.name }}
-        </a>
-      {%- endfor -%}
-    </nav>
-  </li>
-</ul>
+<aside class="border-r-1 border-heading-accent border-opacity-30 flex-none">
+  <div class="sticky top-0 w-256 h-100vh overflow-auto px-24 py-32 bg-black bg-opacity-10">
+
+
+    <div class="">
+      <ul class="gutter-y-36">
+
+        <li>
+          <nav class="flex flex-col align-items-start">
+
+
+            
+            {%- for name in properties -%}
+              
+
+              {% set alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'] %}
+
+              {%- for letter in alphabet -%}
+                
+                {% set typeLetter = false %}
+
+
+                {%- for key, value in name -%}
+                  
+                  {% set firstLetter = key.slice(0, 1) %}
+                  
+
+                  {% if typeLetter == false %}
+
+                    {% if firstLetter == letter %}
+                      <div class="text-xs uppercase tracking-looser color-white semibold pt-24 first.pt-0 mb-10">
+                        {{ firstLetter }}
+                      </div>
+                      {% set typeLetter = true %}
+                    {% endif %}
+                  {% endif %}
+
+                  {% if typeLetter == true %}
+
+                    {% if firstLetter == letter %}
+                      <a href="#{{ key | slugify }}" class="py-2 text-sm semibold transition-200 transform translate-x-0 color-pink-200 color-opacity-60 hover.color-opacity-90 hover.translate-x-6">
+                        {{ key }}
+                      </a>
+                    {% endif %}
+
+                  {% endif %}
+
+                  
+                  
+                {%- endfor -%}
+
+
+
+
+
+              {%- endfor -%}
+              
+
+              
+
+            {%- endfor -%}
+          </nav>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</aside>
