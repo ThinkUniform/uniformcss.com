@@ -1,0 +1,162 @@
+<div 
+  class="fixed top-0 left-0 w-100p h-100vh bg-black bg-opacity-40 z-9"
+  x-cloak
+  x-show="dialogs.mobileNav"
+  x-transition:enter="duration-200"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100"
+  @click="dialogs.mobileNav = false"
+>
+</div>
+
+<div 
+  class="flex fixed top-0 right-0 w-320 z-9 bg-background"
+  x-cloak
+  x-transition:enter="duration-300"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100"
+  x-show="dialogs.mobileNav"
+  x-transition:enter="duration-200 delay-100 transform"
+  x-transition:enter-start="opacity-0 translate-x-192"
+  x-transition:enter-end="opacity-100 translate-x-0"
+>
+  <div class="relative w-100p h-100vh p-20 overflow-auto">
+    <div class="absolute top-0 right-0 m-16">
+      <button class="w-32 h-32 flex align-items-center justify-content-center" @click="dialogs.mobileNav = false">
+        <ion-icon name="close" class="w-24 h-24 color-pink-300"></ion-icon>
+      </button>
+    </div>
+
+    <div class="pt-16">
+      <ul class="gutter-y-36">
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Get Started
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            
+            {%- for post in collections.intro -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+            
+            
+            {%- if pagetype == "cheatsheet" -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="/cheatsheet/fills" class="inline-flex py-2 text-sm semibold transition-200 color-nav-item-active">
+                  Cheatsheet
+                </a>
+              </li>
+            {%- else -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="/cheatsheet/fills" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  Cheatsheet
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if pagetype == "cheatsheet" -%}
+              <li class="">
+                <ul class="py-10">
+                  {%- for post in collections.cheatsheet -%}
+                    <li class="pl-20 py-2 border-l-1 {% if post.url == page.url %}color-nav-item-active border-nav-item-active{% else %}border-pink-200 border-opacity-30 color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                      <a href="{{ post.url }}" class="flex align-items-center text-sm semibold transform translate-x-0 hover.translate-x-6 transition-200 {% if post.url == page.url %}color-nav-item-active {% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                        {{ post.data.title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- endif -%}
+            <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+              <a href="/appendix" class="inline-flex align-items-center py-0 text-sm semibold transition-200 {% if page.url == '/appendix/' %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                Appendix <ion-icon name="star" class="w-14 h-14 color-yellow-300 ml-6"></ion-icon>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Fundamentals
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.fundamentals -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Customizations
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.customization -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Theming
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.theming -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Special Utilities
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.specialUtilities -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</div>

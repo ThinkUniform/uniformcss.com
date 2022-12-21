@@ -1,6 +1,6 @@
 ---
 title: Gradients
-description: Visual reference of all default gradients.
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all gradients
 date: 2021-01-03
 ---
 

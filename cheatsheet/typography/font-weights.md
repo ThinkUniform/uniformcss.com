@@ -1,6 +1,6 @@
 ---
 title: Font Weights
-description: Visual reference of all default font weights.
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all font weights
 date: 2021-01-03
 ---
 

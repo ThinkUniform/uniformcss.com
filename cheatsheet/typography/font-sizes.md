@@ -1,6 +1,6 @@
 ---
 title: Font Sizes
-description: Visual reference of all default font sizes.
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all font sizes
 date: 2021-01-03
 ---
 

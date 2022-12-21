@@ -1,0 +1,173 @@
+<aside class="relative flex-none sticky top-0 md.w-288 md.h-100vh overflow-hidden md.overflow-auto bg-background z-1 border-b-2 md.border-b-0 border-heading-accent">
+  <div class="absolute top-0 left-0 pointer-events-none w-100vw md.w-288 h-100vh overflow-hidden">
+    <div class="glass-keylight is-docs">
+      <div class="glass-keylight-outer">
+        <div class="glass-keylight-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-20 py-20 md.px-24 md.py-32">
+    <div class="flex align-items-center justify-content-between md.mb-32">
+      <div class="flex align-items-center">
+        <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+          <img src="/assets/img/uniform-logo-white.svg" class="w-128 mr-6">
+        </a>
+        {# <a href="/" class="md.hidden inline-flex align-items-center text-lg semibold tracking-tight">
+          <img src="/assets/img/uniform-brandmark-white.svg" class="w-28 mr-6">
+        </a> #}
+        <button class="relative top-2 flex align-items-center ml-2 px-10 inline-flex py-6 radius-full bg-black bg-opacity-60 hover.bg-opacity-40 color-heading uppercase font-xs semibold transition-200">
+          2.0 <ion-icon name="chevron-down" class="w-14 h-14 ml-4"></ion-icon>
+        </button>
+      </div>
+      <div class="flex align-items-center gap-16">
+        <button class="js-docsearch-mobile md.hidden"></button>
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
+          <ion-icon name="logo-github" class="w-24 h-24"></ion-icon>
+        </a>
+        <button class="h-32 flex md.hidden flex-col gap-4 align-items-center justify-content-center" @click="dialogs.mobileNav = true">
+          <div class="h-2 w-20 bg-pink-300"></div>
+          <div class="h-2 w-20 bg-pink-300"></div>
+          <div class="h-2 w-20 bg-pink-300"></div>
+        </button>
+        
+      </div>
+    </div>
+
+    <div class="hidden md.block mb-32 js-docsearch">
+      
+    </div>
+
+    <div class="hidden md.block">
+      <ul class="gutter-y-36">
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Get Started
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            
+            {%- for post in collections.intro -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+            
+            
+            {%- if pagetype == "cheatsheet" -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="/cheatsheet/fills" class="inline-flex py-2 text-sm semibold transition-200 color-nav-item-active">
+                  Cheatsheet
+                </a>
+              </li>
+            {%- else -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="/cheatsheet/fills" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  Cheatsheet
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if pagetype == "cheatsheet" -%}
+              <li class="">
+                <ul class="py-10">
+                  {%- for post in collections.cheatsheet -%}
+                    <li class="pl-20 py-2 border-l-1 {% if post.url == page.url %}color-nav-item-active border-nav-item-active{% else %}border-pink-200 border-opacity-30 color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                      <a href="{{ post.url }}" class="flex align-items-center text-sm semibold transform translate-x-0 hover.translate-x-6 transition-200 {% if post.url == page.url %}color-nav-item-active {% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                        {{ post.data.title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- endif -%}
+            <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+              <a href="/appendix" class="inline-flex align-items-center py-0 text-sm semibold transition-200 {% if page.url == '/appendix/' %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                Appendix <ion-icon name="star" class="w-14 h-14 color-yellow-300 ml-6"></ion-icon>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Fundamentals
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.fundamentals -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Customizations
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.customization -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Theming
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.theming -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+        <li>
+          <div class="h-1 bg-pink-200 bg-opacity-30"></div>
+        </li>
+
+        <li>
+          <h6 class="text-sm semibold color-white semibold mb-12">
+            Special Utilities
+          </h6>
+          <ul class="flex flex-col align-items-start">
+            {%- for post in collections.specialUtilities -%}
+              <li class="transform translate-x-0 hover.translate-x-6 transition-200">
+                <a href="{{ post.url }}" class="inline-flex py-2 text-sm semibold transition-200 {% if post.url == page.url %}color-nav-item-active{% else %} color-pink-200 color-opacity-60 hover.color-opacity-90{% endif %}">
+                  {{ post.data.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</aside>

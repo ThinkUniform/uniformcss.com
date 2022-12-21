@@ -153,9 +153,8 @@
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	top: -128px;
-	left: -128px;
-	right: -128px;
+	top: -170px;
+	left: -120px;
 	pointer-events: none;
 	z-index: 6;
 	mix-blend-mode: overlay;
@@ -163,27 +162,30 @@
 	&.is-hero {
 		transform: translateX(-23%);
 	}
+	&.is-docs {
+		top: -100px;
+		left: 100px;
+		transform: translateX(-15%);
+	}
 }
 .glass-keylight-outer {
-	transform: translateX(90%) translateY(-40%);
+	transform: translateX(220%) translateY(-60%);
 	width: 200px;
-	height: 1000px;
+	height: 2000px;
 }
 .glass-keylight-inner {
 	display: flex;
 	width: 200px;
-	height: 1000px;
+	height: 2000px;
 	transform-origin: center center;
 	transform: rotate(45deg);
-	&.is-hero {
-		transform: rotate(45deg) translateX(16%) translateY(-43%);
-	}
+
 	
 	&:before, &:after {
 		content: '';
 		display: block;
 		width: 100px;
-		height: 1000px;
+		height: 2000px;
 		background: white;
 		border-radius: 100%;
 		

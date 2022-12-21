@@ -1,6 +1,6 @@
 ---
 title: Box Shadows
-description: Visual reference of all default box-shadows.
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all shadows
 date: 2021-01-03
 ---
 

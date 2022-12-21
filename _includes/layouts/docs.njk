@@ -1,61 +1,22 @@
 ---
-layout: layouts/base-docs.njk
-bodyClass: bg-doc-background
+layout: layouts/base.njk
+pageType: docs
 ---
 
+{% include "partials/modals/mobile-nav.njk" %}
 
-<main class="">
-  
-  <div class="flex">
-    <aside class="border-r-1 border-heading-accent">
-      <div class="sticky top-0 w-288 h-100vh overflow-auto px-24 py-32">
-        <div class="flex align-items-center justify-content-between mb-32">
-          <div class="flex align-items-center">
-            <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
-              <img src="/assets/img/uniform-logo-white.svg" class="w-128 mr-6">
-            </a>
-            <button class="relative top-2 flex align-items-center ml-2 px-6 py-6 radius-sm hover.bg-black hover.bg-opacity-40 color-heading uppercase font-xs semibold transition-200">
-              2.0 <ion-icon name="chevron-down" class="w-14 h-14 ml-4"></ion-icon>
-            </button>
-          </div>
-          <div class="flex align-items-center">
-            
-            <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
-              <ion-icon name="logo-github" class="w-24 h-24"></ion-icon>
-            </a>
-          </div>
-        </div>
+<main>
 
-        <div class="js-docsearch mb-32">
-          
-        </div>
+  <div class="flex flex-col md.flex-row">
+    
+    {% include "partials/sidebar.njk" %}
 
-        <div class="">
-          {% include "partials/sidebar-docs.njk" %}
-        </div>
-      </div>
-    </aside>
-
-    {# <div class="docs-pane-divider">
-      
-    </div> #}
-
-    {# <aside class="border-r-1 border-heading-accent border-opacity-30 flex-none">
-      <div class="sticky top-0 w-256 h-100vh overflow-auto px-24 py-32 bg-black bg-opacity-10">
-
-
-        <div class="">
-          {% include "partials/sidebar-docs.njk" %}
-        </div>
-      </div>
-    </aside> #}
-
-    <div class="flex flex-1 justify-content-center gap-48 px-24">
-      <section class="docsearch-content overflow-auto w-100p max-w-640 flex-none mt-72 mb-112">
+    <div class="flex flex-1 justify-content-center gap-48 px-20 min-h-100vh md.border-l-2 border-heading-accent">
+      <section class="docsearch-content overflow-auto w-100p max-w-640 flex-none mt-48 md.mt-72 mb-112">
         <h1 class="inline-flex align-items-center bg-pink-400 bg-opacity-20 mb-14 px-14 py-4 semibold text-sm radius-full color-pink-200 tracking-tight">
           {{ title | safe }}
         </h1>
-        <h2 class="font-6xl sm.font-7xl md.font-8xl lg.font-7xl leading-110 extrabold mb-28 tracking-tighter color-heading">
+        <h2 class="font-5xl sm.font-7xl md.font-7xl lg.font-7xl leading-120 extrabold mb-28 tracking-tighter color-heading">
           {{ description | safe }}
         </h2>
 

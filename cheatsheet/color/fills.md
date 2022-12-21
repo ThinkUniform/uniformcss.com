@@ -1,6 +1,6 @@
 ---
-title: Fills
-description: Visual reference of all default colors.
+title: Fills 
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all colors 
 date: 2021-01-03
 ---
 

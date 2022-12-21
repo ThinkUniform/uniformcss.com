@@ -1,6 +1,6 @@
 ---
 title: Letter Spacings
-description: Visual reference of all default letter-spacings.
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all spacings
 date: 2021-01-03
 ---
 

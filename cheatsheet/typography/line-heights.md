@@ -1,6 +1,6 @@
 ---
 title: Line Heights
-description: Visual reference of all default line-heights.
+description: <span class="color-heading-accent">Neatly organized</span> visual <br class="hidden sm.inline">reference for all line heights
 date: 2021-01-03
 ---
 

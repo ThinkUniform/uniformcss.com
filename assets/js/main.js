@@ -1,80 +1,17 @@
-
-// Scroll to top
-var myElement = document.querySelector('.js-scrollUp') !== null;
-if (myElement) {
-  var myElement = document.querySelector('.js-scrollUp');
-  // construct an instance of Headroom, passing the element
-  var headroom  = new Headroom(myElement);
-  // initialise
-  headroom.init();
-}
-
-// Initialize AlpineJS
-document.addEventListener('alpine:init', () => {
-  Alpine.data('tabs', () => ({
-    width: 0,
-    left: 0,
-    tab: 0,
-
-    init: function() {
-      active = this.$el.querySelector('.is-active');
-      this.width =  active.offsetWidth;
-      this.left =  active.offsetLeft;
-    },
-    switchTabs(e, targetTab) {
-      this.tab = targetTab;
-      this.width = e.currentTarget.offsetWidth;
-      this.left =  e.currentTarget.offsetLeft;
-    }
-  })),
-  
-  Alpine.data('main', () => ({
-    mobileNav: false, 
-    modal: false,
-
-    init: function() {
-
-    },
-    showModal() {
-      this.modal = ! this.modal;
-
-      var iframe = document.querySelector('.js-embedFrame') !== null;
-      if (iframe) {
-        var iframe = document.querySelector('.js-embedFrame');
-      }
-
-      iframe.src = "https://www.youtube.com/embed/_hH65eaPdPo?autoplay=1";
-    },
-    closeModal() {
-      this.modal = ! this.modal;
-
-      var iframe = document.querySelector('.js-embedFrame') !== null;
-      if (iframe) {
-        var iframe = document.querySelector('.js-embedFrame');
-      }
-
-      iframe.src = "";
-    },
-  }))
-})
-
-
 // Initialize AlpineJS
 document.addEventListener('alpine:init', () => {
   // Main
   Alpine.data('main', () => ({
     dialogs: {
-      preview: false,
+      mobileNav: false,
     },
-    previewSelection: 6
   }));
 });
 
-
+// GSAP
 document.addEventListener(
   'DOMContentLoaded',
   function () {
-
     gsap.to('.gsap-section-1 .glass-keylight', {
       scrollTrigger: {
         trigger: '.gsap-section-1 .glass-frame',
