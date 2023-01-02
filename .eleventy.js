@@ -19,7 +19,6 @@ module.exports = function (eleventyConfig) {
     wrapper: 'div',
   });
 
-
   eleventyConfig.addFilter('asPostDate', (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 
