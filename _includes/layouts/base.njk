@@ -34,7 +34,7 @@
   <link rel="manifest" href="/manifest.webmanifest">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+  {# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" /> #}
   <link rel="stylesheet" href="{{ '/assets/css/uniform.min.css' | url }}">
 
   <!-- AlpineJS -->
@@ -59,9 +59,10 @@
 <script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
 
 {% if pageType == 'docs' %}
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
   <script src="/assets/js/docs.js"></script>
 {% else %}
   <script src="/assets/js/main.js"></script>

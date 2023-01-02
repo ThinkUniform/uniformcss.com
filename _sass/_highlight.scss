@@ -12,7 +12,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 
  code[class*="language-"],
  pre[class*="language-"] {
-	 color: fill(cool-gray-200);
+	 color: fill(white, .9);
 	 background: none;
 	 font-family: font(mono);
 	 font-size: font(sm);
@@ -134,7 +134,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  // OVERRIDES
 
 .token.comment {
-	color: fill(cool-gray-300);
+	color: fill(pink-200, .6);
 }
 
 .token.selector {
@@ -142,7 +142,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.important {
-	color: #f14d31;
+	color: fill(orange-300);
 }
 
 .token.tag {
@@ -170,7 +170,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 }
 
 .token.keyword {
-	color: fill(purple-300);
+	color: fill(indigo-300);
 }
 
 .token.rule {

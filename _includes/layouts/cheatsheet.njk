@@ -12,7 +12,7 @@ pageType: docs
     {% include "partials/sidebar.njk" %} 
 
     <div class="flex flex-1 justify-content-center gap-48 px-20 min-h-100vh md.border-l-2 border-heading-accent">
-      <section class="docsearch-content overflow-auto w-100p max-w-896 flex-none mt-72 mb-112">
+      <section class="docsearch-content overflow-auto w-100p max-w-896 flex-none mt-48 md.mt-72 mb-112">
         <h1 class="inline-flex align-items-center bg-pink-400 bg-opacity-20 mb-14 px-14 py-4 semibold text-sm radius-full color-pink-200 tracking-tight">
           {{ title | safe }}
         </h1>
@@ -20,9 +20,11 @@ pageType: docs
           {{ description | safe }}
         </h2>
 
-        {# <p class="text-lg color-paragraph mb-32">
-          {{ intro | safe }}
-        </p> #}
+        {%- if intro -%}
+          <div class="text-lg color-paragraph">
+            {{ intro | markdownify | safe }}
+          </div>
+        {%- endif -%}
 
         {# <div class="flex align-items-center mb-56">
           <img src="/assets/img/profiles/jin.jpg" class="w-36 h-36 mr-14 border-2 border-white radius-full">

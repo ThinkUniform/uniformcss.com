@@ -1,28 +1,42 @@
 <aside class="relative flex-none sticky top-0 md.w-288 md.h-100vh overflow-hidden md.overflow-auto bg-background z-1 border-b-2 md.border-b-0 border-heading-accent">
-  <div class="absolute top-0 left-0 pointer-events-none w-100vw md.w-288 h-100vh overflow-hidden">
-    <div class="glass-keylight is-docs">
-      <div class="glass-keylight-outer">
-        <div class="glass-keylight-inner">
+  <div class="relative z-1 px-20 py-20 md.px-24 md.py-28">
+    <div class="flex md.flex-col align-items-center md.align-items-start justify-content-between md.mb-32">
+      
+      <div class="flex align-items-center justify-content-between w-100p md.mb-28">
+        <div class="flex align-items-center">
+          <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+            <img src="/assets/img/uniform-logo-white.svg" class="w-128 mr-6">
+          </a>
+          <div class="relative" x-data="{ open: false }" @click.away="open = false">
+            <button class="relative top-2 flex align-items-center ml-2 px-10 inline-flex py-6 radius-full bg-black bg-opacity-60 hover.bg-opacity-40 color-heading uppercase font-xs semibold transition-200" @click="open = !open" >
+              2.0 <ion-icon name="chevron-down" class="w-14 h-14 ml-4"></ion-icon>
+            </button>
+            <div x-cloak x-show="open" x-transition class="absolute top-100p right-0 pt-10">
+              <div class="radius-md overflow-hidden bg-black bg-opacity-60 backdrop backdrop-blur-sm py-2 w-112">
+                <ul>
+                  <li class="border-b-1 border-white border-opacity-10">
+                    <div class="flex align-items-center justify-content-between text-left py-4 px-12 color-pink-400 transition-200 text-xs semibold" @click="open = false">
+                      2.0
+                      <ion-icon name="checkmark" class="w-12 h-12"></ion-icon>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="flex align-items-center justify-content-between text-left py-4 px-12 color-pink-400 hover.color-pink-300 transition-200 text-xs semibold" @click="open = false">1.0</a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="px-20 py-20 md.px-24 md.py-32">
-    <div class="flex align-items-center justify-content-between md.mb-32">
-      <div class="flex align-items-center">
-        <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
-          <img src="/assets/img/uniform-logo-white.svg" class="w-128 mr-6">
+        <a href="https://github.com/ThinkUniform/uniformcss" class="hidden md.flex align-items-center text-md leading-100 color-white color-opacity-100 hover.color-opacity-70">
+          <ion-icon name="logo-github" class="w-24 h-24"></ion-icon>
         </a>
-        {# <a href="/" class="md.hidden inline-flex align-items-center text-lg semibold tracking-tight">
-          <img src="/assets/img/uniform-brandmark-white.svg" class="w-28 mr-6">
-        </a> #}
-        <button class="relative top-2 flex align-items-center ml-2 px-10 inline-flex py-6 radius-full bg-black bg-opacity-60 hover.bg-opacity-40 color-heading uppercase font-xs semibold transition-200">
-          2.0 <ion-icon name="chevron-down" class="w-14 h-14 ml-4"></ion-icon>
-        </button>
       </div>
-      <div class="flex align-items-center gap-16">
-        <button class="js-docsearch-mobile md.hidden"></button>
-        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
+
+      <div class="flex align-items-center md.w-100p gap-20">
+        <button class="flex-1 js-docsearch"></button>
+        <a href="https://github.com/ThinkUniform/uniformcss" class="md.hidden flex align-items-center text-md leading-100 color-white color-opacity-100">
           <ion-icon name="logo-github" class="w-24 h-24"></ion-icon>
         </a>
         <button class="h-32 flex md.hidden flex-col gap-4 align-items-center justify-content-center" @click="dialogs.mobileNav = true">
@@ -30,13 +44,10 @@
           <div class="h-2 w-20 bg-pink-300"></div>
           <div class="h-2 w-20 bg-pink-300"></div>
         </button>
-        
       </div>
+
     </div>
 
-    <div class="hidden md.block mb-32 js-docsearch">
-      
-    </div>
 
     <div class="hidden md.block">
       <ul class="gutter-y-36">
@@ -169,5 +180,23 @@
 
       </ul>
     </div>
+
+
+  </div>
+  <div class="md.hidden absolute z-2 top-0 left-0 pointer-events-none w-100vw md.w-288 h-100vh overflow-hidden" style="mix-blend-mode: overlay">
+    <div class="glass-keylight is-docs">
+      <div class="glass-keylight-outer">
+        <div class="glass-keylight-inner">
+        </div>
+      </div>
+    </div>
   </div>
 </aside>
+<div class="hidden md.block fixed z-2 top-0 left-0 pointer-events-none w-288 h-100vh overflow-hidden" style="mix-blend-mode: overlay">
+  <div class="glass-keylight is-docs">
+    <div class="glass-keylight-outer">
+      <div class="glass-keylight-inner">
+      </div>
+    </div>
+  </div>
+</div>

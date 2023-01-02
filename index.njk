@@ -1,446 +1,603 @@
 ---
 title: Lightning Fast Utility Generator for Sass
 layout: layouts/base.njk
-bodyClass: bg-background
 
-scss_example: |
-  @use "uniform" as * with (
-    $config: (
-      important: true
-    )
-  );
-css_example: |
-  .text-left { 
-    text-align: left !important; 
-  }
-  .text-center { 
-    text-align: center !important; 
-  }
-  .text-right { 
-    text-align: right !important; 
-  }
-  .block {
-    display: block !important;
-  }
-  .flex {
-    display: flex !important;
-  }
-clone_uniform: |
-  npm install uniformcss
-compile_uniform: |
-  @use "uniform" as *;
-load_uniform: |
-  <head>
-    <!-- Load your compiled stylesheet here -->
-    <link rel="stylesheet" href="/uniform.min.css">
-  </head>
-
-  <body>
-    <!-- Style components using composable utilities -->
-    <div class="max-w-1025 mx-auto py-48">
-      <h1 class="text-4xl text-center extrabold color-pink-500 mb-24">
-        Hello World!
-      </h1>
-    </div>
-  </body>
-add_animation: |
-  <div class="animate-ping ..."></div>
-load_plugins: |
-  @use "uniform" as *;
-  @use "uniform/plugins/wrapper";
-  @use "uniform/plugins/markdown";
-  @use "uniform/plugins/ratio";
-  @use "uniform/plugins/animate";
-  @use "uniform/plugins/ring";
-animate_plugin: |
-  <main class="wrapper markdown">
-
-    <h1 class="fade-in-from-top" style="--animate-delay: 0s;">
-      Typewriter delectus cred
-    </h1>
-
-    <p class="fade-in-from-top" style="--animate-delay: 0.2s;">
-      Cosby sweater plaid shabby chic kitsch pour-over ex. 
-      Meggings kogi vinyl meh, food truck banh mi Etsy.
-    </p>
-
-    <button class="ring">Focus me</button>
-
-  </main>
-api_function_input: |
-  @use "uniform" as * with (
-    $config: (    
-      colors: ( navbar: #3a37d3 ),
-      shadows: ( card: 0 4px 60px 0 rgba(90, 134, 234, 0.2) )
-    )
-  );
-
-  .navbar {
-    display: flex;
-    background: fill(navbar);
-    box-shadow: shadow(card);
-    padding: size(20, 24);
-  }
-api_function_output: |
-  .navbar {
-    display: flex;
-    background: #3a37d3;
-    box-shadow: 0 4px 60px 0 rgba(90, 134, 234, 0.2);
-    padding: 1.25rem 1.5rem;
-  }
-configure_sass: |
-  @use "uniform" as * with (
-    $config: (    
-      colors: ( 
-        navbar: #3a37d3,
-        footer: #5a6072,
-        seagreen: #188657,
-      ),
-      shadows: (
-        card: 0 4px 60px 0 rgba(90, 134, 234, 0.2)
-      )
-    )
-  );
-configure_css: |
-  :root {
-    --font-sans: sans-serif;
-    --font-mono: menlo;
-    
-    --semibold: 600;
-    --bold: 700;
-    --extrabold: 800;
-  }
-
-# SECTION - POWER FEATURES
-config_shorthand_input: |
-  // main.scss
-
-  @use "uniform" as * with (
-    $config: (    
-      utilities: (
-        margin-top: (
-          shorthand: mt
-        ),
-        margin-right: (
-          shorthand: marginRight
+codesnippet:
+  hero:
+    sass: |
+      @use "uniform" as * with (
+        $config: (    
+          delimiter: '-',
+          important: true,
+          colors: (
+            btn: #0054CB,
+            btn-hover: #0046A8
+          ),
+          utilities: (
+            display: (
+              shorthand: null,
+              responsive: true
+              variants: (
+                block: block,
+                flex: flex
+              )
+            )
+          )
         )
-      )
-    )
-  );
-config_shorthand_output: |
-  /* main.css */
-  
-  .mt-1 {
-    margin-top: 0.062rem;
-  }
-  .mt-2 {
-    margin-top: 0.125rem;
-  }
-  ...
-
-  .marginRight-1 {
-    margin-right: 0.062rem;
-  }
-  ...
-config_important_input: |
-  // main.scss
-
-  @use "uniform" as * with (
-    $config: (    
-      important: true
-    )
-  );
-config_important_output: |
-  /* main.css */
-  
-  .align-baseline {
-    vertical-align: baseline !important;
-  }
-  .align-top {
-    vertival-align: top !important;
-  }
-  .align-middle {
-    vertical-align: middle !important;
-  }
-  .align-bottom	{
-    vertival-align: bottom !important;
-  }
-  .align-text-top	{
-    vertical-align: text-top !important;
-  }
-  .align-text-bottom {
-    vertical-align: text-bottom !important;
-  }
-  ...
-config_delimiter_input: |
-  // main.scss
-
-  @use "uniform" as * with (
-    $config: (    
-      delimiter: '--',
-      pseudo-delimiter: '__',
-      screen-delimiter: '.',
-    )
-  );
-config_delimiter_output: |
-  /* main.css */
-  
-  .bg--opacity-50 {
-    --bg-opacity: 0.5;
-  }
-  .hover__bg--opacity-50:hover {
-    --bg-opacity: 0.5;
-  }
-  .focus__bg--opacity-50:focus {
-    --bg-opacity: 0.5;
-  }
-  ...
-
-  @media (min-width: 768px) {
-    .sm\.text--center {
-      text-align: center;
-    }
-  }
-  ...
-config_comma_compression_input: |
-  // main.scss
-
-  @use "uniform" as * with (
-    $config: (    
-      comma-compression: true
-    )
-  );
-config_comma_compression_output: |
-  /* main.css */
-  
-  .bg-opacity-50, 
-  .focus\.bg-opacity-50:focus, 
-  .group:hover .group-hover\.bg-opacity-50, 
-  .hover\.bg-opacity-50:hover {
-    --bg-opacity: 0.5;
-  }
-  .bg-opacity-55, 
-  .focus\.bg-opacity-55:focus, 
-  .group:hover .group-hover\.bg-opacity-55, 
-  .hover\.bg-opacity-55:hover {
-    --bg-opacity: 0.55;
-  }
-  .bg-opacity-60, 
-  .focus\.bg-opacity-60:focus, 
-  .group:hover .group-hover\.bg-opacity-60, 
-  .hover\.bg-opacity-60:hover {
-    --bg-opacity: 0.6;
-  }
-  ...
-config_prefix_input: |
-  // main.scss
-
-  @use "uniform" as * with (
-    $config: (    
-      prefix: 'u-',
-    )
-  );
-config_prefix_output: |
-  /* main.css */
-  
-  .u-inline {
-    display: inline;
-  }
-  .u-block {
-    display: block;
-  }
-  .u-flex {
-    display: flex;
-  }
-  .u-grid {
-    display: grid;
-  }
-  .u-inline-block {
-    display: inline-block;
-  }
-  .u-inline-flex {
-    display: inline-flex;
-  }
-  ...
-config_apply_input: |
-  // main.scss
-
-  .parent {
-    @include apply('p-40 shadow-2xs radius-2xl');
-
-    .child {
-      @include apply('hover.opacity-50 p-24 md.p-64');
-    }
-  }
-config_apply_output: |
-  /* main.css */
-
-  .parent {
-    padding: 2.5rem;
-    box-shadow: var(--shadow-2xs);
-    border-radius: var(--radius-2xl);
-  }
-  .parent .child {
-    padding: 1.5rem;
-  }
-  .parent .child:hover {
-    opacity: 0.5;
-  }
-
-  @media (min-width: 1024px) {
-    .parent .child {
-      padding: 4rem;
-    }
-  }
-config_api_functions_input: |
-  // main.scss
-
-  .parent {
-    padding: size(24, 32); // 1.5rem 2.5rem;
-    background: fill(red-400, .4);
-    border-radius: radius(lg);
-
-    .child {
-      font-family: font(sans);
-      font-size: font(lg);
-      font-weight: font(semibold);
-      line-height: leading(looser);
-    }
-  }
-config_api_functions_output: |
-  /* main.css */
-
-  .parent {
-    padding: 1.5rem 2rem;
-    background: rgba(var(--red-400), 0.4);
-    border-radius: var(--radius-lg);
-  }
-
-  .parent .child {
-    font-family: var(--font-sans);
-    font-size: var(--font-lg);
-    font-weight: var(--semibold);
-    line-height: var(--leading-looser);
-  }
-config_helpers_input: |
-  // main.scss
-
-  .element {
-    font-size: rem(11);
-    
-    @include screen(sm) {
-      font-size: rem(13);
-    }
-    @include screen(lg) {
-      font-size: rem(15);
-    }
-  }
-config_helpers_output: |
-  /* main.css */
-
-  .element {
-    font-size: 0.687rem;
-  }
-
-  @media (min-width: 768px) {
-    .element {
-      font-size: 0.812rem;
-    }
-  }
-  @media (min-width: 1280px) {
-    .element {
-      font-size: 0.937rem;
-    }
-  }
-config_json_input: |
-  // main.scss
-
-  @use "uniform" as * with (
-    $config: (
-      output: 'json'
-    )
-  );
-config_json_output: |
-  {
-    "text-decoration": {
-      "important": "false",
-      "extra-selector": "",
-      "responsive": "false",
-      "pseudos": "hover, group-hover, focus",
-      "classes": {
-        "underline": {
-          "text-decoration": "underline"
-        },
-        "line-through": {
-          "text-decoration": "line-through"
-        },
-        "no-underline": {
-          "text-decoration": "none"
+      );
+      
+      .btn {
+        @include apply('inline-flex align-items-center justify-content-center h-40 px-14 radius-md color-white semibold bg-btn-600 hover.bg-btn-hover focus.shadow-focus transition-100');
+        &__fluid {
+          @include apply('w-100p')
         }
       }
-    }
-  },
-  ...
+    css: |
+      text-left { 
+        text-align: left !important; 
+      }
+      .text-center { 
+        text-align: center !important; 
+      }
+      .text-right { 
+        text-align: right !important; 
+      }
+      .block {
+        display: block !important;
+      }
+      .flex {
+        display: flex !important;
+      }
+      .inline {
+        display: inline !important;
+      }
+      .inline-block {
+        display: inline-block !important;
+      }
+      .inline-flex {
+        display: inline-flex !important;
+      }
+      ...
+    html: |
+      <div class="w-100p bg-black radius-2xl p-24 pt-32">
+        <h1 class="text-lg text-center extrabold tracking-tight color-white mb-6">
+          Sign in to Uniform
+        </h1>
+        <p class="text-sm text-center color-white color-opacity-60 mb-28">
+          Enter your email and password
+        </p>
+        <div class="relative mb-14">
+          <div class="absolute top-0 left-0 flex align-items-center justify-content-center w-40 h-40 color-white color-opacity-40">
+            <ion-icon name="mail" class="w-18 h-18"></ion-icon>
+          </div>
+          <input type="email" class="h-40 px-16 pl-40 text-sm radius-xs bg-white bg-opacity-10 focus.bg-opacity-15 color-white" placeholder="Email" required>
+        </div>
+        <div class="relative mb-14">
+          <div class="absolute top-0 left-0 flex align-items-center justify-content-center w-40 h-40 color-white color-opacity-40">
+            <ion-icon name="lock-closed" class="w-18 h-18"></ion-icon>
+          </div>
+          <input type="password" class="h-40 px-16 pl-40 text-sm radius-xs bg-white bg-opacity-10 focus.bg-opacity-15 color-white" placeholder="Password" required>
+        </div>
+        <div class="mb-28">
+          <label class="inline-flex align-items-center font-sm color-white">
+            <input class="text-lg radius-xs bg-white bg-opacity-20 color-teal-600 transition-200 border-1 mr-8 " type="checkbox" checked/> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-fluid">Sign in</button> 
+      </div>
+  customize:
+    shorthand:
+      sass: |
+        @use "uniform" as * with (
+          $config: (    
+            utilities: (
+              margin-top: (
+                // `shorthand` is the keyword used to represent the CSS property e.g. `mt-1`, `mt-2`
+                shorthand: mt
+              ),
+              margin-right: (
+                // e.g. `marginRight-1`, `marginRight-2`
+                shorthand: marginRight
+              )
+            ),
+
+            // Exclude all CSS properties in the output.
+            excludes: (
+              all
+            ),
+            // Only include `margin-top` and `margin-right CSS properties in the output.
+            includes: (
+              margin-top, 
+              margin-right
+            )
+          )
+        );
+      css: |
+        .mt-1 {
+          margin-top: 0.0625rem;
+        }
+
+        .mt-2 {
+          margin-top: 0.125rem;
+        }
+
+        .mt-4 {
+          margin-top: 0.25rem;
+        }
+
+        .marginRight-1 {
+          margin-right: 0.0625rem;
+        }
+
+        .marginRight-2 {
+          margin-right: 0.125rem;
+        }
+
+        .marginRight-4 {
+          margin-right: 0.25rem;
+        }
+
+        ...
+    important:
+      sass: |
+        @use "uniform" as * with (
+          $config: (   
+            // Append `!important` to the end each CSS property. 
+            important: true,
+
+            // Exclude all CSS properties in the output.
+            excludes: (
+              all
+            ),
+
+            // Only include `margin` in the output.
+            includes: (
+              margin
+            )
+          )
+        );
+      css: |
+        .m-1 {
+          margin: 0.0625rem !important;
+        }
+
+        .m-2 {
+          margin: 0.125rem !important;
+        }
+
+        .m-4 {
+          margin: 0.25rem !important;
+        }
+
+        .m-6 {
+          margin: 0.375rem !important;
+        }
+
+        .m-8 {
+          margin: 0.5rem !important;
+        }
+
+        .m-10 {
+          margin: 0.625rem !important;
+        }
+
+        ...
+
+    delimiters:
+      sass: |
+        @use "uniform" as * with (
+          $config: (
+            // Customize the delimiter used to separate keyword and variant.
+            delimiter: '--',
+            pseudo-delimiter: '__',
+            screen-delimiter: '.',
+
+            // Exclude all CSS properties in the output.
+            excludes: (
+              all
+            ),
+
+            // Only include `opacity` in the output.
+            includes: (
+              opacity
+            )
+          )
+        );
+      
+      css: |
+        .opacity--100 {
+          opacity: 1;
+        }
+
+        .hover__opacity--100:hover {
+          opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+          .sm\.opacity--100 {
+            opacity: 1;
+          }
+
+          .sm\.hover__opacity--100:hover {
+            opacity: 1;
+          }
+        }
+    commaCompression:
+      sass: |
+        @use "uniform" as * with (
+          $config: (
+            // Append a prefix to each utility.
+            prefix: 'u-',
+
+            // Exclude all CSS properties in the output.
+            excludes: (
+              all
+            ),
+
+            // Only include `display` in the output.
+            includes: (
+              display
+            )
+          )
+        );
+      css: |
+        .opacity-0, .focus\.opacity-0:focus, .group:hover .group-hover\.opacity-0, .hover\.opacity-0:hover {
+          opacity: 0;
+        }
+
+        .opacity-2, .focus\.opacity-2:focus, .group:hover .group-hover\.opacity-2, .hover\.opacity-2:hover {
+          opacity: 0.02;
+        }
+
+        .opacity-4, .focus\.opacity-4:focus, .group:hover .group-hover\.opacity-4, .hover\.opacity-4:hover {
+          opacity: 0.04;
+        }
+
+        .opacity-6, .focus\.opacity-6:focus, .group:hover .group-hover\.opacity-6, .hover\.opacity-6:hover {
+          opacity: 0.06;
+        }
+
+        .opacity-8, .focus\.opacity-8:focus, .group:hover .group-hover\.opacity-8, .hover\.opacity-8:hover {
+          opacity: 0.08;
+        }
+
+        .opacity-15, .focus\.opacity-15:focus, .group:hover .group-hover\.opacity-15, .hover\.opacity-15:hover {
+          opacity: 0.15;
+        }
+
+        ...
+    prefix:
+      sass: |
+        @use "uniform" as * with (
+          $config: (
+            // Append a prefix to each utility.
+            prefix: 'u-',
+
+            // Exclude all CSS properties in the output.
+            excludes: (
+              all
+            ),
+
+            // Only include `display` in the output.
+            includes: (
+              display
+            )
+          )
+        );
+      css: |
+        .u-inline {
+          display: inline;
+        }
+
+        .u-block {
+          display: block;
+        }
+
+        .u-flex {
+          display: flex;
+        }
+
+        .u-grid {
+          display: grid;
+        }
+
+        .u-inline-block {
+          display: inline-block;
+        }
+
+        .u-inline-flex {
+          display: inline-flex;
+        }
+
+        ...
+    apply:
+      sass: |
+        @use "uniform" as *;
+
+        .block {
+          @include apply('overflow-hidden radius-sm');
+
+          &__element {
+            @include apply('flex align-items-center h-40 px-12 shadow-2xs radius-sm p-24 md.p-64');
+
+            &--modifier {
+              @include apply('w-100p radius-none')
+            }
+          }
+        }
+
+      css: |
+        .block {
+          overflow: hidden;
+          border-radius: var(--radius-sm);
+        }
+
+        .block__element {
+          display: flex;
+          align-items: center;
+          height: 2.5rem;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          box-shadow: var(--shadow-2xs);
+          border-radius: var(--radius-sm);
+          padding: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+          .block__element {
+            padding: 4rem;
+          }
+        }
+
+        .block__element--modifier {
+          width: 100%;
+          border-radius: 0;
+        }
+    apiFunctions:
+      sass: |
+        @use "uniform" as *;
+
+        .block {
+          padding: size(24, 32);
+          background: fill(red-400, .4);
+          border-radius: radius(lg);
+          box-shadow: shadow(sm);
+
+          &__element {
+            border-radius: radius(lg);
+            box-shadow: shadow(sm);
+            font-family: font(sans);
+            font-size: font(lg);
+            font-weight: font(semibold);
+            line-height: leading(looser);
+
+            &--modifier {
+              letter-spacing: tracking(loose);
+            }
+          }
+        }
+
+      css: |
+        .block {
+          padding: 1.5rem 2rem;
+          background: rgba(var(--red-400), 0.4);
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow-sm);
+        }
+
+        .block__element {
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow-sm);
+          font-family: var(--font-sans);
+          font-size: var(--font-lg);
+          font-weight: var(--font-semibold);
+          line-height: var(--leading-looser);
+        }
+
+        .block__element--modifier {
+          letter-spacing: var(--tracking-loose);
+        }
+    helperMixins:
+      sass: |
+        @use "uniform" as *;
+
+        .block {
+          font-size: rem(11);
+          
+          &--modifier {
+            @include screen(sm) {
+              font-size: rem(13);
+            }
+          }
+
+          @each $breakpoint, $breakpoint-value in screens() {
+            // for each breakpoint, do the following
+            @include screen($breakpoint) {
+              &__element-#{$breakpoint} {
+                font-size: rem(16);
+              }
+            }
+          }
+        }
+
+      css: |
+        .block {
+          font-size: 0.6875rem;
+        }
+        @media (min-width: 768px) {
+          .block--modifier {
+            font-size: 0.8125rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .block__element-sm {
+            font-size: 0.9375rem;
+          }
+        }
+        @media (min-width: 1024px) {
+          .block__element-md {
+            font-size: 0.9375rem;
+          }
+        }
+        @media (min-width: 1280px) {
+          .block__element-lg {
+            font-size: 0.9375rem;
+          }
+        }
+    headlessMode:
+      sass: |
+        @use "uniform" as * with (
+          $config: (
+            output: 'headless'
+          )
+        );
+
+        .block {
+          @include apply('overflow-hidden radius-sm');
+
+          &__element {
+            @include apply('flex align-items-center h-40 px-12 shadow-2xs radius-sm p-24 md.p-64');
+
+            &--modifier {
+              @include apply('w-100p radius-none')
+            }
+          }
+        }
+
+      css: |
+        .block {
+          overflow: hidden;
+          border-radius: var(--radius-sm);
+        }
+
+        .block__element {
+          display: flex;
+          align-items: center;
+          height: 2.5rem;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          box-shadow: var(--shadow-2xs);
+          border-radius: var(--radius-sm);
+          padding: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+          .block__element {
+            padding: 4rem;
+          }
+        }
+
+        .block__element--modifier {
+          width: 100%;
+          border-radius: 0;
+        }
+    jsonOutput:
+      sass: |
+        @use "uniform" as * with (
+          $config: (
+            output: 'json',
+
+            excludes: (
+              all
+            ),
+
+            includes: (
+              align-content
+            )
+          )
+        );
+
+      json: |
+        {
+          "align-content": {
+            "important": "false",
+            "extra-selector": "",
+            "responsive": "true",
+            "pseudos": "none",
+            "classes": {
+              "align-content-center": {
+                "align-content": "center"
+              },
+              "align-content-start": {
+                "align-content": "flex-start"
+              },
+              "align-content-end": {
+                "align-content": "flex-end"
+              },
+              "align-content-between": {
+                "align-content": "space-between"
+              },
+              "align-content-around": {
+                "align-content": "space-around"
+              },
+              "align-content-evenly": {
+                "align-content": "space-evenly"
+              }
+            }
+          }
+        }
+
+
+
+
 ---
 
-<nav class="fade-in-from-topx opacity-0x hidden md.block stickyx mt-36 top-n1 px-32 relative z-10"
-  style="--animate-delay: 0.2s; --animate-duration: .6s; --animate-from: -24px;">
-  <div class="max-w-1152 mx-auto">
-    <div class="flex align-items-center justify-content-between py-10 mx-auto">
-      <div class="w-256 flex align-items-center">
-        <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
-          <img src="/assets/img/uniform-logo-white.svg" class="w-144 mr-6">
-          <span class="relative mt-n6 color-heading uppercase font-xs bold tracking-loose">
-            2.0
-          </span>
-        </a>
-      </div>
+{% include "partials/modals/mobile-nav.njk" %}
 
-      <div class="flex align-items-center justify-content-end gutter-x-24">
-        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
-          Get started
-        </a>
-        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
-          Appendix
-        </a>
-        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
-          Docs
-        </a>
-        <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
-          Cheatsheet
-        </a>
-        <a class="flex align-items-center medium color-white hover.color-white">
-          <ion-icon name="logo-github" class="w-28 h-28"></ion-icon>
-        </a>
-        
-      </div>
-      
-    </div>
-  </div>
-</nav>
+<div class="overflow-hidden">
 
 <section class="mb-256">
-  <div class="px-32">
-    <div class="relative max-w-1152 mx-auto pt-56 sm.pt-72 pb-72">
-      <div class="hero-glass">
-        <div class="hero-glass-outer">
-          <div class="hero-glass-inner"></div>
+  <div class="px-20 sm.px-32">
+    <div class="relative max-w-1152 mx-auto pt-12 sm.pt-32 mb-56 sm.mb-96 lg.mb-32">
+      <nav class="mb-56 sm.mb-96 top-n1 relative z-2">
+        <div class="flex align-items-center justify-content-between py-10 mx-auto">
+          <div class="w-256 flex align-items-center">
+            <a href="/" class="inline-flex align-items-center text-lg semibold tracking-tight">
+              <img src="/assets/img/uniform-logo-white.svg" class="w-128 sm.w-144 mr-6">
+              <span class="relative mt-n6 color-heading uppercase font-xs bold tracking-loose">
+                2.0
+              </span>
+            </a>
+          </div>
+
+          <div class="hidden sm.flex align-items-center justify-content-end gutter-x-24">
+            <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
+              Get started
+            </a>
+            <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
+              Appendix
+            </a>
+            <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
+              Docs
+            </a>
+            <a class="text-sm medium color-pink-200 color-opacity-80 hover.color-opacity-100">
+              Cheatsheet
+            </a>
+            <a class="flex align-items-center medium color-white hover.color-white">
+              <ion-icon name="logo-github" class="w-28 h-28"></ion-icon>
+            </a>
+          </div>
+
+          <div class="flex sm.hidden align-items-center md.w-100p gap-20">
+            <a class="flex align-items-center medium color-white hover.color-white">
+              <ion-icon name="logo-github" class="w-28 h-28"></ion-icon>
+            </a>
+            <button class="h-32 flex md.hidden flex-col gap-4 align-items-center justify-content-center" @click="dialogs.mobileNav = true">
+              <div class="h-2 w-20 bg-pink-300"></div>
+              <div class="h-2 w-20 bg-pink-300"></div>
+              <div class="h-2 w-20 bg-pink-300"></div>
+            </button>
+          </div>
+
+          
         </div>
+      </nav>
+
+      <div class="hero-frame-left">
+        <img src="/assets/img/hero-frame-left.svg" class="w-512">
       </div>
-      <div class="hero-glass">
-        <div class="hero-glass-outer">
-          <div class="hero-glass-inner"></div>
-        </div>
-      </div>
-      <div class="hero-glass">
-        <div class="hero-glass-outer">
-          <div class="hero-glass-inner"></div>
-        </div>
-      </div>
-      <div class="hero-glass">
-        <div class="hero-glass-outer">
-          <div class="hero-glass-inner"></div>
-        </div>
+      <div class="hero-frame-right">
+        <img src="/assets/img/hero-frame-right.svg" class="w-512">
       </div>
 
       <div class="glass-keylight is-hero">
@@ -450,7 +607,7 @@ config_json_output: |
         </div>
       </div>
 
-      <div class="relative z-4 fade-inx">
+      <div class="relative z-4">
         {# <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
           <a href="https://www.producthunt.com/posts/uniform-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uniform-css" class="inline-flex align-items-center text-lg semibold tracking-tight">
             <img src="/assets/img/featured.svg" class="max-w-192">
@@ -461,33 +618,49 @@ config_json_output: |
           Built entirely in <ion-icon name="logo-sass" class="w-28 h-28 ml-10 color-pink-400"></ion-icon>
         </div>
 
-        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
-          <span class="color-heading-accent">Roll your own</span> flexible utility <br>class generator built for Sass
+        <h1 class="font-6xl sm.font-8xl md.font-9xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
+          <span class="color-heading-accent">Roll your own</span> flexible utility <br class="hidden sm.inline">class generator built for Sass
         </h1>
         
-        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
-          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        <p class="text-lg sm.text-lg md.text-lg max-w-512 tracking-tight mb-32 sm.mb-48 color-paragraph">
+          Fully customizable utility generator and CSS framework to help you gain the full power of both utility-first and Sass.
         </p>
         
-        <div class="flex gap-10">
-          <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
+        <div class="flex flex-col sm.flex-row gap-20">
+          <a href="/docs/overview" class="inline-flex align-items-center justify-content-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
             Read docs
           </a>
-          <div class="inline-flex align-items-center h-40 radius-md px-16 bg-black bg-opacity-60 border-1 border-pink-200 border-opacity-40 text-sm color-white">
-            <pre><code><span class="color-pink-300">npm install</span> uniformcss</code></pre>
-            <div x-data="{
-              tooltip: false
-            }">
-              <div class="ml-12 flex align-items-center relative" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false">
-                <button class="text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90">
+          <div 
+            class="inline-flex align-items-center justify-content-between h-40 radius-md px-16 bg-black bg-opacity-60 border-1 border-pink-200 border-opacity-40 text-sm color-white"
+            x-data="{
+              tooltip: false,
+              timeout: null,
+              copyContent() {
+                this.tooltip = true;
+                navigator.clipboard.writeText('npm install uniformcss');
+              }
+            }"
+            x-on:mouseenter="tooltip = false; clearTimeout(timeout)"
+            x-on:mouseleave="timeout = setTimeout(() => { tooltip = false }, 600)"
+          >
+            <pre><code class="text-sm"><span class="color-pink-300">npm install</span> uniformcss</code></pre>
+            <div 
+              class="ml-10"
+            >
+              <div class="relative">
+                <button 
+                  class="flex align-items-center h-24 text-md leading-100 color-pink-200 color-opacity-70 hover.color-opacity-90" 
+                  @click="copyContent()" 
+                >
                   <ion-icon name="copy"></ion-icon>
                 </button>
-                <div class="absolute bottom-100p left-50p transform translate-x-n50p z-10 mb-8 bg-black radius-sm shadow-md space-normal z-2 pointer-events-none" x-show="tooltip" x-transition:enter="duration-200" x-transition:enter-start="opacity-0 mb-0" x-transition:enter-end="opacity-100 mb-8" x-transition:leave="duration-200" x-transition:leave-start="opacity-100 mb-0" x-transition:leave-end="opacity-0 mb-8" style="display: none;">
-                  <div class="flex align-items-center px-10 py-8 space-nowrap text-xs leading-100 regular color-white">
-                    Copy
+
+                <div class="absolute bottom-100p left-50p transform translate-x-n50p z-10 mb-4 bg-pink-400 radius-sm shadow-md space-normal z-2 pointer-events-none" x-show="tooltip" x-transition:enter="duration-200" x-transition:enter-start="opacity-0 mb-0" x-transition:enter-end="opacity-100 mb-4" x-transition:leave="duration-200" x-transition:leave-start="opacity-100 mb-0" x-transition:leave-end="opacity-0 mb-4" style="display: none;">
+                  <div class="flex align-items-center px-10 py-8 space-nowrap text-xs leading-100 semibold color-white">
+                    Copied!
                   </div>
-                  
                 </div>
+
               </div>
             </div>
             
@@ -497,53 +670,70 @@ config_json_output: |
     </div>
   </div>
 
-  <div class="relative z-4 px-32">
+  <div class="relative z-4 px-20 sm.px-32">
     <div class="max-w-1152 mx-auto">
-      <div class="fade-inx flex align-items-end justify-content-between mb-56">
-        <div>
-          <div class="mb-16 uppercase tracking-looser semibold text-xs color-pink-200 color-opacity-100">
-            Used and loved by
+      <div class="flex flex-col lg.flex-row lg.align-items-end justify-content-between mb-96 lg.mb-64">
+        <div class="flex-1">
+          <div class="flex align-items-center mb-20 uppercase tracking-looser semibold text-xs color-pink-200 color-opacity-100">
+            Used and <ion-icon name="heart" class="w-20 h-20 mx-6 color-red-300"></ion-icon> by
           </div>
 
-          <div class="flex align-items-center gap-32">
-            <a href="https://castle.io" target="_blank">
-              <img src="/assets/img/logos/castle.svg" class="w-80">
-            </a>
-            <a href="https://rewatch.com/" target="_blank">
-              <img src="/assets/img/logos/rewatch.svg" class="h-24">
-            </a>
-            <a href="https://hopmedic.com" target="_blank">
-              <img src="/assets/img/logos/hopmedic.svg" class="relative top-2 w-112">
-            </a>
-            <a href="https://senderplate.com" target="_blank">
-              <img src="/assets/img/logos/senderplate.svg" class="w-128">
-            </a>
+          <div class="flex flex-wrap align-items-center sm.justify-content-between gap-32 mb-96 lg.mb-0 lg.pr-56">
+            <div class="flex">
+              <a href="https://castle.io" target="_blank">
+                <img src="/assets/img/logos/castle.svg" class="w-80">
+              </a>
+            </div>
+            <div class="flex">
+              <a href="https://rewatch.com/" target="_blank">
+                <img src="/assets/img/logos/rewatch.svg" class="h-24">
+              </a>
+            </div>
+            <div class="flex">
+              <a href="https://hopmedic.com" target="_blank">
+                <img src="/assets/img/logos/hopmedic.svg" class="relative top-2 w-112">
+              </a>
+            </div>
+            <div class="flex">
+              <a href="https://senderplate.com" target="_blank">
+                <img src="/assets/img/logos/senderplate.svg" class="w-128">
+              </a>
+            </div>
+            <div class="flex">
+              <a target="_blank">
+                <img src="/assets/img/logos/lumebrite.svg" class="w-128">
+              </a>
+            </div>
           </div>
         </div>
-        <div class="relative flex-1">
-          <div class="absolute bottom-0 right-0">
+        <div class="flex justify-content-center relative">
+          <div class="bg-black radius-lg" style="width: 330px; height: 120px;">
             <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAICKQW&placement=uniformcsscom" id="_carbonads_js"></script>
           </div>
         </div>
       </div>
 
-      <div class="fade-in-from-bottomx glass-container" style="--animate-from: 100px; --animate-duration: .8s;">
-        <div class="glass-container-inner h-640">
-          <ul class="flex align-items-center border-b-1 border-white border-opacity-30">
+      <div class="glass-container" x-data="{ tab: 0 }">
+        <div class="glass-container-inner">
+          <ul class="flex align-items-center border-b-1 border-white border-opacity-30 overflow-auto space-nowrap">
             <li class="border-r-1 border-white border-opacity-20">
-              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold">
-                <ion-icon name="logo-sass" class="w-24 h-24 color-pink-300 mr-10"></ion-icon> styles.scss
+              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 0 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 0">
+                <ion-icon name="logo-sass" class="w-24 h-24 color-pink-400 mr-10"></ion-icon> styles.scss
               </button>
             </li>
             <li class="border-r-1 border-white border-opacity-20">
-              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6 hover.bg-opacity-0 transition-200">
+              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 1 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 1">
+                <span class="text-lg color-blue-300 mr-12">#</span> styles.css
+              </button>
+            </li>
+            <li class="border-r-1 border-white border-opacity-20">
+              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 2 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 2">
                 <span class="text-lg color-blue-300 mr-12">#</span> index.html
               </button>
             </li>
-            
             <li class="border-r-1 border-white border-opacity-20">
-              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6 hover.bg-opacity-0 transition-200">
-                <span class="text-lg color-blue-300 mr-12">#</span> styles.css
+              <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 2 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 3">
+                <ion-icon name="eye" class="w-20 h-20 color-yellow-300 mr-10"></ion-icon> preview
               </button>
             </li>
 
@@ -552,12 +742,76 @@ config_json_output: |
             </li>
           </ul>
 
-          <div class="glass-code">
-            {% highlight "scss" %}
-            {{ config_shorthand_input | safe }}
-            {% endhighlight %}
+          <div class="glass-code flex flex-col sm.flex-row">
+            <div class="sm.flex-1 overflow-auto h-512 sm.h-auto" x-show="tab == 0">
+              {% highlight "scss" %}
+              {{ codesnippet.hero.sass | safe }}
+              {% endhighlight %}
+            </div>
+            <div class="sm.flex-1 overflow-auto h-512 sm.h-auto" x-show="tab == 1" x-cloak>
+              {% highlight "css" %}
+              {{ codesnippet.hero.css | safe }}
+              {% endhighlight %}
+            </div>
+            <div class="sm.flex-1 overflow-auto h-512 sm.h-auto" x-show="tab == 2" x-cloak>
+              {% highlight "html" %}
+              {{ codesnippet.hero.html | safe }}
+              {% endhighlight %}
+            </div>
+            <div class="sm.flex-1 overflow-auto h-512 sm.h-auto flex align-items-center justify-content-center" x-show="tab == 3" x-cloak>
+              <div class="w-100p max-w-320 py-112">
+                {% include "partials/ui/sign-in.njk" %}
+              </div>
+            </div>
+            <div class="hidden sm.block sm.w-320 md.w-448 p-24 md.p-36 flex-none border-t-1 sm.border-t-0 sm.border-l-1 border-white border-opacity-30">
+              <div class="uppercase tracking-loosest text-xs semibold color-pink-200 color-opacity-80 mb-12">Sassy workflow</div>
+              <h3 class="text-2xl leading-130 extrabold mb-24 tracking-tighter color-heading">
+                <span class="color-heading-accent">Drop-in and configure</span> <br class="hidden sm.inline">everything in Sass
+              </h3>
+              <p class="text-sm color-paragraph mb-32">
+                Infuse any Sass-built project with the power of utility-first CSS. Fully configure directly in Sass, or add helpful utilities progressively without requiring a complete project overhaul.
+              </p>
+              <ul class="gutter-y-12">
+                <li class="flex align-items-center color-paragraph text-sm">
+                  <ion-icon name="checkmark-circle" class="text-2xl mr-10 color-heading"></ion-icon>
+                  Fully configurable utility settings
+                </li>
+                <li class="flex align-items-center color-paragraph text-sm">
+                  <ion-icon name="checkmark-circle" class="text-2xl mr-10 color-heading"></ion-icon>
+                  Easily themeable
+                </li>
+                <li class="flex align-items-center color-paragraph text-sm">
+                  <ion-icon name="checkmark-circle" class="text-2xl mr-10 color-heading"></ion-icon>
+                  Extend and override variants
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="sm.hidden mt-36">
+        <div class="uppercase tracking-loosest text-xs semibold color-pink-200 color-opacity-80 mb-8">Sassy workflow</div>
+        <h3 class="text-3xl leading-120 extrabold mb-20 tracking-tighter color-heading">
+          <span class="color-heading-accent">Drop-in and configure</span> <br>everything in Sass
+        </h3>
+        <p class="text-md color-paragraph mb-32">
+          Infuse any Sass-built project with the power of utility-first CSS. Fully configure directly in Sass, or add helpful utilities progressively without requiring a complete project overhaul.
+        </p>
+        <ul class="gutter-y-12">
+          <li class="flex align-items-center color-paragraph text-md">
+            <ion-icon name="checkmark-circle" class="text-2xl mr-10 color-heading"></ion-icon>
+            Fully configurable utility settings
+          </li>
+          <li class="flex align-items-center color-paragraph text-md">
+            <ion-icon name="checkmark-circle" class="text-2xl mr-10 color-heading"></ion-icon>
+            Easily themeable
+          </li>
+          <li class="flex align-items-center color-paragraph text-md">
+            <ion-icon name="checkmark-circle" class="text-2xl mr-10 color-heading"></ion-icon>
+            Extend and override variants
+          </li>
+        </ul>
       </div>
 
     </div>
@@ -565,17 +819,14 @@ config_json_output: |
 </section>
 
 
-
-
-
-
-
-
 <section class="mb-256 gsap-section-1">
-  <div class="px-32">
+  <div class="px-20 sm.px-32">
     <div class="relative max-w-1152 mx-auto">
 
       <div class="glass-frame">
+        <div class="glass-frame-light">
+          <img src="/assets/img/frame-fill-light.svg" class="w-100p">
+        </div>
         <div class="glass-frame-outer">
           <div class="glass-frame-inner"></div>
         </div>
@@ -587,31 +838,46 @@ config_json_output: |
         </div>
       </div>
       <div class="relative z-1">
-        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
-          <span class="color-heading-accent">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        <h1 class="font-6xl sm.font-8xl md.font-9xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
+          <span class="color-heading-accent">Blazingly fast</span> front-end <br class="hidden sm.inline">workflow without the hassle
         </h1>
         
-        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
-          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        <p class="text-lg sm.text-lg md.text-lg max-w-640 tracking-tight mb-72 color-paragraph">
+          <span class="mr-4">Say goodbye to lingering legacy stylesheets and enjoy building scalable UI without ever worrying about CSS bloat.</span> <a href="/docs/overview" class="color-white hover.color-opacity-80 transition-100 bold inline-flex align-items-center">
+            Try on Codepen <ion-icon name="arrow-forward" class="w-18 h-18 ml-4"></ion-icon>
+          </a>
         </p>
         
-        <div class="flex gap-10 mb-72">
+        {# <div class="flex gap-10 mb-72">
           <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
             Play on Codepen
           </a>
-        </div>
+        </div> #}
 
-        <div class="grid grid-cols-7 gap-48">
-          <div class="col-2 grid grid-cols-1 gap-48">
+        <div class="grid grid-cols-1 sm.grid-cols-2 lg.grid-cols-7 gap-48 max-w-384 sm.max-w-none mx-auto">
+          <div class="col-1 lg.col-2 align-items-start grid grid-cols-1 gap-48">
             <div class="grid grid-cols-1 gap-48">
-              {% include "partials/ui/calendar.njk" %}
-              {% include "partials/ui/calendar-detail.njk" %}
-              {% include "partials/ui/sign-in.njk" %}
+              <div>
+                {% include "partials/ui/calendar.njk" %}
+              </div>
+              <div>
+                {% include "partials/ui/calendar-detail.njk" %}
+              </div>
+              <div>
+                {% include "partials/ui/sign-in.njk" %}
+              </div>
+              
+              <div class="lg.hidden">
+                {% include "partials/ui/player.njk" %}
+              </div>
+              
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-1 lg.col-3 align-items-start">
             <div class="grid grid-cols-1 gap-48">
-              {% include "partials/ui/ecommerce.njk" %}
+              <div>
+                {% include "partials/ui/ecommerce.njk" %}
+              </div>
               <div class="bg-white radius-xl overflow-hidden">
                 <div class="p-12 pb-0">
                   <div class="relative">
@@ -628,29 +894,29 @@ config_json_output: |
                   </h4>
 
                   <div class="px-18 pb-18 gutter-y-1">
-                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 bg-cool-gray-100 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 bg-cool-gray-100 hover.bg-cool-gray-100 text-sm color-cool-gray-700 hover.color-cool-gray-900 semibold radius-sm">
                       Custom event properties
-                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">custom.event</span>
                     </button>
-                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-sm color-cool-gray-700 hover.color-cool-gray-900 semibold radius-sm">
                       Device fingerprint
-                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">device.id</span>
                     </button>
-                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-sm color-cool-gray-700 hover.color-cool-gray-900 semibold radius-sm">
                       Shipping address
-                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">address.shipping</span>
                     </button>
-                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-xs color-cool-gray-700 group-hover.color-cool-gray-800 semibold radius-sm">
+                    <button class="group flex align-items-center justify-content-between w-100p px-14 py-6 hover.bg-cool-gray-100 text-sm color-cool-gray-700 hover.color-cool-gray-900 semibold radius-sm">
                       Email
-                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">event.name.id</span>
+                      <span class="medium text-xs color-cool-gray-500 group-hover.color-cool-gray-700">user.email</span>
                     </button>
                   </div>
 
                   <div>
                     <div class="border-t-1x border-indigo-200 ">
-                      <button class="px-12 py-12 w-100p flex align-items-center justify-content-center text-xs semibold bg-indigo-50 hover.bg-indigo-100 color-indigo-800 hover.color-indigo-900">
+                      <button class="px-12 py-12 w-100p flex align-items-center justify-content-center text-sm semibold bg-indigo-50 hover.bg-indigo-100 color-indigo-800 hover.color-indigo-900">
                         <ion-icon name="add-circle" class="w-20 h-20 mr-8 color-indigo-500"></ion-icon>
-                        Add new advanced signal
+                        Add Advanced Signal
                       </button>
                     </div>
                     
@@ -658,11 +924,13 @@ config_json_output: |
                 </div>
               </div>
               
-              <div class="grid grid-cols-8 gap-48">
-                <div class="col-5">
-                  {% include "partials/ui/pop-up.njk" %}
+              <div class="grid grid-cols-1 md.grid-cols-8 gap-48">
+                <div class="col-1 md.col-5">
+                  <div>
+                    {% include "partials/ui/pop-up.njk" %}
+                  </div>
                 </div>
-                <div class="col-3">
+                <div class="col-1 md.col-3">
                   <div class="grid grid-cols-1 gap-32">
                     <div class="flex align-items-center border-1 border-cool-gray-200 hover.border-cool-gray-200 shadow-2xs hover.shadow-xs radius-md overflow-hidden transition-200 w-100p">
                       <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-100 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40">
@@ -679,22 +947,26 @@ config_json_output: |
                       </button>
                     </div>
 
-                    <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-50 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap w-100p h-40 radius-md">
-                      <ion-icon name="star" class="w-16 h-16 mr-8 color-yellow-400"></ion-icon> 
-                      Starred
-                      <div class="ml-10 px-8 py-4 leading-100 radius-full bg-cool-gray-200">
-                        2.8k
+                    <div class="flex flex-wrap gap-32">
+                      <div>
+                        <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-50 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap md.w-100p h-40 px-14 radius-md">
+                          <ion-icon name="star" class="w-16 h-16 mr-8 color-yellow-400"></ion-icon> 
+                          Starred
+                          <div class="ml-10 px-8 py-4 leading-100 radius-full bg-cool-gray-200">
+                            2.8k
+                          </div>
+                        </button>
                       </div>
-                    </button>
 
-                    <div class="flex align-items-center gap-24">
-                      <button type="button" class="bg-teal-500 inline-flex h-24 w-40 p-4 radius-full" role="switch" aria-checked="false">
-                        <span class="block h-16 w-16 radius-full bg-white shadow-xs duration-200 ease-in-out"></span>
-                      </button>
+                      <div class="flex align-items-center gap-24">
+                        <button type="button" class="bg-teal-500 inline-flex h-24 w-40 p-4 radius-full" role="switch" aria-checked="false">
+                          <span class="block h-16 w-16 radius-full bg-white shadow-xs duration-200 ease-in-out"></span>
+                        </button>
 
-                      <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-50 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap h-28 px-12 radius-md">
-                        Button
-                      </button>
+                        <button class="inline-flex align-items-center justify-content-center bg-white hover.bg-cool-gray-50 border-r-1 last.border-r-0 border-cool-gray-200 shadow-2xs hover.shadow-xs color-cool-gray-700 transition-200 text-xs color-white semibold space-nowrap h-28 px-12 radius-md">
+                          Button
+                        </button>
+                      </div>
                     </div>
 
                   </div>
@@ -703,12 +975,20 @@ config_json_output: |
 
                 </div>
               </div>
+
+              <div class="lg.hidden">
+                {% include "partials/ui/activity.njk" %}
+              </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="hidden lg.block col-1 lg.col-2">
             <div class="grid grid-cols-1 gap-48">
-              {% include "partials/ui/player.njk" %}
-              {% include "partials/ui/activity.njk" %}
+              <div>
+                {% include "partials/ui/player.njk" %}
+              </div>
+              <div>
+                {% include "partials/ui/activity.njk" %}
+              </div>
             </div>
           </div>
         </div>
@@ -716,19 +996,16 @@ config_json_output: |
     </div>
   </div>
 </section>
-
-
-
-
-
-
 
 
 <section class="mb-256 gsap-section-2">
-  <div class="px-32">
+  <div class="px-20 sm.px-32">
     <div class="relative max-w-1152 mx-auto">
 
       <div class="glass-frame">
+        <div class="glass-frame-light">
+          <img src="/assets/img/frame-fill-light.svg" class="w-100p">
+        </div>
         <div class="glass-frame-outer">
           <div class="glass-frame-inner"></div>
         </div>
@@ -740,37 +1017,48 @@ config_json_output: |
         </div>
       </div>
       <div class="relative z-1">
-        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
-          <span class="color-heading-accent">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        <h1 class="font-6xl sm.font-8xl md.font-9xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
+          <span class="color-heading-accent">Complete control</span> over how<br class="hidden sm.inline"> how utility classes look
         </h1>
         
-        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
-          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+        <p class="text-lg sm.text-lg md.text-lg max-w-768 tracking-tight mb-72 color-paragraph">
+          <span class="mr-4">Attach prefixes, change shorthands, remove delimiters, enable responsiveness, override variants. Control every aspect of how utilities are generated. </span> <a href="/docs/overview" class="color-white hover.color-opacity-80 transition-100 bold inline-flex align-items-center">
+            How to customize <ion-icon name="arrow-forward" class="w-18 h-18 ml-4"></ion-icon>
+          </a>
         </p>
         
-        <div class="flex gap-10 mb-72">
+        {# <div class="flex gap-10 mb-72">
           <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
             Play on Codepen
           </a>
-        </div>
+        </div> #}
 
-        <div class="glass-container">
-          <div class="glass-container-inner h-640">
-            <ul class="flex align-items-center border-b-1 border-white border-opacity-30">
+        <div class="glass-container" x-data="{ tab: 0 }">
+          <div class="glass-container-inner">
+            <ul class="flex align-items-center border-b-1 border-white border-opacity-30 overflow-auto space-nowrap">
               <li class="border-r-1 border-white border-opacity-20">
-                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold">
-                  <ion-icon name="logo-sass" class="w-24 h-24 color-pink-300 mr-10"></ion-icon> styles.scss
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 0 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 0">
+                  Shorthand
                 </button>
               </li>
               <li class="border-r-1 border-white border-opacity-20">
-                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6 hover.bg-opacity-0 transition-200">
-                  <span class="text-lg color-blue-300 mr-12">#</span> index.html
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 1 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 1">
+                  Important
                 </button>
               </li>
-              
               <li class="border-r-1 border-white border-opacity-20">
-                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6 hover.bg-opacity-0 transition-200">
-                  <span class="text-lg color-blue-300 mr-12">#</span> styles.css
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 2 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 2">
+                  Delimiters
+                </button>
+              </li>
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 3 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 3">
+                  Comma Compression
+                </button>
+              </li>
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 4 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 4">
+                  Prefix
                 </button>
               </li>
 
@@ -779,10 +1067,119 @@ config_json_output: |
               </li>
             </ul>
 
-            <div class="glass-code">
-              {% highlight "scss" %}
-              {{ config_shorthand_input | safe }}
-              {% endhighlight %}
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 0">
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.shorthand.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.shorthand.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 1" x-cloak>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.important.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.important.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 2" x-cloak>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.delimiters.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.delimiters.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 3" x-cloak>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.commaCompression.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.commaCompression.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 4" x-cloak>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.prefix.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative sm.flex-1 h-384 sm.h-576 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class= h-384"sm.h-576 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.prefix.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -790,17 +1187,16 @@ config_json_output: |
     </div>
   </div>
 </section>
-
-
-
-
 
 
 <section class="mb-256 gsap-section-3">
-  <div class="px-32">
+  <div class="px-20 sm.px-32">
     <div class="relative max-w-1152 mx-auto">
 
       <div class="glass-frame">
+        <div class="glass-frame-light">
+          <img src="/assets/img/frame-fill-light.svg" class="w-100p">
+        </div>
         <div class="glass-frame-outer">
           <div class="glass-frame-inner"></div>
         </div>
@@ -812,37 +1208,48 @@ config_json_output: |
         </div>
       </div>
       <div class="relative z-1">
-        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
-          <span class="color-heading-accent">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        <h1 class="font-6xl sm.font-8xl md.font-9xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
+          <span class="color-heading-accent">Advanced features</span> to help <br class="hidden sm.inline">supercharge your Sass project
         </h1>
-        
-        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
-          Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
+
+        <p class="text-lg sm.text-lg md.text-lg max-w-768 tracking-tight mb-72 color-paragraph">
+          <span class="mr-4">Enjoy every bit of Sass. Uniform provides apply extrapolation, helper theme functions, and Sass mixins to help you be even more productive. </span> <a href="/docs/overview" class="color-white hover.color-opacity-80 transition-100 bold inline-flex align-items-center">
+            See how it works <ion-icon name="arrow-forward" class="w-18 h-18 ml-4"></ion-icon>
+          </a>
         </p>
         
-        <div class="flex gap-10 mb-72">
+        {# <div class="flex gap-10 mb-72">
           <a href="/docs/overview" class="inline-flex align-items-center h-40 px-16 color-black bg-yellow-200 hover.bg-yellow-300 transition-100 radius-md semibold text-md">
             Learn more
           </a>
-        </div>
+        </div> #}
 
-        <div class="glass-container">
-          <div class="glass-container-inner h-640">
-            <ul class="flex align-items-center border-b-1 border-white border-opacity-30">
+        <div class="glass-container" x-data="{ tab: 0 }">
+          <div class="glass-container-inner">
+            <ul class="flex align-items-center border-b-1 border-white border-opacity-30 overflow-auto space-nowrap">
               <li class="border-r-1 border-white border-opacity-20">
-                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold">
-                  <ion-icon name="logo-sass" class="w-24 h-24 color-pink-300 mr-10"></ion-icon> styles.scss
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 0 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 0">
+                  Apply
                 </button>
               </li>
               <li class="border-r-1 border-white border-opacity-20">
-                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6 hover.bg-opacity-0 transition-200">
-                  <span class="text-lg color-blue-300 mr-12">#</span> index.html
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 1 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 1">
+                  API Functions
                 </button>
               </li>
-              
               <li class="border-r-1 border-white border-opacity-20">
-                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold bg-white bg-opacity-6 hover.bg-opacity-0 transition-200">
-                  <span class="text-lg color-blue-300 mr-12">#</span> styles.css
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 2 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 2">
+                  Helper Mixins
+                </button>
+              </li>
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 3 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 3">
+                  <div class="flex">Headless Mode <div class="relative mb-4 ml-4 radius-2xs bg-yellow-300 color-black px-4 text-2xs flex align-items-center justify-content-center h-16 tracking-loose">NEW</div></div>
+                </button>
+              </li>
+              <li class="border-r-1 border-white border-opacity-20">
+                <button class="flex align-items-center h-56 px-24 color-white text-sm semibold transition-200" :class="tab == 4 ? '' : 'bg-white bg-opacity-8 hover.bg-opacity-0'" @click="tab = 4">
+                  <div class="flex">JSON Output <div class="relative mb-4 ml-4 radius-2xs bg-yellow-300 color-black px-4 text-2xs flex align-items-center justify-content-center h-16 tracking-loose">NEW</div></div>
                 </button>
               </li>
 
@@ -851,10 +1258,119 @@ config_json_output: |
               </li>
             </ul>
 
-            <div class="glass-code">
-              {% highlight "scss" %}
-              {{ config_shorthand_input | safe }}
-              {% endhighlight %}
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 0">
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.apply.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.apply.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 1" x-cloak>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.apiFunctions.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.apiFunctions.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 2" x-cloak>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.helperMixins.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.helperMixins.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 3" x-cloak>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.headlessMode.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.headlessMode.css | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-code flex flex-col sm.flex-row" x-show="tab == 4" x-cloak>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  INPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "scss" %}
+                  {{ codesnippet.customize.jsonOutput.sass | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
+              <div class="relative flex-1 h-384 sm.h-640 overflow-auto border-t-1 border-l-0 sm.border-l-1 border-white border-opacity-15">
+                <div class="absolute top-0 right-0 mt-10 mr-10 flex align-items-center justify-content-center radius-xs h-20 px-6 bg-pink-200 bg-opacity-20 color-pink-200 text-2xs bold tracking-looser">
+                  OUTPUT
+                </div>
+                <div class="h-384 sm.h-640 overflow-auto">
+                  {% highlight "json" %}
+                  {{ codesnippet.customize.jsonOutput.json | safe }}
+                  {% endhighlight %}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -864,15 +1380,14 @@ config_json_output: |
 </section>
 
 
-
-
-
-
 <section class="gsap-section-4" x-data="{ trackerColor: 'null' }">
-  <div class="px-32">
+  <div class="px-20 sm.px-32">
     <div class="relative max-w-1152 mx-auto">
 
       <div class="glass-frame">
+        <div class="glass-frame-light">
+          <img src="/assets/img/frame-fill-light.svg" class="w-100p">
+        </div>
         <div class="glass-frame-outer">
           <div class="glass-frame-inner"></div>
         </div>
@@ -884,70 +1399,70 @@ config_json_output: |
         </div>
       </div>
       <div class="relative z-1">
-        <h1 class="font-6xl sm.font-7xl md.font-8xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
-          <span class="color-heading-accent">Roll your own</span> flexible utility class <br>generator built for Sass projects
+        <h1 class="font-6xl sm.font-8xl md.font-9xl lg.font-9xl leading-110 extrabold mb-24 tracking-tighter color-heading">
+          <span class="color-heading-accent">Roll your own</span> flexible utility class <br class="hidden sm.inline">generator built for Sass projects
         </h1>
         
-        <p class="text-xl md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
+        <p class="text-lg sm.text-lg md.text-lg max-w-640 tracking-tight mb-48 color-paragraph">
           Fully customizable utilities-class generator and CSS framework to help you quickly generate just the utilities you need directly in Sass.
         </p>
         
         <div class="flex mb-72">
-          <div class="grid grid-cols-10 px-20 py-16 gap-18 radius-lg bg-black radius-full color-white bold text-xs">
+          <div class="w-100p sm.w-auto grid grid-cols-10 px-20 py-16 gap-12 sm.gap-18 radius-lg bg-black radius-full color-white bold text-xs">
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'null'">
-              <div class="w-14 h-14 radius-full border-2 border-pink-300 border-opacity-100 bg-transparent group-hover.bg-transparent transition-200 transform group-hover.scale-150 scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full border-2 border-pink-300 border-opacity-100 bg-transparent group-hover.bg-transparent transition-200 transform group-hover.scale-150 scale-150" :class="{ 
                   'scale-150': trackerColor === 'null'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'indigo'">
-              <div class="w-14 h-14 radius-full bg-indigo-500 group-hover.bg-indigo-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-indigo-500 group-hover.bg-indigo-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'indigo'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'purple'">
-              <div class="w-14 h-14 radius-full bg-purple-500 group-hover.bg-purple-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-purple-500 group-hover.bg-purple-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'purple'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'pink'">
-              <div class="w-14 h-14 radius-full bg-pink-500 group-hover.bg-pink-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-pink-500 group-hover.bg-pink-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'pink'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'red'">
-              <div class="w-14 h-14 radius-full bg-red-500 group-hover.bg-red-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-red-500 group-hover.bg-red-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'red'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'orange'">
-              <div class="w-14 h-14 radius-full bg-orange-500 group-hover.bg-orange-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-orange-500 group-hover.bg-orange-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'orange'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'yellow'">
-              <div class="w-14 h-14 radius-full bg-yellow-500 group-hover.bg-yellow-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-yellow-500 group-hover.bg-yellow-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'yellow'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'lime'">
-              <div class="w-14 h-14 radius-full bg-lime-500 group-hover.bg-lime-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-lime-500 group-hover.bg-lime-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'lime'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'green'">
-              <div class="w-14 h-14 radius-full bg-green-500 group-hover.bg-green-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-green-500 group-hover.bg-green-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'green'
                 }"></div>
             </button>
             <button class="flex align-items-center group justify-content-center" @click="trackerColor = 'teal'">
-              <div class="w-14 h-14 radius-full bg-teal-500 group-hover.bg-teal-400 transition-200 transform group-hover.scale-150" :class="{ 
+              <div class="flex-none w-14 h-14 radius-full bg-teal-500 group-hover.bg-teal-400 transition-200 transform group-hover.scale-150" :class="{ 
                   'scale-150': trackerColor === 'teal'
                 }"></div>
             </button>
           </div>
         </div>
 
-        <div class="glass-container">
+        <div class="glass-container ml-48 sm.ml-auto w-768 sm.w-auto">
           <div class="glass-container-inner h-640">
             {% include "partials/ui/issue-tracker.njk" %}
           </div>
@@ -958,11 +1473,8 @@ config_json_output: |
 </section>
 
 
-
-
-
 <section class="py-128">
-  <div class="px-32">
+  <div class="px-20 sm.px-32">
     <div class="relative max-w-640 mx-auto">
       <div class="flex align-items-center justify-content-center mb-32">
         <a href="https://rewatch.com/" target="_blank">
@@ -972,7 +1484,7 @@ config_json_output: |
 
         </a>
       </div>
-      <h3 class="font-6xl sm.font-7xl md.font-8xl lg.font-5xl leading-110 extrabold mb-36 tracking-tighter text-center color-heading">
+      <h3 class="font-3xl sm.font-5xl md.font-5xl lg.font-5xl leading-120 extrabold mb-36 tracking-tighter text-center color-heading">
         “It's been a fantastic tool to help with automating the generation of a custom set of utility classes that we need.”
       </h3>
 
@@ -989,3 +1501,4 @@ config_json_output: |
 
 
 {% include "partials/footer.njk" %}
+</div>
