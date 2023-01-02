@@ -11,8 +11,6 @@ module.exports = function (eleventyConfig) {
   let markdownItContainer = require("markdown-it-container");
   let markdownItAttrs = require("markdown-it-attrs");
 
-  let fs = require('fs');
-
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -26,21 +24,6 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 
     // other config likely here
-  });
-
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, bs) {
-        bs.addMiddleware('*', (req, res) => {
-          let content_404 = fs.readFileSync('_site/404.html');
-          // Add 404 http status code in request header.
-          res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
-          // Provides the 404 content without redirect.
-          res.write(content_404);
-          res.end();
-        });
-      },
-    },
   });
 
   // https://www.11ty.dev/docs/copy/
