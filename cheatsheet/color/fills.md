@@ -10,28 +10,6 @@ The following table visually represents all the colors that are available.
 
 | Color | Name { .w-160 } | HEX |
 | - | - | - |
-| { .bg-primary-50 } | `primary-50` | `#EDF1FF` |
-| { .bg-primary-100 } | `primary-100` | `#DAE2FF` |
-| { .bg-primary-200 } | `primary-200` | `#B0C2FF` |
-| { .bg-primary-300 } | `primary-300` | `#89A3FF` |
-| { .bg-primary-400 } | `primary-400` | `#6385FF` |
-| { .bg-primary-500 } | `primary-500` | `#446CFA` |
-| { .bg-primary-600 } | `primary-600` | `#2650EB` |
-| { .bg-primary-700 } | `primary-700` | `#002AC8` |
-| { .bg-primary-800 } | `primary-800` | `#00209A` |
-| { .bg-primary-900 } | `primary-900` | `#001566` |
-| { .bg-primary-950 } | `primary-950` | `#000A33` |
-| { .bg-secondary-50 } | `secondary-50` | `#EAEEFC` |
-| { .bg-secondary-100 } | `secondary-100` | `#D6DDFA` |
-| { .bg-secondary-200 } | `secondary-200` | `#AEBCF4` |
-| { .bg-secondary-300 } | `secondary-300` | `#8B9EE9` |
-| { .bg-secondary-400 } | `secondary-400` | `#6A81DD` |
-| { .bg-secondary-500 } | `secondary-500` | `#5269C8` |
-| { .bg-secondary-600 } | `secondary-600` | `#3C54B3` |
-| { .bg-secondary-700 } | `secondary-700` | `#2B4093` |
-| { .bg-secondary-800 } | `secondary-800` | `#1E2F74` |
-| { .bg-secondary-900 } | `secondary-900` | `#142154` |
-| { .bg-secondary-950 } | `secondary-950` | `#0B1333` |
 | { .bg-white } | `white` | `#ffffff` |
 | { .bg-black } | `black` | `#000000` |
 | { .bg-warm-gray-50 } | `warm-gray-50` | `#F7F6F5` |

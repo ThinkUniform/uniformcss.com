@@ -38,28 +38,6 @@ The following base colors are available to be be applied to color related proper
 
 | Color | Name { .w-160 } | HEX |
 | - | - | - |
-| { .bg-primary-50 } | `primary-50` | `#E8F1FD` |
-| { .bg-primary-100 } | `primary-100` | `#D1E2FB` |
-| { .bg-primary-200 } | `primary-200` | `#A3C6F7` |
-| { .bg-primary-300 } | `primary-300` | `#4D91F0` |
-| { .bg-primary-400 } | `primary-400` | `#1267DD` |
-| { .bg-primary-500 } | `primary-500` | `#0054CB` |
-| { .bg-primary-600 } | `primary-600` | `#0046A8` |
-| { .bg-primary-700 } | `primary-700` | `#003785` |
-| { .bg-primary-800 } | `primary-800` | `#002F71` |
-| { .bg-primary-900 } | `primary-900` | `#00265C` |
-| { .bg-primary-950 } | `primary-950` | `#001533` |
-| { .bg-secondary-50 } | `secondary-50` | `#FDF8D2` |
-| { .bg-secondary-100 } | `secondary-100` | `#FBEDA6` |
-| { .bg-secondary-200 } | `secondary-200` | `#F7CC4F` |
-| { .bg-secondary-300 } | `secondary-300` | `#ECA713` |
-| { .bg-secondary-400 } | `secondary-400` | `#E18C00` |
-| { .bg-secondary-500 } | `secondary-500` | `#D27F00` |
-| { .bg-secondary-600 } | `secondary-600` | `#C37300` |
-| { .bg-secondary-700 } | `secondary-700` | `#A45B00` |
-| { .bg-secondary-800 } | `secondary-800` | `#884B00` |
-| { .bg-secondary-900 } | `secondary-900` | `#6B3B00` |
-| { .bg-secondary-950 } | `secondary-950` | `#331B00` |
 | { .bg-white } | `white` | `#ffffff` |
 | { .bg-black } | `black` | `#000000` |
 | { .bg-warm-gray-50 } | `warm-gray-50` | `#F7F6F5` |
@@ -218,68 +196,6 @@ The following base colors are available to be be applied to color related proper
 | { .bg-pink-950 } | `pink-950` | `#260013` |
 
 :::
-
----
-
-## Semantic Colors
-
-Uniform also provides semantic colors to handle form states. The following semantic colors are available to be be applied to color related properties such as `border`, `color`, and `background-color`.
-
-<div class="gutter-y-20 radius-lg mb-24">
-  <div class="px-20 py-18 radius-lg border-1 border-success bg-success">
-    <h3 class="mb-12 text-md leading-100 bold color-success">Success Alert</h3>
-    <p class="text-sm color-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-  <div class="px-20 py-18 radius-lg border-1 border-warning bg-warning">
-    <h3 class="mb-12 text-md leading-100 bold color-warning">Warning Alert</h3>
-    <p class="text-sm color-warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-  <div class="px-20 py-18 radius-lg border-1 border-danger bg-danger">
-    <h3 class="mb-12 text-md leading-100 bold color-danger">Danger Alert</h3>
-    <p class="text-sm color-danger">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-  <div class="px-20 py-18 radius-lg border-1 border-info bg-info">
-    <h3 class="mb-12 text-md leading-100 bold color-info">Info Alert</h3>
-    <p class="text-sm color-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-</div>
-
-```html
-<div class="border-1 border-success bg-success ...">
-  <h3 class="color-success ...">Success Alert</h3>
-  <p class="color-success ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-
-<div class="border-1 border-warning bg-warning ...">
-  <h3 class="color-warning ...">Warning Alert</h3>
-  <p class="color-warning ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-
-<div class="border-1 border-danger bg-danger ...">
-  <h3 class="color-danger ...">Danger Alert</h3>
-  <p class="color-danger ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-
-<div class="border-1 border-info bg-info ...">
-  <h3 class="color-info ...">Info Alert</h3>
-  <p class="color-info ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-```
-
-| Color | Name { .w-160 } | Value |
-| - | - | - |
-| { .bg-success } | `bg-success` | `green-50` | 
-| { .bg-green-500 } | `border-success` | `green-500` | 
-| { .bg-green-800 } | `color-success` | `green-800` | 
-| { .bg-warning } | `bg-warning` | `yellow-50` | 
-| { .bg-yellow-300 } | `border-warning` | `yellow-300` |
-| { .bg-yellow-800} | `color-warning` | `yellow-800` |  
-| { .bg-danger } | `bg-danger` | `red-50` | 
-| { .bg-red-200 } | `border-danger` | `red-200` | 
-| { .bg-red-800 } | `color-danger` | `red-800` | 
-| { .bg-info } | `bg-info` | `teal-50` |
-| { .bg-teal-500 } | `border-info` | `teal-500` |
-| { .bg-teal-800 } | `color-info` | `teal-800` |
 
 ---
 

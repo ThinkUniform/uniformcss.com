@@ -254,29 +254,3 @@ If you are using the precompiled version of Uniform, you can customize theme pro
 }
 ```
 
----
-
-## Customize Semantic Colors
-
-Semantic colors are specific to the property and are not available at the global `colors` scope. To override semantic colors, define its CSS variables in `:root`.
-
-```css
-/* main.css */
-
-:root {
-  --bg-success: green;
-  --bg-warning: yellow;
-  --bg-danger: red;
-  --bg-info: blue;
-
-  --border-success: green;
-  --border-warning: yellow;
-  --border-danger: red;
-  --border-info: blue;
-
-  --color-success: green;
-  --color-warning: yellow;
-  --color-danger: red;
-  --color-info: blue;
-}
-```

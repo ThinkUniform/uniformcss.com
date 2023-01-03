@@ -428,15 +428,15 @@ config_json_output: |
       </div>
 
       <div class="w-256 flex justify-content-end gutter-x-16">
-        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-primary-500 transition-100">
+        <a href="https://github.com/ThinkUniform/uniformcss" class="flex align-items-center hover.color-indigo-500 transition-100">
           {% set iconClass = 'fill-current w-24 h-24' %}
           {% include "icons/logo-github.njk" %}
         </a>
-        <a href="https://twitter.com/uniformcss" class="flex align-items-center hover.color-primary-500 transition-100">
+        <a href="https://twitter.com/uniformcss" class="flex align-items-center hover.color-indigo-500 transition-100">
           {% set iconClass = 'fill-current w-24 h-24' %}
           {% include "icons/logo-twitter.njk" %}
         </a>
-        <a href="https://www.youtube.com/watch?v=5owdoXV_rYM&list=PL9jAsp0Y5-LTA6OOH4LdwDoP_PdqrkUJT" class="flex align-items-center hover.color-primary-500 transition-100">
+        <a href="https://www.youtube.com/watch?v=5owdoXV_rYM&list=PL9jAsp0Y5-LTA6OOH4LdwDoP_PdqrkUJT" class="flex align-items-center hover.color-indigo-500 transition-100">
           {% set iconClass = 'fill-current w-24 h-24' %}
           {% include "icons/logo-youtube.njk" %}
         </a>
@@ -454,15 +454,15 @@ config_json_output: |
           <img src="/assets/img/uniform-logo.svg" class="h-28 mr-12"><span class="inline-flex align-items-center px-6 py-2 bg-cool-gray-100 uppercase font-2xs bold tracking-loose radius-sm">{{ metadata.version }}</span>
         </div>
 
-        <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
+        {# <div class="sm.flex justify-content-center mb-28 fade-in opacity-0" style="--animate-delay: .8s;">
           <a href="https://www.producthunt.com/posts/uniform-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uniform-css" class="inline-flex align-items-center text-lg semibold tracking-tight">
             <img src="/assets/img/featured.svg" class="max-w-192">
           </a>
-        </div>
+        </div> #}
 
         <h1 class="fade-in opacity-0 font-8xl sm.font-11xl md.font-11xl lg.font-11xl leading-110 extrabold m-auto mb-32 tracking-tighter"
           style="--animate-delay: .8s;">
-          <span class="color-primary-500">Lightning Fast&nbsp;</span><br>Generator for Sass
+          <span class="color-indigo-500">Lightning Fast&nbsp;</span><br>Generator for Sass
         </h1>
         
         <p class="fade-in opacity-0 text-xl md.text-xl tracking-tight sm.max-w-640 md.max-w-screen-sm sm.mx-auto mb-48 color-cool-gray-600"
@@ -524,7 +524,7 @@ config_json_output: |
         <div class="text-md text-center sm.text-left max-w-448">
           <p class="text-lg mb-20 color-cool-gray-600">"Sass already provides great functionality out of the box. Uniform CSS builds on this strength to help web developers be more productive with the power of immensely flexible utility-first classes."</p>
           <div class="text-xs uppercase bold tracking-looser">
-            — Jin Su Park, Product Designer<a href="https://castle.io" class="color-primary-500 ml-6">@Castle</a>
+            — Jin Su Park, Product Designer<a href="https://castle.io" class="color-indigo-500 ml-6">@Castle</a>
           </div>
         </div>
         
@@ -546,7 +546,7 @@ config_json_output: |
 {% include "partials/sections/enhanced-experience.njk" %}
 {% include "partials/sections/easy-setup.njk" %}
 
-<div class="justify-content-center flex align-items-center py-96 carbon-home">
+<div class="justify-content-center flex align-items-center pt-24 mb-48 carbon-home relative z-2">
   <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAICKQW&placement=uniformcsscom" id="_carbonads_js"></script>
 </div>
 {% include "partials/footer.njk" %}
