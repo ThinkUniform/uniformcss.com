@@ -29,6 +29,8 @@
 @use "_docsearch";
 @use "_highlight";
 
+/*! purgecss start ignore */
+
 [x-cloak] {
 	display: none !important;
 }
@@ -281,3 +283,5 @@
 		right: 0;
 	}
 }
+
+/*! purgecss end ignore */
