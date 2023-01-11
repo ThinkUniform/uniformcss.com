@@ -1,0 +1,33 @@
+@use "uniform" as *;
+
+.glass-frame {
+	position: absolute;
+	top: -128px;
+	left: -128px;
+	pointer-events: none;
+}
+.glass-frame-light {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: blur(10px);
+	top: -240px;
+	left: -200px;
+	width: 1000px;
+	height: 800px;
+}
+.glass-frame-inner {
+	width: 1152px;
+	height: 640px;
+	border-top-left-radius: 56px;
+	background: #430039;
+}
+.glass-frame-outer {
+	position: relative;
+	z-index: 1;
+	padding-top: 2px;
+	padding-left: 2px;
+	border-top-left-radius: 56px;
+	background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(255,164,196,1) 10%, rgba(255,164,196,0) 40%);
+}

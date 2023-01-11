@@ -1,0 +1,55 @@
+@use "uniform" as *;
+
+.glass-keylight {
+	// overflow: hidden;
+	width: 100%;
+	height: 640px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: -170px;
+	left: -120px;
+	pointer-events: none;
+	z-index: 6;
+	mix-blend-mode: overlay;
+	filter: blur(32px);
+	&.is-hero {
+		transform: translateX(-15%);
+		top: 0;
+    left: -256px;
+	}
+	&.is-docs {
+		top: 0;
+		left: 0;
+		transform: translateX(0%);
+	}
+}
+.glass-keylight-outer {
+	transform: translateX(60%) translateY(-25%);
+	width: 200px;
+	height: 900px;
+}
+.glass-keylight-inner {
+	display: flex;
+	width: 200px;
+	height: 900px;
+	transform-origin: center center;
+	transform: rotate(45deg);
+
+	
+	&:before, &:after {
+		content: '';
+		display: block;
+		width: 100px;
+		height: 900px;
+		background: white;
+		border-radius: 100%;
+		
+		// mix-blend-mode: overlay;
+	} 
+	&:after {
+		background: #9AFFFF;
+		position: relative;
+		left: -20px;
+	}
+}

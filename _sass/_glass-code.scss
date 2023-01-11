@@ -1,0 +1,9 @@
+@use "uniform" as *;
+
+.glass-code {
+	pre[class*="language-"] {
+		@include apply('p-24 sm.p-24');
+		background: transparent;
+		overflow: initial;
+	}
+}
