@@ -33,27 +33,23 @@
             <div class="relative radius-full h-8 w-8 bg-green-500"></div>
           </div>
         </div>
-        {% set iconClass = 'w-14 h-14' %}
-        {% include "icons/chevron-down.njk" %}
+        <ion-icon name="chevron-down" class="w-14 h-14"></ion-icon>
       </a>
     </div>
 
     <div class="grid grid-cols-1 gap-1 p-10 mb-12">
       <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
-        {% set iconClass = 'fill-current w-14 h-14 mr-12 opacity-50' %}
-        {% include "icons/search.njk" %}
+        <ion-icon name="search" class="fill-current w-14 h-14 mr-12 opacity-50"></ion-icon>
         Search
       </a>
 
       <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold hover.bg-white hover.bg-opacity-10 transition-200">
-        {% set iconClass = 'fill-current w-14 h-14 mr-12 opacity-50' %}
-        {% include "icons/file-tray-full.njk" %}
+        <ion-icon name="file-tray-full" class="fill-current w-14 h-14 mr-12 opacity-50"></ion-icon>
         Inbox
       </a>
 
       <a class="flex align-items-center px-10 py-4 radius-sm color-white color-opacity-70 hover.color-opacity-100 text-xs semibold bg-white bg-opacity-10 transition-200">
-        {% set iconClass = 'fill-current w-14 h-14 mr-12 opacity-50' %}
-        {% include "icons/pricetag.njk" %}
+        <ion-icon name="pricetag" class="fill-current w-14 h-14 mr-12 opacity-50"></ion-icon>
         My issues
       </a>
     </div>
